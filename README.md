@@ -12,7 +12,7 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 * Irkus Anzola
 * Adrian Ocampo
 
-# Teknologiak :computer:
+# Hizkuntzak eta Teknologiak :computer:
 
 [![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
