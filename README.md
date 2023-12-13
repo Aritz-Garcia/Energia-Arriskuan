@@ -20,3 +20,7 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 [![](https://custom-icon-badges.demolab.com/badge/tailwind-38B2AC?style=for-the-badge&logo=tailwind&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/vue-white?logo=vue&logoColor=green&style=for-the-badge)]()
 [![](https://custom-icon-badges.demolab.com/badge/laravel-FF2D20?logo=laravel&logoColor=white&style=for-the-badge)]()
+
+# Instalazioa :hammer_and_wrench:
+
+**coming soon**
