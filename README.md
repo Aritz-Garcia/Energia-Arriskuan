@@ -14,4 +14,9 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 
 # Teknologiak :computer:
 
-[![](https://custom-icon-badges.demolab.com/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]() 
+[![](https://custom-icon-badges.demolab.com/badge/tailwind-38B2AC?style=for-the-badge&logo=tailwind&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/vue-white?logo=vue&logoColor=green&style=for-the-badge)]()
+[![](https://custom-icon-badges.demolab.com/badge/laravel-FF2D20?logo=laravel&logoColor=white&style=for-the-badge)]()
