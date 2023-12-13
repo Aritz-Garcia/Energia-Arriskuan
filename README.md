@@ -8,8 +8,10 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 
 # Taldea :bust_in_silhouette:
 
-* Aritz
-* Irkus
-* Adrian
+* Aritz Garcia
+* Irkus Anzola
+* Adrian Ocampo
 
-# Teknologiak
+# Teknologiak :computer:
+
+[![](https://custom-icon-badges.demolab.com/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)]()
