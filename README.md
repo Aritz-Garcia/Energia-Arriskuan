@@ -1,4 +1,4 @@
-# Scape Room :alien:
+# Escape Room :alien:
 
 2073an gaude, eta planetako baliabide fosilak ia agortuta daude; urteak dira zentral konbentzionaletatik elektrizitatea sortzea ezinezkoa dela, eta energia berriztagarriak dira elektrizitatea sortzeko ardatz nagusia.
 
