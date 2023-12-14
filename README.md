@@ -63,6 +63,8 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 
 **Paso 1**
 
+**Paso 2**
+
 ## 📕 Erabilera
 
 *Guía sobre cómo utilizar el proyecto, ejemplos de código o ejemplos de casos de uso.*
