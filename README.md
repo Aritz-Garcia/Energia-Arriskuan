@@ -6,18 +6,18 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 
 ## 📑 Aurkibidea
 
-1. [Deskribapena](#Deskribapena)
+1. [Deskribapena](#deskribapena)
 2. [Características](#características)
 3. [Hizkuntzak eta Teknologiak](#hizkuntzak-eta-teknologiak)
 4. [Workspace](#workspace)
-   - [Pre-requisitos](#pre-requisitos-)
-   - [Instalación](#instalación-)
-5. [Uso](#uso)
-6. [Licencia](#licencia)
-7. [Desarrolladores/as](#desarrolladoresas)
-8. [Contaktua](#contaktua)
-9. [¡Gracias!](#¡gracias)
-10. [Centro Educativo](#centro-educativo)
+   - [Pre-requisitos](#pre-requisitos)
+   - [Instalazioa](#instalazioa)
+5. [Erabilera](#erabilera)
+6. [Lizentzia](#lizentzia)
+7. [Garatzaileak](#garatzaileak)
+8. [Kontaktua](#kontaktua)
+9. [Eskerrik asko!](#eskerrik-asko)
+10. [Ikastetxea](#ikastetxea)
 
 ## 📝 Deskribapena
 
@@ -33,9 +33,8 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 
 - `Funcionalidad 1`: descripción de la funcionalidad 1
 - `Funcionalidad 2`: descripción de la funcionalidad 2
-- `Funcionalidad 2a`: descripción de la funcionalidade 2a relacionada con la funcionalidad 2
+- `Funcionalidad 2a`: descripción de la funcionalidad 2a relacionada con la funcionalidad 2
 - `Funcionalidad 3`: descripción de la funcionalidad 3
-
 
 ## :computer: Hizkuntzak eta Teknologiak
 [![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
@@ -50,8 +49,7 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 [![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
 [![](https://custom-icon-badges.demolab.com/badge/docker-white?logo=docker&logoColor=1d63ed&style=for-the-badge)]()
 
-
-### Pre-requisitos 📋
+## Pre-requisitos 📋
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
@@ -59,22 +57,11 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 Ejemplo
 ```
 
-### 🔧 Instalazioa  
+## 🔧 Instalazioa  
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutándose_
 
-_Paso 1_
-
-```
-Comando, ruta, etc.
-```
-
-*Paso 2*
-
-```
-Comando, ruta, etc.
-```
-
+**Paso 1**
 
 ## 📕 Erabilera
 
@@ -86,26 +73,24 @@ Comando, ruta, etc.
 
 ## 👨🏽‍💻 Garatzaileak
 
-
-* **Aritz Garcia**
-* **Irkus Anzola**
-* **Adrian Ocampo**
+- **Aritz Garcia**
+- **Irkus Anzola**
+- **Adrian Ocampo**
 
 ## ✉️ Kontaktua
 
-
 - Email: [correo@dominio.com](mailto:correo@dominio.com)
-- X: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
+- Twitter: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
 - Discord: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
 
 ## 🎁 Eskerrik asko!
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: xxx
+* Beste batzuei proiektu honi buruz hitz egiten die 📢
+* Garagardo bat gonbidatu 🍺 edo kafe bat ☕ taldeko norbaiti.
+* Eskerrak eman publikoki 🤓.
 
-## 🏫 Centro Educativo
+
+## 🏫 Ikastetxea
 [![](https://fptxurdinaga.eus/wp-content/uploads/2023/06/Logo_Home3.png)](https://fptxurdinaga.eus/)
 Este proyecto ha sido desarrollado en el ciclo de Desarrollo de Aplicaciones Web del CIFP Txurdinaga LHII (Bilbao, Euskadi, Spain).
 [https://fptxurdinaga.eus](https://fptxurdinaga.eus)
