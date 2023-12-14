@@ -29,8 +29,8 @@
     </div>
 
     <!--Copyright section-->
-    <div class="w-full bg-green-600 p-4 text-center text-white dark:bg-green-800 dark:text-green-400">
+    <div class="w-full bg-green-600 p-4 text-center  dark:bg-green-800 dark:text-green-400">
         © 2023 Derechos de autor:
-        <a class="text-green-800 dark:text-green-400" href="https://tw-elements.com/">TW elements</a>
+        <a class="text-white dark:text-green-400" href="https://tw-elements.com/">TW elements</a>
     </div>
 </footer>
