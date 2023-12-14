@@ -59,7 +59,7 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 Ejemplo
 ```
 
-### Instalación 🔧
+### 🔧 Instalazioa  
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutándose_
 
@@ -76,31 +76,29 @@ Comando, ruta, etc.
 ```
 
 
-## 📕 Uso
+## 📕 Erabilera
 
 *Guía sobre cómo utilizar el proyecto, ejemplos de código o ejemplos de casos de uso.*
 
-## 🖋 Licencia
+## 🖋 Lizentzia
 
 *Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles*
 
-## 👨🏽‍💻 Desarrolladores/as
+## 👨🏽‍💻 Garatzaileak
 
 
 * **Aritz Garcia**
 * **Irkus Anzola**
 * **Adrian Ocampo**
 
-## ✉️ Contaktua
+## ✉️ Kontaktua
 
 
 - Email: [correo@dominio.com](mailto:correo@dominio.com)
 - X: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
 - Discord: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
 
-## 🎁 ¡Gracias! 
-
-*Si queréis, podéis solicitar aquí difusión de vuestro proyecto, enlaces a ko.fi, Patreon, etc.*
+## 🎁 Eskerrik asko!
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
