@@ -1,23 +1,31 @@
-# Nombre del Proyecto y portada o logotipo
+# :alien: Energia Arriskuan: Escape Room
 
-*Breve descripción del proyecto.
+Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizitatea sortzea zaila da. Zibilizazio estralurtarrek eraso egiten dute, energia berriztagarrietan dagoen ezagutza lapurtzeko helburuarekin. Txurdinaga LHII zentroa da azken erasoaren lekua, estalurtar taldeak energia berriztagarrian garatutako ezagutza lapurtu du eta zentroko sistema guztiak deskonektatu ditu.
 
-Añade badges con la información más importante:
-- Versión.
-- Estado: en desarrollo, finalizado, etc.
-- Licencia.
-- Etc.
+![Static Badge](https://img.shields.io/badge/status-prozesuan-brightgreen)
 
-Ejemplos:
-![Static Badge](https://img.shields.io/badge/status-en%20proceso-brightgreen) ![Static Badge](https://img.shields.io/badge/license-cc%20bync-blue)
+## 📑 Aurkibidea
 
-## Índice
+1. [Deskribapena](#deskribapena)
+2. [Características](#características)
+3. [Hizkuntzak eta Teknologiak](#hizkuntzak-eta-teknologiak)
+4. [Workspace](#workspace)
+   - [Pre-requisitos](#pre-requisitos-)
+   - [Instalación](#instalación-)
+5. [Uso](#uso)
+6. [Licencia](#licencia)
+7. [Desarrolladores/as](#desarrolladoresas)
+8. [Contaktua](#contaktua)
+9. [¡Gracias!](#¡gracias)
+10. [Centro Educativo](#centro-educativo)
 
-*Incluye un índice a todas las secciones del proyecto.*
+## 📝 Deskribapena
 
-## 📝 Descripción
+2073an gaude, eta planetako baliabide fosilak ia agortuta daude; urteak dira zentral konbentzionaletatik elektrizitatea sortzea ezinezkoa dela, eta energia berriztagarriak dira elektrizitatea sortzeko ardatz nagusia.
 
-*Descripción detallada del proyecto, su propósito y contexto en el ciclo de desarrollo de aplicaciones web. También se puede mencionar brevemente las tecnologías clave utilizadas.*
+Lur planetako bizitza etsaia da, eta etengabe jasaten dituzte zibilizazio estralurtarren erasoak, energia berriztagarrietan dugun ezagutza handia lapurtzen saiatzen baitira, beste planeta batzuetara eraman ahal izateko.
+
+Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Estralurtar talde batek zentroari eraso egin dio, urteetan energia berriztagarrian garatutako ezagutza guztia xurgatzeko helburuarekin, eta, horren ondorioz, zentroko sistema guztiak deskonektatu egin dira.
 
 ## 💎 Características
 
@@ -28,20 +36,20 @@ Ejemplos:
 - `Funcionalidad 2a`: descripción de la funcionalidade 2a relacionada con la funcionalidad 2
 - `Funcionalidad 3`: descripción de la funcionalidad 3
 
-## 🖼 Capturas del proyecto
 
-*Añadir enlaces o capturas de pantalla que muestren la demostración en vivo o ejemplos del proyecto.*
+## :computer: Hizkuntzak eta Teknologiak
+[![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]() 
+[![](https://custom-icon-badges.demolab.com/badge/tailwind-38B2AC?style=for-the-badge&logo=tailwind&logoColor=white)]()
+[![](https://custom-icon-badges.demolab.com/badge/vue-white?logo=vue&logoColor=green&style=for-the-badge)]()
+[![](https://custom-icon-badges.demolab.com/badge/laravel-FF2D20?logo=laravel&logoColor=white&style=for-the-badge)]()
 
-## 🛠️ Tecnologías
+## :keyboard: Workspace
+[![](https://img.shields.io/badge/-Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)]()
+[![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
+[![](https://custom-icon-badges.demolab.com/badge/docker-white?logo=docker&logoColor=1d63ed&style=for-the-badge)]()
 
-*Lista de las principales tecnologías, lenguajes, frameworks y librerías utilizados en el proyecto con los links a las webs oficiales. Por ejemplo:*
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## 🚀 Despliegue
-
-*Instrucciones detalladas para desplegar el proyecto. Puede incluir requisitos previos y comandos necesarios.*
 
 ### Pre-requisitos 📋
 
@@ -72,31 +80,19 @@ Comando, ruta, etc.
 
 *Guía sobre cómo utilizar el proyecto, ejemplos de código o ejemplos de casos de uso.*
 
-## 🤝 Contribución
-
-*Haz una referencia al archivo CONTRIBUTING.md. Deberéis desarrollar también este archivo donde indicaréis aspectos como:
-- Guía de desarrollo (nombrado de variables, funciones, etc.)
-- Cómo hacer pull requests.
-- Cómo se nombran las ramas.
-- Todo aquello que consideréis.
-
-*También podéis hacer referencia a cómo otros pueden contribuir al proyecto, ya sea informando de problemas, proponiendo mejoras, etc.*
-
 ## 🖋 Licencia
 
 *Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles*
 
 ## 👨🏽‍💻 Desarrolladores/as
 
-*Indicar por cada autor/a su nombre, el papel que ha tenido en el proyecto y un enlace a su github.*
 
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-* **Fulanita Detal** - *Documentación* - [fulanitadetal](#fulanita-de-tal)
+* **Aritz Garcia**
+* **Irkus Anzola**
+* **Adrian Ocampo**
 
+## ✉️ Contaktua
 
-## ✉️ Contacto
-
-Indica cómo pueden ponerse en contacto con los autores o autoras del proyecto: correo, redes sociales, etc.
 
 - Email: [correo@dominio.com](mailto:correo@dominio.com)
 - X: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
