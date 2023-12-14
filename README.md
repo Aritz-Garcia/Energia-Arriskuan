@@ -10,14 +10,14 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 2. [Características](#características)
 3. [Hizkuntzak eta Teknologiak](#hizkuntzak-eta-teknologiak)
 4. [Workspace](#workspace)
-   - [Pre-requisitos](#pre-requisitos)
-   - [Instalazioa](#instalazioa)
-5. [Erabilera](#erabilera)
-6. [Lizentzia](#lizentzia)
-7. [Garatzaileak](#garatzaileak)
-8. [Kontaktua](#kontaktua)
-9. [Eskerrik asko!](#eskerrik-asko)
-10. [Ikastetxea](#ikastetxea)
+5. [Pre-requisitos](#pre-requisitos)
+6. [Instalazioa](#instalazioa)
+7. [Erabilera](#erabilera)
+8. [Lizentzia](#lizentzia)
+9. [Garatzaileak](#garatzaileak)
+10. [Kontaktua](#kontaktua)
+11. [Eskerrik asko!](#eskerrik-asko)
+12. [Ikastetxea](#ikastetxea)
 
 ## 📝 Deskribapena
 
