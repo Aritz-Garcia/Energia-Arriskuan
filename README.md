@@ -1,4 +1,4 @@
-# :alien: Energia Arriskuan: Escape Room
+# :alien: Escape Room: Energia Arriskuan
 
 Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizitatea sortzea zaila da. Zibilizazio estralurtarrek eraso egiten dute, energia berriztagarrietan dagoen ezagutza lapurtzeko helburuarekin. Txurdinaga LHII zentroa da azken erasoaren lekua, estalurtar taldeak energia berriztagarrian garatutako ezagutza lapurtu du eta zentroko sistema guztiak deskonektatu ditu.
 
