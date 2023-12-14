@@ -6,7 +6,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 
 ## 📑 Aurkibidea
 
-1. [Deskribapena](#deskribapena)
+1. [Deskribapena](#Deskribapena)
 2. [Características](#características)
 3. [Hizkuntzak eta Teknologiak](#hizkuntzak-eta-teknologiak)
 4. [Workspace](#workspace)
