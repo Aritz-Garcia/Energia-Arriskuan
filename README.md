@@ -15,7 +15,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 7. [Erabilera](#-erabilera)
 8. [Lizentzia](#-lizentzia)
 9. [Garatzaileak](#-garatzaileak)
-10. [Kontaktua](#-kontaktua)
+10. [Kontaktua](#%EF%B8%8F-kontaktua)
 11. [Eskerrik asko!](#-eskerrik-asko)
 12. [Ikastetxea](#-ikastetxea)
 
