@@ -6,18 +6,18 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 
 ## 📑 Aurkibidea
 
-1. [Deskribapena](#deskribapena)
-2. [Características](#características)
-3. [Hizkuntzak eta Teknologiak](#hizkuntzak-eta-teknologiak)
-4. [Workspace](#workspace)
-5. [Pre-requisitos](#pre-requisitos)
-6. [Instalazioa](#instalazioa)
-7. [Erabilera](#erabilera)
-8. [Lizentzia](#lizentzia)
-9. [Garatzaileak](#garatzaileak)
-10. [Kontaktua](#kontaktua)
-11. [Eskerrik asko!](#eskerrik-asko)
-12. [Ikastetxea](#ikastetxea)
+1. [Deskribapena](#-deskribapena)
+2. [Características](#-características)
+3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
+4. [Workspace](#keyboard-workspace)
+5. [Pre-requisitos](#-pre-requisitos)
+6. [Instalazioa](#-instalazioa)
+7. [Erabilera](#-erabilera)
+8. [Lizentzia](#-lizentzia)
+9. [Garatzaileak](#-garatzaileak)
+10. [Kontaktua](#-kontaktua)
+11. [Eskerrik asko!](#-eskerrik-asko)
+12. [Ikastetxea](#-ikastetxea)
 
 ## 📝 Deskribapena
 
@@ -49,7 +49,7 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 [![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
 [![](https://custom-icon-badges.demolab.com/badge/docker-white?logo=docker&logoColor=1d63ed&style=for-the-badge)]()
 
-## Pre-requisitos 📋
+## 📋 Pre-requisitos 
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
