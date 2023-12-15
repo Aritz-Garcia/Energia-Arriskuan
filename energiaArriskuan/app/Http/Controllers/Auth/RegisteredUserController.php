@@ -32,14 +32,20 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'abizena' => ['required', 'string', 'max:255'],
+            'erabiltzailea' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        // el rol siempre va a ser 0, ya que solo se va a registrar un usuario normal
         $user = User::create([
             'name' => $request->name,
+            'abizena' => $request->abizena,
+            'erabiltzailea' => $request->erabiltzailea,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'rol' => 0,
         ]);
 
         event(new Registered($user));
