@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.font-rubik {
+    font-family: 'Rubik';
+}
+
+body {
+    background-image: url('T1-2DW3D/energiaArriskuan/public/images/Foto_fondo.png');
+    background-size: cover;
+    background-position: center;
+}
