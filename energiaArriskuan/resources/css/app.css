@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.font-rubik {
+    font-family: 'Rubik';
+}
+
+body {
+    background-image: url('../../public/images/Foto_fondo.png');
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+
+}
+
+footer{
+    margin-top: 560px;
+}
+
+.fill-current {
+    fill: #0BD904; /* Color predeterminado */
+    transition: fill 0.3s ease; /* Transición suave */
+}
+
+.fill-current:hover {
+    fill: #F2F8F0; /* Color al hacer hover */
+}

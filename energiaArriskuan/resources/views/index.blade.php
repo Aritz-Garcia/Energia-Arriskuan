@@ -1,12 +1,9 @@
 @extends('layouts.plantilla')
 
-@section('title', 'TODOS LOS ALUMNOS')
+@section('title', 'ESTO ES UNA PRUEBA')
 
 @section('content')
 
-    <br>
-
-    <h1>LISTA CURSOS</h1>
 
     <br>
 
