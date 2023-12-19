@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('id_erabiltzailea')->references('id')->on('users');
             $table->string('denbora')->nullable();
             $table->boolean('bukatuta')->default(false);
+            $table->boolean('irabazita')->default(false);
             $table->timestamps();
         });
     }
