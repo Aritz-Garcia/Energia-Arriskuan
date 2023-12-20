@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'DASHBOARD')
+@section('title', 'Perfil')
 
 @section('content')
     
