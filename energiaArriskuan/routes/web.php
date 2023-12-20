@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/kontaktua', function () {
+    return view('kontaktua');
+})->name('kontaktua');
+
 // Route::get('/perfil', function () {
 //     return view('perfil');
 // })->middleware(['auth', 'verified'])->name('perfil');
