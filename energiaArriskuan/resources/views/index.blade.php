@@ -1,11 +1,7 @@
 @extends('layouts.plantilla')
 
-@section('title', 'ESTO ES UNA PRUEBA')
+@section('title', 'Hasiera')
 
 @section('content')
-
-
-    <br>
-
 
 @endsection
