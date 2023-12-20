@@ -5,22 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Partida extends Model
+class Prueba extends Model
 {
     use HasFactory;
 
-    protected $table = "partida";
+    protected $table = "prueba";
     protected $primaryKey = "id";
     protected $guarded = ["denbora"];
     protected $hidden = ['id'];
 
-    public function erabiltzailea()
+    public function partida()
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function pruebas()
-    {
-        return $this->hasMany(Prueba::class);
+        return $this->belongsTo(Partida::class);
     }
 }
