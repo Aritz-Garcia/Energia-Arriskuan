@@ -43,6 +43,9 @@ const vueApp = {
             } else {
                 this.erabiltzaileak.argazkia = false;
             }
+        },
+        bidali() {
+            this.pausua = 1;
         }
     }
 }
