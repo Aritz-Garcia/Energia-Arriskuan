@@ -7,12 +7,16 @@
     font-family: 'Rubik';
 }
 
-body {
+body.fotoFondo {
     background-image: url('../../public/images/Foto_fondo.png');
     background-color: #010440;
     background-size: cover;
     background-position: center;
 
+}
+
+body.fondoAzul{
+    background-color: #0074CC;
 }
 
 footer{
