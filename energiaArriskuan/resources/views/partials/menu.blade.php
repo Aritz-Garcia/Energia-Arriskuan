@@ -77,7 +77,7 @@
                     <a href="#" class="block py-2 px-3 border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Klasifikazioa</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3  border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Kontaktua</a>
+                    <a href="{{ route('kontaktua') }}" class="block py-2 px-3  border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Kontaktua</a>
                 </li>
             </ul>
         </div>
