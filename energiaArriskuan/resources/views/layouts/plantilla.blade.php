@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
-    @vite('resources/css/app.css')
 </head>
 
 <body class="antialiased font-rubik min-h-screen">
@@ -28,6 +29,7 @@
     </main>
 
     @include("partials.footer")
+
 </body>
 
 </html>
