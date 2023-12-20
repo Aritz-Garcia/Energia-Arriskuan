@@ -1,6 +1,6 @@
 <nav class="bg-[#010440] border-gray-200">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="../public/images/Logo.png" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowraptext-white text-white">ENERGIA ARRISKUAN</span>
         </a>
@@ -26,7 +26,7 @@
 
                             <x-slot name="content">
                                 <div class="py-2 bg-[#010440] text-[#0BD904]  border rounded">
-                                    <x-dropdown-link :href="route('profile.edit')"
+                                    <x-dropdown-link :href="route('profile.index')"
                                         class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
