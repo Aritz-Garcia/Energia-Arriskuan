@@ -72,7 +72,7 @@
   <div
     class="w-full p-4 text-center text-[#0BD904] bg-[#010440]">
     © 2023 Copyright:
-    <a class="text-whitehite text-[#0BD904]" href="https://tw-elements.com/"
+    <a class="text-whitehite text-[#0BD904]" href="#"
       >TW elements</a
     >
   </div>
