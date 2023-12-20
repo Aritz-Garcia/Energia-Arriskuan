@@ -1,6 +1,6 @@
 <nav class="bg-[#010440] border-gray-200">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="{{ route('index') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="../public/images/Logo.png" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowraptext-white text-white">ENERGIA ARRISKUAN</span>
         </a>
@@ -71,7 +71,7 @@
         <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Hasiera</a>
+                    <a href="{{ route('index') }}" class="block py-2 px-3 border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Hasiera</a>
                 </li>
                 <li>
                     <a href="#" class="block py-2 px-3 border-b md:hover:bg-transparent md:border-0 md:hover:text-[#0BD904] md:p-0 text-white">Klasifikazioa</a>
