@@ -65,7 +65,7 @@ class RegisteredUserController extends Controller
             // $url = Storage::putFile("storage/alumnos", $request->file("foto"));
             $user->foto = $urldb;
         } else {
-            $user->foto = "storage/alumnos/default.jpg";
+            $user->foto = "storage/erabiltzaileak/default.jpg";
         }
 
         $user->save();
