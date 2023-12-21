@@ -1,7 +1,7 @@
 <nav class="bg-[#010440] border-gray-200">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="{{ route('index') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="../public/images/Logo.png" class="h-20" alt="Logo" />
+            <img src="{{ url(asset('images/Logo.png')) }}" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowraptext-white text-white">ENERGIA ARRISKUAN</span>
         </a>
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -26,7 +26,7 @@
 
                             <x-slot name="content">
                                 <div class="py-2 bg-[#010440] text-[#0BD904]  border rounded">
-                                    <x-dropdown-link :href="route('profile.index')"
+                                    <x-dropdown-link :href="route('profile.index', Auth::user()->id)"
                                         class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
@@ -48,13 +48,13 @@
                         @else
                             <button onclick="window.location='{{ route('login') }}'"
                                 class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                                Log in
+                                Saioa hasi
                             </button>
 
                             @if (Route::has('register'))
                                 <button onclick="window.location='{{ route('register') }}'"
                                     class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                                    Register
+                                    Erregistratu
                                 </button>
                             @endif
                         @endauth
