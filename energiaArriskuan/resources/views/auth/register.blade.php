@@ -4,7 +4,7 @@
         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf
 
-            <div v-if="pausua == 1">
+            <div v-show="pausua == 1">
                 <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-300">Datu pertsonalak:</h3>
                 <hr class="my-2">
                 <!-- Name -->
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div v-if="pausua == 2">
+            <div v-show="pausua == 2">
                 <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-300">Erabiltzaileak sortu:</h3>
                 <hr class="my-2">
                 <!-- Email Address -->
