@@ -16,6 +16,11 @@ class ProfileController extends Controller
     public function index(int $profilaId)
     {
         $profila = User::find($profilaId);
+
+        if ($profila == null) {
+            return Redirect::route('index');
+        }
+        
         return view('profile.index', compact('profila'));
     }
 
