@@ -4,7 +4,7 @@
             <img src="{{ url(asset('images/Logo.png')) }}" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#0BD904]">ENERGIA ARRISKUAN</span>
         </a>
-        <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
+        <div class="flex items-center lg:order-2 space-x-1 lg:space-x-2 rtl:space-x-reverse">
             <div class="flex items-center space-x-4">
                 @if (Route::has('login'))
                     <div class="lg:flex items-center space-x-4 hidden">

@@ -24,7 +24,7 @@
         </header>
     @endisset
 
-    <main role="main" class="container">
+    <main role="main" class="x-w-screen-xl">
         @yield("content")
     </main>
 
