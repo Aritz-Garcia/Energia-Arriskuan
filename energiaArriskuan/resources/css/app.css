@@ -37,7 +37,7 @@ body.fondoAzul{
     word-spacing: 4px;
 }
 
-p{
+.containerIndex p{
     color: white;
 	-webkit-text-stroke: 1px black;
 	text-shadow: 0px 1px 4px black;
