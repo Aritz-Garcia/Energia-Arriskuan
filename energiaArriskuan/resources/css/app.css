@@ -8,7 +8,7 @@
 }
 
 body.fotoFondo {
-    background-image: url('../../public/images/Foto_fondo.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../../public/images/Foto_fondo.png");
     background-color: #010440;
     background-size: cover;
     background-position: center;
@@ -19,9 +19,6 @@ body.fondoAzul{
     background-color: #0074CC;
 }
 
-footer{
-    margin-top: 560px;
-}
 
 .fill-current {
     fill: #0BD904; /* Color predeterminado */
@@ -30,4 +27,41 @@ footer{
 
 .fill-current:hover {
     fill: #F2F8F0; /* Color al hacer hover */
+}
+
+.containerIndex {
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 4px;
+}
+
+p{
+    color: white;
+	-webkit-text-stroke: 1px black;
+	text-shadow: 0px 1px 4px black;
+}
+
+#bottone1 {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: #0BD904;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 30px 14px rgba(11,217,4,1);
+    -moz-box-shadow: 0px 0px 30px 14px rgba(11,217,4,1);
+    box-shadow: 0px 0px 30px 14px rgba(11,217,4,1);
+    margin-top: 100px;
+}
+
+#bottone1:hover{
+    transition: 0.7s;
+    -webkit-box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
+    -moz-box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
+    box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
 }
