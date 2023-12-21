@@ -1,58 +1,60 @@
 <nav class="bg-[#010440] border-gray-200">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="{{ route('index') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="../public/images/Logo.png" class="h-20" alt="Logo" />
+            <img src="{{ url(asset('images/Logo.png')) }}" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#0BD904]">ENERGIA ARRISKUAN</span>
         </a>
+        <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <div class="flex items-center space-x-4">
+                @if (Route::has('login'))
+                    <div class="lg:flex items-center space-x-4 hidden">
+                        @auth
+                            <x-dropdown align="right" width="48">
+                                <x-slot name="trigger">
+                                    <div class="flex items-center justify-center text-[#0BD904] hover:text-white">
+                                        <a class="font-semibold py-2 px-1 focus:outline-none ">
+                                            {{ Auth::user()->erabiltzailea }}
+                                        </a>
+                                        <svg class="fill-current h-5 w-4">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </x-slot>
 
-        <div class="flex items-center lg:order-2 space-x-1 lg:space-x-2 rtl:space-x-reverse">
-            <!-- Contenido relacionado con el usuario -->
-            <div class="hidden lg:flex items-center space-x-4">
-                @auth
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            <div class="flex items-center justify-center text-[#0BD904] hover:text-white">
-                                <a class="font-semibold py-2 px-1 focus:outline-none ">
-                                    {{ Auth::user()->erabiltzailea }}
-                                </a>
-                                <svg class="fill-current h-5 w-4">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </x-slot>
+                                <x-slot name="content">
+                                    <div class="py-2 bg-[#010440] text-[#0BD904] border rounded">
+                                        <x-dropdown-link :href="route('profile.index', Auth::user()->id)" class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                            {{ __('Profile') }}
+                                        </x-dropdown-link>
 
-                        <x-slot name="content">
-                            <div class="py-2 bg-[#010440] text-[#0BD904] border rounded">
-                                <x-dropdown-link :href="route('profile.index')" class="block px-4 py-2 text-white hover:text-[#0BD904]">
-                                    {{ __('Profile') }}
-                                </x-dropdown-link>
-
-                                <!-- Autenticación -->
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault(); this.closest('form').submit();"
-                                        class="block px-4 py-2 text-white hover:text-[#0BD904]">
-                                        {{ __('Saioa Itxi') }}
-                                    </x-dropdown-link>
-                                </form>
-                            </div>
-                        </x-slot>
-                    </x-dropdown>
-                @else
-                    <button onclick="window.location='{{ route('login') }}'"
-                        class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                        Iniciar sesión
-                    </button>
-                    @if (Route::has('register'))
-                        <button onclick="window.location='{{ route('register') }}'"
-                            class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                            Registrarse
-                        </button>
-                    @endif
-                @endauth
+                                        <!-- Autenticación -->
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault(); this.closest('form').submit();"
+                                                class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                                {{ __('Saioa Itxi') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </div>
+                                </x-slot>
+                            </x-dropdown>
+                        @else
+                            <button onclick="window.location='{{ route('login') }}'"
+                                class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                Saioa hasi
+                            </button>
+                            @if (Route::has('register'))
+                                <button onclick="window.location='{{ route('register') }}'"
+                                    class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                    Erregistratu
+                                </button>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </div>
             <button id="boton-menu-movil" data-collapse-toggle="mega-menu" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -96,10 +98,9 @@
                                     </svg>
                                 </div>
                             </x-slot>
-
                             <x-slot name="content">
                                 <div class="py-2 bg-[#010440] text-[#0BD904]  border rounded">
-                                    <x-dropdown-link :href="route('profile.index')"
+                                    <x-dropdown-link :href="route('profile.index', Auth::user()->id)"
                                         class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
@@ -115,22 +116,22 @@
                                     </form>
                                 </div>
                             </x-slot>
+
                         </x-dropdown>
                     @else
                         <button onclick="window.location='{{ route('login') }}'"
                             class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                            Iniciar sesión
+                            Saioa hasi
                         </button>
                         @if (Route::has('register'))
                             <button onclick="window.location='{{ route('register') }}'"
                                 class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                                Registrarse
+                                Erregistratu
                             </button>
                         @endif
                     @endauth
                 </li>
             </ul>
-
         </div>
     </div>
 </nav>
