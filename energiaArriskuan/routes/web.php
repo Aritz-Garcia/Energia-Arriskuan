@@ -22,6 +22,11 @@ Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
 
+Route::get('/jolasa', function () {
+    return view('jolasa');
+})->name('jolasa');
+
+
 // Route::get('/perfil', function () {
 //     return view('perfil');
 // })->middleware(['auth', 'verified'])->name('perfil');
