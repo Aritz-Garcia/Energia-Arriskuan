@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,9 +13,15 @@ use Illuminate\View\View;
 class ProfileController extends Controller
 {
 
-    public function index()
+    public function index(int $profilaId)
     {
-        return view('profile.index');
+        $profila = User::find($profilaId);
+
+        if ($profila == null) {
+            return Redirect::route('index');
+        }
+        
+        return view('profile.index', compact('profila'));
     }
 
     /**
