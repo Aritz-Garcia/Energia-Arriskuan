@@ -9,14 +9,14 @@ class Partida extends Model
 {
     use HasFactory;
 
-    protected $table = "partida";
+    protected $table = "partidas";
     protected $primaryKey = "id";
     protected $guarded = ["denbora"];
     protected $hidden = ['id'];
 
     public function erabiltzailea()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'id_erabiltzailea');
     }
 
     public function pruebas()

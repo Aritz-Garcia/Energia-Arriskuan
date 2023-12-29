@@ -32,6 +32,6 @@ class User extends Authenticatable
 
     public function partidas()
     {
-        return $this->hasMany(Partida::class);
+        return $this->hasMany(Partida::class, 'id_erabiltzailea');
     }
 }

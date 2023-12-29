@@ -20,7 +20,7 @@ class ProfileController extends Controller
         if ($profila == null) {
             return Redirect::route('index');
         }
-        
+
         return view('profile.index', compact('profila'));
     }
 
