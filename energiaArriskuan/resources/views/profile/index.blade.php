@@ -8,12 +8,17 @@
             {{-- Zure erab --}}
             <div class="text-white">
                 {{-- Erab info --}}
-                <div class="flex items-center mb-6">
-                    <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia" class="m-2 h-32 w-32 rounded-full">
-                    <div class="ms-4">
-                        <p class="text-2xl">{{ $profila->name }}  {{ $profila->abizena }}</p>
-                        <p>{{ $profila->erabiltzailea }}</p>
-                        <p>{{ $profila->email }}</p>
+                <div class="flex items-center justify-between mx-2">
+                    <div class="flex items-center mb-6">
+                        <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia" class="m-2 h-32 w-32 rounded-full">
+                        <div class="ms-4">
+                            <p class="text-2xl">{{ $profila->name }}  {{ $profila->abizena }}</p>
+                            <p>{{ $profila->erabiltzailea }}</p>
+                            <p>{{ $profila->email }}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="{{ route('profile.edit') }}" class="border-solid border border-black rounded-lg p-2 m-2 bg-blue-700 hover:bg-blue-400">Edit</a>
                     </div>
                 </div>
 
@@ -32,20 +37,27 @@
                                 <tr class="border-solid border-b border-white">
                                     @if ($partida->bukatuta == 0)
                                         {{-- Bukatu gabe --}}
-                                        <td class="ps-2">Play / Ezabatu</td>
+                                        <td class="ps-2">
+                                            <button class="border-solid border border-black rounded-lg p-2 bg-green-900">Play</button>
+                                            <button class="border-solid border border-black rounded-lg p-2 bg-red-700">Ezabatu</button>
+                                        </td>
                                         @if ($partida->denbora == null)
                                             <td class="text-center py-4">00:00</td>
                                         @else
                                             <td class="text-center py-4">{{ $partida->denbora }}</td>
                                         @endif
-                                        <td class="pe-2 text-right">
-                                            <button class="border-solid border border-black rounded-lg p-2 bg-amber-500 text-black font-semibold w-auto sm:w-36">
-                                                Bukatu Gabe
-                                            </button>
+                                        <td class="pe-2">
+                                            <div class="flex justify-end content-center">
+                                                <div class="text-center border-solid border border-black rounded-lg p-2 bg-amber-500 text-black font-semibold w-auto sm:w-36">
+                                                    Bukatu Gabe
+                                                </div>
+                                            </div>
                                         </td>
                                     @else
                                         {{-- Bukatuta --}}
-                                        <td class="ps-2">Ezabatu</td>
+                                        <td class="ps-2">
+                                            <button class="border-solid border border-black rounded-lg p-2 bg-red-700">Ezabatu</button>
+                                        </td>
                                         @if ($partida->irabazita == 0)
                                             {{-- Irabazi gabe --}}
                                             @if ($partida->denbora == null)
@@ -55,9 +67,11 @@
                                             @endif
 
                                             <td class="pe-2 text-right">
-                                                <button class="border-solid border border-black rounded-lg p-2 bg-red-700 text-black font-semibold w-auto sm:w-36">
-                                                    Game Over
-                                                </button>
+                                                <div class="flex justify-end content-center">
+                                                    <div class="text-center border-solid border border-black rounded-lg p-2 bg-red-700 text-black font-semibold w-auto sm:w-36">
+                                                        Game Over
+                                                    </div>
+                                                </div>
                                             </td>
                                         @else
                                             {{-- Irabazita --}}
@@ -68,9 +82,11 @@
                                             @endif
 
                                             <td class="pe-2 text-right">
-                                                <button class="border-solid border border-black rounded-lg p-2 bg-green-900 text-black font-semibold w-auto sm:w-36">
-                                                    Bukatuta
-                                                </button>
+                                                <div class="flex justify-end content-center">
+                                                    <div class="text-center border-solid border border-black rounded-lg p-2 bg-green-900 text-black font-semibold w-auto sm:w-36">
+                                                        Bukatuta
+                                                    </div>
+                                                </div>
                                             </td>
                                         @endif
                                     @endif
@@ -84,41 +100,54 @@
             {{-- Admin --}}
             <div class="text-white">
                 {{-- Erab info --}}
-                <div class="flex items-center mb-6">
-                    <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia" class="m-2 h-32 w-32 rounded-full">
-                    <div class="ms-4">
-                        <p class="text-2xl">{{ $profila->name }}  {{ $profila->abizena }}</p>
-                        <p>{{ $profila->erabiltzailea }}</p>
-                        <p>{{ $profila->email }}</p>
+                <div class="flex items-center justify-between mx-2">
+                    <div class="flex items-center mb-6">
+                        <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia" class="m-2 h-32 w-32 rounded-full">
+                        <div class="ms-4">
+                            <p class="text-2xl">{{ $profila->name }}  {{ $profila->abizena }}</p>
+                            <p>{{ $profila->erabiltzailea }}</p>
+                            <p>{{ $profila->email }}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="border-solid border border-black rounded-lg p-2 m-2 bg-red-700 hover:bg-red-400">Ezabatu</a>
                     </div>
                 </div>
 
                 {{-- Taula --}}
-                <div class="border-solid border-2 border-black rounded-lg m-5 p-2">
-                    <p class="font-bold mt-3 mb-2">Partidak:</p>
+                <div class="border-solid border-2 border-black rounded-lg m-5 p-2 bg-gray-600">
+                    <div class="flex justify-between">
+                        <p class="font-bold mt-3 mb-2">Partidak:</p>
+                    </div>
                     <hr>
                     @if (count($profila->partidas) == 0)
-                        <p>Ez duzu partidarik jokatu</p>
+                        <p>Ez du partidarik jokatu</p>
                     @else
                         <table class="table-fixed w-full">
                             @foreach ($profila->partidas as $partida)
                                 <tr class="border-solid border-b border-white">
                                     @if ($partida->bukatuta == 0)
                                         {{-- Bukatu gabe --}}
-                                        <td class="ps-2">Play / Ezabatu</td>
+                                        <td class="ps-2">
+                                            <button class="border-solid border border-black rounded-lg p-2 bg-red-700">Ezabatu</button>
+                                        </td>
                                         @if ($partida->denbora == null)
                                             <td class="text-center py-4">00:00</td>
                                         @else
                                             <td class="text-center py-4">{{ $partida->denbora }}</td>
                                         @endif
-                                        <td class="pe-2 text-right">
-                                            <button class="border-solid border border-black rounded-lg p-2 bg-amber-500 text-black font-semibold w-auto sm:w-36">
-                                                Bukatu Gabe
-                                            </button>
+                                        <td class="pe-2">
+                                            <div class="flex justify-end content-center">
+                                                <div class="text-center border-solid border border-black rounded-lg p-2 bg-amber-500 text-black font-semibold w-auto sm:w-36">
+                                                    Bukatu Gabe
+                                                </div>
+                                            </div>
                                         </td>
                                     @else
                                         {{-- Bukatuta --}}
-                                        <td class="ps-2">Ezabatu</td>
+                                        <td class="ps-2">
+                                            <button class="border-solid border border-black rounded-lg p-2 bg-red-700">Ezabatu</button>
+                                        </td>
                                         @if ($partida->irabazita == 0)
                                             {{-- Irabazi gabe --}}
                                             @if ($partida->denbora == null)
@@ -128,9 +157,11 @@
                                             @endif
 
                                             <td class="pe-2 text-right">
-                                                <button class="border-solid border border-black rounded-lg p-2 bg-red-700 text-black font-semibold w-auto sm:w-36">
-                                                    Game Over
-                                                </button>
+                                                <div class="flex justify-end content-center">
+                                                    <div class="text-center border-solid border border-black rounded-lg p-2 bg-red-700 text-black font-semibold w-auto sm:w-36">
+                                                        Game Over
+                                                    </div>
+                                                </div>
                                             </td>
                                         @else
                                             {{-- Irabazita --}}
@@ -141,9 +172,11 @@
                                             @endif
 
                                             <td class="pe-2 text-right">
-                                                <button class="border-solid border border-black rounded-lg p-2 bg-green-900 text-black font-semibold w-auto sm:w-36">
-                                                    Bukatuta
-                                                </button>
+                                                <div class="flex justify-end content-center">
+                                                    <div class="text-center border-solid border border-black rounded-lg p-2 bg-green-900 text-black font-semibold w-auto sm:w-36">
+                                                        Bukatuta
+                                                    </div>
+                                                </div>
                                             </td>
                                         @endif
                                     @endif
