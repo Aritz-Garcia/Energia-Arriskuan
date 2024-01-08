@@ -18,11 +18,13 @@
                 <p class="my-5">Con las condiciones actuales de habitabilidad del planeta, es imposible mantenernos con vida más de 2 horas si no se restablecen los sistemas energéticos que tenemos en el centro. Por eso, nuestro equipo de expertos en energía renovable tiene que resolver una serie de retos que pondrá en marcha nuevamente toda la generación de energía del centro y podremos salvar la vida de todas las personas.</p>
             </div>
         </div>
+        <div class="botoiaHasiDiv">
+            <p class="md:mx-auto">Misioa hasteko prest?</p>
+            <a href="" id="bottone1" class="md:mx-auto"><strong>HASI</strong></a>
+        </div>
     </div>
 
-    <div class="botoiaHasi">
-        <button class="p-2 uppercase">Hasi</button>
-    </div>
+
 
     <style>
         .contJolasAzalpena {
@@ -75,7 +77,13 @@
             pointer-events: none;
         }
 
-        .botoiaHasi {
+        .botoiaHasiDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
             visibility: hidden;
             animation: botoia 4s linear 10s;
         }
@@ -95,5 +103,16 @@
             }
         }
     </style>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                let botoiaHasiDiv = document.querySelector('.botoiaHasiDiv');
+                let titulua = document.querySelector('#titulua');
+                botoiaHasiDiv.style.visibility = 'visible';
+                titulua.style.display = 'none';
+            }, 10000);
+        }
+    </script>
 
 @endsection
