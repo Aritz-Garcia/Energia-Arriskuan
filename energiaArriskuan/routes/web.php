@@ -26,6 +26,14 @@ Route::get('/jolasa', function () {
     return view('jolasa');
 })->name('jolasa');
 
+Route::get('/hasiera', function () {
+    return view('hasiera');
+})->name('hasiera');
+
+Route::get('/biltegia', function () {
+    return view('biltegia');
+})->name('biltegia');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
