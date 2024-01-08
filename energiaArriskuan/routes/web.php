@@ -26,6 +26,14 @@ Route::get('/jolasa', function () {
     return view('jolasa');
 })->name('jolasa');
 
+Route::get('/hasiera', function () {
+    return view('hasiera');
+})->name('hasiera');
+
+Route::get('/biltegia', function () {
+    return view('biltegia');
+})->name('biltegia');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
@@ -33,7 +41,7 @@ Route::get('/jolasa', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile/{profilaId}', [ProfileController::class, 'index'])->name('profile.index');
-    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

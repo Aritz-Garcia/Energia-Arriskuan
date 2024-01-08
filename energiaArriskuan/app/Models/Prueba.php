@@ -9,7 +9,7 @@ class Prueba extends Model
 {
     use HasFactory;
 
-    protected $table = "prueba";
+    protected $table = "pruebas";
     protected $primaryKey = "id";
     protected $guarded = ["denbora"];
     protected $hidden = ['id'];
