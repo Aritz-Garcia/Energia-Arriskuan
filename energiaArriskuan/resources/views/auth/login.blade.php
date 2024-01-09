@@ -52,4 +52,4 @@
 
 </x-guest-layout>
 
-@include("partials.footer")
+   @include("partials.footer")
