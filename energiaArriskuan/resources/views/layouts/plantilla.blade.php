@@ -24,8 +24,7 @@
         </header>
     @endisset
 
-    {{-- <main role="main" class="container"> --}}
-    <main role="main">
+    <main role="main" class="">
         @yield("content")
     </main>
 
