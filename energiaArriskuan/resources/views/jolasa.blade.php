@@ -1,13 +1,13 @@
-@extends('layouts.plantilla')
+@extends('layouts.plantillaKontaktua')
 
 @section('title', 'JOLASA')
 
 @section('content')
 
-    <div class="contJolasAzalpena relative overflow-hidden">
-        <div id="titulua" class="absolute bottom-0 text-justify overflow-hidden after:absolute after:left-0 after:right-0 after:top-0 after:pointer-events-none">
+    <div class="contJolasAzalpena relative overflow-hidden text-[#0BD904]">
+        <div id="titulua" class="z-0 absolute bottom-0 text-justify overflow-hidden after:absolute after:left-0 after:right-0 after:top-0 after:pointer-events-none">
             <div id="azalpenaContent" class="absolute">
-                <p class="text-center my-5">ENERGIA ARRISKUAN</p>
+                <p class="text-center my-5 text-white font-medium">ENERGIA ARRISKUAN</p>
 
                 <p class="my-5">2073. urtea da, eta planetako baliabide fosilak ia agortuta daude. Urteak dira zentral konbentzionaletatik elektrizitatea sortzea ezinezkoa dela, eta energia berriztagarriak dira elektrizitatea sortzeko ardatz nagusia.</p>
 
@@ -18,9 +18,9 @@
                 <p class="my-5">Planetaren egungo bizigarritasun-baldintzekin, ezinezkoa da 2 ordu baino gehiago bizirik mantentzea, zentroan dauden energia-sistemak berrezartzen ez badira. Horregatik, zuk eta energia berriztagarriko aditu-taldeak zentroko energia-sorkuntza guztia berriro martxan jarriko duen eta pertsona guztien bizitza salbatu ahal izango den zeregin batzuk konpondu behar dituzue.</p>
             </div>
         </div>
-        <div class="botoiaHasiDiv flex flex-col justify-center items-center h-full m-0 invisible">
-            <p class="md:mx-auto">Misioa hasteko prest?</p>
-            <a href="" id="bottone1" class="md:mx-auto"><strong>HASI</strong></a>
+        <div class="z-50 botoiaHasiDiv flex flex-col justify-center items-center h-full m-0 invisible">
+            <p class="md:mx-auto text-3xl font-semibold">Misioa hasteko prest?</p>
+            <a href="" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
 
         #azalpenaContent {
             top: 100%;
-            animation: scroll 100s linear;
+            animation: scroll 100s linear 1;
         }
 
         @keyframes scroll {
@@ -62,6 +62,18 @@
             }
         }
 
+        @media (max-width: 768px) {
+            #titulua {
+                font-size: 250%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #titulua {
+                font-size: 150%;
+            }
+        }
+
         #titulua:after {
             content: ' ';
             bottom: 60%;
@@ -69,7 +81,8 @@
         }
 
         .botoiaHasiDiv {
-            animation: botoia 4s linear 73s;
+            position: static;
+            animation: botoia 30s linear 68s;
         }
 
         @keyframes botoia {
@@ -80,6 +93,10 @@
             1% {
                 visibility: visible;
                 opacity: 0;
+            }
+            15% {
+                visibility: visible;
+                opacity: 1;
             }
             100% {
                 visibility: visible;
@@ -93,12 +110,12 @@
             setTimeout(function() {
                 let titulua = document.querySelector('#titulua');
                 titulua.style.display = 'none';
-            }, 100000);
+            }, 90000);
 
             setTimeout(function() {
                 let botoiaHasiDiv = document.querySelector('.botoiaHasiDiv');
                 botoiaHasiDiv.style.visibility = 'visible';
-            }, 73000);
+            }, 68000);
         }
     </script>
 
