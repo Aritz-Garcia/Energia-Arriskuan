@@ -62,6 +62,18 @@
             }
         }
 
+        @media (max-width: 768px) {
+            #titulua {
+                font-size: 250%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #titulua {
+                font-size: 150%;
+            }
+        }
+
         #titulua:after {
             content: ' ';
             bottom: 60%;
