@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="containerIndex items-center flex flex-col w-auto py-14 px-16 md:py-40">
+    <div class="containerIndex items-center flex flex-col w-auto py-14 px-16 md:py-56">
 
 
 
