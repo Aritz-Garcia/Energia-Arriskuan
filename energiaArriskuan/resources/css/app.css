@@ -83,3 +83,52 @@ body.fondoAzul{
     -moz-box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
     box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
 }
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+    background-color: #0bd904;
+    color: #010440;
+
+  }
+
+  .accordion:hover:after {
+    color: #010440;  /* Cambia el color al hacer hover */
+  }
+
+  .accordion:after {
+    content: '\2193';
+    color: #0bd904;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2191";
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: #010440;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+body.fotoFondoKontaktua {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../public/images/fondoInicio.png");
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+
+}
