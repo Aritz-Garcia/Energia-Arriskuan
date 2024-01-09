@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="contJolasAzalpena relative overflow-hidden text-[#0BD904]">
+    <div class="contJolasAzalpena relative overflow-hidden text-[#0BD904] mt-6">
         <div id="titulua" class="z-0 absolute bottom-0 text-justify overflow-hidden after:absolute after:left-0 after:right-0 after:top-0 after:pointer-events-none">
             <div id="azalpenaContent" class="absolute">
                 <p class="text-center my-5 text-white font-medium">ENERGIA ARRISKUAN</p>
