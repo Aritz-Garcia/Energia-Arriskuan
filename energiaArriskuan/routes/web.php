@@ -34,6 +34,14 @@ Route::get('/biltegia', function () {
     return view('biltegia');
 })->name('biltegia');
 
+Route::get('/patio', function () {
+    return view('patio');
+})->name('patio');
+
+Route::get('/sotoa', function () {
+    return view('sotoa');
+})->name('sotoa');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');

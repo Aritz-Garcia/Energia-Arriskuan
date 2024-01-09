@@ -4,9 +4,9 @@
 
 @section('content')
 
-<div class="flex flex-col lg:flex-row w-full">
+    <div class="flex flex-col lg:flex-row w-full">
 
-    <div class="w-full lg:w-1/2 lg:p-24 pb-8 pl-16 pr-16 pt-24">
+        <div class="w-full lg:w-1/2 lg:p-24 pb-8 pl-16 pr-16 pt-24">
 
             <h2 class="text-2xl mb-2 text-[#0BD904]">
                 Ohiko galderak
@@ -16,24 +16,29 @@
                 Zein da escape room-aren iraupena?
             </button>
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
             </div>
 
-            <button class="accordion bg-[#010440] text-[#0BD904]">Zenbat pertsonak parte har dezakete aldi berean escape room-aren?</button>
+            <button class="accordion bg-[#010440] text-[#0BD904]">Zenbat pertsonak parte har dezakete aldi berean escape
+                room-aren?</button>
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
             </div>
 
-            <button class="accordion bg-[#010440] text-[#0BD904]">Berariazko trebetasunak behar ditut escape room-are gozatzeko?</button>
+            <button class="accordion bg-[#010440] text-[#0BD904]">Berariazko trebetasunak behar ditut escape room-are
+                gozatzeko?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
@@ -44,27 +49,32 @@
                 Zer gertatzen da probak esleitutako denboraren barruan ebaztea lortzen ez badugu?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
 
             </div>
 
-            <button class="accordion bg-[#010440] text-[#0BD904]">Pistarik edo laguntzarik jaso dezaket jokoan zehar?</button>
+            <button class="accordion bg-[#010440] text-[#0BD904]">Pistarik edo laguntzarik jaso dezaket jokoan
+                zehar?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
 
             </div>
 
-            <button class="accordion bg-[#010440] text-[#0BD904]">Zer gertatzen da igarkizun bat konpondu ezin badut escape room-an?</button>
+            <button class="accordion bg-[#010440] text-[#0BD904]">Zer gertatzen da igarkizun bat konpondu ezin badut escape
+                room-an?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex
                     ea commodo consequat.</p>
