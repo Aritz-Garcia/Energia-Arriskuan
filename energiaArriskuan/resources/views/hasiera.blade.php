@@ -1,11 +1,11 @@
-{{-- @extends('layouts.plantillaHasiera')
+@extends('layouts.plantillaHasiera')
 
 @section('title', 'Hasiera')
 
-@section('content')>
+@section('content')
 
-    <div id="juego3">
+    {{-- <div id="juego3">
 
-    </div>
+    </div> --}}
 
-@endsection --}}
+@endsection

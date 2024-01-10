@@ -42,6 +42,10 @@ Route::get('/sotoa', function () {
     return view('sotoa');
 })->name('sotoa');
 
+Route::get('/teilatua', function () {
+    return view('teilatua');
+})->name('teilatua');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');

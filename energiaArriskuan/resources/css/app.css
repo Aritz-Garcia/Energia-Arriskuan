@@ -60,7 +60,14 @@ body.fotoFondoSotoa {
     height: 100vh;
 }
 
-
+body.fotoFondoTeilatua {
+    background-image: url("../../public/images/teilatua.png");
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
 
 body.fondoAzul{
     background-color: #0074CC;
