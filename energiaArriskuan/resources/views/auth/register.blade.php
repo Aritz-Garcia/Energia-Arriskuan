@@ -1,3 +1,4 @@
+@include("partials.menu")
 <x-guest-layout>
 
     <div id="registro">
@@ -110,3 +111,5 @@
 
     @vite('resources/js/vue/registro.js')
 </x-guest-layout>
+
+@include("partials.footer")
