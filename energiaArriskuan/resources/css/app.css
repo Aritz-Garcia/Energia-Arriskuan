@@ -33,6 +33,35 @@ body.fotoFondoBiltegia {
     height: 100vh;
 }
 
+body.fotoFondoKontaktua {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../public/images/fondoInicio.png");
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+body.fotoFondoPatio {
+    background-image: url("../../public/images/patio.png");
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body.fotoFondoSotoa {
+    background-image: url("../../public/images/sotoa.png");
+    background-color: #010440;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+
 body.fondoAzul{
     background-color: #0074CC;
 }
@@ -124,31 +153,3 @@ body.fondoAzul{
     overflow: hidden;
     transition: max-height 0.3s ease-out;
   }
-
-body.fotoFondoKontaktua {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../public/images/fondoInicio.png");
-    background-color: #010440;
-    background-size: cover;
-    background-position: center;
-
-}
-
-
-body.fotoFondoPatio {
-    background-image: url("../../public/images/patio.png");
-    background-color: #010440;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-}
-
-body.fotoFondoSotoa {
-    background-image: url("../../public/images/sotoa.png");
-    background-color: #010440;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-}
-
