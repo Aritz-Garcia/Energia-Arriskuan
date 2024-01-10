@@ -72,7 +72,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-bad-primary-button class="me-4" v-if="pausua == pausuakTotal" @click.prevent="dialogAtzera">
+                <x-bad-primary-button class="me-4" v-if="pausua == pausuakTotal" @click.prevent="atzera">
                     {{ __('Atzera') }}
                 </x-bad-primary-button>
 
@@ -91,7 +91,7 @@
         </form>
 
         {{-- Dialogo que al te advierte si quieres ir para atras o no porque la foto se borra si vas para atras --}}
-        <div id="dialog" class="hidden fixed inset-0 flex items-center justify-center">
+        {{-- <div id="dialog" class="hidden fixed inset-0 flex items-center justify-center">
             <div class="bg-white p-8 rounded shadow-lg">
                 <h2 class="text-xl font-bold mb-4">Kontuz</h2>
                 <p>Adi, atzera joatean aukeratutako argazkia ezabatuko da eta berriro sartu beharko da. Ziur zaude atzera joan nahi duzula?</p>
@@ -104,7 +104,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 
