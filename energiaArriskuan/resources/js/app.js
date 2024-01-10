@@ -18,3 +18,11 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Importa tu componente
+import EjemploComponente from '../components/juego3.vue';
+
+// Registra el componente globalmente
+const app = Vue.createApp(EjemploComponente);
+
+app.mount("#juego3")

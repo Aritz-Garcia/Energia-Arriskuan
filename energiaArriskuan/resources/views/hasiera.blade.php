@@ -2,7 +2,10 @@
 
 @section('title', 'Hasiera')
 
-@section('content')
+@section('content')>
 
+    <div id="juego3">
+
+    </div>
 
 @endsection
