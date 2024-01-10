@@ -1,4 +1,4 @@
-@extends('layouts.plantillaHasiera')
+{{-- @extends('layouts.plantillaHasiera')
 
 @section('title', 'Hasiera')
 
@@ -8,4 +8,4 @@
 
     </div>
 
-@endsection
+@endsection --}}
