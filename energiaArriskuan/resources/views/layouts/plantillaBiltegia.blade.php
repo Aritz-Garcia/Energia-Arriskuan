@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 

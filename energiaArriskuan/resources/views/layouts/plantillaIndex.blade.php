@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/app.js') }}" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased font-rubik fotoFondo">
+<body class="antialiased font-rubik fotoFondo min-h-screen">
 
     @include("partials.menu")
 
