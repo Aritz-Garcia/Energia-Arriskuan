@@ -1,7 +1,8 @@
 <template>
-    <div class="fondo">
 
-        <p class="text-white"></p>
+    <p class="text-[#0bd904] bg-[#000000] p-6 text-2xl md:w-auto mx-10">El código está formado por las iniciales de las 3 partes que forman el rotor de un aerogenerador.</p>
+
+    <div class="fondo">
 
         <div class="input-container">
 
@@ -28,9 +29,10 @@
         <div class="containerBoton">
             <button @click="checkResult" class="verify-btn">Verificar Resultado</button>
 
-            <div id="verification-result"></div>
         </div>
     </div>
+    <div id="verification-result"></div>
+
 </template>
 
 <script>
@@ -57,10 +59,11 @@ export default {
             var result3 = document.getElementById('letterInput3').value;
 
             if (result1 === 'B' && result2 === 'C' && result3 === 'P') {
+                document.querySelector('.fondo').style.backgroundImage = "url(../../images/CandadoAbierto.png)";
                 resultElement.innerHTML = '¡Correcto! Los valores han sido reiniciados.';
                 this.resetValues();
             } else {
-                resultElement.innerHTML = 'Incorrecto. Inténtalo de nuevo.';
+                resultElement.innerHTML = '¡Código incorrecto!';
             }
         },
 

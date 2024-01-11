@@ -193,7 +193,7 @@ body.fondoAzul{
   }
 
   .btn-increment, .btn-decrement {
-    background-color: #007bff;
+    background-color: #73633C;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -203,7 +203,7 @@ body.fondoAzul{
   }
 
   .btn-decrement {
-    background-color: #dc3545;
+    background-color: #73633C;
   }
 
   .verify-btn {
@@ -226,7 +226,7 @@ body.fondoAzul{
   }
 
   .fondo {
-    background-image: url("../../public/images/candado.png");
+    background-image: url("../../public/images/Candado.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,3 +235,4 @@ body.fondoAzul{
     justify-content: center;
     flex-direction: column;
 }
+
