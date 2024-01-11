@@ -2,6 +2,7 @@ import Alpine from 'alpinejs';
 import './bootstrap';
 import { createApp } from 'vue'
 import denbora from "../components/denbora.vue";
+import juego3 from "../components/juego3.vue";
 
 window.Alpine = Alpine;
 
@@ -9,6 +10,9 @@ Alpine.start();
 
 const app = createApp(denbora);
 app.mount('#tiempo');
+
+const juego3App = createApp(juego3);
+juego3App.mount("#juego3");
 
 var acc = document.getElementsByClassName("accordion");
 var i;

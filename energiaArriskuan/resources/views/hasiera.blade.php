@@ -4,8 +4,11 @@
 
 @section('content')
 
-    {{-- <div id="juego3">
+    <div id="juego3">
 
-    </div> --}}
+    </div>
+    <p>prueba</p>
+
+
 
 @endsection
