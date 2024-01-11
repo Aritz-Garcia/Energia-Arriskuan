@@ -12,6 +12,7 @@ class PartidaController extends Controller
     public function index()
     {
         //
+        return view('partida.index');
     }
 
     /**
