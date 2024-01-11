@@ -7,8 +7,6 @@
     <div id="juego3">
 
     </div>
-    <p>prueba</p>
-
 
 
 @endsection
