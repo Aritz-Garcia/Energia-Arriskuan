@@ -1,7 +1,7 @@
-<!-- <template>
+<template>
     <div>
 
-        <p> kdshfiugsdiugfui</p>
+        <p> kdshfiugsdiugfuissss</p>
 
     </div>
 </template>
@@ -12,4 +12,4 @@
 
     }
 
-</script> -->
+</script>
