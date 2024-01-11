@@ -1,8 +1,14 @@
 import Alpine from 'alpinejs';
+import './bootstrap';
+import { createApp } from 'vue'
+import denbora from "../components/denbora.vue";
 
 window.Alpine = Alpine;
 
 Alpine.start();
+
+const app = createApp(denbora);
+app.mount('#tiempo');
 
 var acc = document.getElementsByClassName("accordion");
 var i;
