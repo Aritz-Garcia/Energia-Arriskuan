@@ -234,5 +234,7 @@ body.fondoAzul{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-size: cover; /* Adjust according to your needs */
+
 }
 
