@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div id="tiempo">
+    <div id="tiempo" class="text-white">
 
     </div>
 
