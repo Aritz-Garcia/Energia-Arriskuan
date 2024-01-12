@@ -16,7 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased font-rubik fotoFondoHasiera">
+<body class="antialiased font-rubik">
 
     {{-- @include("partials.menu") --}}
 
