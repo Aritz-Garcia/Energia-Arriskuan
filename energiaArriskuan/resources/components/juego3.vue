@@ -25,7 +25,7 @@
       </div>
   
       <div class="containerBoton">
-        <button @click="checkResult" class="verify-btn" :disabled="verificationButtonBlocked">Comprobar</button>
+        <button @click="checkResult" class="verify-btn" :disabled="verificationButtonBlocked">ABRIR</button>
       </div>
     </div>
     <div id="verification-result"></div>
