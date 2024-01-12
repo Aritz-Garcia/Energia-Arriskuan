@@ -39,4 +39,8 @@
         </div>
     </div>
 
+    <div id="tiempo" class="text-white">
+
+    </div>
+
 @endsection

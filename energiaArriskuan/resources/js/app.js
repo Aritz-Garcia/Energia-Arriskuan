@@ -1,6 +1,7 @@
 import Alpine from 'alpinejs';
 import './bootstrap';
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import denbora from "../components/denbora.vue";
 import juego3 from "../components/juego3.vue";
 
@@ -9,6 +10,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 const app = createApp(denbora);
+app.use(createPinia());
 app.mount('#tiempo');
 
 const juego3App = createApp(juego3);
