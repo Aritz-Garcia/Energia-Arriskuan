@@ -16,7 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body  onclick="detectarClic(event)" class="antialiased font-rubik fotoFondoHasiera">
+<body class="antialiased font-rubik fotoFondoHasiera">
 
     {{-- @include("partials.menu") --}}
 
