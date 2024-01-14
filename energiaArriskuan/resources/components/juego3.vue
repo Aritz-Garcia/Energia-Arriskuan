@@ -38,9 +38,9 @@
         inputsBlocked: false,
         verificationButtonBlocked: false,
         vibration: false,
-        result1: '',
-        result2: '',
-        result3: '',
+        result1: 'A',
+        result2: 'A',
+        result3: 'A',
       };
     },
     methods: {
@@ -73,6 +73,10 @@
           resultElement.innerHTML = '';
           this.inputsBlocked = true;
           this.verificationButtonBlocked = true;
+          setTimeout(() => {
+            document.getElementById("juego3div").classList.remove("block");
+            document.getElementById("juego3div").classList.add("hidden");
+          }, 3000);
         } else {
           this.vibration = true;
           setTimeout(() => {
@@ -82,8 +86,8 @@
       },
   
       resetValues() {
-        this.result1 = 'C';
-        this.result2 = 'B';
+        this.result1 = 'B';
+        this.result2 = 'C';
         this.result3 = 'P';
       },
     },
