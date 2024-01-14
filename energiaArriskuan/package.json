@@ -21,7 +21,7 @@
         "@fontsource/inter": "^5.0.16",
         "@next/font": "^14.0.4",
         "@tailwindcss/typography": "^0.5.10",
-        "@vitejs/plugin-vue": "^4.5.2",
+        "@vitejs/plugin-vue": "^4.6.2",
         "bottleneck": "^2.19.5",
         "fluid-canvas": "github:malik-tillman/fluid-js",
         "i": "^0.3.7",
@@ -29,6 +29,6 @@
         "tailwind-typewriter": "^1.0.1",
         "typeface-inter": "^3.18.1",
         "vite-plugin-windicss": "^1.9.2",
-        "vue": "^3.4.7"
+        "vue": "^3.4.11"
     }
 }
