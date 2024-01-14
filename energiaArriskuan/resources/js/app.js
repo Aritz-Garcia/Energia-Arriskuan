@@ -3,7 +3,7 @@ import './bootstrap';
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import denbora from "../components/denbora.vue";
-import juego3 from "../components/juego3.vue";
+import hasiera from "../components/hasieraClick.vue";
 
 window.Alpine = Alpine;
 
@@ -13,8 +13,9 @@ const app = createApp(denbora);
 app.use(createPinia());
 app.mount('#tiempo');
 
-const juego3App = createApp(juego3);
-juego3App.mount("#juego3");
+const hasieraApp = createApp(hasiera);
+hasieraApp.mount("#hasieraDiv");
+
 
 var acc = document.getElementsByClassName("accordion");
 var i;

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Define las coordenadas de la parte específica que quieres hacer clic
         var areaTopPSotoa = 40;     // 40% del alto de la imagen
         var areaLeftPSotoa = 66;    // 66% del ancho de la imagen
-        var areaWidthPSotoa = 9;    // 9% del ancho de la imagen
+        var areaWidthPSotoa = 8;    // 9% del ancho de la imagen
         var areaHeightPSotoa = 27;  // 27% del alto de la imagen
 
         // Calcula las coordenadas absolutas de la posición específica
@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (posY >= areaTopAbsPSotoa && posY <= areaTopAbsPSotoa + areaHeightAbsPSotoa &&
             posX >= areaLeftAbsPSotoa && posX <= areaLeftAbsPSotoa + areaWidthAbsPSotoa) {
             // Realiza la acción deseada
-            document.getElementById('juego3div').classList.remove('hidden');
-            document.getElementById('juego3div').classList.add('block');
+            
         } else if (posY >= areaTopAbsPAlamacen && posY <= areaTopAbsPAlamacen + areaHeightAbsPAlamacen &&
             posX >= areaLeftAbsPAlamacen && posX <= areaLeftAbsPAlamacen + areaWidthAbsPAlamacen) {
             // Realiza la acción deseada

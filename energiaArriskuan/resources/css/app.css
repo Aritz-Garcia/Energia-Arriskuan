@@ -232,14 +232,14 @@ body.fondoAzul{
 
   .fondo {
     background-image: url("../../public/images/Candado.png");
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
     padding: 5%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-size: cover; /* Adjust according to your needs */
+    /* background-size: cover; /* Adjust according to your needs */
 
 }
 
