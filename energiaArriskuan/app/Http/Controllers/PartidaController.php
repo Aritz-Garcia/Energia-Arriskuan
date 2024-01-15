@@ -53,8 +53,15 @@ class PartidaController extends Controller
     }
 
     public function hasiera(int $partidaId) {
-        $partida = Partida::find($partidaId);
+        // $partida = Partida::find($partidaId);
+        $partida = Partida::where('id', $partidaId)->where('irabazita', 0)->first();
         return view('hasiera', ['partida' => $partida]);
+
+    }
+
+    public function biltegia(int $partidaId) {
+        $partida = Partida::find($partidaId);
+        return view('biltegia', ['partida' => $partida]);
 
     }
 }
