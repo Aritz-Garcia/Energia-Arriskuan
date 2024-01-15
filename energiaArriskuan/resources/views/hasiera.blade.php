@@ -5,6 +5,7 @@
 @section('content')
 
     <div id="hasieraDiv">
+        <Hasiera nombre="prueba"></Hasiera>
 
         {{-- <img src="{{asset('images/hasiera.png')}}" id="imagenClickable" alt="Img" style="width: 100%; height:100vh">
 

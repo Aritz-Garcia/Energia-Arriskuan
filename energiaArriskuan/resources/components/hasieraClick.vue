@@ -29,6 +29,7 @@
 <script>
     import { createApp } from 'vue'
     import juego3 from "./juego3.vue";
+    import route from '../../vendor/tightenco/ziggy';
 
     document.addEventListener('DOMContentLoaded', function() {
         const juego3App = createApp(juego3);
@@ -71,10 +72,18 @@
                         posX >= areaLeftAbs && posX <= areaLeftAbs + areaWidthAbs) {
                         if (i == 0) {
                             // * Almacen
-                            // TODO Cambio de pagina a almacen
-                            console.log("Almacen");
+                            window.location.href = route('biltegia');
                         } else if (i == 1) {
                             // * Sotoa
+                            // TODO Cambiar a pagina de sotoa cuando el juego se haya completado una vez
+
+                            // Beste orrialdeak kendu
+                            document.getElementById('ateaItxiakDiv').classList.remove('block');
+                            document.getElementById('erlojuaDiv').classList.remove('block');
+                            document.getElementById('ateaItxiakDiv').classList.add('hidden');
+                            document.getElementById('erlojuaDiv').classList.add('hidden');
+
+                            // 3. jolasa egin gabe badago
                             document.getElementById('juego3div').classList.remove('hidden');
                             document.getElementById('juego3div').classList.add('block');
                         } else if (i == 2) {

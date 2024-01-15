@@ -29,6 +29,8 @@
         "tailwind-typewriter": "^1.0.1",
         "typeface-inter": "^3.18.1",
         "vite-plugin-windicss": "^1.9.2",
-        "vue": "^3.4.11"
+        "vue": "^3.4.11",
+        "ziggy": "^2.4.0",
+        "ziggy-js": "^1.8.1"
     }
 }
