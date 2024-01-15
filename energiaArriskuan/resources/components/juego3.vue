@@ -71,15 +71,11 @@
 
         if (this.result1 === 'B' && this.result2 === 'C' && this.result3 === 'P') {
           document.querySelector('.fondo').style.backgroundImage = "url('/T1-2DW3D/energiaArriskuan/public/images/candadoAbierto.png')";
-          resultElement2.innerHTML = '¡Correcto! Ahora puedes entrar al Biltegi';
+          resultElement2.innerHTML = 'Zuzen! Sotora sar zaitezke orain.';
           this.resetValues();
           resultElement.innerHTML = '';
           this.inputsBlocked = true;
           this.verificationButtonBlocked = true;
-          setTimeout(() => {
-            document.getElementById("juego3div").classList.remove("block");
-            document.getElementById("juego3div").classList.add("hidden");
-          }, 3000);
         } else {
           this.vibration = true;
           setTimeout(() => {
