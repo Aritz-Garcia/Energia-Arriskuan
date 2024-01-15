@@ -5,7 +5,7 @@
 
         <div id="juego3div" class="hidden">
             <div id="juego3">
-                <Juego3></Juego3>
+                <Juego3 :partida=partida.id></Juego3>
             </div>
         </div>
 
