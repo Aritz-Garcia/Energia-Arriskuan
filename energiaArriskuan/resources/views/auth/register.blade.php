@@ -6,8 +6,8 @@
             @csrf
 
             <div v-show="pausua == 1">
-                <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-300">Datu pertsonalak:</h3>
-                <hr class="my-2">
+                <h3 class="text-2xl font-bold text-[#0BD904]">Datu pertsonalak:</h3>
+                <hr class="my-2 border-t-2 border-[#0BD904]">
                 <!-- Name -->
                 <div>
                     <x-input-label for="name" :value="__('Name')" />
@@ -31,8 +31,8 @@
             </div>
 
             <div v-show="pausua == 2">
-                <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-300">Erabiltzaileak sortu:</h3>
-                <hr class="my-2">
+                <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzaileak sortu:</h3>
+                <hr class="my-2 border-t-2 border-[#0BD904]">
                 <!-- Email Address -->
                 <div class="mt-4">
                     <x-input-label for="email" :value="__('Email')" />
@@ -41,11 +41,20 @@
                 </div>
 
                 <!-- Argazia -->
-                <div class="mt-4">
+                <div class="mt-4 grid w-full items-center gap-1.5">
                     <x-input-label for="foto" :value="__('Argazkia - Aukerazkoa')" />
-                    <input type="file" name="foto" id="foto" accept="image/*" @change="argazkiaBarruan">
+                    <input
+                        class="flex w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
+                        type="file"
+                        id="picture"
+                        name="foto"
+                        accept="image/*"
+                        @change="argazkiaBarruan"
+                    />
+
                     <x-input-error :messages="$errors->get('foto')" class="mt-2" />
                 </div>
+
 
                 <!-- Password -->
                 <div class="mt-4">
@@ -77,7 +86,7 @@
                     {{ __('Atzera') }}
                 </x-bad-primary-button>
 
-                <a class="underline text-sm text-gray-600 text-center dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+                <a class="text-[#0BD904]" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
