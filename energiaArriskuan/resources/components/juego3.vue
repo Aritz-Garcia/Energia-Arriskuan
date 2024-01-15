@@ -36,6 +36,9 @@
 
   <script>
   export default {
+    props: {
+        partida: String,
+    },
     data() {
       return {
         inputsBlocked: false,
@@ -76,6 +79,7 @@
           resultElement.innerHTML = '';
           this.inputsBlocked = true;
           this.verificationButtonBlocked = true;
+          window.location.href = route('prueba3update', this.partida);
         } else {
           this.vibration = true;
           setTimeout(() => {
