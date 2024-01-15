@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Partida;
+use App\Models\Prueba;
 
-class PartidaController extends Controller
+
+class PruebaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,6 @@ class PartidaController extends Controller
     public function index()
     {
         //
-        return view('partida.index');
     }
 
     /**
@@ -48,20 +49,11 @@ class PartidaController extends Controller
         //
     }
 
-    public function jolasAzalpena(int $partidaId) {
-        return view('jolasa', ['partidaId' => $partidaId]);
-    }
+    public function prueba3(String $partidaId){
 
-    public function hasiera(int $partidaId) {
-        // $partida = Partida::find($partidaId);
-        $partida = Partida::where('id', $partidaId)->where('irabazita', 0)->first();
-        return view('hasiera', ['partida' => $partida]);
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba3")->update(["bukatuta" => 1]);
 
-    }
-
-    public function biltegia(int $partidaId) {
-        $partida = Partida::find($partidaId);
-        return view('biltegia', ['partida' => $partida]);
+        return redirect()->route("hasiera", $partidaId);
 
     }
 }

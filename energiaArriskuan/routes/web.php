@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PruebaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,6 +58,9 @@ Route::middleware('auth')->group(function () {
     // Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
     Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
     Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
+    Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
+
+    Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
 
 });
 

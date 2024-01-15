@@ -5,7 +5,7 @@
 
         <div id="juego3div" class="hidden">
             <div id="juego3">
-                <Juego3></Juego3>
+                <Juego3 :partida=partida.id></Juego3>
             </div>
         </div>
 
@@ -81,11 +81,9 @@
                         posX >= areaLeftAbs && posX <= areaLeftAbs + areaWidthAbs) {
                         if (i == 0) {
                             // * Almacen
-                            window.location.href = route('biltegia');
+                            window.location.href = route('biltegia', this.partida.id);
                         } else if (i == 1) {
                             // * Sotoa
-                            // TODO Cambiar a pagina de sotoa cuando el juego se haya completado una vez
-
                             for (let i = 0; i < this.pruebas.length; i++) {
                                 if (this.pruebas[i].izena == "prueba3") {
                                     if (this.pruebas[i].bukatuta) {

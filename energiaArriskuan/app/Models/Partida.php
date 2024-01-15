@@ -12,7 +12,6 @@ class Partida extends Model
     protected $table = "partidas";
     protected $primaryKey = "id";
     protected $guarded = ["denbora"];
-    protected $hidden = ['id'];
 
     public function erabiltzailea()
     {
