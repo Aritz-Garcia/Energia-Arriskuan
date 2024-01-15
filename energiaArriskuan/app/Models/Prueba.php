@@ -16,6 +16,6 @@ class Prueba extends Model
 
     public function partida()
     {
-        return $this->belongsTo(Partida::class);
+        return $this->belongsTo(Partida::class, 'id_partida');
     }
 }

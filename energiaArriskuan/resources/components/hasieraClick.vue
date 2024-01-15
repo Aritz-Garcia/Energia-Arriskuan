@@ -1,11 +1,11 @@
 <template>
 
     <div>
-        <img src="images/hasiera.png" @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
+        <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
         <div id="juego3div" class="hidden">
             <div id="juego3">
-
+                <Juego3></Juego3>
             </div>
         </div>
 
@@ -28,16 +28,25 @@
 
 <script>
     import { createApp } from 'vue'
-    import juego3 from "./juego3.vue";
+    import Juego3 from "./juego3.vue";
     import route from '../../vendor/tightenco/ziggy';
 
     document.addEventListener('DOMContentLoaded', function() {
-        const juego3App = createApp(juego3);
+        const juego3App = createApp({
+            components: {
+                Juego3,
+            }
+        });
         juego3App.mount("#juego3");
     });
 
     export default {
         name: 'hasieraClick',
+        props: {
+            urlimg: String,
+            partida: Object,
+            pruebas: Array,
+        },
         data () {
             return {
                 objektuak: [
@@ -77,15 +86,27 @@
                             // * Sotoa
                             // TODO Cambiar a pagina de sotoa cuando el juego se haya completado una vez
 
-                            // Beste orrialdeak kendu
-                            document.getElementById('ateaItxiakDiv').classList.remove('block');
-                            document.getElementById('erlojuaDiv').classList.remove('block');
-                            document.getElementById('ateaItxiakDiv').classList.add('hidden');
-                            document.getElementById('erlojuaDiv').classList.add('hidden');
+                            for (let i = 0; i < this.pruebas.length; i++) {
+                                if (this.pruebas[i].izena == "prueba3") {
+                                    if (this.pruebas[i].bukatuta) {
+                                        // Jolasa bukatuta
+                                        window.location.href = route('sotoa');
+                                    } else {
+                                        // Jolasa egin gabe
+                                        // Beste orrialdeak kendu
+                                        document.getElementById('ateaItxiakDiv').classList.remove('block');
+                                        document.getElementById('erlojuaDiv').classList.remove('block');
+                                        document.getElementById('ateaItxiakDiv').classList.add('hidden');
+                                        document.getElementById('erlojuaDiv').classList.add('hidden');
 
-                            // 3. jolasa egin gabe badago
-                            document.getElementById('juego3div').classList.remove('hidden');
-                            document.getElementById('juego3div').classList.add('block');
+                                        // 3. jolasa egin gabe badago
+                                        document.getElementById('juego3div').classList.remove('hidden');
+                                        document.getElementById('juego3div').classList.add('block');
+                                    }
+                                    return;
+                                }
+                            }
+
                         } else if (i == 2) {
                             // * Techo
                             // TODO Cambio de pagina a techo
