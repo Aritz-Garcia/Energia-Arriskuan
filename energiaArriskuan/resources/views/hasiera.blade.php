@@ -12,7 +12,7 @@
         <Denbora></Denbora> --}}
 
     </div>
-        {{-- <div style="position: absolute;
+    {{-- <div style="position: absolute;
         top: 40vh;
         left: 66%;
         width: 8%;
@@ -75,9 +75,7 @@
         </div>
     </div> --}}
 
-    <script>
-
-    </script>
+    <script></script>
 
 
 @endsection
