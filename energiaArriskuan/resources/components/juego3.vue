@@ -105,7 +105,7 @@
 export default {
     name: "juego3",
     props: {
-        partidaa: String,
+        partida: String,
     },
     data() {
         return {
@@ -154,7 +154,7 @@ export default {
                 this.resetValues();
                 this.inputsBlocked = true;
                 this.verificationButtonBlocked = true;
-                window.location.href = route("prueba3.update", this.partidaa);
+                window.location.href = route("prueba3.update", this.partida);
             } else {
                 this.vibration = true;
                 setTimeout(() => {
