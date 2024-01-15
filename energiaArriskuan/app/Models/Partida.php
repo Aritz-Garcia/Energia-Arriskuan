@@ -21,6 +21,6 @@ class Partida extends Model
 
     public function pruebas()
     {
-        return $this->hasMany(Prueba::class);
+        return $this->hasMany(Prueba::class, 'id_partida');
     }
 }
