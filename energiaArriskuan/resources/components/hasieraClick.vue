@@ -8,6 +8,20 @@
 
             </div>
         </div>
+
+        <!-- Erlojua klikatzean erakusten den testua -->
+        <div id="erlojuaDiv" class="hidden">
+            <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+                <p id="erlojuaPText"></p>
+            </div>
+        </div>
+
+        <!-- Atea itxita dagoela erakusten duen testua -->
+        <div id="ateaItxiakDiv" class="hidden">
+            <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+                <p>Atea itxita dago</p>
+            </div>
+        </div>
     </div>
 
 </template>
@@ -26,16 +40,18 @@
         data () {
             return {
                 objektuak: [
-                    // Almacen
+                    // * Almacen
                     {areaTop: 40, areaLeft: 26, areaWidth: 8, areaHeight: 27},
-                    // Sotoa
+                    // * Sotoa
                     {areaTop: 40, areaLeft: 66, areaWidth: 8, areaHeight: 27},
-                    // Techo
+                    // * Techo
                     {areaTop: 35.2, areaLeft: 45.1, areaWidth: 4, areaHeight: 10},
-                    // Jardin
+                    // * Jardin
                     {areaTop: 43, areaLeft: 37, areaWidth: 3, areaHeight: 18},
-                    // Erlojua
+                    // * Erlojua
                     {areaTop: 36, areaLeft: 53.7, areaWidth: 1.7, areaHeight: 2},
+                    // * Ate itxiak
+                    {areaTop: 46.1, areaLeft: 50.1, areaWidth: 7.3, areaHeight: 10},
 
                 ],
             }
@@ -54,28 +70,65 @@
                     if (posY >= areaTopAbs && posY <= areaTopAbs + areaHeightAbs &&
                         posX >= areaLeftAbs && posX <= areaLeftAbs + areaWidthAbs) {
                         if (i == 0) {
-                            // Alamcen
+                            // * Almacen
+                            // TODO Cambio de pagina a almacen
                             console.log("Almacen");
                         } else if (i == 1) {
-                            // Sotoa
-                            console.log("Sotoa");
-
+                            // * Sotoa
                             document.getElementById('juego3div').classList.remove('hidden');
                             document.getElementById('juego3div').classList.add('block');
                         } else if (i == 2) {
-                            //Techo
+                            // * Techo
+                            // TODO Cambio de pagina a techo
                             console.log("Techo");
                         } else if (i == 3) {
-                            // Jardin
+                            // * Jardin
+                            // TODO Cambio de pagina a jardin
                             console.log("Jardin");
                         } else if (i == 4) {
-                            // Erlojua
-                            console.log("Erlojua");
+                            // * Erlojua
+                            // Erlojua klikatzean erakusten den testua
+                            document.getElementById('erlojuaDiv').classList.remove('hidden');
+                            document.getElementById('erlojuaDiv').classList.add('block');
+                            document.getElementById('erlojuaDiv').classList.add('animate__ateaItxia__text');
+                            document.getElementById('erlojuaPText').innerHTML = this.eguna() + "ak dira";
+
+                            // Beste testuak kendu
+                            document.getElementById('ateaItxiakDiv').classList.remove('block');
+                            document.getElementById('ateaItxiakDiv').classList.add('hidden');
+
+                            setTimeout(() => {
+                                document.getElementById('erlojuaDiv').classList.remove('block');
+                                document.getElementById('erlojuaDiv').classList.add('hidden');
+                                document.getElementById('erlojuaDiv').classList.remove('animate__ateaItxia__text');
+                            }, 4900);
+                        } else if (i == 5) {
+                            // * Ate itxiak
+                            // Atea itxita dagoela erakusten duen testua
+                            document.getElementById('ateaItxiakDiv').classList.remove('hidden');
+                            document.getElementById('ateaItxiakDiv').classList.add('block');
+                            document.getElementById('ateaItxiakDiv').classList.add('animate__ateaItxia__text');
+
+                            // Beste testuak kendu
+                            document.getElementById('erlojuaDiv').classList.remove('block');
+                            document.getElementById('erlojuaDiv').classList.add('hidden');
+
+                            setTimeout(() => {
+                                document.getElementById('ateaItxiakDiv').classList.remove('block');
+                                document.getElementById('ateaItxiakDiv').classList.add('hidden');
+                                document.getElementById('ateaItxiakDiv').classList.remove('animate__ateaItxia__text');
+                            }, 4900);
                         }
 
                         return;
                     }
                 }
+            },
+            eguna() {
+                let eguna = new Date();
+                let ordua = eguna.getHours();
+                let minutua = eguna.getMinutes();
+                return ordua + ":" + minutua;
             }
         },
     }

@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .font-rubik {
-    font-family: 'Rubik';
+    font-family: "Rubik";
 }
 
 body.fotoFondo {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/images/fondoInicio.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../../public/images/fondoInicio.png");
     background-color: #010440;
     background-size: cover;
     background-position: center;
-
 }
 
 body.fotoFondoHasiera {
@@ -34,13 +33,12 @@ body.fotoFondoBiltegia {
 }
 
 body.fotoFondoKontaktua {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../public/images/fondoInicio.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../../public/images/fondoInicio.png");
     background-color: #010440;
     background-size: cover;
     background-position: center;
-
 }
-
 
 body.fotoFondoPatio {
     background-image: url("../../public/images/patio.png");
@@ -69,18 +67,17 @@ body.fotoFondoTeilatua {
     height: 100vh;
 }
 
-body.fondoAzul{
-    background-color: #0074CC;
+body.fondoAzul {
+    background-color: #0074cc;
 }
 
-
 .fill-current {
-    fill: #0BD904; /* Color predeterminado */
+    fill: #0bd904; /* Color predeterminado */
     transition: fill 0.3s ease; /* Transición suave */
 }
 
 .fill-current:hover {
-    fill: #F2F8F0; /* Color al hacer hover */
+    fill: #f2f8f0; /* Color al hacer hover */
 }
 
 .containerIndex {
@@ -91,10 +88,10 @@ body.fondoAzul{
     word-spacing: 4px;
 }
 
-.containerIndex p{
+.containerIndex p {
     color: white;
-	-webkit-text-stroke: 1px black;
-	text-shadow: 0px 1px 4px black;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 1px 4px black;
 }
 
 #bottone1 {
@@ -103,17 +100,17 @@ body.fondoAzul{
     padding-bottom: 16px;
     padding-top: 16px;
     border-radius: 9px;
-    background: #0BD904;
+    background: #0bd904;
     border: none;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0px 0px 30px 14px rgba(11,217,4,1);
+    box-shadow: 0px 0px 30px 14px rgba(11, 217, 4, 1);
     margin-top: 100px;
 }
 
-#bottone1:hover{
+#bottone1:hover {
     transition: 0.7s;
-    box-shadow: 0px 0px 50px 28px rgba(11,217,4,1);
+    box-shadow: 0px 0px 50px 28px rgba(11, 217, 4, 1);
 }
 
 .accordion {
@@ -125,41 +122,41 @@ body.fondoAzul{
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-  }
+}
 
-  .active, .accordion:hover {
+.active,
+.accordion:hover {
     background-color: #0bd904;
     color: #010440;
+}
 
-  }
+.accordion:hover:after {
+    color: #010440; /* Cambia el color al hacer hover */
+}
 
-  .accordion:hover:after {
-    color: #010440;  /* Cambia el color al hacer hover */
-  }
-
-  .accordion:after {
-    content: '\2193';
+.accordion:after {
+    content: "\2193";
     color: #0bd904;
     font-weight: bold;
     float: right;
     margin-left: 5px;
-  }
+}
 
-  .active:after {
+.active:after {
     content: "\2191";
-  }
+}
 
-  .panel {
+.panel {
     padding: 0 18px;
     background-color: #010440;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-  }
+}
 
-  /* ------------------------------------------- */
+/* ------------------------------------------- */
 
-#juego3{
+#juego3 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -173,7 +170,7 @@ body.fondoAzul{
     justify-content: center;
 }
 
-  .input-container {
+.input-container {
     display: flex;
     margin-top: 200px;
     flex-direction: row;
@@ -181,13 +178,14 @@ body.fondoAzul{
     justify-content: center;
 }
 
-  .number-input {
+.number-input {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .selected-letter, .input-field {
+.selected-letter,
+.input-field {
     width: 40px;
     text-align: center;
     font-size: 18px;
@@ -195,23 +193,24 @@ body.fondoAzul{
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0;
-  }
+}
 
-  .btn-increment, .btn-decrement {
-    background-color: #73633C;
+.btn-increment,
+.btn-decrement {
+    background-color: #73633c;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     padding: 5px 10px;
-  }
+}
 
-  .btn-decrement {
-    background-color: #73633C;
-  }
+.btn-decrement {
+    background-color: #73633c;
+}
 
-  .verify-btn {
+.verify-btn {
     background-color: black;
     color: #fff;
     border: none;
@@ -220,17 +219,16 @@ body.fondoAzul{
     font-size: 16px;
     padding: 10px;
     margin-top: 10px;
+}
 
-  }
-
-  .containerBoton{
+.containerBoton {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .fondo {
+.fondo {
     background-image: url("../../public/images/Candado.png");
     /* background-size: cover; */
     background-position: center;
@@ -240,21 +238,50 @@ body.fondoAzul{
     justify-content: center;
     flex-direction: column;
     /* background-size: cover; /* Adjust according to your needs */
-
 }
 
 .vibrating {
     animation: shake 0.5s ease-in-out;
-  }
+}
 
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
     }
-    25%, 75% {
-      transform: translateX(-10px);
+    25%,
+    75% {
+        transform: translateX(-10px);
     }
     50% {
-      transform: translateX(10px);
+        transform: translateX(10px);
     }
-  }
+}
+
+/********************************* Hasiera *********************************/
+
+.ateaItxiaText {
+    transform: translate(-50%, -50%);
+}
+
+.animate__ateaItxia__text {
+    animation: ateaItxiaDiv 5s;
+}
+
+@keyframes ateaItxiaDiv {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

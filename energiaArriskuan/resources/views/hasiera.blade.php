@@ -11,7 +11,7 @@
         <Denbora></Denbora> --}}
 
     </div>
-        <div style="position: absolute;
+        {{-- <div style="position: absolute;
         top: 40vh;
         left: 66%;
         width: 8%;
@@ -55,6 +55,15 @@
         background-color:#cc5858;
         opacity: 0.8;">
         </div>
+
+        <div style="position: absolute;
+        top: 46.1vh;
+        left: 50.1%;
+        width: 7.3%;
+        height: 10vh;
+        background-color:#500191;
+        opacity: 0.8;">
+        </div> --}}
 
 
     {{-- @vite('resources/js/clickarImagenes/puerta1.js') --}}
