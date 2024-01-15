@@ -27,10 +27,6 @@ Route::get('/jolasa', function () {
     return view('jolasa');
 })->name('jolasa');
 
-Route::get('/hasiera', function () {
-    return view('hasiera');
-})->name('hasiera');
-
 Route::get('/biltegia', function () {
     return view('biltegia');
 })->name('biltegia');
@@ -57,6 +53,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
+    Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
+    Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
+
 });
 
 Route::get('/partidas', [PartidaController::class, 'index'])->name('partida.index');
