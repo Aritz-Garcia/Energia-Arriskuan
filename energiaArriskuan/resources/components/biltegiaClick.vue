@@ -5,7 +5,7 @@
 
         <div id="juego3div" class="hidden">
             <div id="juego3">
-                <Juego3 :partidaa=partida.id></Juego3>
+                <Juego3></Juego3>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
 <script>
     import { createApp } from 'vue'
     import Juego3 from "./juego3.vue";
-    import route from '../../vendor/tightenco/ziggy';
+    import route from '../../vendor/tightenco/ziggy/src/js';
 
     document.addEventListener('DOMContentLoaded', function() {
         const juego3App = createApp({
@@ -85,7 +85,6 @@
                         } else if (i == 1) {
                             // * Sotoa
                             // TODO Poner id de partida al redirigir
-
                             for (let i = 0; i < this.pruebas.length; i++) {
                                 if (this.pruebas[i].izena == "prueba3") {
                                     if (this.pruebas[i].bukatuta) {

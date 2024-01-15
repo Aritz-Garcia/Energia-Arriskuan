@@ -12,7 +12,6 @@ class Prueba extends Model
     protected $table = "pruebas";
     protected $primaryKey = "id";
     protected $guarded = ["denbora"];
-    protected $hidden = ['id'];
 
     public function partida()
     {
