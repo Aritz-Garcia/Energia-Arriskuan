@@ -28,22 +28,6 @@ Route::get('/jolasa', function () {
     return view('jolasa');
 })->name('jolasa');
 
-Route::get('/biltegia', function () {
-    return view('biltegia');
-})->name('biltegia');
-
-Route::get('/patio', function () {
-    return view('patio');
-})->name('patio');
-
-Route::get('/sotoa', function () {
-    return view('sotoa');
-})->name('sotoa');
-
-Route::get('/teilatua', function () {
-    return view('teilatua');
-})->name('teilatua');
-
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
@@ -59,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
     Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
     Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
+    Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
+    Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
+    Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
 
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
 

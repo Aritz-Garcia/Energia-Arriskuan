@@ -88,7 +88,7 @@
                                 if (this.pruebas[i].izena == "prueba3") {
                                     if (this.pruebas[i].bukatuta) {
                                         // Jolasa bukatuta
-                                        window.location.href = route('sotoa');
+                                        window.location.href = route('sotoa', this.partida.id);
                                     } else {
                                         // Jolasa egin gabe
                                         // Beste orrialdeak kendu
@@ -107,12 +107,10 @@
 
                         } else if (i == 2) {
                             // * Techo
-                            // TODO Cambio de pagina a techo
-                            console.log("Techo");
+                            window.location.href = route('teilatua', this.partida.id);
                         } else if (i == 3) {
                             // * Jardin
-                            // TODO Cambio de pagina a jardin
-                            console.log("Jardin");
+                            window.location.href = route('patio', this.partida.id);
                         } else if (i == 4) {
                             // * Erlojua
                             // Erlojua klikatzean erakusten den testua
