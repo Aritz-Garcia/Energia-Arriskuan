@@ -2,8 +2,9 @@ import Alpine from 'alpinejs';
 import './bootstrap';
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { ZiggyVue } from 'ziggy-js';
 import denbora from "../components/denbora.vue";
-import hasiera from "../components/hasieraClick.vue";
+import Hasiera from "../components/hasieraClick.vue";
 
 window.Alpine = Alpine;
 
@@ -13,7 +14,12 @@ const app = createApp(denbora);
 app.use(createPinia());
 app.mount('#tiempo');
 
-const hasieraApp = createApp(hasiera);
+const hasieraApp = createApp({
+    components: {
+        Hasiera,
+    }
+});
+hasieraApp.use(ZiggyVue);
 hasieraApp.mount("#hasieraDiv");
 
 
