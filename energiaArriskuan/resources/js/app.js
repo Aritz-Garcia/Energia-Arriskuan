@@ -5,6 +5,8 @@ import { createPinia } from 'pinia'
 import { ZiggyVue } from 'ziggy-js';
 import denbora from "../components/denbora.vue";
 import Hasiera from "../components/hasieraClick.vue";
+import Biltegia from "../components/biltegiaClick.vue";
+
 
 window.Alpine = Alpine;
 
@@ -21,6 +23,14 @@ const hasieraApp = createApp({
 });
 hasieraApp.use(ZiggyVue);
 hasieraApp.mount("#hasieraDiv");
+
+const biltegiaApp = createApp({
+    components: {
+        Biltegia,
+    }
+});
+biltegiaApp.use(ZiggyVue);
+biltegiaApp.mount("#biltegiaDiv");
 
 
 var acc = document.getElementsByClassName("accordion");
