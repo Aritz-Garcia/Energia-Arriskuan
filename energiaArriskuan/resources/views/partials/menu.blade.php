@@ -43,12 +43,12 @@
                             </x-dropdown>
                         @else
                             <button onclick="window.location='{{ route('login') }}'"
-                                class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                class="font-semibold text-[#010440] bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                 Saioa hasi
                             </button>
                             @if (Route::has('register'))
                                 <button onclick="window.location='{{ route('register') }}'"
-                                    class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                    class="font-semibold text-[#010440] bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                     Erregistratu
                                 </button>
                             @endif
