@@ -168,7 +168,9 @@ body.fondoAzul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según tu preferencia */
 }
+
 
 .input-container {
     display: flex;
@@ -257,6 +259,23 @@ body.fondoAzul {
         transform: translateX(10px);
     }
 }
+
+#text {
+    background-image: url("../../public/images/hoja.png");
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+    /* También puedes usar 'background-size: contain;' si prefieres que la imagen se ajuste completamente dentro del div */
+    font-family: "Indie Flower", cursive, sans-serif;
+
+}
+
+.close-img {
+    float: right;
+    margin-right: 20px; /* Ajusta según sea necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    width: 40px; /* Ajusta el ancho según tus preferencias */
+    height: 40px; /* Ajusta la altura según tus preferencias */
+  }
 
 /********************************* Hasiera *********************************/
 
