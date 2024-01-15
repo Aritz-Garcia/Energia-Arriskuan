@@ -58,8 +58,9 @@ Route::middleware('auth')->group(function () {
     // Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
     Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
     Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
+    Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
 
-    Route::put('/prueba3/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3update');
+    Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
 
 });
 
