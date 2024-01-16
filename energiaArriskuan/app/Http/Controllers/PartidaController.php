@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partida;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PartidaController extends Controller
 {
@@ -48,37 +50,74 @@ class PartidaController extends Controller
         //
     }
 
-    public function jolasAzalpena(int $partidaId) {
-        return view('jolasa', ['partidaId' => $partidaId]);
+    public function jolasAzalpena(int $erabiltzaileaId) {
+
+        if (Auth::user()->id == $erabiltzaileaId) {
+            $partida = Partida::where('id_erabiltzailea', $erabiltzaileaId)->where('bukatuta', 0)->first();
+
+            if ($partida == null) {
+                $partida = new Partida();
+                $partida->id_erabiltzailea = $erabiltzaileaId;
+                $partida->save();
+
+                for ($i = 1; $i <= 4; $i++) {
+                    $partida->pruebas()->create([
+                        'izena' => 'prueba' . $i,
+                        'bukatuta' => 0,
+                    ]);
+                }
+                return view('jolasa', ['partida' => $partida]);
+            } else {
+                return redirect()->route('hasiera', $partida->id);
+            }
+        } else {
+            return redirect()->route('index');
+        }
+
+
     }
 
     public function hasiera(int $partidaId) {
-        // $partida = Partida::find($partidaId);
-        $partida = Partida::where('id', $partidaId)->where('irabazita', 0)->first();
+        $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
         return view('hasiera', ['partida' => $partida]);
 
     }
 
     public function biltegia(int $partidaId) {
         $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
         return view('biltegia', ['partida' => $partida]);
 
     }
 
     public function sotoa(int $partidaId) {
         $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
         return view('sotoa', ['partida' => $partida]);
 
     }
 
     public function patio(int $partidaId) {
         $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
         return view('patio', ['partida' => $partida]);
 
     }
 
     public function teilatua(int $partidaId) {
         $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
         return view('teilatua', ['partida' => $partida]);
 
     }
