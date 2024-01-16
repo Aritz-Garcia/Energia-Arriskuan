@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div id="tiempo" class="text-white">
+    {{-- <div id="tiempo" class="text-white"> --}}
 
     </div>
 

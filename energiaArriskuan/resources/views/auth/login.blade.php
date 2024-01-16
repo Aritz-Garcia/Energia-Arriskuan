@@ -8,7 +8,7 @@
         @csrf
 
         <!-- Email Address -->
-        <div>
+        <div class="pt-3">
             <x-input-label for="erabiltzailea" :value="__('Erabiltzailea')" />
             <x-text-input id="erabiltzailea" class="block mt-1 w-full" type="text" name="erabiltzailea" :value="old('erabiltzailea')"
                 required autofocus autocomplete="username" />
@@ -30,7 +30,7 @@
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
-                    class="rounded text-[#0BD904] bg-slate-600 border-[#0BD904] shadow-sm focus:ring-[#0BD904] "
+                    class="rounded text-[#0BD904] bg-[#010440] border-[#0BD904] shadow-sm focus:ring-[#0BD904] "
                     name="remember">
                 <span class="ms-2 text-sm text-[#0BD904]">{{ __('Remember me') }}</span>
             </label>
