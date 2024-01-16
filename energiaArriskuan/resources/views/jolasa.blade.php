@@ -20,10 +20,9 @@
         </div>
         <div class="z-50 botoiaHasiDiv flex flex-col justify-center items-center h-full m-0 invisible">
             <p class="md:mx-auto text-3xl font-semibold">Misioa hasteko prest?</p>
-            <a href="" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
+            <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
         </div>
     </div>
-
 
 
     <style>
