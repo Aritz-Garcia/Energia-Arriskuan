@@ -8,7 +8,7 @@
 
 body.fotoFondo {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../../public/images/fondoInicio.png");
+    url("../../public/images/fondoInicio.png");
     background-color: #010440;
     background-size: cover;
     background-position: center;
@@ -198,30 +198,30 @@ body.fondoAzul {
     transform: translateX(-50%);
     margin-top: 20px; /* Agrega un espacio entre main y cartasC */
   }
-  
+
   .carta-box {
     margin: 20px;
     width: 150px;
     height: 200px;
     perspective: 1000px;
   }
-  
+
   .carta-box:hover .carta {
     transform: rotateY(180deg);
   }
-  
+
   .carta {
     transform-style: preserve-3d;
     transition: all 0.5s linear;
   }
-  
+
   .cara {
     position: absolute;
     backface-visibility: hidden;
     background-color: white;
     border: 5px solid black;
   }
-  
+
   .cara.detras {
     transform: rotateY(180deg);
   }
@@ -329,7 +329,13 @@ body.fondoAzul {
     cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
     width: 40px; /* Ajusta el ancho según tus preferencias */
     height: 40px; /* Ajusta la altura según tus preferencias */
-  }
+}
+
+
+.formFondo{
+    border: 1px solid #0bd904;
+    backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según tu preferencia */
+}
 
 /********************************* Hasiera *********************************/
 

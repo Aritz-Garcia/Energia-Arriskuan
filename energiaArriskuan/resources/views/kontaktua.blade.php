@@ -40,8 +40,7 @@
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                     incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                    ex ea commodo consequat.</p>
 
             </div>
 
@@ -116,7 +115,7 @@
                 </div>
                 <div>
                     <button
-                        class="hover:bg-white rounded-md bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">
+                        class="hover:bg-white rounded-full bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">
                         Bidali
                     </button>
                 </div>
