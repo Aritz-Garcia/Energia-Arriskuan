@@ -6,8 +6,8 @@
             @csrf
 
             <div v-show="pausua == 1">
-                <h3 class="text-2xl font-bold text-[#0BD904]">Datu pertsonalak:</h3>
-                <hr class="my-2 border-t-2 border-[#0BD904]">
+                <h3 class="text-2xl font-bold text-[#0BD904] pt-3">Datu pertsonalak:</h3>
+                <hr class="my-2 border-t-2 border-[#0BD904] pb-3">
                 <!-- Name -->
                 <div>
                     <x-input-label for="name" :value="__('Name')" />
