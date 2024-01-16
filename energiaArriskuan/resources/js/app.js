@@ -7,6 +7,7 @@ import Denbora from "../components/denbora.vue";
 import Hasiera from "../components/hasieraClick.vue";
 import Biltegia from "../components/biltegiaClick.vue";
 import Sotoa from "../components/sotoaClick.vue";
+import Teilatua from "../components/teilatuaClick.vue";
 
 
 window.Alpine = Alpine;
@@ -48,6 +49,15 @@ const sotoaApp = createApp({
 });
 sotoaApp.use(ZiggyVue);
 sotoaApp.mount("#sotoaDiv");
+
+// * Teilatua component
+const teilatuaApp = createApp({
+    components: {
+        Teilatua,
+    }
+});
+teilatuaApp.use(ZiggyVue);
+teilatuaApp.mount("#teilatuaDiv");
 
 
 var acc = document.getElementsByClassName("accordion");
