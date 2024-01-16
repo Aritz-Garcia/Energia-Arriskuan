@@ -8,7 +8,7 @@
 
 body.fotoFondo {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../../public/images/fondoInicio.png");
+    url("../../public/images/fondoInicio.png");
     background-color: #010440;
     background-size: cover;
     background-position: center;
@@ -276,6 +276,12 @@ body.fondoAzul {
     width: 40px; /* Ajusta el ancho según tus preferencias */
     height: 40px; /* Ajusta la altura según tus preferencias */
   }
+
+
+.formFondo{
+    border: 4px solid #010440;
+    backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según tu preferencia */
+}
 
 /********************************* Hasiera *********************************/
 
