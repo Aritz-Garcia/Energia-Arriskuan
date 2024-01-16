@@ -64,4 +64,22 @@ class PartidaController extends Controller
         return view('biltegia', ['partida' => $partida]);
 
     }
+
+    public function sotoa(int $partidaId) {
+        $partida = Partida::find($partidaId);
+        return view('sotoa', ['partida' => $partida]);
+
+    }
+
+    public function patio(int $partidaId) {
+        $partida = Partida::find($partidaId);
+        return view('patio', ['partida' => $partida]);
+
+    }
+
+    public function teilatua(int $partidaId) {
+        $partida = Partida::find($partidaId);
+        return view('teilatua', ['partida' => $partida]);
+
+    }
 }
