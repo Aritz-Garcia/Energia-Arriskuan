@@ -4,29 +4,29 @@
 
 @section('content')
     @if(Auth::user()->id == $partida->id_erabiltzailea)
-        <div id="hasieraDiv">
-            <Hasiera urlimg={{ asset('images/biltegia.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
+        <div id="biltegiaDiv">
+            <Biltegia urlimg={{ asset('images/biltegia.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Biltegia>
         </div>
 
-        {{-- <div style="position: absolute;
+         {{-- <div style="position: absolute;
             top: 40vh;
-            left: 66%;
-            width: 8%;
-            height: 27vh;
+            left: 60%;
+            width: 5.5%;
+            height: 18vh;
             background-color:#fff;
             opacity: 0.8;">
-            </div>
+            </div> --}}
 
-            <div style="position: absolute;
-            top: 40vh;
-            left: 26%;
-            width: 8%;
-            height: 27vh;
+            {{-- <div style="position: absolute;
+            top: 59vh;
+            left: 34%;
+            width: 18%;
+            height: 16vh;
             background-color:#6f64ff;
             opacity: 0.8;">
-            </div>
+            </div> --}}
 
-            <div style="position: absolute;
+            {{-- <div style="position: absolute;
             top: 35.2vh;
             left: 45.1%;
             width: 4%;
