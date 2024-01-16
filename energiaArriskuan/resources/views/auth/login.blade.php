@@ -1,5 +1,8 @@
-@include('partials.menu')
-<x-guest-layout>
+@extends('layouts.plantillaLoginRegister')
+
+@section('title', 'Saioa Hasi')
+
+@section('content')
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -36,10 +39,9 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-end mt-4 pb-3">
             @if (Route::has('password.request'))
-                <a class="text-[#0BD904]"
-                    href="{{ route('password.request') }}">
+                <a class="text-[#0BD904]" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
@@ -51,7 +53,4 @@
     </form>
 
 
-
-</x-guest-layout>
-
-@include('partials.footer')
+@endsection
