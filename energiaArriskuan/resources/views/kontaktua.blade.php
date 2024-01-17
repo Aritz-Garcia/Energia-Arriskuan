@@ -1,6 +1,6 @@
 @extends('layouts.plantillaKontaktua')
 
-@section('title', 'KONTAKTUA')
+@section('title', 'Kontaktua')
 
 @section('content')
 

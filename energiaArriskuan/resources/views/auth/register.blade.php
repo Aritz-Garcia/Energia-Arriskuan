@@ -1,6 +1,6 @@
 @extends('layouts.plantillaLoginRegister')
 
-@section('title', 'Saioa Hasi')
+@section('title', 'Erregistratu')
 
 @section('content')
 
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div v-show="pausua == 2">
+            <div v-show="pausua == 2" class="pt-3">
                 <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzaileak sortu:</h3>
                 <hr class="my-2 border-t-2 border-[#0BD904]">
                 <!-- Email Address -->

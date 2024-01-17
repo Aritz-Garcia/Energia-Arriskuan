@@ -5,63 +5,30 @@
 @section('content')
 
     @if(Auth::user()->id == $partida->id_erabiltzailea)
-        <div id="hasieraDiv">
-            <Hasiera urlimg={{ asset('images/teilatua.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
+        <div id="teilatuaDiv">
+            <Teilatua urlimg={{ asset('images/teilatua.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Teilatua>
         </div>
 
+        {{-- puerta --}}
         {{-- <div style="position: absolute;
-            top: 40vh;
-            left: 66%;
-            width: 8%;
-            height: 27vh;
-            background-color:#fff;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 40vh;
-            left: 26%;
-            width: 8%;
-            height: 27vh;
-            background-color:#6f64ff;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 35.2vh;
-            left: 45.1%;
+            top: 48vh;
+            left: 27.5%;
             width: 4%;
-            height: 10vh;
-            background-color:#1143b1;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 43vh;
-            left: 37%;
-            width: 3%;
-            height: 18vh;
-            background-color:#58c8cc;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 36vh;
-            left: 53.7%;
-            width: 1.7%;
-            height: 2vh;
-            background-color:#cc5858;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 46.1vh;
-            left: 50.1%;
-            width: 7.3%;
-            height: 10vh;
+            height: 13vh;
             background-color:#500191;
             opacity: 0.8;">
-            </div> --}}
+        </div> --}}
+
+        {{-- juego --}}
+        {{-- <div style="position: absolute;
+            top: 35vh;
+            left: 31.5%;
+            width: 12%;
+            height: 32vh;
+            background-color:#51ff00;
+            opacity: 0.5;">
+        </div> --}}
+
     @else
 
         <script>
