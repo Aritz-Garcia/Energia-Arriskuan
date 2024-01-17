@@ -79,17 +79,17 @@ export default {
         { areaTop: 59, areaLeft: 34, areaWidth: 18, areaHeight: 16 },
         // * Puerta
         { areaTop: 40, areaLeft: 60, areaWidth: 5.5, areaHeight: 18 },
-        // * estantería 1
+        // * Estantería 1
         { areaTop: 20, areaLeft: 1, areaWidth: 18, areaHeight: 55 },
-        // * estantería 2
+        // * Estantería 2
         { areaTop: 35, areaLeft: 25, areaWidth: 30, areaHeight: 23 },
-        // * estantería 3
+        // * Estantería 3
         { areaTop: 20, areaLeft: 74, areaWidth: 14, areaHeight: 40 },
-        // * suelo
+        // * Suelo
         { areaTop: 76, areaLeft: 34, areaWidth: 35, areaHeight: 15 },
-        // * exit
+        // * Exit
         { areaTop: 23, areaLeft: 47, areaWidth: 4, areaHeight: 7 },
-        // * erlojua
+        // * Erlojua
         { areaTop: 30.5, areaLeft: 60.5, areaWidth: 3.5, areaHeight: 4.5 },
       ],
     };
@@ -117,7 +117,7 @@ export default {
           } else if (i == 1) {
             window.location.href = route("hasiera", this.partida.id);
           } else if (i == 2) {
-            // * estantería 1
+            // * Estantería 1
             estanteria1.classList.remove("hidden");
             estanteria1.classList.add("block");
             estanteria1.classList.add("animate__ateaItxia__text");
@@ -144,7 +144,7 @@ export default {
               estanteria1.classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 3) {
-            // * estantería 2
+            // * Estantería 2
             estanteria2.classList.remove("hidden");
             estanteria2.classList.add("block");
             estanteria2.classList.add("animate__ateaItxia__text");
@@ -171,7 +171,7 @@ export default {
               estanteria2.classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 4) {
-            // * estantería 3
+            // * Estantería 3
             estanteria3.classList.remove("hidden");
             estanteria3.classList.add("block");
             estanteria3.classList.add("animate__ateaItxia__text");
@@ -198,7 +198,7 @@ export default {
               estanteria3.classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 5) {
-            // * suelo
+            // * Suelo
             suelo.classList.remove("hidden");
             suelo.classList.add("block");
             suelo.classList.add("animate__ateaItxia__text");
@@ -225,7 +225,7 @@ export default {
               suelo.classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 6) {
-            // * exit
+            // * Exit
             exit.classList.remove("hidden");
             exit.classList.add("block");
             exit.classList.add("animate__ateaItxia__text");
@@ -252,7 +252,7 @@ export default {
               exit.classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 7) {
-            // * exit
+            // * Erlojua
             erlojuaDiv.classList.remove("hidden");
             erlojuaDiv.classList.add("block");
             document
@@ -290,6 +290,9 @@ export default {
       let eguna = new Date();
       let ordua = eguna.getHours();
       let minutua = eguna.getMinutes();
+      if (minutua < 10) {
+        minutua = "0" + minutua;
+      }
       return ordua + ":" + minutua;
     },
   },
