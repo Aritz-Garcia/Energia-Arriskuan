@@ -171,6 +171,9 @@ export default {
       let eguna = new Date();
       let ordua = eguna.getHours();
       let minutua = eguna.getMinutes();
+      if (minutua < 10) {
+        minutua = "0" + minutua;
+      }
       return ordua + ":" + minutua;
     },
   },
