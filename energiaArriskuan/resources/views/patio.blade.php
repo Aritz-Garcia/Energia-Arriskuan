@@ -5,63 +5,100 @@
 @section('content')
 
     @if(Auth::user()->id == $partida->id_erabiltzailea)
-        <div id="hasieraDiv">
-            <Hasiera urlimg={{ asset('images/patio.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
+        <div id="patioaDiv">
+            <Patioa urlimg={{ asset('images/patio.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Patioa>
         </div>
 
+        {{-- atea --}}
         {{-- <div style="position: absolute;
-            top: 40vh;
-            left: 66%;
-            width: 8%;
-            height: 27vh;
-            background-color:#fff;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 40vh;
-            left: 26%;
-            width: 8%;
-            height: 27vh;
-            background-color:#6f64ff;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 35.2vh;
-            left: 45.1%;
-            width: 4%;
-            height: 10vh;
-            background-color:#1143b1;
-            opacity: 0.8;">
-            </div>
-
-            <div style="position: absolute;
-            top: 43vh;
-            left: 37%;
-            width: 3%;
+            top: 52vh;
+            left: 87%;
+            width: 7%;
             height: 18vh;
-            background-color:#58c8cc;
-            opacity: 0.8;">
-            </div>
+            background-color:#fff;
+            opacity: 0.5;">
+        </div> --}}
 
-            <div style="position: absolute;
-            top: 36vh;
-            left: 53.7%;
-            width: 1.7%;
-            height: 2vh;
-            background-color:#cc5858;
-            opacity: 0.8;">
-            </div>
+        {{-- simbolo 1 --}}
+        {{-- <div style="position: absolute;
+            top: 71vh;
+            left: 76.5%;
+            width: 6%;
+            height: 6vh;
+            background-color:#ff0000;
+            opacity: 0.3;">
+        </div> --}}
 
-            <div style="position: absolute;
-            top: 46.1vh;
-            left: 50.1%;
-            width: 7.3%;
-            height: 10vh;
-            background-color:#500191;
-            opacity: 0.8;">
-            </div> --}}
+        {{-- simbolo 2 --}}
+        {{-- <div style="position: absolute;
+            top: 79vh;
+            left: 82%;
+            width: 5.5%;
+            height: 5vh;
+            background-color: #0400ff;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 3 --}}
+        {{-- <div style="position: absolute;
+            top: 62vh;
+            left: 75%;
+            width: 3.5%;
+            height: 5vh;
+            background-color: #37ff00;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 4 --}}
+        {{-- <div style="position: absolute;
+            top: 70vh;
+            left: 36%;
+            width: 3.5%;
+            height: 5vh;
+            background-color: #ff00bf;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 5 --}}
+        {{-- <div style="position: absolute;
+            top: 70vh;
+            left: 40.2%;
+            width: 3.5%;
+            height: 5vh;
+            background-color:#00e5ff;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 6 --}}
+        {{-- <div style="position: absolute;
+            top: 63vh;
+            left: 51%;
+            width: 2.5%;
+            height: 4vh;
+            background-color:#ff7700;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 7 --}}
+        {{-- <div style="position: absolute;
+            top: 65vh;
+            left: 53.6%;
+            width: 2.9%;
+            height: 5vh;
+            background-color:#ffea00;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- simbolo 8 --}}
+        {{-- <div style="position: absolute;
+            top: 65vh;
+            left: 63%;
+            width: 4%;
+            height: 5vh;
+            background-color:#4b3912;
+            opacity: 0.7;">
+        </div> --}}
+
     @else
 
         <script>
