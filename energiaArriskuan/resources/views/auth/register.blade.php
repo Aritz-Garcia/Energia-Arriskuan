@@ -1,15 +1,18 @@
-@include("partials.menu")
-<x-guest-layout>
+@extends('layouts.plantillaLoginRegister')
+
+@section('title', 'Erregistratu')
+
+@section('content')
 
     <div id="registro">
         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf
 
-            <div v-show="pausua == 1">
-                <h3 class="text-2xl font-bold text-[#0BD904] pt-3">Datu pertsonalak:</h3>
-                <hr class="my-2 border-t-2 border-[#0BD904] pb-3">
+            <div v-show="pausua == 1" class="pt-3">
+                <h3 class="text-2xl font-bold text-[#0BD904]">Datu pertsonalak:</h3>
+                <hr class="my-2 border-t-2 border-[#0BD904]">
                 <!-- Name -->
-                <div>
+                <div class="pt-3">
                     <x-input-label for="name" :value="__('Name')" />
                     <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" v-model="erabiltzaileak.izena" :value="old('name')" required autofocus autocomplete="name" />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
@@ -30,7 +33,7 @@
                 </div>
             </div>
 
-            <div v-show="pausua == 2">
+            <div v-show="pausua == 2" class="pt-3">
                 <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzaileak sortu:</h3>
                 <hr class="my-2 border-t-2 border-[#0BD904]">
                 <!-- Email Address -->
@@ -81,7 +84,7 @@
 
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-4 pb-3 pt-3">
                 <x-bad-primary-button class="me-4" v-if="pausua == pausuakTotal" @click.prevent="atzera">
                     {{ __('Atzera') }}
                 </x-bad-primary-button>
@@ -119,6 +122,5 @@
 
 
     @vite('resources/js/vue/registro.js')
-</x-guest-layout>
 
-@include("partials.footer")
+@endsection
