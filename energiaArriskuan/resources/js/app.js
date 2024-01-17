@@ -8,6 +8,7 @@ import Hasiera from "../components/hasieraClick.vue";
 import Biltegia from "../components/biltegiaClick.vue";
 import Sotoa from "../components/sotoaClick.vue";
 import Teilatua from "../components/teilatuaClick.vue";
+import Patioa from "../components/patioaClick.vue";
 
 
 window.Alpine = Alpine;
@@ -58,6 +59,15 @@ const teilatuaApp = createApp({
 });
 teilatuaApp.use(ZiggyVue);
 teilatuaApp.mount("#teilatuaDiv");
+
+// * Patioa component
+const patioaApp = createApp({
+    components: {
+        Patioa,
+    }
+});
+patioaApp.use(ZiggyVue);
+patioaApp.mount("#patioaDiv");
 
 
 var acc = document.getElementsByClassName("accordion");
