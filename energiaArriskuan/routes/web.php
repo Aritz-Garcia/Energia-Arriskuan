@@ -3,7 +3,12 @@
 use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PruebaController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EditarController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +49,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
 
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
+
+    Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
+
 
 });
 

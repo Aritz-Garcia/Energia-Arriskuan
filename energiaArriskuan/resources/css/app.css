@@ -337,6 +337,12 @@ body.fondoAzul {
     backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según tu preferencia */
 }
 
+
+.fondoTablaAdmin{
+    backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según tu preferencia */
+
+}
+
 /********************************* Hasiera *********************************/
 
 .ateaItxiaText {
