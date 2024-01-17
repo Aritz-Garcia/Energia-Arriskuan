@@ -12,7 +12,7 @@
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>estantería 1</p>
+        <p>Kutxa hutsak baino ez daude</p>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>estantería 2</p>
+        <p>Pieza zaharrak daude</p>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>estantería 3</p>
+        <p>Ez dago ezer interesgarririk</p>
       </div>
     </div>
 
@@ -63,7 +63,6 @@
 </template>
 
 <script>
-
 import route from "../../vendor/tightenco/ziggy/src/js";
 
 export default {
