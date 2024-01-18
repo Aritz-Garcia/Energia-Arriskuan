@@ -364,3 +364,25 @@ body.fondoAzul {
         opacity: 0;
     }
 }
+
+/********************************* Sotoa *********************************/
+@keyframes errorSotoa {
+    0%,
+    100% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #ff0000;
+    }
+}
+
+@keyframes aciertoSotoa {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #00ff00;
+    }
+}

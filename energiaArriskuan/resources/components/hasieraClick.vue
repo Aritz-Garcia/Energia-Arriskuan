@@ -45,24 +45,6 @@ import Juego3 from "./juego3.vue";
 import Denbora from "./denbora.vue";
 import route from "../../vendor/tightenco/ziggy";
 
-document.addEventListener("DOMContentLoaded", function () {
-    // * Juego3
-    const juego3App = createApp({
-        components: {
-            Juego3,
-        },
-    });
-    juego3App.mount("#juego3");
-
-    // * Denbora
-    const denboraApp = createApp({
-        components: {
-            Denbora,
-        },
-    });
-    denboraApp.mount("#denbora");
-});
-
 export default {
   name: "hasieraClick",
   props: {
@@ -70,6 +52,10 @@ export default {
     partida: Object,
     pruebas: Array,
   },
+  components: {
+        Juego3,
+        Denbora,
+    },
   data() {
     return {
       objektuak: [
