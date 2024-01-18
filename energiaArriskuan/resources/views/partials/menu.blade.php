@@ -30,11 +30,12 @@
                                             {{ __('Profile') }}
                                         </x-dropdown-link>
 
-                                        <!-- Nuevo enlace para la página de administración -->
-                                        <x-dropdown-link :href="route('admin')"
-                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
-                                            {{ __('Admin') }}
-                                        </x-dropdown-link>
+                                        @if (Auth::user()->rol == 1)
+                                            <x-dropdown-link :href="route('admin', Auth::user()->id)"
+                                                class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                                {{ __('Admin') }}
+                                            </x-dropdown-link>
+                                        @endif
 
                                         <!-- Autenticación -->
                                         <form method="POST" action="{{ route('logout') }}">
@@ -112,20 +113,12 @@
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
 
-                                    @auth
-                                        @if (auth()->check())
-                                            {{ 'Usuario autenticado' }}
-                                            {{ 'Rol del usuario: ' . auth()->user()->rol }}
-                                            @if (auth()->user()->rol == '1')
-                                                <x-dropdown-link :href="route('admin')"
-                                                    class="block px-4 py-2 text-white hover:text-[#0BD904]">
-                                                    {{ __('Admin') }}
-                                                </x-dropdown-link>
-                                            @else
-                                                {{ 'El usuario no es admin' }}
-                                            @endif
-                                        @endif
-                                    @endauth
+                                    @if (Auth::user()->rol == 1)
+                                        <x-dropdown-link :href="route('admin', Auth::user()->id)"
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                            {{ __('Admin') }}
+                                        </x-dropdown-link>
+                                    @endif
 
 
 

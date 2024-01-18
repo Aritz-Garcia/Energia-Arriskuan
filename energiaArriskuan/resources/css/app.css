@@ -343,6 +343,18 @@ body.fondoAzul {
 
 }
 
+.card:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.card {
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.2);
+  }
+
 /********************************* Hasiera *********************************/
 
 .ateaItxiaText {
