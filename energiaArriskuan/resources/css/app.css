@@ -404,3 +404,22 @@ body.fondoAzul {
         background-color: #00ff00;
     }
 }
+
+@keyframes vientoAnim {
+    0% {
+        top: 200px;
+        left: 420px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 240px;
+        opacity: 0;
+    }
+}

@@ -5,7 +5,8 @@
                 <div class="relative border-[#0BD904] border-2 rounded-xl p-5">
                     <div class="h-[365px] w-[485px]">
                         <img src="../../public/images/juego4/hierba.jpg" alt="hierba" class="absolute h-[405px] top-0 left-0 rounded-xl">
-                        <img id="molinoImg" src="../../public/images/juego4/molino.png" alt="molino" class="absolute left-[147px] w-48">
+                        <img id="molinoImg" src="../../public/images/juego4/molino1.png" alt="molino" class="absolute left-[147px] w-48">
+                        <img src="../../public/images/juego4/viento.png" alt="viento" class="absolute top-[200px] left-[420px] w-16 -rotate-45 opacity-0" :style="{'animation': animacion}">
                         <img src="../../public/images/juego4/pantalla.gif" alt="estatica de pantalla" class="absolute h-[405px] top-0 left-0 rounded-xl opacity-55">
                     </div>
                 </div>
@@ -53,7 +54,7 @@
         },
         data() {
             return {
-
+                animacion: "",
             }
         },
         methods: {
@@ -61,6 +62,11 @@
                 let value = document.getElementById("brujulaSlider").value;
                 document.getElementById("brujulaImg").style.transform = "rotate(" + value + "deg)";
                 document.getElementById("molinoImg").style.transform = "rotate(" + value + "deg)";
+                if (value >= 314 && value <= 316) {
+                    this.animacion = "vientoAnim 2s infinite";
+                } else {
+                    this.animacion = "";
+                }
             },
             incrementarValor() {
                 let value = document.getElementById("brujulaSlider").value;
