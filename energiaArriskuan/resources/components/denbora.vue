@@ -1,15 +1,7 @@
 <template>
     <div>
         <div>
-            {{contador}}
-        </div>
-        <div>
-            <button @click="decrementar">-</button>
-            <button @click="incrementar">+</button>
-        </div>
-        <hr>
-        <div>
-            EL numero mostrado es: {{parImpar}}
+            {{ denborarenString }}
         </div>
   </div>
 
@@ -17,18 +9,47 @@
 
 <script>
 
-import { mapState, mapActions } from 'pinia'
-import {useCounterStore} from '@/pinia/tiempo'
-
 export default {
-    computed:{
-    //En esta sección se utiliza mapState para mapear las propiedades del estado del store useCounterStore en las propiedades computadas del componente. En este caso, se están mapeando las propiedades contador y parImpar del store al componente.
-    ...mapState(useCounterStore, ['contador','parImpar'])
-  },
-  methods:{
-    //En esta sección se utiliza mapActions para mapear las acciones del store useCounterStore en los métodos del componente. Se están mapeando las acciones incrementar y decrementar.
-    ...mapActions(useCounterStore,['incrementar', 'decrementar'])
-  },
+    name: 'denbora',
+    props: {
+        partida: String,
+    },
+    mounted() {
+        this.startDenbora();
+    },
+    data() {
+        return {
+            denbora: 0,
+            denborarenString: "",
+        }
+    },
+    methods: {
+        getDenbora() {
+            console.log(this.partida);
+            let denboraString = this.partida;
+            let denboraSplit = denboraString.split(":");
+            let denboraInt = parseInt(denboraSplit[0]) * 60 + parseInt(denboraSplit[1]);
+            this.denbora = denboraInt;
+        },
+        startDenbora() {
+            this.getDenbora();
+            setInterval(() => {
+                this.denbora--;
+                this.denboraStringEgin();
+            }, 1000);
+        },
+        denboraStringEgin() {
+            let min = Math.floor(this.denbora / 60);
+            let seg = this.denbora % 60;
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (seg < 10) {
+                seg = "0" + seg;
+            }
+            this.denborarenString = min + ":" + seg;
+        }
+    },
 }
 </script>
 

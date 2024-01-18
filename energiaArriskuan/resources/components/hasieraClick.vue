@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div>
+        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl">
+            <Denbora :partida=partida.denbora></Denbora>
+        </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -36,16 +42,8 @@
 <script>
 import { createApp } from "vue";
 import Juego3 from "./juego3.vue";
+import Denbora from "./denbora.vue";
 import route from "../../vendor/tightenco/ziggy";
-
-document.addEventListener("DOMContentLoaded", function () {
-  const juego3App = createApp({
-    components: {
-      Juego3,
-    },
-  });
-  juego3App.mount("#juego3");
-});
 
 export default {
   name: "hasieraClick",
@@ -54,6 +52,10 @@ export default {
     partida: Object,
     pruebas: Array,
   },
+  components: {
+        Juego3,
+        Denbora,
+    },
   data() {
     return {
       objektuak: [

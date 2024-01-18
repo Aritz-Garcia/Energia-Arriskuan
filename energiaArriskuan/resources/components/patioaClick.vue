@@ -23,30 +23,21 @@
       </div>
     </div>
 
-    <div id="simbolosDiv1" class="">
-      <div id="simbolosDiv">
+    <div id="simbolosDiv" class="hidden">
         <Papera :simbolos=simbolo></Papera>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { createApp } from 'vue';
 import Papera from "./papelesPatio.vue";
 import route from '../../vendor/tightenco/ziggy';
 
-document.addEventListener("DOMContentLoaded", function () {
-  const papelApp = createApp({
+export default {
+    name: 'patioaClick',
     components: {
         Papera,
     },
-  });
-  papelApp.mount("#simbolosDiv");
-});
-
-export default {
-    name: 'patioaClick',
     props: {
         urlimg: String,
         partida: Object,
@@ -74,7 +65,7 @@ export default {
                 // * Simbolo4
                 {areaTop: 70, areaLeft: 36, areaWidth: 3.5, areaHeight: 5},
             ],
-            simbolo : "",
+            simbolo: "",
         }
     },
     methods: {
@@ -131,7 +122,9 @@ export default {
                     } else if (i == 5) {
                     // * Simbolo 1
                     console.log("Simbolo 1");
-                    this.simbolo="simbolo1";
+                    this.simbolo = "simbolo1";
+                    simbolosDiv.classList.remove('hidden');
+                    simbolosDiv.classList.add('block');
 
                     } else if (i == 6) {
                         // * Simbolo 2
@@ -154,17 +147,23 @@ export default {
                         // }, 4900);
 
                         console.log("Simbolo 2");
-                        this.simbolo="simbolo2";
+                        this.simbolo = "simbolo2";
+                        simbolosDiv.classList.remove('hidden');
+                        simbolosDiv.classList.add('block');
 
                     } else if (i == 7) {
                         // * Simbolo 3
                         console.log("Simbolo 3");
-                        this.simbolo="simbolo3";
+                        this.simbolo = "simbolo3";
+                        simbolosDiv.classList.remove('hidden');
+                        simbolosDiv.classList.add('block');
 
                     }else if (i == 8) {
                         // * Simbolo 4
                         console.log("Simbolo 4");
-                        this.simbolo="simbolo4";
+                        this.simbolo = "simbolo4";
+                        simbolosDiv.classList.remove('hidden');
+                        simbolosDiv.classList.add('block');sDiv3.classList.add('hidden');
                     }
 
                     return;
