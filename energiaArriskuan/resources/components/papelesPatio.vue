@@ -1,6 +1,6 @@
 <template>
     <div class="absolute text-white top-0">
-        <p id="idatziP"></p>
+        <p>{{ simbolos }}</p>
     </div>
 
 </template>
@@ -11,15 +11,5 @@ export default {
     props:{
         simbolos : String,
     },
-    data() {
-        return {
-
-        }
-    },
-    mounted: {
-        escribir() {
-            idatziP.innerHTML = this.simbolos;
-        }
-    }
   }
 </script>

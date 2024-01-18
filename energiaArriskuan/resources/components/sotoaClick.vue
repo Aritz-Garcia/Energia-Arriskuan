@@ -53,21 +53,15 @@
     import Juego4 from "./juego4.vue";
     import route from '../../vendor/tightenco/ziggy';
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const juego4App = createApp({
-            components: {
-                Juego4,
-            }
-        });
-        juego4App.mount("#juego4");
-    });
-
     export default {
         name: 'sotoaClick',
         props: {
             urlimg: String,
             partida: Object,
             pruebas: Array,
+        },
+        components: {
+            Juego4,
         },
         data () {
             return {

@@ -156,7 +156,7 @@ body.fondoAzul {
 
 /* ------------------------------------------- */
 
-#juego3 {
+#juego3, #juego4 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -380,5 +380,27 @@ body.fondoAzul {
 
     100% {
         opacity: 0;
+    }
+}
+
+/********************************* Sotoa *********************************/
+@keyframes errorSotoa {
+    0%,
+    100% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #ff0000;
+    }
+}
+
+@keyframes aciertoSotoa {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #00ff00;
     }
 }
