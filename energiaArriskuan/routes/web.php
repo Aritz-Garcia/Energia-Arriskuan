@@ -3,7 +3,12 @@
 use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PruebaController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EditarController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,26 +29,6 @@ Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
 
-Route::get('/jolasa', function () {
-    return view('jolasa');
-})->name('jolasa');
-
-Route::get('/biltegia', function () {
-    return view('biltegia');
-})->name('biltegia');
-
-Route::get('/patio', function () {
-    return view('patio');
-})->name('patio');
-
-Route::get('/sotoa', function () {
-    return view('sotoa');
-})->name('sotoa');
-
-Route::get('/teilatua', function () {
-    return view('teilatua');
-})->name('teilatua');
-
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
@@ -55,12 +40,26 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
+    Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
     Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
     Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
     Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
+    Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
+    Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
+    Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
 
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
+    Route::get('/prueba4/update/{partidaId}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
+
+    Route::get('/admin/{userId}', [AdminController::class, 'admin'])->name('admin');
+
+    Route::get('/erabiltzaileakAdmin/{userId}', [AdminController::class, 'erabiltzaileakAdmin'])->name('erabiltzaileakAdmin');
+
+    Route::get('/erabiltzaileakNormalak/{userId}', [AdminController::class, 'erabiltzaileakNormalak'])->name('erabiltzaileakNormalak');
+
+    Route::get('/partidak/{userId}', [AdminController::class, 'partidak'])->name('partidak');
+
+
 
 });
 

@@ -6,6 +6,7 @@
                 el rotor de un aerogenerador.
             </p>
             <img
+                id="close-img"
                 @click="closeGame"
                 src="../../public/images/cerrar.png"
                 alt="Cerrar"
@@ -154,7 +155,11 @@ export default {
                 this.resetValues();
                 this.inputsBlocked = true;
                 this.verificationButtonBlocked = true;
-                window.location.href = route("prueba3.update", this.partida);
+
+                document.getElementById("close-img").classList.add("hidden");
+                setTimeout(() => {
+                    window.location.href = route("prueba3.update", this.partida);
+                }, 3000);
             } else {
                 this.vibration = true;
                 setTimeout(() => {

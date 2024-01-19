@@ -22,7 +22,12 @@
                     berrezartzeko eta gizateria salbatzeko erronkak gainditu behar ditu.
                 </p>
 
-                <a href="{{ route('jolasa') }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                @if (Auth::user() != null)
+                <a href="{{ route('jolasa', Auth::user()->id) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+
+                @else
+                <a href="{{ route('jolasa', 0) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                @endif
 
                     <svg stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none"
                         class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +44,7 @@
         </div>
     </div>
 
-    <div id="tiempo" class="text-white">
+    {{-- <div id="tiempo" class="text-white"> --}}
 
     </div>
 

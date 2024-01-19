@@ -3,35 +3,32 @@ import './bootstrap';
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { ZiggyVue } from 'ziggy-js';
-import denbora from "../components/denbora.vue";
+import Denbora from "../components/denbora.vue";
 import Hasiera from "../components/hasieraClick.vue";
 import Biltegia from "../components/biltegiaClick.vue";
+import Sotoa from "../components/sotoaClick.vue";
+import Teilatua from "../components/teilatuaClick.vue";
+import Patioa from "../components/patioaClick.vue";
 
 
 window.Alpine = Alpine;
 
 Alpine.start();
 
-const app = createApp(denbora);
-app.use(createPinia());
-app.mount('#tiempo');
-
-const hasieraApp = createApp({
+// * Denbora component
+const app = createApp({
     components: {
+        Denbora,
         Hasiera,
-    }
-});
-hasieraApp.use(ZiggyVue);
-hasieraApp.mount("#hasieraDiv");
-
-const biltegiaApp = createApp({
-    components: {
         Biltegia,
+        Sotoa,
+        Teilatua,
+        Patioa,
     }
 });
-biltegiaApp.use(ZiggyVue);
-biltegiaApp.mount("#biltegiaDiv");
-
+app.use(createPinia());
+app.use(ZiggyVue);
+app.mount('#app');
 
 var acc = document.getElementsByClassName("accordion");
 var i;

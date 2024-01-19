@@ -25,9 +25,17 @@
 
                                 <x-slot name="content">
                                     <div class="py-2 bg-[#010440] text-[#0BD904] border rounded">
-                                        <x-dropdown-link :href="route('profile.index', Auth::user()->id)" class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                        <x-dropdown-link :href="route('profile.index', Auth::user()->id)"
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                             {{ __('Profile') }}
                                         </x-dropdown-link>
+
+                                        @if (Auth::user()->rol == 1)
+                                            <x-dropdown-link :href="route('admin', Auth::user()->id)"
+                                                class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                                {{ __('Admin') }}
+                                            </x-dropdown-link>
+                                        @endif
 
                                         <!-- Autenticación -->
                                         <form method="POST" action="{{ route('logout') }}">
@@ -105,6 +113,15 @@
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
 
+                                    @if (Auth::user()->rol == 1)
+                                        <x-dropdown-link :href="route('admin', Auth::user()->id)"
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
+                                            {{ __('Admin') }}
+                                        </x-dropdown-link>
+                                    @endif
+
+
+
                                     <!-- Autenticación -->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
@@ -116,7 +133,6 @@
                                     </form>
                                 </div>
                             </x-slot>
-
                         </x-dropdown>
                     @else
                         <button onclick="window.location='{{ route('login') }}'"

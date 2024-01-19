@@ -31,7 +31,9 @@
     @endisset
 
     <main role="main" class="x-w-screen-xl">
-        @yield("content")
+        <div id="app">
+            @yield("content")
+        </div>
     </main>
 
     {{-- @include("partials.footer") --}}
