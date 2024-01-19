@@ -62,6 +62,12 @@ class PruebaController extends Controller
         Prueba::where("id_partida", $partidaId)->where("izena", "prueba1")->update(["bukatuta" => 1]);
 
         return redirect()->route("biltegia", $partidaId);
+    }
+    public function prueba4(String $partidaId){
+
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba4")->update(["bukatuta" => 1]);
+
+        return redirect()->route("sotoa", $partidaId);
 
     }
 }

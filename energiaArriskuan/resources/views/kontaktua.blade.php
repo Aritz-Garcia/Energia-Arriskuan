@@ -1,6 +1,6 @@
 @extends('layouts.plantillaKontaktua')
 
-@section('title', 'KONTAKTUA')
+@section('title', 'Kontaktua')
 
 @section('content')
 
@@ -16,32 +16,20 @@
                 Zein da escape room-aren iraupena?
             </button>
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">20 minutu daude escape room-a bukatzeko.</p>
             </div>
 
             <button class="accordion bg-[#010440] text-[#0BD904]">Zenbat pertsonak parte har dezakete aldi berean escape
                 room-aren?</button>
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">Gailu bakoitzeko pertsona bakarrak jolastu dezake aldi berean.</p>
             </div>
 
             <button class="accordion bg-[#010440] text-[#0BD904]">Berariazko trebetasunak behar ditut escape room-are
                 gozatzeko?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">Energi berriztagarriei buruz jakin behar da escape room-a bukatzeko.</p>
 
             </div>
 
@@ -49,11 +37,7 @@
                 Zer gertatzen da probak esleitutako denboraren barruan ebaztea lortzen ez badugu?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">Denbora bukatzean eta proba batean bat bukatu gabe badago partida galdutzat emango da eta profilera eramango zaitu nahi izatekotan beste partida berri bat egiteko.</p>
 
             </div>
 
@@ -61,11 +45,7 @@
                 zehar?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">Bai, pantailaren goikaldean eskuinaldean bonbilla bat dago nahi izatekotan pista edo laguntza bat emateko, baina bonbillan klikatzean denbora behera joango da.</p>
 
             </div>
 
@@ -73,11 +53,7 @@
                 room-an?</button>
 
             <div class="panel">
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex
-                    ea commodo consequat.</p>
+                <p class="text-white">Proba bakoitzaren azkenengo pista erantzuna izango da, baina pista hori ikusterakoan denbora gehiago kenduko da eta partida galtzeko aukera handiagoak egongo dira.</p>
 
             </div>
 
@@ -116,7 +92,7 @@
                 </div>
                 <div>
                     <button
-                        class="hover:bg-white rounded-md bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">
+                        class="hover:bg-white rounded-full bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">
                         Bidali
                     </button>
                 </div>
