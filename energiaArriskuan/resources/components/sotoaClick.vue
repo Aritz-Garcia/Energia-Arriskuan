@@ -49,7 +49,6 @@
 </template>
 
 <script>
-    import { createApp } from 'vue'
     import Juego4 from "./juego4.vue";
     import route from '../../vendor/tightenco/ziggy';
 
