@@ -3,6 +3,11 @@
     <div>
         <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
+        <div id="juego1div" class="hidden">
+            <div id="juego1">
+                <juego1 :partida=partida.id></juego1>
+            </div>
+        </div>
         
 
     </div>
@@ -10,7 +15,18 @@
 </template>
 
 <script>
+    import { createApp } from 'vue';
+    import juego1 from "./juego1.vue";
     import route from '../../vendor/tightenco/ziggy/src/js';
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const juego1App = createApp({
+            components: {
+                juego1,
+            }
+        });
+        juego1App.mount("#juego1");
+    });
 
     export default {
         name: 'biltegiaClick',
@@ -46,6 +62,8 @@
                         if (i == 0) {
                             // * Mesa
                             console.log("ebjwyfgveu");
+                            document.getElementById('juego1div').classList.remove('hidden');
+                            document.getElementById('juego1div').classList.add('block');
                         }else if(i == 1){
                             window.location.href=route("hasiera", this.partida.id);
                         }

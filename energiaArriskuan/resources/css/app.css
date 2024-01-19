@@ -172,16 +172,19 @@ body.fondoAzul {
 }
 
 #juego1 {
-    background-image: url("../../public/image/juego1/mesa.jpg");
+    background-image: url("../../public/images/juego1/mesa.jpg");
     background-repeat: no-repeat;
     background-attachment: cover;
     background-size: cover;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -190,20 +193,33 @@ body.fondoAzul {
     background-color: rgba(0, 0, 0, 0.7); /* Negro transparente (ajusta el valor alfa según tus preferencias) */
     display: flex;
     justify-content: center;
-    width: auto;
-    height: auto;
+    width: 700px;
+    height: 250px;
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px; /* Agrega un espacio entre main y cartasC */
+    left: 95%;
+    transform: translateX(-95%);
+    margin: 10px; /* Agrega un espacio entre main y cartasC */
   }
+
+#carta-slot{
+    display: flex;
+    flex-wrap: wrap;
+}
   
   .carta-box {
-    margin: 20px;
+    margin-top: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
     width: 150px;
-    height: 200px;
+    height: 150px;
     perspective: 1000px;
+  }
+
+  .caras{
+    width: 150px;
+    height: 150px;
   }
   
   .carta-box:hover .carta {
