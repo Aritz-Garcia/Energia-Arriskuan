@@ -40,19 +40,18 @@
 </template>
 
 <script>
-import { createApp } from "vue";
 import Juego3 from "./juego3.vue";
 import Denbora from "./denbora.vue";
 import route from "../../vendor/tightenco/ziggy";
 
 export default {
-  name: "hasieraClick",
-  props: {
-    urlimg: String,
-    partida: Object,
-    pruebas: Array,
-  },
-  components: {
+    name: "hasieraClick",
+    props: {
+        urlimg: String,
+        partida: Object,
+        pruebas: Array,
+    },
+    components: {
         Juego3,
         Denbora,
     },
