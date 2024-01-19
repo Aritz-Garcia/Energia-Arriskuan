@@ -347,6 +347,10 @@ body.fondoAzul {
     filter: brightness(0) invert(1);
 }
 
+.boton:hover img {
+    filter: brightness(0) invert(1);
+}
+
 .card {
     transition: transform 0.3s;
   }
