@@ -59,6 +59,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/partidak/{userId}', [AdminController::class, 'partidak'])->name('partidak');
 
+    Route::post('/guardar-cookie', [PartidaController::class, 'guardarCookie'])->name('guardarCookie');
+
 
 
 });
