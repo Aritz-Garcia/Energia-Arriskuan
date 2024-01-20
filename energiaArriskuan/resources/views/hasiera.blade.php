@@ -37,7 +37,7 @@
             </div>
 
             <div style="position: absolute;
-            top: 43vh;
+            top: 43.5vh;
             left: 37%;
             width: 3%;
             height: 18vh;
@@ -60,6 +60,42 @@
             width: 7.3%;
             height: 10vh;
             background-color:#500191;
+            opacity: 0.8;">
+            </div>
+
+            <div style="position: absolute;
+            top: 37vh;
+            left: 29.2%;
+            width: 2%;
+            height: 2vh;
+            background-color:#fdf9d1;
+            opacity: 0.8;">
+            </div>
+
+            <div style="position: absolute;
+            top: 42vh;
+            left: 37.7%;
+            width: 1.3%;
+            height: 1.3vh;
+            background-color:#fdf9d1;
+            opacity: 0.8;">
+            </div>
+
+            <div style="position: absolute;
+            top: 36.8vh;
+            left: 67.5%;
+            width: 2.4%;
+            height: 2.7vh;
+            background-color:#fdf9d1;
+            opacity: 0.8;">
+            </div>
+
+            <div style="position: absolute;
+            top: 34vh;
+            left: 46.3%;
+            width: 1.8%;
+            height: 1vh;
+            background-color:#fdf9d1;
             opacity: 0.8;">
             </div> --}}
     @else

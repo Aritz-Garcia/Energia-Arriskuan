@@ -65,11 +65,19 @@ export default {
         // * Techo
         { areaTop: 35.2, areaLeft: 45.1, areaWidth: 4, areaHeight: 10 },
         // * Jardin
-        { areaTop: 43, areaLeft: 37, areaWidth: 3, areaHeight: 18 },
+        { areaTop: 43.5, areaLeft: 37, areaWidth: 3, areaHeight: 18 },
         // * Erlojua
         { areaTop: 36, areaLeft: 53.7, areaWidth: 1.7, areaHeight: 2 },
         // * Ate itxiak
         { areaTop: 46.1, areaLeft: 50.1, areaWidth: 7.3, areaHeight: 10 },
+        // * Biltegia papera
+        { areaTop: 37, areaLeft: 29.2, areaWidth: 2, areaHeight: 2 },
+        // * Jardin papera
+        { areaTop: 42, areaLeft: 37.7, areaWidth: 1.3, areaHeight: 1.3 },
+        // * Sotoa papera
+        { areaTop: 36.8, areaLeft: 67.5, areaWidth: 2.4, areaHeight: 2.7 },
+        // * Techo papera
+        { areaTop: 34, areaLeft: 46.3, areaWidth: 1.8, areaHeight: 1 },
       ],
     };
   },
@@ -162,6 +170,18 @@ export default {
                 .getElementById("ateaItxiakDiv")
                 .classList.remove("animate__ateaItxia__text");
             }, 4900);
+          } else if (i == 6) {
+            // * Biltegia papera
+            console.log("Biltegia papera");
+          } else if (i == 7) {
+            // * Jardin papera
+            console.log("Jardin papera");
+          } else if (i == 8) {
+            // * Sotoa papera
+            console.log("Sotoa papera");
+          } else if (i == 9) {
+            // * Techo papera
+            console.log("Techo papera");
           }
 
           return;
