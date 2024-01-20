@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie';
 import axios from 'axios';
 
 export default {
@@ -19,14 +18,12 @@ export default {
     },
     mounted() {
         this.startDenbora();
-        this.cookie = Cookies.get('denbora');
     },
     data() {
         return {
             denbora: 0,
             denborarenString: "",
             intervalo: null,
-            cookie: null,
         }
     },
     methods: {
@@ -45,17 +42,9 @@ export default {
                 } else {
                     this.denbora--;
                     this.denboraStringEgin();
-                    this.setCookie();
+                    this.gorderDb();
                 }
             }, 1000);
-
-            setInterval(() => {
-                if (this.denbora != 0) {
-                    this.gorderDb();
-                } else {
-                    clearInterval();
-                }
-            }, 2000);
         },
         denboraStringEgin() {
             let min = Math.floor(this.denbora / 60);
@@ -71,15 +60,15 @@ export default {
         terminarIntervalo() {
             clearInterval(this.intervalo);
         },
-        setCookie() {
-            Cookies.set('denbora', this.denbora, { expires: 5256000 });
-        },
         async gorderDb() {
-            let cookie = Cookies.get('denbora');
-            axios.post('../guardar-cookie', {
+            let cookie = this.denbora;
+            axios.post('../denbora-gorde', {
                 valor: cookie,
                 partidaId: this.partida,
             });
+        },
+        gameOver() {
+            // TODO - Game over
         }
     },
 }

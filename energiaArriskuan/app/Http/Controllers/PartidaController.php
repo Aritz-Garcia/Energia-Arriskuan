@@ -16,7 +16,6 @@ class PartidaController extends Controller
     public function index()
     {
         //
-        // $this->crearCookie();
         return view('partida.index');
     }
 
@@ -124,8 +123,7 @@ class PartidaController extends Controller
 
     }
 
-    public function guardarCookie(Request $request) {
-
+    public function denboraGorde(Request $request) {
         $partidaId = $request->input('partidaId');
         $valor = $request->input('valor');
 
