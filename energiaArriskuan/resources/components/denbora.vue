@@ -3,7 +3,7 @@
         <div>
             {{ denborarenString }}
         </div>
-  </div>
+    </div>
 
 </template>
 
