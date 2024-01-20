@@ -6,6 +6,12 @@
         </div>
     </div>
 
+    <div id="atekoPaperaDiv" class="hidden">
+        <div class="absolute top-1/2 left-1/2 atekoPapera">
+            <AtekoPapera :testua=testua />
+        </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -42,6 +48,7 @@
 <script>
 import Juego3 from "./juego3.vue";
 import Denbora from "./denbora.vue";
+import AtekoPapera from "./panelPuerta.vue";
 import route from "../../vendor/tightenco/ziggy";
 
 export default {
@@ -54,6 +61,7 @@ export default {
     components: {
         Juego3,
         Denbora,
+        AtekoPapera,
     },
   data() {
     return {
@@ -79,6 +87,7 @@ export default {
         // * Techo papera
         { areaTop: 34, areaLeft: 46.3, areaWidth: 1.8, areaHeight: 1 },
       ],
+      testua: "",
     };
   },
   methods: {
@@ -172,16 +181,24 @@ export default {
             }, 4900);
           } else if (i == 6) {
             // * Biltegia papera
-            console.log("Biltegia papera");
+            this.testua = "BILTEGIA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
           } else if (i == 7) {
             // * Jardin papera
-            console.log("Jardin papera");
+            this.testua = "PATIOA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
           } else if (i == 8) {
             // * Sotoa papera
-            console.log("Sotoa papera");
+            this.testua = "SOTOA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
           } else if (i == 9) {
             // * Techo papera
-            console.log("Techo papera");
+            this.testua = "TEILATUA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
           }
 
           return;

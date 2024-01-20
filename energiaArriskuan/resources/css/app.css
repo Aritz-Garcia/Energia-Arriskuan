@@ -156,7 +156,7 @@ body.fondoAzul {
 
 /* ------------------------------------------- */
 
-#juego3, #juego4 {
+#juego3, #juego4, .atekoPapera {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -385,6 +385,13 @@ body.fondoAzul {
     100% {
         opacity: 0;
     }
+}
+
+#atekoPapera {
+    background-image: url("../../public/images/panel.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Indie Flower", cursive, sans-serif;
 }
 
 /********************************* Sotoa *********************************/
