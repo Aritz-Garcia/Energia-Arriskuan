@@ -25,6 +25,7 @@
         "bottleneck": "^2.19.5",
         "fluid-canvas": "github:malik-tillman/fluid-js",
         "i": "^0.3.7",
+        "js-cookie": "^3.0.5",
         "pinia": "^2.1.7",
         "tailwind-typewriter": "^1.0.1",
         "typeface-inter": "^3.18.1",

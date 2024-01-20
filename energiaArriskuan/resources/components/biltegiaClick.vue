@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div>
+        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl">
+            <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+        </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -63,6 +69,7 @@
 </template>
 
 <script>
+import Denbora from "./denbora.vue";
 import route from "../../vendor/tightenco/ziggy/src/js";
 
 export default {
@@ -72,6 +79,9 @@ export default {
     partida: Object,
     pruebas: Array,
   },
+  components: {
+        Denbora,
+    },
   data() {
     return {
       objektuak: [
