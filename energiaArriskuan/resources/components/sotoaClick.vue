@@ -3,7 +3,7 @@
     <div>
 
         <div>
-            <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl">
+            <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
                 <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
             </div>
         </div>
