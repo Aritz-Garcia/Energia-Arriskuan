@@ -1,8 +1,14 @@
 <template>
   <div>
     <div>
-        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl">
-            <Denbora :partida=partida.denbora></Denbora>
+        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
+            <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+        </div>
+    </div>
+
+    <div id="atekoPaperaDiv" class="hidden">
+        <div class="absolute top-1/2 left-1/2 atekoPapera">
+            <AtekoPapera :testua=testua />
         </div>
     </div>
 
@@ -40,21 +46,22 @@
 </template>
 
 <script>
-import { createApp } from "vue";
 import Juego3 from "./juego3.vue";
 import Denbora from "./denbora.vue";
+import AtekoPapera from "./panelPuerta.vue";
 import route from "../../vendor/tightenco/ziggy";
 
 export default {
-  name: "hasieraClick",
-  props: {
-    urlimg: String,
-    partida: Object,
-    pruebas: Array,
-  },
-  components: {
+    name: "hasieraClick",
+    props: {
+        urlimg: String,
+        partida: Object,
+        pruebas: Array,
+    },
+    components: {
         Juego3,
         Denbora,
+        AtekoPapera,
     },
   data() {
     return {
@@ -66,12 +73,21 @@ export default {
         // * Techo
         { areaTop: 35.2, areaLeft: 45.1, areaWidth: 4, areaHeight: 10 },
         // * Jardin
-        { areaTop: 43, areaLeft: 37, areaWidth: 3, areaHeight: 18 },
+        { areaTop: 43.5, areaLeft: 37, areaWidth: 3, areaHeight: 18 },
         // * Erlojua
         { areaTop: 36, areaLeft: 53.7, areaWidth: 1.7, areaHeight: 2 },
         // * Ate itxiak
         { areaTop: 46.1, areaLeft: 50.1, areaWidth: 7.3, areaHeight: 10 },
+        // * Biltegia papera
+        { areaTop: 37, areaLeft: 29.2, areaWidth: 2, areaHeight: 2 },
+        // * Jardin papera
+        { areaTop: 42, areaLeft: 37.7, areaWidth: 1.3, areaHeight: 1.3 },
+        // * Sotoa papera
+        { areaTop: 36.8, areaLeft: 67.5, areaWidth: 2.4, areaHeight: 2.7 },
+        // * Techo papera
+        { areaTop: 34, areaLeft: 46.3, areaWidth: 1.8, areaHeight: 1 },
       ],
+      testua: "",
     };
   },
   methods: {
@@ -163,6 +179,26 @@ export default {
                 .getElementById("ateaItxiakDiv")
                 .classList.remove("animate__ateaItxia__text");
             }, 4900);
+          } else if (i == 6) {
+            // * Biltegia papera
+            this.testua = "BILTEGIA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
+          } else if (i == 7) {
+            // * Jardin papera
+            this.testua = "PATIOA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
+          } else if (i == 8) {
+            // * Sotoa papera
+            this.testua = "SOTOA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
+          } else if (i == 9) {
+            // * Techo papera
+            this.testua = "TEILATUA";
+            document.getElementById("atekoPaperaDiv").classList.remove("hidden");
+            document.getElementById("atekoPaperaDiv").classList.add("block");
           }
 
           return;

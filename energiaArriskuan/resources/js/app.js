@@ -19,56 +19,16 @@ Alpine.start();
 const app = createApp({
     components: {
         Denbora,
-    }
-});
-app.use(createPinia());
-app.mount('#tiempo');
-
-// * Hasiera component
-const hasieraApp = createApp({
-    components: {
         Hasiera,
-    }
-});
-hasieraApp.use(ZiggyVue);
-hasieraApp.mount("#hasieraDiv");
-
-// * Biltegia component
-const biltegiaApp = createApp({
-    components: {
         Biltegia,
-    }
-});
-biltegiaApp.use(ZiggyVue);
-biltegiaApp.mount("#biltegiaDiv");
-
-// * Sotoa component
-const sotoaApp = createApp({
-    components: {
         Sotoa,
-    }
-});
-sotoaApp.use(ZiggyVue);
-sotoaApp.mount("#sotoaDiv");
-
-// * Teilatua component
-const teilatuaApp = createApp({
-    components: {
         Teilatua,
-    }
-});
-teilatuaApp.use(ZiggyVue);
-teilatuaApp.mount("#teilatuaDiv");
-
-// * Patioa component
-const patioaApp = createApp({
-    components: {
         Patioa,
     }
 });
-patioaApp.use(ZiggyVue);
-patioaApp.mount("#patioaDiv");
-
+app.use(createPinia());
+app.use(ZiggyVue);
+app.mount('#app');
 
 var acc = document.getElementsByClassName("accordion");
 var i;

@@ -1,6 +1,13 @@
 <template>
 
     <div>
+
+        <div>
+            <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
+                <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+            </div>
+        </div>
+
         <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
         <div id="juego4div" class="hidden">
@@ -49,8 +56,8 @@
 </template>
 
 <script>
-    import { createApp } from 'vue'
     import Juego4 from "./juego4.vue";
+    import Denbora from "./denbora.vue";
     import route from '../../vendor/tightenco/ziggy';
 
     export default {
@@ -62,6 +69,7 @@
         },
         components: {
             Juego4,
+            Denbora,
         },
         data () {
             return {
