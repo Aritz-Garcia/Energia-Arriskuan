@@ -7,15 +7,17 @@
       style="width: 100%; height: 100vh"
     />
 
-    <div>
-        <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
-
-        <div id="juego1div" class="hidden">
-            <div id="juego1">
-                <juego1 :partida=partida.id></juego1>
-            </div>
+    <div id="juego1div" class="hidden">
+        <div id="juego1">
+            <juego1 :partida=partida.id></juego1>
         </div>
-        
+    </div>
+
+    <div id="jolasaBukatutaDiv" class="hidden">
+      <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+          <p>Aquí no hay nada más que hacer</p>
+      </div>
+    </div>
 
     <!-- estantería 1 dagoela erakusten duen testua -->
     <div id="estanteria1" class="hidden">
@@ -69,7 +71,6 @@
         <p id="erlojuaPText"></p>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -136,7 +137,43 @@ export default {
         ) {
           if (i == 0) {
             // * Mesa
-            console.log("ebjwyfgveu");
+            for (let i = 0; i < this.pruebas.length; i++) {
+                  if (this.pruebas[i].izena == "prueba1") {
+                        if (this.pruebas[i].bukatuta) {
+                            // * Beste testuak kendu
+                          estanteria2.classList.remove("block");
+                          estanteria2.classList.add("hidden");
+
+                          estanteria3.classList.remove("block");
+                          estanteria3.classList.add("hidden");
+
+                          suelo.classList.remove("block");
+                          suelo.classList.add("hidden");
+
+                          exit.classList.remove("block");
+                          exit.classList.add("hidden");
+
+                          erlojuaDiv.classList.remove("block");
+                          erlojuaDiv.classList.add("hidden");
+                          // Jolasa bukatuta
+                          jolasaBukatutaDiv.classList.remove('hidden');
+                          jolasaBukatutaDiv.classList.add('block');
+                          jolasaBukatutaDiv.classList.add('animate__ateaItxia__text');
+
+                          setTimeout(() => {
+                            jolasaBukatutaDiv.classList.remove('block');
+                            jolasaBukatutaDiv.classList.add('hidden');
+                            jolasaBukatutaDiv.classList.remove('animate__ateaItxia__text');
+                            }, 4900);
+                        } else {
+                            
+                              // 3. jolasa egin gabe badago
+                              document.getElementById('juego1div').classList.remove('hidden');
+                              document.getElementById('juego1div').classList.add('block');
+                                    }
+                                    return;
+                                }
+                            }
           } else if (i == 1) {
             window.location.href = route("hasiera", this.partida.id);
           } else if (i == 2) {
@@ -160,6 +197,9 @@ export default {
 
             erlojuaDiv.classList.remove("block");
             erlojuaDiv.classList.add("hidden");
+
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
 
             setTimeout(() => {
               estanteria1.classList.remove("block");
@@ -188,6 +228,9 @@ export default {
             erlojuaDiv.classList.remove("block");
             erlojuaDiv.classList.add("hidden");
 
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
+
             setTimeout(() => {
               estanteria2.classList.remove("block");
               estanteria2.classList.add("hidden");
@@ -214,6 +257,9 @@ export default {
 
             erlojuaDiv.classList.remove("block");
             erlojuaDiv.classList.add("hidden");
+
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
 
             setTimeout(() => {
               estanteria3.classList.remove("block");
@@ -242,6 +288,9 @@ export default {
             erlojuaDiv.classList.remove("block");
             erlojuaDiv.classList.add("hidden");
 
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
+
             setTimeout(() => {
               suelo.classList.remove("block");
               suelo.classList.add("hidden");
@@ -268,6 +317,9 @@ export default {
 
             erlojuaDiv.classList.remove("block");
             erlojuaDiv.classList.add("hidden");
+
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
 
             setTimeout(() => {
               exit.classList.remove("block");
@@ -298,6 +350,9 @@ export default {
 
             exit.classList.remove("block");
             exit.classList.add("hidden");
+
+            jolasaBukatutaDiv.classList.remove('block');
+            jolasaBukatutaDiv.classList.add('hidden');
 
             setTimeout(() => {
               erlojuaDiv.classList.remove("block");

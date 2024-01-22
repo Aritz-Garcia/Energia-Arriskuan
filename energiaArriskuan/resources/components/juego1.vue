@@ -42,6 +42,7 @@
 
     <script>
 import datos from '../js/objetos.json';
+import route from '../../vendor/tightenco/ziggy/src/js';
 
 export default {
   name: "juego1",
