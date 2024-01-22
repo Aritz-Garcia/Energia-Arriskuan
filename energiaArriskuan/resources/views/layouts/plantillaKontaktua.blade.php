@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased font-rubik fotoFondoKontaktua">
+<body class="antialiased font-rubik-regular fotoFondoKontaktua">
 
     @include("partials.menu")
 

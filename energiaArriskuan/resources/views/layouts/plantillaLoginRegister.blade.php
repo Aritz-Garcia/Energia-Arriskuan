@@ -16,7 +16,7 @@
     @routes
 </head>
 
-<body class="antialiased font-rubik fotoFondo">
+<body class="antialiased font-rubik-regular fotoFondo">
 
     @include('partials.menu')
 

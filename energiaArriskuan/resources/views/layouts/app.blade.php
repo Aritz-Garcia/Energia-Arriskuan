@@ -11,7 +11,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="font-rubik antialiased fotoFondoKontaktua">
+    <body class="font-rubik-regular antialiased fotoFondoKontaktua">
         @include("partials.menu")
 
         <div class="min-h-screen">
