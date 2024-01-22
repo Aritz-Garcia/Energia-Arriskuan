@@ -139,4 +139,13 @@ class PartidaController extends Controller
         $denborarenString = $min . ":" . $seg;
         Partida::where("id", $partidaId)->update(["denbora" => $denborarenString]);
     }
+
+    public function gameOverUpdate($partidaId) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1]);
+        return redirect()->route('gameOverView', $partidaId);
+    }
+
+    public function gameOverView($partidaId) {
+        return view('partida.gameOver', ['partidaId' => $partidaId]);
+    }
 }

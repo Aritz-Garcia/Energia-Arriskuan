@@ -15,8 +15,6 @@
 
 <body class="antialiased font-rubik-bold fotoFondo min-h-screen">
 
-    @include("partials.menu")
-
     @isset($header)
         <header>
             <div>
@@ -28,8 +26,6 @@
     <main role="main" class="x-w-screen-xl">
         @yield("content")
     </main>
-
-    @include("partials.footer")
 
 </body>
 
