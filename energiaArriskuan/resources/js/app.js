@@ -15,7 +15,7 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-// * Denbora component
+// * Komponenteak
 const app = createApp({
     components: {
         Denbora,
