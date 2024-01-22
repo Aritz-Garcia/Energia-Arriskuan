@@ -48,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
 
+    Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
     Route::get('/prueba4/update/{partidaId}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
 
