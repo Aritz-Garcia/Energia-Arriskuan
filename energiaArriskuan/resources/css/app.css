@@ -2,8 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Rubik Regular";
+    src: url(../../public/fonts/Rubik/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url(../../public/fonts/Rubik/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Indie Flower";
+    src: url(../../public/fonts/Indie_flower/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Digital Regular";
+    src: url(../../public/fonts/Digital/DS-DIGI.TTF);
+}
+
+@font-face {
+    font-family: "Digital Bold";
+    src: url(../../public/fonts/Digital/DS-DIGIB.TTF);
+}
+
 .font-rubik {
-    font-family: "Rubik";
+    font-family: "Rubik Regular";
 }
 
 body.fotoFondo {
@@ -411,6 +436,11 @@ body.fondoAzul {
 }
 
 /********************************* Sotoa *********************************/
+
+.sotoaPanelLetra {
+    font-family: "Digital Bold", sans-serif;
+}
+
 @keyframes errorSotoa {
     0%,
     100% {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex flex-row items-center justify-center my-5">
+        <div class="flex flex-row items-center justify-center my-5 sotoaPanelLetra">
             <div class="flex flex-col items-center">
                 <button
                     class="btn-increment"
