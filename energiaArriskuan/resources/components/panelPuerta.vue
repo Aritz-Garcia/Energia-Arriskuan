@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-center mb-8">
-        <p class="text-3xl md:w-auto mx-10 px-20 p-6" id="atekoPapera">
+        <p class="text-3xl md:w-auto mx-10 px-20 p-6 text-white" id="atekoPapera">
             {{ testua }}
         </p>
         <img
