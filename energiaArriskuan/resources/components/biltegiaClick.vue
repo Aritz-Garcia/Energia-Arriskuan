@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div>
+        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
+            <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+        </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -74,19 +80,9 @@
 </template>
 
 <script>
-    import { createApp } from 'vue';
-    import juego1 from "./juego1.vue";
-    import route from '../../vendor/tightenco/ziggy/src/js';
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const juego1App = createApp({
-            components: {
-                juego1,
-            }
-        });
-        juego1App.mount("#juego1");
-    });
-
+import Denbora from "./denbora.vue";
+import route from "../../vendor/tightenco/ziggy/src/js";
 
 export default {
   name: "biltegiaClick",
@@ -95,6 +91,9 @@ export default {
     partida: Object,
     pruebas: Array,
   },
+  components: {
+        Denbora,
+    },
   data() {
     return {
       objektuak: [

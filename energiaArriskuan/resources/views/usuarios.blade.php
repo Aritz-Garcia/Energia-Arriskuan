@@ -4,7 +4,7 @@
 
 @section('content')
     <div
-        class="flex flex-col items-center justify-center gap-10 py-16 sm:py-56 sm:flex-row sm:gap-3 md:gap-6 lg:gap-10 xl:gap-16 mx-20">
+        class="flex flex-col items-center justify-center gap-10 py-16 sm:py-72 sm:flex-row sm:gap-3 md:gap-6 lg:gap-10 xl:gap-16 mx-20">
 
         <table class="max-w-screen-md mx-auto text-sm text-left  rtl:text-right text-[#0BD904] border border-[#0BD904]">
             <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">

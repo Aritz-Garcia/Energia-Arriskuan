@@ -91,7 +91,7 @@
 
 <script>
     import route from '../../vendor/tightenco/ziggy';
-    
+
     export default {
         name: "panelNumerico",
         props: {
@@ -131,6 +131,12 @@
                     this.resetValues();
                     this.animacion = "aciertoSotoa 1s";
                     this.colorFondo = "#00ff00"
+
+                    let resultElement = document.getElementById("text");
+                    resultElement.innerHTML = "Kodea zuzena da!";
+
+                    document.getElementById("close-img").classList.add("hidden");
+
                     setTimeout(() => {
                         window.location.href = route("prueba4.update", this.partida);
                     }, 3000);
