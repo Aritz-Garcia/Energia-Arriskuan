@@ -16,7 +16,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
-    <body class="font-rubik antialiased fotoFondo">
+    <body class="font-rubik-regular antialiased fotoFondo">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-16">
             <div>
                 <a href="/">
