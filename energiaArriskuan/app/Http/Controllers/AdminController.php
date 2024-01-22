@@ -36,9 +36,9 @@ class AdminController extends Controller
 
             if ($usuario != null) {
 
-                $users = User::all()->where('rol', 1);
+                $users = User::where('rol', 1)->paginate(5);
 
-                return view('usuarios')->with('users', $users);;
+                return view('usuarios')->with('users', $users);
             } else {
 
                 return redirect()->route('index');
@@ -56,9 +56,9 @@ class AdminController extends Controller
 
             if ($usuario != null) {
 
-                $users = User::all()->where('rol', 0);
+                $users = User::where('rol', 0)->paginate(5);
 
-                return view('usuarios')->with('users', $users);;
+                return view('usuarios')->with('users', $users);
             } else {
 
                 return redirect()->route('index');
@@ -67,6 +67,7 @@ class AdminController extends Controller
             return redirect()->route('index');
         }
     }
+
 
     public function partidak($userId)
     {
@@ -88,5 +89,4 @@ class AdminController extends Controller
             return redirect()->route('index');
         }
     }
-
 }
