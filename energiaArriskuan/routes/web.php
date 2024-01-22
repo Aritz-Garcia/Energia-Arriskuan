@@ -62,7 +62,9 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/denbora-gorde', [PartidaController::class, 'denboraGorde'])->name('denboraGorde');
 
+    Route::get('/partida/gameOverUpdate/{partidaId}', [PartidaController::class, 'gameOverUpdate'])->name('gameOver');
 
+    Route::get('/partida/gameOver/{partidaId}', [PartidaController::class, 'gameOverView'])->name('gameOverView');
 
 });
 

@@ -13,10 +13,9 @@
             id="close-img"
         />
     </div>
-    </div>
       <div>
         <!-- ... (tu código HTML anterior) ... -->
-    
+
         <main id="carta-slot">
           <div
             class="carta-box"
@@ -34,10 +33,11 @@
             </div>
           </div>
         </main>
-    
+
         <!-- Contenedor para las cartas clickeadas -->
         <div id="cartas-grid" class="cartasC"></div>
       </div>
+    </div>
     </template>
 
     <script>

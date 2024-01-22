@@ -1,6 +1,6 @@
 <template>
-    <div class="sotoaPanelLetra text-3xl">
-        <div>
+    <div class="sotoaPanelLetra text-4xl bg-black p-3 rounded-xl">
+        <div id="denboraStringDiv" :style="{ 'animation' : estilo }">
             {{ denborarenString }}
         </div>
     </div>
@@ -9,6 +9,7 @@
 
 <script>
 import axios from 'axios';
+import route from '../../vendor/tightenco/ziggy/src/js';
 
 export default {
     name: 'denbora',
@@ -24,6 +25,7 @@ export default {
             denbora: 0,
             denborarenString: "",
             intervalo: null,
+            estilo: "",
         }
     },
     methods: {
@@ -39,7 +41,12 @@ export default {
 
                 if (this.denbora == 0) {
                     this.terminarIntervalo();
+                    this.gameOver();
                 } else {
+                    if (this.denbora <= 300) {
+                        document.getElementById("denboraStringDiv").classList.add("text-red-600");
+                        this.estilo = "denborabostmin 1.5s infinite";
+                    }
                     this.denbora--;
                     this.denboraStringEgin();
                     this.gorderDb();
@@ -69,6 +76,7 @@ export default {
         },
         gameOver() {
             // TODO - Game over
+            window.location.href = route('gameOver', this.partida);
         }
     },
 }
