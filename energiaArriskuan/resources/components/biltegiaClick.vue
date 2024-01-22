@@ -13,6 +13,16 @@
       style="width: 100%; height: 100vh"
     />
 
+    <div>
+        <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
+
+        <div id="juego1div" class="hidden">
+            <div id="juego1">
+                <juego1 :partida=partida.id></juego1>
+            </div>
+        </div>
+        
+
     <!-- estantería 1 dagoela erakusten duen testua -->
     <div id="estanteria1" class="hidden">
       <div
@@ -66,9 +76,11 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
+
 import Denbora from "./denbora.vue";
 import route from "../../vendor/tightenco/ziggy/src/js";
 
