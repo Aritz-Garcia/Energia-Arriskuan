@@ -484,3 +484,8 @@ body.fondoAzul {
         opacity: 0;
     }
 }
+
+/********************************* Denbora *********************************/
+.denboraErdian {
+    transform: translate(-50%);
+}
