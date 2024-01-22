@@ -3,16 +3,18 @@
         <div>
             {{ denborarenString }}
         </div>
-  </div>
+    </div>
 
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
     name: 'denbora',
     props: {
-        partida: String,
+        partida: Number,
+        denboraPart: String,
     },
     mounted() {
         this.startDenbora();
@@ -21,21 +23,27 @@ export default {
         return {
             denbora: 0,
             denborarenString: "",
+            intervalo: null,
         }
     },
     methods: {
         getDenbora() {
-            console.log(this.partida);
-            let denboraString = this.partida;
+            let denboraString = this.denboraPart;
             let denboraSplit = denboraString.split(":");
             let denboraInt = parseInt(denboraSplit[0]) * 60 + parseInt(denboraSplit[1]);
             this.denbora = denboraInt;
         },
         startDenbora() {
             this.getDenbora();
-            setInterval(() => {
-                this.denbora--;
-                this.denboraStringEgin();
+            this.intervalo = setInterval(() => {
+
+                if (this.denbora == 0) {
+                    this.terminarIntervalo();
+                } else {
+                    this.denbora--;
+                    this.denboraStringEgin();
+                    this.gorderDb();
+                }
             }, 1000);
         },
         denboraStringEgin() {
@@ -48,6 +56,19 @@ export default {
                 seg = "0" + seg;
             }
             this.denborarenString = min + ":" + seg;
+        },
+        terminarIntervalo() {
+            clearInterval(this.intervalo);
+        },
+        async gorderDb() {
+            let cookie = this.denbora;
+            axios.post('../denbora-gorde', {
+                valor: cookie,
+                partidaId: this.partida,
+            });
+        },
+        gameOver() {
+            // TODO - Game over
         }
     },
 }
