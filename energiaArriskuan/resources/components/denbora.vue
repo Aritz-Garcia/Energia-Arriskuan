@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="sotoaPanelLetra text-3xl">
         <div>
             {{ denborarenString }}
         </div>

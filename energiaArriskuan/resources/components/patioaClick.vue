@@ -1,5 +1,12 @@
 <template>
   <div>
+
+    <div>
+        <div id="denbora" class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50">
+            <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+        </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -47,12 +54,14 @@
 
 <script>
 import Papera from "./papelesPatio.vue";
+import Denbora from './denbora.vue';
 import route from "../../vendor/tightenco/ziggy";
 
 export default {
   name: "patioaClick",
   components: {
     Papera,
+    Denbora,
   },
   props: {
     urlimg: String,
@@ -62,27 +71,27 @@ export default {
   data() {
     return {
       objektuak: [
-        // * Atea 
+        // * Atea
         { areaTop: 52, areaLeft: 87, areaWidth: 7, areaHeight: 18 },
-        // * Saskibaloiko baloiak 
+        // * Saskibaloiko baloiak
         { areaTop: 70, areaLeft: 40.2, areaWidth: 3.5, areaHeight: 5 },
-        // * Saskibaloiko baloiak 
+        // * Saskibaloiko baloiak
         { areaTop: 63, areaLeft: 51, areaWidth: 2.5, areaHeight: 4 },
-        // * Saskibaloiko baloiak 
+        // * Saskibaloiko baloiak
         { areaTop: 65, areaLeft: 63, areaWidth: 4, areaHeight: 5 },
-        // * Peluche 
+        // * Peluche
         { areaTop: 65, areaLeft: 53.5, areaWidth: 2.9, areaHeight: 5 },
-        // * Simbolo1 
+        // * Simbolo1
         { areaTop: 71, areaLeft: 76.5, areaWidth: 6, areaHeight: 6 },
-        // * Simbolo2 
+        // * Simbolo2
         { areaTop: 79, areaLeft: 82, areaWidth: 5.5, areaHeight: 5 },
-        // * Simbolo3 
+        // * Simbolo3
         { areaTop: 62, areaLeft: 75, areaWidth: 3.5, areaHeight: 5 },
         // * Simbolo4
         { areaTop: 70, areaLeft: 36, areaWidth: 3.5, areaHeight: 5 },
-        // * Zaborra 
+        // * Zaborra
         { areaTop: 45, areaLeft: 2, areaWidth: 30, areaHeight: 40 },
-        // * Jolastu 
+        // * Jolastu
         { areaTop: 43, areaLeft: 38, areaWidth: 20, areaHeight: 14 },
       ],
       simbolo: "",

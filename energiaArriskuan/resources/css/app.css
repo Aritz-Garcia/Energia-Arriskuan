@@ -27,8 +27,12 @@
     src: url(../../public/fonts/Digital/DS-DIGIB.TTF);
 }
 
-.font-rubik {
+.font-rubik-regular {
     font-family: "Rubik Regular";
+}
+
+.font-rubik-bold {
+    font-family: "Rubik Bold";
 }
 
 body.fotoFondo {
@@ -231,7 +235,7 @@ body.fondoAzul {
     display: flex;
     flex-wrap: wrap;
 }
-  
+
   .carta-box {
     margin-top: 60px;
     margin-left: 15px;
@@ -246,7 +250,7 @@ body.fondoAzul {
     width: 150px;
     height: 150px;
   }
-  
+
   .carta-box:hover .carta {
     transform: rotateY(180deg);
   }
@@ -479,4 +483,9 @@ body.fondoAzul {
         left: 240px;
         opacity: 0;
     }
+}
+
+/********************************* Denbora *********************************/
+.denboraErdian {
+    transform: translate(-50%);
 }

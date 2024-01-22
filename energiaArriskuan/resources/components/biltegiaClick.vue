@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-        <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
+        <div id="denbora" class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50">
             <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
         </div>
     </div>
@@ -15,7 +15,7 @@
 
     <div id="juego1div" class="hidden">
         <div id="juego1">
-            <juego1 :partida=partida.id></juego1>
+            <Juego1 :partida=partida.id></Juego1>
         </div>
     </div>
 
@@ -83,6 +83,7 @@
 <script>
 
 import Denbora from "./denbora.vue";
+import Juego1 from "./juego1.vue";
 import route from "../../vendor/tightenco/ziggy/src/js";
 
 export default {
@@ -94,6 +95,7 @@ export default {
   },
   components: {
         Denbora,
+        Juego1,
     },
   data() {
     return {
@@ -165,7 +167,7 @@ export default {
                             jolasaBukatutaDiv.classList.remove('animate__ateaItxia__text');
                             }, 4900);
                         } else {
-                            
+
                               // 3. jolasa egin gabe badago
                               document.getElementById('juego1div').classList.remove('hidden');
                               document.getElementById('juego1div').classList.add('block');

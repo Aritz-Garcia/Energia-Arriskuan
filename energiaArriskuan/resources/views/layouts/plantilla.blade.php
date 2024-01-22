@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased font-rubik min-h-screen fondoAzul">
+<body class="antialiased font-rubik-regular min-h-screen fondoAzul">
 
     @include("partials.menu")
 
