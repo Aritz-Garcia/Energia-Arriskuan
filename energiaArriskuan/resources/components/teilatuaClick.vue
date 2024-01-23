@@ -7,6 +7,10 @@
             </div>
         </div>
 
+        <div class="absolute top-0 left-0 z-50">
+            <Irten/>
+        </div>
+
         <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
         <!-- estantería 1 dagoela erakusten duen testua -->
@@ -22,6 +26,7 @@
 
 <script>
     import Denbora from './denbora.vue';
+import Irten from './jolasakIrten.vue';
     import route from '../../vendor/tightenco/ziggy/src/js';
 
     export default {
@@ -33,6 +38,7 @@
         },
         components: {
             Denbora,
+            Irten,
         },
         data () {
             return {
