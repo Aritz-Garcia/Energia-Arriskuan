@@ -7,6 +7,10 @@
         </div>
     </div>
 
+    <div class="absolute top-0 left-0 z-50">
+        <Irten/>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -55,6 +59,7 @@
 <script>
 import Papera from "./papelesPatio.vue";
 import Denbora from './denbora.vue';
+import Irten from './jolasakIrten.vue';
 import route from "../../vendor/tightenco/ziggy";
 
 export default {
@@ -62,6 +67,7 @@ export default {
   components: {
     Papera,
     Denbora,
+    Irten,
   },
   props: {
     urlimg: String,
