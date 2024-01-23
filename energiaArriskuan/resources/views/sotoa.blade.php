@@ -4,9 +4,13 @@
 
 @section('content')
 
-    @if(Auth::user()->id == $partida->id_erabiltzailea)
+    <x-audio-player />
+
+
+    @if (Auth::user()->id == $partida->id_erabiltzailea)
         <div id="sotoaDiv">
-            <Sotoa urlimg={{ asset('images/sotoa.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Sotoa>
+            <Sotoa urlimg={{ asset('images/sotoa.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}>
+            </Sotoa>
         </div>
 
         {{-- <div style="position: absolute;
@@ -81,11 +85,9 @@
             opacity: 0.8;">
         </div> --}}
     @else
-
         <script>
             window.location.href = route('index');
         </script>
-
     @endif
 
 

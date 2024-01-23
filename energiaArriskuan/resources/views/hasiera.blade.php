@@ -4,7 +4,14 @@
 
 @section('content')
 
-    @if(Auth::user()->id == $partida->id_erabiltzailea)
+    {{-- <x-audio-player /> --}}
+
+    @if (Auth::user()->id == $partida->id_erabiltzailea)
+        <div id="hasieraDiv">
+            <Hasiera urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}>
+            </Hasiera>
+        </div>
+        
         @if ($berria)
 
             <div id="hasieraDiv">
@@ -124,12 +131,20 @@
             height: 1vh;
             background-color:#fdf9d1;
             opacity: 0.8;">
+            </div>
+
+            
+            <div style="position: absolute;
+            top: 41vh;
+            left: 61.3%;
+            width: 1.4%;
+            height: 6vh;
+            background-color:#ff00c3;
+            opacity: 0.8;">
             </div> --}}
     @else
-
         <script>
             window.location.href = route('index');
         </script>
-
     @endif
 @endsection
