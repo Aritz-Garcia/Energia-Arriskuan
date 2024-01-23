@@ -59,6 +59,7 @@ class PartidaController extends Controller
             if ($partida == null) {
                 $partida = new Partida();
                 $partida->id_erabiltzailea = $erabiltzaileaId;
+                $partida->denbora = "60:00";
                 $partida->save();
 
                 for ($i = 1; $i <= 4; $i++) {
