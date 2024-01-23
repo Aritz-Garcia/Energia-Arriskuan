@@ -2,11 +2,10 @@
     <div>
         <div class="flex items-center justify-center">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                El código está formado por las iniciales de las 3 partes que forman
-                el rotor de un aerogenerador.
+                Kodea aerosorgailu baten 3 zatien inizialez osatuta dago.
             </p>
             <img
-                id="close-img"
+                id="close-img-hasiera"
                 @click="closeGame"
                 src="../../public/images/cerrar.png"
                 alt="Cerrar"
@@ -145,8 +144,8 @@ export default {
             this.result3 = document.getElementById("letterInput3").value;
 
             if (
-                this.result1 === "B" &&
-                this.result2 === "C" &&
+                this.result1 === "A" &&
+                this.result2 === "K" &&
                 this.result3 === "P"
             ) {
                 document.querySelector(".fondo").style.backgroundImage =
@@ -156,7 +155,7 @@ export default {
                 this.inputsBlocked = true;
                 this.verificationButtonBlocked = true;
 
-                document.getElementById("close-img").classList.add("hidden");
+                document.getElementById("close-img-hasiera").classList.add("hidden");
                 setTimeout(() => {
                     window.location.href = route("prueba3.update", this.partida);
                 }, 3000);
@@ -174,8 +173,8 @@ export default {
         },
 
         resetValues() {
-            this.result1 = "B";
-            this.result2 = "C";
+            this.result1 = "A";
+            this.result2 = "K";
             this.result3 = "P";
         },
     },

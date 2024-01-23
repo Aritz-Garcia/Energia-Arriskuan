@@ -9,8 +9,8 @@
                 {{-- Zure erab --}}
                 {{-- Erab info --}}
                 <div
-                    class="flex flex-col justify-center items-center max-w-md min-w-sm mx-auto text-[#0bd904] border-2 border-[#0bd904] hover:border-[#ffffff] hover:border-2 bg-[#010440] rounded-3xl py-7">
-                    <div class="flex justify-center items-center">
+                    class="flex flex-col justify-center items-center max-w-lg min-w-md mx-auto text-[#0bd904] border-2 border-[#0bd904] hover:border-[#ffffff] hover:border-2 bg-[#010440] rounded-3xl py-7">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
                         <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia"
                             class="hover:border-[#ffffff] m-2 h-36 w-36 rounded-full border-2 border-[#0bd904]">
                         <div class="m-4">
@@ -88,7 +88,7 @@
                                             @if ($partida->denbora == null)
                                                 <td class="text-center py-4 text-xl"><del>00:00</del></td>
                                             @else
-                                                <td class="text-center py-4 text-xl">{{ $partida->denbora }} - Tachado</td>
+                                                <td class="text-center py-4 text-xl line-through">{{ $partida->denbora }}</td>
                                             @endif
 
                                             <td class="pe-2">
@@ -201,7 +201,7 @@
                                                 @if ($partida->denbora == null)
                                                     <td class="text-center py-4 text-xl"><del>00:00</del></td>
                                                 @else
-                                                    <td class="text-center py-4 text-xl">{{ $partida->denbora }} - Tachado</td>
+                                                    <td class="text-center py-4 text-xl line-through">{{ $partida->denbora }}</td>
                                                 @endif
 
                                                 <td class="pe-2">
@@ -238,7 +238,7 @@
                 </div>
             @else
                 {{-- Erab normal beste user batean --}}
-                <p>Ezin zara hemen egon</p>
+                {{route('index')}}
             @endif
         </div>
     @endauth
