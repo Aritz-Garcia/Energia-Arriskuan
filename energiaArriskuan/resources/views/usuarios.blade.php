@@ -3,9 +3,21 @@
 @section('title', 'Admin Orrialdea')
 
 @section('content')
-    <div class="max-w-screen-md mx-auto py-4 sm:py-72">
+
+    <div class="absolute top-28 left-0 z-50">
+        <a href="{{ route('admin', ['userId' => 1]) }}">
+            <div class="ms-2 mt-2 px-5 p-3 text-center hover:brightness-0 hover:invert">
+                <img src="{{ asset('images/irten-index.png') }}" alt="admin horrira joan" class="w-10">
+            </div>
+        </a>
+    </div>
+
+    <div class="max-w-screen-md mx-auto py-4 sm:py-80">
+
+
         @if (count($users) > 0)
-            <table class="table-auto w-full border-collapse text-sm text-left rtl:text-right text-[#0BD904] border border-[#0BD904] mx-auto">
+            <table
+                class="table-auto w-full border-collapse text-sm text-left rtl:text-right text-[#0BD904] border border-[#0BD904] mx-auto">
                 <!-- Encabezado de la tabla -->
                 <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">
                     <tr>
@@ -20,8 +32,7 @@
                         <tr class="bg-[#010440] border border-[#0BD904]">
                             <!-- Contenido de cada celda -->
                             <th scope="row" class="flex items-center px-6 py-4 whitespace-nowrap text-[#0BD904]">
-                                <img class="w-10 h-10 rounded-full" src="{{ url(asset($usuario->foto)) }}"
-                                    alt="Argazkia">
+                                <img class="w-10 h-10 rounded-full" src="{{ url(asset($usuario->foto)) }}" alt="Argazkia">
                                 <div class="ps-3">
                                     <div class="text-base">{{ $usuario->name }}</div>
                                     <div class="font-normal text-[#0BD904]">{{ $usuario->abizena }}</div>
@@ -41,7 +52,8 @@
                 {{ $users->links() }}
             </div>
         @else
-            <p class="text-xl text-center bg-[#010440] border border-[#0BD904] text-[#0BD904] p-5">Ez daude erabiltzarile arruntarik!</p>
+            <p class="text-xl text-center bg-[#010440] border border-[#0BD904] text-[#0BD904] p-5">Ez daude erabiltzarile
+                arruntarik!</p>
         @endif
     </div>
 @endsection

@@ -81,9 +81,9 @@
 
         </div>
 
-        <div class="flex items-center justify-end mt-4 pb-3 pt-3">
+        <div class="flex items-center justify-between mt-8 pb-3 pt-3">
 
-            <a class="text-[#0BD904]" href="{{ route('login') }}">
+            <a class="text-[#0BD904] hover:text-[#fff]" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
