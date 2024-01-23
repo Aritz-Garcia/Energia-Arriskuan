@@ -7,10 +7,22 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" class="relative" action="{{ route('login') }}">
+
         @csrf
 
-        <!-- Email Address -->
+        {{-- <div class="pt-3 absolute top-0 right-0"> --}}
+
+        {{-- <div class="group pt-3 absolute top-0 right-0">
+            <img src="../public/images/informacion.png" alt="informazioa" class="cursor-pointer">
+            <div class="hidden group-hover:block absolute w-44 top-3 right-0 bg-white p-4 shadow-md">
+                a: aaaaaaaaaaaa <br>
+                b: bbbbbbbbbbbb
+            </div>
+        </div> --}}
+
+
+        <!-- Erabiltzailea -->
         <div class="pt-3">
             <x-input-label for="erabiltzailea" :value="__('Erabiltzailea')" />
             <x-text-input id="erabiltzailea" class="block mt-1 w-full" type="text" name="erabiltzailea" :value="old('erabiltzailea')"
