@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <x-audio-player />
+    {{-- <x-audio-player /> --}}
 
     @if (Auth::user()->id == $partida->id_erabiltzailea)
         <div id="hasieraDiv">
@@ -120,6 +120,16 @@
             width: 1.8%;
             height: 1vh;
             background-color:#fdf9d1;
+            opacity: 0.8;">
+            </div>
+
+            
+            <div style="position: absolute;
+            top: 41vh;
+            left: 61.3%;
+            width: 1.4%;
+            height: 6vh;
+            background-color:#ff00c3;
             opacity: 0.8;">
             </div> --}}
     @else
