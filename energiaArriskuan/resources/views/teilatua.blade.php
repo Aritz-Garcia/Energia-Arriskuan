@@ -4,9 +4,13 @@
 
 @section('content')
 
-    @if(Auth::user()->id == $partida->id_erabiltzailea)
+    <x-audio-player />
+
+
+    @if (Auth::user()->id == $partida->id_erabiltzailea)
         <div id="teilatuaDiv">
-            <Teilatua urlimg={{ asset('images/teilatua.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Teilatua>
+            <Teilatua urlimg={{ asset('images/teilatua.png') }} :partida={{ $partida }}
+                :pruebas={{ $partida->pruebas }}></Teilatua>
         </div>
 
         {{-- puerta --}}
@@ -28,13 +32,10 @@
             background-color:#51ff00;
             opacity: 0.5;">
         </div> --}}
-
     @else
-
         <script>
             window.location.href = route('index');
         </script>
-
     @endif
 
 
