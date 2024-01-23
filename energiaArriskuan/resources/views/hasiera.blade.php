@@ -9,6 +9,27 @@
             <Hasiera urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
         </div>
 
+        @if ($berria)
+            <div style="position: absolute;
+                top: 40vh;
+                left: 26%;
+                width: 8%;
+                height: 27vh;
+                opacity: 0;" id="atea">
+            </div>
+
+            <div style="position: absolute;
+                top: 37vh;
+                left: 29.2%;
+                width: 2%;
+                height: 2vh;
+                opacity: 0;" id="ateGainean">
+            </div>
+
+            @vite(["resources/js/tutorial.js"])
+
+        @endif
+
         {{-- <div style="position: absolute;
             top: 40vh;
             left: 66%;

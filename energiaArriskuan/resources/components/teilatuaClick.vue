@@ -1,6 +1,12 @@
 <template>
 
     <div>
+        <div>
+            <div id="denbora" class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50">
+                <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
+            </div>
+        </div>
+
         <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
         <!-- estantería 1 dagoela erakusten duen testua -->
@@ -15,6 +21,7 @@
 </template>
 
 <script>
+    import Denbora from './denbora.vue';
     import route from '../../vendor/tightenco/ziggy/src/js';
 
     export default {
@@ -23,6 +30,9 @@
             urlimg: String,
             partida: Object,
             pruebas: Array,
+        },
+        components: {
+            Denbora,
         },
         data () {
             return {

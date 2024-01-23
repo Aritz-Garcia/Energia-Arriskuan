@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased font-rubik-regular min-h-screen fondoAzul">
-
-    @include("partials.menu")
+<body class="antialiased font-rubik-bold fotoFondo min-h-screen">
 
     @isset($header)
         <header>
@@ -25,11 +23,9 @@
         </header>
     @endisset
 
-    <main role="main" class="">
+    <main role="main" class="x-w-screen-xl">
         @yield("content")
     </main>
-
-    @include("partials.footer")
 
 </body>
 

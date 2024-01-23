@@ -1,30 +1,30 @@
 <template>
     <div>
       <div>
-          <div id="denbora" class="text-center absolute top-0 left-1/2 my-3 text-white text-xl z-50">
+          <div id="denbora" class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50">
               <Denbora :denboraPart=partida.denbora :partida=partida.id></Denbora>
           </div>
       </div>
-  
+
       <div id="atekoPaperaDiv" class="hidden">
           <div class="absolute top-1/2 left-1/2 atekoPapera">
               <AtekoPapera :testua=testua />
           </div>
       </div>
-  
+
       <img
         :src="urlimg"
         @click.prevent="clickImagen"
         alt="Img"
         style="width: 100%; height: 100vh"
       />
-  
+
       <div id="juego3div" class="hidden">
         <div id="juego3">
           <Juego3 :partida="partida.id"></Juego3>
         </div>
       </div>
-  
+
       <!-- Erlojua klikatzean erakusten den testua -->
       <div id="erlojuaDiv" class="hidden">
         <div
@@ -33,7 +33,7 @@
           <p id="erlojuaPText"></p>
         </div>
       </div>
-  
+
       <!-- Atea itxita dagoela erakusten duen testua -->
       <div id="ateaItxiakDiv" class="hidden">
         <div
@@ -44,13 +44,13 @@
       </div>
     </div>
   </template>
-  
+
   <script>
   import Juego3 from "./juego3.vue";
   import Denbora from "./denbora.vue";
   import AtekoPapera from "./panelPuerta.vue";
   import route from "../../vendor/tightenco/ziggy";
-  
+
   export default {
       name: "hasieraClick",
       props: {
@@ -94,13 +94,13 @@
       clickImagen(event) {
         let posX = event.clientX - event.target.offsetLeft;
         let posY = event.clientY - event.target.offsetTop;
-  
+
         for (let i = 0; i < this.objektuak.length; i++) {
           var areaTopAbs = (this.objektuak[i].areaTop / 100) * event.target.height;
           var areaLeftAbs = (this.objektuak[i].areaLeft / 100) * event.target.width;
           var areaWidthAbs = (this.objektuak[i].areaWidth / 100) * event.target.width;
           var areaHeightAbs = (this.objektuak[i].areaHeight / 100) * event.target.height;
-  
+
           if (
             posY >= areaTopAbs &&
             posY <= areaTopAbs + areaHeightAbs &&
@@ -124,7 +124,7 @@
                     document.getElementById("erlojuaDiv").classList.remove("block");
                     document.getElementById("ateaItxiakDiv").classList.add("hidden");
                     document.getElementById("erlojuaDiv").classList.add("hidden");
-  
+
                     // 3. jolasa egin gabe badago
                     document.getElementById("juego3div").classList.remove("hidden");
                     document.getElementById("juego3div").classList.add("block");
@@ -147,11 +147,11 @@
                 .getElementById("erlojuaDiv")
                 .classList.add("animate__ateaItxia__text");
               document.getElementById("erlojuaPText").innerHTML = this.eguna() + "ak dira";
-  
+
               // Beste testuak kendu
               document.getElementById("ateaItxiakDiv").classList.remove("block");
               document.getElementById("ateaItxiakDiv").classList.add("hidden");
-  
+
               setTimeout(() => {
                 document.getElementById("erlojuaDiv").classList.remove("block");
                 document.getElementById("erlojuaDiv").classList.add("hidden");
@@ -167,11 +167,11 @@
               document
                 .getElementById("ateaItxiakDiv")
                 .classList.add("animate__ateaItxia__text");
-  
+
               // Beste testuak kendu
               document.getElementById("erlojuaDiv").classList.remove("block");
               document.getElementById("erlojuaDiv").classList.add("hidden");
-  
+
               setTimeout(() => {
                 document.getElementById("ateaItxiakDiv").classList.remove("block");
                 document.getElementById("ateaItxiakDiv").classList.add("hidden");
@@ -200,7 +200,7 @@
               document.getElementById("atekoPaperaDiv").classList.remove("hidden");
               document.getElementById("atekoPaperaDiv").classList.add("block");
             }
-  
+
             return;
           }
         }
@@ -217,4 +217,3 @@
     },
   };
   </script>
-  

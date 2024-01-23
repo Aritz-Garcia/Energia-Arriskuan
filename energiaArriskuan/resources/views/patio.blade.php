@@ -22,8 +22,8 @@
         {{-- simbolo 1 --}}
         {{-- <div style="position: absolute;
             top: 71vh;
-            left: 76.5%;
-            width: 6%;
+            left: 75%;
+            width: 10%;
             height: 6vh;
             background-color:#ff0000;
             opacity: 0.3;">
@@ -41,20 +41,20 @@
 
         {{-- simbolo 3 --}}
         {{-- <div style="position: absolute;
-            top: 62vh;
-            left: 75%;
-            width: 3.5%;
-            height: 5vh;
+            top: 60vh;
+            left: 73%;
+            width: 8%;
+            height: 10vh;
             background-color: #37ff00;
             opacity: 0.3;">
         </div> --}}
 
         {{-- simbolo 4 --}}
         {{-- <div style="position: absolute;
-            top: 70vh;
-            left: 36%;
-            width: 3.5%;
-            height: 5vh;
+            top: 68vh;
+            left: 34%;
+            width: 6%;
+            height: 13vh;
             background-color: #ff00bf;
             opacity: 0.3;">
         </div> --}}
@@ -97,6 +97,26 @@
             height: 5vh;
             background-color:#4b3912;
             opacity: 0.7;">
+        </div> --}}
+
+        {{-- zaborra --}}
+        {{-- <div style="position: absolute;
+            top: 45vh;
+            left: 2%;
+            width: 30%;
+            height: 40vh;
+            background-color: #ffffff;
+            opacity: 0.3;">
+        </div> --}}
+
+        {{-- jolastu --}}
+        {{-- <div style="position: absolute;
+            top: 43vh;
+            left: 38%;
+            width: 20%;
+            height: 14vh;
+            background-color: #ffffff;
+            opacity: 0.3;">
         </div> --}}
 
     @else

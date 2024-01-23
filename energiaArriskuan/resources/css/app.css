@@ -2,8 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-rubik {
-    font-family: "Rubik";
+@font-face {
+    font-family: "Rubik Regular";
+    src: url(../../public/fonts/Rubik/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url(../../public/fonts/Rubik/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Indie Flower";
+    src: url(../../public/fonts/Indie_flower/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Digital Regular";
+    src: url(../../public/fonts/Digital/DS-DIGI.TTF);
+}
+
+@font-face {
+    font-family: "Digital Bold";
+    src: url(../../public/fonts/Digital/DS-DIGIB.TTF);
+}
+
+.font-rubik-regular {
+    font-family: "Rubik Regular";
+}
+
+.font-rubik-bold {
+    font-family: "Rubik Bold";
 }
 
 body.fotoFondo {
@@ -156,7 +185,7 @@ body.fondoAzul {
 
 /* ------------------------------------------- */
 
-#juego3, #juego4, .atekoPapera {
+#juego3, #juego4, .atekoPapera, #juego2Paperak, .gameOver {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -206,7 +235,7 @@ body.fondoAzul {
     display: flex;
     flex-wrap: wrap;
 }
-  
+
   .carta-box {
     margin-top: 60px;
     margin-left: 15px;
@@ -221,7 +250,7 @@ body.fondoAzul {
     width: 150px;
     height: 150px;
   }
-  
+
   .carta-box:hover .carta {
     transform: rotateY(180deg);
   }
@@ -411,6 +440,11 @@ body.fondoAzul {
 }
 
 /********************************* Sotoa *********************************/
+
+.sotoaPanelLetra {
+    font-family: "Digital Bold", sans-serif;
+}
+
 @keyframes errorSotoa {
     0%,
     100% {
@@ -449,4 +483,28 @@ body.fondoAzul {
         left: 240px;
         opacity: 0;
     }
+}
+
+/********************************* Denbora *********************************/
+.denboraErdian {
+    transform: translate(-50%);
+}
+
+@keyframes denborabostmin {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    /* 40% {
+        opacity: 1;
+    } */
+
+    50% {
+        opacity: 0.2;
+    }
+
+    /* 60% {
+        opacity: 1;
+    } */
 }

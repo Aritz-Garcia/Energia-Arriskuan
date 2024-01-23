@@ -83,7 +83,15 @@ class PartidaController extends Controller
         if ($partida == null || $partida->bukatuta == 1) {
             return redirect()->route('index');
         }
-        return view('hasiera', ['partida' => $partida]);
+
+        $berria = -1;
+        if ($partida->created_at == $partida->updated_at) {
+            $berria = 1;
+        } else {
+            $berria = 0;
+        }
+
+        return view('hasiera', ['partida' => $partida, "berria" => $berria]);
 
     }
 
@@ -138,5 +146,14 @@ class PartidaController extends Controller
         }
         $denborarenString = $min . ":" . $seg;
         Partida::where("id", $partidaId)->update(["denbora" => $denborarenString]);
+    }
+
+    public function gameOverUpdate($partidaId) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1]);
+        return redirect()->route('gameOverView', $partidaId);
+    }
+
+    public function gameOverView($partidaId) {
+        return view('partida.gameOver', ['partidaId' => $partidaId]);
     }
 }
