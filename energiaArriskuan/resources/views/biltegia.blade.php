@@ -3,6 +3,8 @@
 @section('title', 'Biltegia')
 
 @section('content')
+    <x-audio-player />
+
     @if (Auth::user()->id == $partida->id_erabiltzailea)
         <div id="biltegiaDiv">
             <Biltegia urlimg={{ asset('images/biltegia.png') }} :partida={{ $partida }}
@@ -31,7 +33,7 @@
             opacity: 0.5;">
         </div> --}}
 
-         {{-- estantería 1 --}}
+        {{-- estantería 1 --}}
         {{-- <div
             style="position: absolute;
             top: 20vh;
