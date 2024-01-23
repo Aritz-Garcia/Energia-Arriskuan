@@ -11,8 +11,12 @@
             <Hasiera urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}>
             </Hasiera>
         </div>
-
+        
         @if ($berria)
+
+            <div id="hasieraDiv">
+                <Hasiera-Tutorial urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera-Tutorial>
+            </div>
             <div style="position: absolute;
                 top: 40vh;
                 left: 26%;
@@ -30,6 +34,12 @@
             </div>
 
             @vite(["resources/js/tutorial.js"])
+
+        @else
+
+            <div id="hasieraDiv">
+                <Hasiera urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
+            </div>
 
         @endif
 
