@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 import { ZiggyVue } from 'ziggy-js';
 import Denbora from "../components/denbora.vue";
 import Hasiera from "../components/hasieraClick.vue";
+import HasieraTutorial from "../components/hasieraTutorial.vue";
 import Biltegia from "../components/biltegiaClick.vue";
 import Sotoa from "../components/sotoaClick.vue";
 import Teilatua from "../components/teilatuaClick.vue";
@@ -20,6 +21,7 @@ const app = createApp({
     components: {
         Denbora,
         Hasiera,
+        HasieraTutorial,
         Biltegia,
         Sotoa,
         Teilatua,
