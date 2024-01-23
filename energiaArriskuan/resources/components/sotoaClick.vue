@@ -7,6 +7,10 @@
             </div>
         </div>
 
+        <div class="absolute top-0 left-0 z-50">
+            <Irten/>
+        </div>
+
         <img :src=urlimg @click.prevent="clickImagen" alt="Img" style="width: 100%; height:100vh">
 
         <div id="juego4div" class="hidden">
@@ -57,6 +61,7 @@
 <script>
     import Juego4 from "./juego4.vue";
     import Denbora from "./denbora.vue";
+import Irten from './jolasakIrten.vue';
     import route from '../../vendor/tightenco/ziggy';
 
     export default {
@@ -69,6 +74,7 @@
         components: {
             Juego4,
             Denbora,
+            Irten,
         },
         data () {
             return {
