@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_erabiltzailea');
-            $table->foreign('id_erabiltzailea')->references('id')->on('users');
+            $table->foreign('id_erabiltzailea')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('denbora')->nullable();
             $table->boolean('bukatuta')->default(false);
             $table->boolean('irabazita')->default(false);
