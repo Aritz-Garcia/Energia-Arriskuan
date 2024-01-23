@@ -102,15 +102,6 @@ export default {
                 { areaTop: 75, areaLeft: 40.2, areaWidth: 46, areaHeight: 10 },
                 { areaTop: 70, areaLeft: 43.7, areaWidth: 42.5, areaHeight: 5 },
                 { areaTop: 60, areaLeft: 67, areaWidth: 19.2, areaHeight: 10 },
-
-                // * Simbolo1
-                // { areaTop: 71, areaLeft: 76.5, areaWidth: 6, areaHeight: 6 },
-                // * Simbolo2
-                // { areaTop: 79, areaLeft: 82, areaWidth: 5.5, areaHeight: 5 },
-                // * Simbolo3
-                // { areaTop: 62, areaLeft: 75, areaWidth: 3.5, areaHeight: 5 },
-                // * Simbolo4
-                // { areaTop: 70, areaLeft: 36, areaWidth: 3.5, areaHeight: 5 },
             ],
             zenbakia: 0,
         };
@@ -241,32 +232,6 @@ export default {
                         simbolosDiv.classList.remove("hidden");
                         simbolosDiv.classList.add("block");
                     }
-                    //   } else if (i == 5) {
-                    //     // * Simbolo 1
-                    //     console.log("Simbolo 1");
-                    //     this.simbolo = "simbolo1";
-                    //     simbolosDiv.classList.remove("hidden");
-                    //     simbolosDiv.classList.add("block");
-                    //   } else if (i == 6) {
-                    //     // * Simbolo 2
-                    //     console.log("Simbolo 2");
-                    //     this.simbolo = "simbolo2";
-                    //     simbolosDiv.classList.remove("hidden");
-                    //     simbolosDiv.classList.add("block");
-                    //   } else if (i == 7) {
-                    //     // * Simbolo 3
-                    //     console.log("Simbolo 3");
-                    //     this.simbolo = "simbolo3";
-                    //     simbolosDiv.classList.remove("hidden");
-                    //     simbolosDiv.classList.add("block");
-                    //   } else if (i == 8) {
-                    //     // * Simbolo 4
-                    //     console.log("Simbolo 4");
-                    //     this.simbolo = "simbolo4";
-                    //     simbolosDiv.classList.remove("hidden");
-                    //     simbolosDiv.classList.add("block");
-                    //     sDiv3.classList.add("hidden");
-
                     return;
                 }
             }
