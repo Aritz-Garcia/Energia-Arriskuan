@@ -12,6 +12,26 @@
             <hr class="my-2 border-t-2 border-[#0BD904]">
 
             <!-- Name -->
+            {{-- <div class="pt-3">
+                <div class="flex justify-between relative group">
+
+                    <x-input-label for="name" :value="__('Name')" />
+                    <div class="relative">
+                        <img src="../public/images/informacion.png" class="h-6 cursor-pointer" id="infoIcon">
+                        <p
+                            class="hidden group-hover:inline absolute top-[-8px] left-[-300px] w-auto text-white p-2">
+
+                            15 karaktere, letra handiak eta txikiak
+
+                        </p>
+                    </div>
+                </div>
+                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
+                    v-model="erabiltzaileak.izena" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            </div> --}}
+
+            <!-- Name -->
             <div class="pt-3">
                 <x-input-label for="name" :value="__('Name')" />
                 <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
