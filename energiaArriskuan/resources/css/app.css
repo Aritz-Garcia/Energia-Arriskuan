@@ -410,7 +410,7 @@ body.fondoAzul {
 
 /********************************* Hasiera *********************************/
 
-.ateaItxiaText {
+.ateaItxiaText, .paperaPatio {
     transform: translate(-50%, -50%);
 }
 
