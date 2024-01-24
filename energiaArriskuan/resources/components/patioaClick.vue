@@ -16,20 +16,24 @@
             <Irten />
         </div>
 
-        <img
-            :src="urlimg"
-            @click.prevent="clickImagen"
-            alt="Img"
-            style="width: 100%; height: 100vh"
-        />
+    <div class="absolute top-0 right-0 z-50">
+        <Pista/>
+    </div>
 
-        <div id="pelotasDiv" class="hidden">
-            <div
-                class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
-            >
-                <p>Saskibaloiko baloiak</p>
-            </div>
-        </div>
+    <img
+      :src="urlimg"
+      @click.prevent="clickImagen"
+      alt="Img"
+      style="width: 100%; height: 100vh"
+    />
+
+    <div id="pelotasDiv" class="hidden">
+      <div
+        class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
+      >
+        <p>Saskibaloiko baloiak</p>
+      </div>
+    </div>
 
         <div id="ZaborraDiv" class="hidden">
             <div
@@ -66,6 +70,7 @@ import Papera from "./papelesPatio.vue";
 import Denbora from "./denbora.vue";
 import Irten from "./jolasakIrten.vue";
 import route from "../../vendor/tightenco/ziggy";
+import Pista from './pistak.vue';
 
 export default {
     name: "patioaClick",

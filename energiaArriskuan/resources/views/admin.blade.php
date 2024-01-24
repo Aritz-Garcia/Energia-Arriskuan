@@ -12,7 +12,7 @@
             class="flex-2/3 card text-[#0BD904] hover:text-[#ffffff] bg-[#010440] py-5 rounded-3xl border-2 border-[#0BD904] hover:border-[#ffffff] w-60 min-w-48">
             <div>
                 <img src="{{ asset('images/admin.png') }}" alt="admin" class="mx-auto pb-6">
-                <p class="text-center text-lg">ERABILTZAILE ADMINISTRATZAILEAK</p>
+                <p class="text-center text-lg">ADMINISTRATZAILEAK</p>
             </div>
         </a>
 

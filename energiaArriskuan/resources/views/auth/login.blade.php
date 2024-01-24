@@ -51,12 +51,16 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4 pb-3">
+        <div class="flex items-center justify-between mt-8 pb-3">
             @if (Route::has('password.request'))
-                <a class="text-[#0BD904]" href="{{ route('password.request') }}">
+                <a class="text-[#0BD904] hover:text-[#fff] pr-10" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
+
+            <a class="text-[#0BD904] hover:text-[#fff] pr-10" href="{{ route('register') }}">
+                {{ __('Ez zaude erregistratuta?') }}
+            </a>
 
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
