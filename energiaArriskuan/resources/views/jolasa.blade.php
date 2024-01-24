@@ -15,7 +15,7 @@
 
                 <p class="my-5">CIFP Txurdinaga zentroa izan da Lurrean izandako azken erasoaren gertalekua. Estralurtar talde batek zentroari eraso dio, urteetan energia berriztagarriari buruz garatutako ezagutza guztia xurgatzeko asmoz, eta, horren ondorioz, zentroko sistema guztiak deskonektatu egin dira.</p>
 
-                <p class="my-5">Planetaren egungo bizigarritasun-baldintzekin, ezinezkoa da 2 ordu baino gehiago bizirik mantentzea, zentroan dauden energia-sistemak berrezartzen ez badira. Horregatik, zuk eta energia berriztagarriko aditu-taldeak zentroko energia-sorkuntza guztia berriro martxan jarriko duen eta pertsona guztien bizitza salbatu ahal izango den zeregin batzuk konpondu behar dituzue.</p>
+                <p class="my-5">Planetaren egungo bizigarritasun-baldintzekin, ezinezkoa da ordu bat baino gehiago bizirik mantentzea, zentroan dauden energia-sistemak berrezartzen ez badira. Horregatik, zuk eta energia berriztagarriko aditu-taldeak zentroko energia-sorkuntza guztia berriro martxan jarriko duen eta pertsona guztien bizitza salbatu ahal izango den zeregin batzuk konpondu behar dituzue.</p>
             </div>
         </div>
         <div class="z-50 botoiaHasiDiv flex flex-col justify-center items-center h-full m-0 invisible">
@@ -23,7 +23,7 @@
             <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
         </div>
         <form action="{{ route('hasiera', $partida->id )}}">
-            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-[#0BD904] bg-[#0BD904] text-[#010440] p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:text-[#0BD904]">SKIP</button>
+            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-[#0BD904] bg-[#0BD904] text-[#010440] p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:text-[#010440]">SKIP</button>
         </form>
     </div>
 

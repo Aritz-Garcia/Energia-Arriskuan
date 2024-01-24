@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center">
-        <Probak :probak="probak"></Probak>
+        <Probak :probak="probak" id="probakSemaforo"></Probak>
         <div
         class="ms-2 mt-2 px-5 p-3"
         >
