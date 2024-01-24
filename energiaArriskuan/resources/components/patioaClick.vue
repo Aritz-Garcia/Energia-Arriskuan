@@ -78,6 +78,7 @@ export default {
         Papera,
         Denbora,
         Irten,
+        Pista,
     },
     props: {
         urlimg: String,
