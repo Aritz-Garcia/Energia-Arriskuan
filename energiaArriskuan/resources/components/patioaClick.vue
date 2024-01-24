@@ -17,7 +17,7 @@
         </div>
 
     <div class="absolute top-0 right-0 z-50">
-        <Pista/>
+        <Pista :probak=pruebas></Pista>
     </div>
 
     <img
