@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <x-audio-player />
+    {{-- <x-audio-player /> --}}
 
 
     @if(Auth::user()->id == $partida->id_erabiltzailea)
@@ -19,7 +19,49 @@
             width: 7%;
             height: 18vh;
             background-color:#fff;
-            opacity: 0.5;">
+            opacity: 0.8;">
+        </div> --}}
+
+        {{-- Lurra sinboloak --}}
+        {{-- <div style="position: absolute;
+            top: 57vh;
+            left: 32%;
+            width: 8.2%;
+            height: 28vh;
+            background-color:#7af5d6;
+            opacity: 0.8;">
+        </div>
+        <div style="position: absolute;
+            top: 57vh;
+            left: 40.2%;
+            width: 10.8%;
+            height: 13vh;
+            background-color:#7af5d6;
+            opacity: 0.8;">
+        </div>
+        <div style="position: absolute;
+            top: 75vh;
+            left: 40.2%;
+            width: 46%;
+            height: 10vh;
+            background-color:#7af5d6;
+            opacity: 0.8;">
+        </div>
+        <div style="position: absolute;
+            top: 70vh;
+            left: 43.7%;
+            width: 42.5%;
+            height: 5vh;
+            background-color:#7af5d6;
+            opacity: 0.8;">
+        </div>
+        <div style="position: absolute;
+            top: 60vh;
+            left: 67%;
+            width: 19.2%;
+            height: 10vh;
+            background-color:#7af5d6;
+            opacity: 0.8;">
         </div> --}}
 
         {{-- simbolo 1 --}}
@@ -62,44 +104,44 @@
             opacity: 0.3;">
         </div> --}}
 
-        {{-- simbolo 5 --}}
+        {{-- Sakibaloia 1 --}}
         {{-- <div style="position: absolute;
             top: 70vh;
             left: 40.2%;
             width: 3.5%;
             height: 5vh;
             background-color:#00e5ff;
-            opacity: 0.3;">
+            opacity: 0.8;">
         </div> --}}
 
-        {{-- simbolo 6 --}}
+        {{-- Sakibaloia 2 --}}
         {{-- <div style="position: absolute;
             top: 63vh;
             left: 51%;
             width: 2.5%;
             height: 4vh;
             background-color:#ff7700;
-            opacity: 0.3;">
+            opacity: 0.8;">
         </div> --}}
 
-        {{-- simbolo 7 --}}
-        {{-- <div style="position: absolute;
-            top: 65vh;
-            left: 53.6%;
-            width: 2.9%;
-            height: 5vh;
-            background-color:#ffea00;
-            opacity: 0.3;">
-        </div> --}}
-
-        {{-- simbolo 8 --}}
+        {{-- Sakibaloia 3 --}}
         {{-- <div style="position: absolute;
             top: 65vh;
             left: 63%;
             width: 4%;
             height: 5vh;
             background-color:#4b3912;
-            opacity: 0.7;">
+            opacity: 0.8;">
+        </div> --}}
+
+        {{-- Panpina --}}
+        {{-- <div style="position: absolute;
+            top: 65vh;
+            left: 53.6%;
+            width: 2.9%;
+            height: 5vh;
+            background-color:#ffea00;
+            opacity: 0.8;">
         </div> --}}
 
         {{-- zaborra --}}
@@ -109,17 +151,17 @@
             width: 30%;
             height: 40vh;
             background-color: #ffffff;
-            opacity: 0.3;">
+            opacity: 0.8;">
         </div> --}}
 
-        {{-- jolastu --}}
+        {{-- Kulunka --}}
         {{-- <div style="position: absolute;
             top: 43vh;
             left: 38%;
             width: 20%;
             height: 14vh;
             background-color: #ffffff;
-            opacity: 0.3;">
+            opacity: 0.8;">
         </div> --}}
 
     @else
