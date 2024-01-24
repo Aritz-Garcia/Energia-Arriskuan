@@ -83,7 +83,7 @@
                 class="verify-btn"
                 :disabled="verificationButtonBlocked"
             >
-                CORREGIR
+                EGIAZTATU
             </button>
         </div>
     </div>

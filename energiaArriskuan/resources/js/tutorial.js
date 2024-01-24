@@ -33,6 +33,7 @@ const driverObj = driver({
         { element: '#hasieraDiv', popover: { title: 'Hasiera', description: 'Ikusi dezakegunez, hasierako gelan gaude.\nHemendik hasita ekintza desberdinak egin beharko dira energia-sistemak berrezartzeko.', side: "left", align: 'start' }},
         { element: '#ateGainean', popover: { title: 'Gelen izena', description: 'Gelen izena jakiteko ateen gainean klik eginez agertuko da.', side: "right", align: 'start' }},
         { element: '#atea', popover: { title: 'Gelak', description: 'Ateen gainean kliaktzean gelaz aldatuko da.', side: "right", align: 'start' }},
+        { element: '#pistak', popover: { title: 'Pistak', description: 'Pantailaren goikaldeaan, eskumaldean pista botoia ikusi daiteke. Gainenan klikatzean jolas baten pistak emango ditu.', side: "right", align: 'start' }},
         { popover: { title: 'Zure txanda', description: 'Orain zure txanda da, zailatu denbora bukatu baino lehen ekintza desberdinak egiten. Zorte on!!!' } }
     ]
 });
