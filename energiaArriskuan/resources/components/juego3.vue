@@ -94,7 +94,7 @@
                     class="verify-btn"
                     :disabled="verificationButtonBlocked"
                 >
-                    ABRIR
+                    IREKI
                 </button>
             </div>
         </div>
