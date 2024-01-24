@@ -22,6 +22,9 @@
             <p class="md:mx-auto text-3xl font-semibold">Misioa hasteko prest?</p>
             <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
         </div>
+        <form action="{{ route('hasiera', $partida->id )}}">
+            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-[#0BD904] bg-[#0BD904] text-[#010440] p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:text-[#0BD904]">SKIP</button>
+        </form>
     </div>
 
 
