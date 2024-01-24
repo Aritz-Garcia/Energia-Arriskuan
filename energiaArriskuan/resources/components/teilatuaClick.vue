@@ -17,6 +17,12 @@
       <Pista />
     </div>
 
+    <div id="juego4div" class="hidden">
+      <div id="juego4">
+        <Juego2 :partida="partida.id"></Juego2>
+      </div>
+    </div>
+
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -25,17 +31,19 @@
     />
 
     <!-- estantería 1 dagoela erakusten duen testua -->
-    <div id="estanteria1" class="hidden">
+    <div id="jolasaBukatutaDiv" class="hidden">
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>estantería 1</p>
+        <p>Bukatu duzu hemen</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
+import Juego2 from "./juego2.vue";
 import Denbora from "./denbora.vue";
 import Irten from "./jolasakIrten.vue";
 import Pista from "./pistak.vue";
@@ -49,6 +57,7 @@ export default {
     pruebas: Array,
   },
   components: {
+    Juego2,
     Denbora,
     Irten,
     Pista,
@@ -83,6 +92,40 @@ export default {
           if (i == 0) {
             // * juego
             console.log("ebjwyfgveu");
+            for (let i = 0; i < this.pruebas.length; i++) {
+              if (this.pruebas[i].izena == "prueba2") {
+                // Beste testuak kendu
+                // liburutegiaDiv.classList.remove("block");
+                // liburutegiaDiv.classList.add("hidden");
+                // argiaDiv.classList.remove("block");
+                // argiaDiv.classList.add("hidden");
+                // atzekaldekoLiburutegiaDiv.classList.remove("block");
+                // atzekaldekoLiburutegiaDiv.classList.add("hidden");
+                // ateaItxiaDiv.classList.remove("block");
+                // ateaItxiaDiv.classList.add("hidden");
+                // paperakDiv.classList.remove("block");
+                // paperakDiv.classList.add("hidden");
+                if (this.pruebas[i].bukatuta) {
+                  // Jolasa bukatuta
+                  jolasaBukatutaDiv.classList.remove("hidden");
+                  jolasaBukatutaDiv.classList.add("block");
+                  jolasaBukatutaDiv.classList.add("animate__ateaItxia__text");
+
+                  setTimeout(() => {
+                    jolasaBukatutaDiv.classList.remove("block");
+                    jolasaBukatutaDiv.classList.add("hidden");
+                    jolasaBukatutaDiv.classList.remove("animate__ateaItxia__text");
+                  }, 4900);
+                } else {
+                  // Jolasa egin gabe
+
+                  // 4. jolasa egin gabe badago
+                  document.getElementById("juego4div").classList.remove("hidden");
+                  document.getElementById("juego4div").classList.add("block");
+                }
+                return;
+              }
+            }
           } else if (i == 1) {
             window.location.href = route("hasiera", this.partida.id);
           }
