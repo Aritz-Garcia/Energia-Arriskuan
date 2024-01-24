@@ -233,7 +233,7 @@ export default {
                     } else if (i == 7 || i == 8 || i == 9 || i == 10 || i == 11) {
                         // * Lurreko sinboloak
                         console.log("Lurreko sinboloak");
-                        this.gehitu();
+                        this.zenbakia = this.randomZenbakia();
                         simbolosDiv.classList.remove("hidden");
                         simbolosDiv.classList.add("block");
                     }
@@ -241,12 +241,8 @@ export default {
                 }
             }
         },
-        gehitu() {
-            if (this.zenbakia == 4) {
-                return this.zenbakia = 1;
-            } else {
-                return this.zenbakia++;
-            }
+        randomZenbakia() {
+            return Math.floor(Math.random() * 4) + 1;
         },
     },
 };
