@@ -1,5 +1,5 @@
 <template>
-    <div class="flex">
+    <div class="flex mt-2">
         <img v-for="i in ondo" :key="i" src="../../public/images/jolasak/verde.png" alt="Ondo" class="w-12 h-12">
         <img v-for="i in txarto" :key="i" src="../../public/images/jolasak/rojo.png" alt="Ondo" class="w-12 h-12">
     </div>
