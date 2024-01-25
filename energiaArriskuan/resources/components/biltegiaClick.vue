@@ -21,7 +21,7 @@
 
     <div id="jolasaBukatutaDiv" class="hidden">
       <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
-          <p>Aquí no hay nada más que hacer</p>
+          <p>Hemen ez dago ezer gehiago egiteko</p>
       </div>
     </div>
 
