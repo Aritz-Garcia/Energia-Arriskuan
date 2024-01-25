@@ -2,11 +2,7 @@
     <div>
         <div class="flex items-center justify-center mb-8">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                Bilatu zein den panelaren orientazioa eta inklinazioa.
-                <!--
-                    orientazioa (α)
-                    inklinazioa (β)
-                -->
+                Jarri ondo panelaren orientazioa eta inklinazioa.
             </p>
             <img
                 id="close-img"
@@ -39,7 +35,7 @@
                         <div id="divPanel" class="h-[210px] w-[485px]" style="transform: rotateX(0deg);">
                             <img id="panelSolar" src="../../public/images/juego2/panelSolar.png" alt="hierba" class="absolute h-[250px] w-full top-0 left-0 rounded-xl">
                         </div>
-                        
+
                     </div>
 
 
@@ -54,7 +50,7 @@
                     <button @click.prevent="decrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
                     <input type="range" name="Orientazioa" id="Orientazioa" min="-30" max="30" value="0" @input="moverOrientazioa()" class="accent-[#0BD904]">
                     <button @click.prevent="incrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
-                    
+
                     <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl text-[#010440] bg-[#fff]" v-model="orientazioaValue">
 
                 </div>
@@ -79,7 +75,7 @@
         props: {
             partida: String,
         },
-        
+
         data() {
             return {
                 inclinazioaValue: 0,

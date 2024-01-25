@@ -35,7 +35,7 @@
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>Bukatu duzu hemen</p>
+        <p>Panelaren orientazioa eta inklinazioa ondo jarri duzu.</p>
       </div>
     </div>
   </div>
@@ -94,16 +94,7 @@ export default {
             for (let i = 0; i < this.pruebas.length; i++) {
               if (this.pruebas[i].izena == "prueba2") {
                 // Beste testuak kendu
-                // liburutegiaDiv.classList.remove("block");
-                // liburutegiaDiv.classList.add("hidden");
-                // argiaDiv.classList.remove("block");
-                // argiaDiv.classList.add("hidden");
-                // atzekaldekoLiburutegiaDiv.classList.remove("block");
-                // atzekaldekoLiburutegiaDiv.classList.add("hidden");
-                // ateaItxiaDiv.classList.remove("block");
-                // ateaItxiaDiv.classList.add("hidden");
-                // paperakDiv.classList.remove("block");
-                // paperakDiv.classList.add("hidden");
+
                 if (this.pruebas[i].bukatuta) {
                   // Jolasa bukatuta
                   jolasaBukatutaDiv.classList.remove("hidden");
