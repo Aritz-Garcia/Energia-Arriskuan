@@ -185,7 +185,7 @@ body.fondoAzul {
 
 /* ------------------------------------------- */
 
-#juego3, #juego4, .atekoPapera, #juego2Paperak, .gameOver {
+#juego3, #juego4, .atekoPapera, #juego2Paperak, .gameOver, #juego2letralYnumeros {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -279,6 +279,10 @@ body.fondoAzul {
 
   .cara.detras {
     transform: rotateY(180deg);
+  }
+
+  .marron{
+    background-color: #0000009c;
   }
 
 .input-container {
@@ -517,6 +521,33 @@ body.fondoAzul {
     /* 60% {
         opacity: 1;
     } */
+}
+
+/* Estilos personalizados para la paginación de Laravel */
+.pagination {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+}
+
+.pagination > li {
+    display: inline-block !important;
+    margin: 0 5px !important;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    padding: 6px 12px !important;
+    text-decoration: none !important;
+    color: #0BD904 !important;
+    border: 1px solid #0BD904 !important;
+    border-radius: 4px !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background-color: #0BD904 !important;
+    color: #ffffff !important;
 }
 
 /********************************* Tutorial *********************************/

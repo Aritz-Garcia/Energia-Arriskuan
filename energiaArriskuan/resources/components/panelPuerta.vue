@@ -4,7 +4,7 @@
             {{ testua }}
         </p>
         <img
-            id="close-img"
+            id="close-img-ateak"
             @click="closeGame"
             src="../../public/images/cerrar.png"
             alt="Cerrar"

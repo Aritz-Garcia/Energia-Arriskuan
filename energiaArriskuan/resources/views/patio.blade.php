@@ -4,6 +4,9 @@
 
 @section('content')
 
+    <x-audio-player />
+
+
     @if(Auth::user()->id == $partida->id_erabiltzailea)
         <div id="patioaDiv">
             <Patioa urlimg={{ asset('images/patio.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Patioa>

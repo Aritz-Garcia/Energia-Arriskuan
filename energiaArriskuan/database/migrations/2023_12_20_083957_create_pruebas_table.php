@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pruebas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_partida');
-            $table->foreign('id_partida')->references('id')->on('partidas');
+            $table->foreign('id_partida')->references('id')->on('partidas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('izena');
             $table->string('denbora')->nullable();
             $table->boolean('bukatuta')->default(false);
