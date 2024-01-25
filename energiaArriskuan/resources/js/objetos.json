@@ -1,12 +1,12 @@
 [
-{ "id":1 , "ImagenF": "../../public/images/juego1/placafotovoltaica.png", "ImagenT":"../../public/images/juego1/S.png", "Letra": "S"},
+{ "id":1 , "ImagenF": "../../public/images/juego1/placafotovoltaica.png", "ImagenT":"../../public/images/juego1/A.png", "Letra": "A"},
 { "id":2 ,"ImagenF": "../../public/images/juego1/ordenador.png", "ImagenT":"../../public/images/juego1/Z.png", "Letra": "Z"},
 { "id":3 ,"ImagenF": "../../public/images/juego1/magnetotermicos.png", "ImagenT":"../../public/images/juego1/U.png", "Letra": "U"},
 { "id":4 ,"ImagenF": "../../public/images/juego1/osciloscopio.png", "ImagenT":"../../public/images/juego1/M.png", "Letra": "M"},
-{ "id":5 ,"ImagenF": "../../public/images/juego1/bateria.png", "ImagenT":"../../public/images/juego1/L.png", "Letra": "L"},
-{ "id":6 ,"ImagenF": "../../public/images/juego1/inversor.png", "ImagenT":"../../public/images/juego1/A.png", "Letra": "A"},
-{ "id":7 ,"ImagenF": "../../public/images/juego1/regulador.png", "ImagenT":"../../public/images/juego1/O.png", "Letra": "O"},
-{ "id":8 ,"ImagenF": "../../public/images/juego1/cables.png", "ImagenT":"../../public/images/juego1/R.png", "Letra": "R"},
-{ "id":9 ,"ImagenF": "../../public/images/juego1/maniqui.png", "ImagenT":"../../public/images/juego1/I.png", "Letra": "I"},
+{ "id":5 ,"ImagenF": "../../public/images/juego1/bateria.png", "ImagenT":"../../public/images/juego1/G.png", "Letra": "G"},
+{ "id":6 ,"ImagenF": "../../public/images/juego1/inversor.png", "ImagenT":"../../public/images/juego1/I.png", "Letra": "I"},
+{ "id":7 ,"ImagenF": "../../public/images/juego1/regulador.png", "ImagenT":"../../public/images/juego1/R.png", "Letra": "R"},
+{ "id":8 ,"ImagenF": "../../public/images/juego1/cables.png", "ImagenT":"../../public/images/juego1/A.png", "Letra": "A"},
+{ "id":9 ,"ImagenF": "../../public/images/juego1/maniqui.png", "ImagenT":"../../public/images/juego1/O.png", "Letra": "O"},
 { "id":10 ,"ImagenF": "../../public/images/juego1/rectificador.png", "ImagenT":"../../public/images/juego1/P.png", "Letra": "P"}
 ]

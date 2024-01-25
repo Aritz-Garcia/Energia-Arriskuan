@@ -1,16 +1,17 @@
 <template>
+    <div class="fondoj1 rounded-xl">
     <div>
     <div class="flex items-center justify-center">
-        <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
+        <p class="text-3xl md:w-auto mx-9 pl-20 p-4 my-5" id="text">
           <!-- Los paneles fotovoltaicos de la instalación del centro han sufrido daños, necesitamos repararlo. -->
-          Los paneles fotovoltaicos de la instalación del centro han sufrido daños y tenemos que reinstalar todo el sistema.
-          Cada elemento contendrá una letra con la cual tendremos que formar una palabra para seguir con la configuración.
+          Zentroko instalazioko eguzki-panelak kalteak izan dituzte eta sistema osoa berriz instalatu behar dugu.
         </p>
         <img
             @click="closeGame"
             src="../../public/images/cerrar.png"
             alt="Cerrar"
             id="close-img"
+            class="m-5 p-2"
         />
     </div>
       <div>
@@ -38,6 +39,7 @@
         <div id="cartas-grid" class="cartasC"></div>
       </div>
     </div>
+  </div>
     </template>
 
     <script>
@@ -82,7 +84,6 @@ export default {
     if (!this.cartasOrden.find(carta => carta.id === cartaId)) {
       // Añade la carta a cartasOrden y cartaRandom solo si no está presente
       this.cartasOrden.push(objeto);
-      this.cartaRandom.push(objeto);
     }
 
     console.log(this.cartasOrden);
@@ -95,24 +96,32 @@ export default {
       this.mensaje = ordenCorrecto ? '¡Has ganado!' : 'Esta no es la palabra';
       console.log(this.mensaje);
 
-      // Limpiar cartas-grid después de verificar
-      while (document.getElementById('cartas-grid').firstChild) {
-        const originalCartaElement = document.getElementById('cartas-grid').firstChild;
-        document.getElementById('cartas-grid').removeChild(originalCartaElement);
-      }
-
-      // Reiniciar la lógica de verificación y la lista de cartas
-      this.cartasOrden = [];
-      this.cartaRandom.pop();
 
       // Si ganaste, realiza alguna acción adicional si es necesario
       if (ordenCorrecto) {
+          // Limpiar cartas-grid después de verificar
+        while (document.getElementById('cartas-grid').firstChild) {
+        const originalCartaElement = document.getElementById('cartas-grid').firstChild;
+        document.getElementById('cartas-grid').removeChild(originalCartaElement);
+      }
         // Lógica adicional para después de ganar
-        textoElement.innerHTML = "Los paneles fotovoltaicos han sido reparados!";
+        textoElement.innerHTML = "Eguzki panelak konpondu dira!";
         document.getElementById("close-img").classList.add("hidden");
         setTimeout(() => {
             window.location.href = route("prueba1.update", this.partida);
         }, 2000);
+      } else {
+        // Limpiar cartas-grid después de verificar
+      while (document.getElementById('cartas-grid').firstChild) {
+        const originalCartaElement = document.getElementById('cartas-grid').firstChild;
+        document.getElementById('cartas-grid').removeChild(originalCartaElement);
+      }
+        for( let i = 0; i < this.cartasOrden.length; i++){
+          this.cartaRandom.push(this.cartasOrden[i]);
+        }
+        // Reiniciar la lógica de verificación y la lista de cartas
+        this.cartasOrden = [];
+        this.cartaRandom.pop();
       }
     } else {
       // Si aún no tienes suficientes cartas, simplemente añade la carta a cartas-grid
