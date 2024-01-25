@@ -140,8 +140,29 @@ export default {
             // * Mesa
             for (let i = 0; i < this.pruebas.length; i++) {
                   if (this.pruebas[i].izena == "prueba1") {
+                         // * Beste testuak kendu
+                          estanteria1.classList.remove("block");
+                          estanteria1.classList.add("hidden");
+                          
+                          estanteria2.classList.remove("block");
+                          estanteria2.classList.add("hidden");
+
+                          estanteria3.classList.remove("block");
+                          estanteria3.classList.add("hidden");
+
+                          suelo.classList.remove("block");
+                          suelo.classList.add("hidden");
+
+                          exit.classList.remove("block");
+                          exit.classList.add("hidden");
+
+                          erlojuaDiv.classList.remove("block");
+                          erlojuaDiv.classList.add("hidden");
                         if (this.pruebas[i].bukatuta) {
                             // * Beste testuak kendu
+                          estanteria1.classList.remove("block");
+                          estanteria1.classList.add("hidden");
+                          
                           estanteria2.classList.remove("block");
                           estanteria2.classList.add("hidden");
 
