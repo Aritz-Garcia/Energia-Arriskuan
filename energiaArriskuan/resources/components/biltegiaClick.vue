@@ -6,6 +6,13 @@
         </div>
     </div>
 
+    <div class="absolute top-0 left-0 z-50">
+        <Irten/>
+    </div>
+
+    <div class="absolute top-0 right-0 z-50">
+        <Pista :probak=pruebas></Pista>
+    </div>
     <img
       :src="urlimg"
       @click.prevent="clickImagen"
@@ -84,6 +91,8 @@
 
 import Denbora from "./denbora.vue";
 import Juego1 from "./juego1.vue";
+import Irten from './jolasakIrten.vue';
+import Pista from './pistak.vue';
 import route from "../../vendor/tightenco/ziggy/src/js";
 
 export default {
@@ -96,6 +105,8 @@ export default {
   components: {
         Denbora,
         Juego1,
+        Irten,
+        Pista,
     },
   data() {
     return {

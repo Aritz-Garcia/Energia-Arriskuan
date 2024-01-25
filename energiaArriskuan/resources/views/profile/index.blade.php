@@ -4,7 +4,7 @@
 
 @section('content')
     @auth
-        <div class="my-24 mx-60">
+        <div class="my-28 mx-60">
             @if (Auth::user()->id == $profila->id)
                 {{-- Zure erab --}}
                 {{-- Erab info --}}

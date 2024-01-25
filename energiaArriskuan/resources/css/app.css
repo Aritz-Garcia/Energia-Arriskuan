@@ -133,7 +133,7 @@ body.fondoAzul {
     border: none;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0px 0px 30px 14px rgba(11, 217, 4, 1);
+    box-shadow: 0px 0px 30px 14px #0bd904;
     margin-top: 100px;
 }
 
@@ -420,7 +420,7 @@ body.fondoAzul {
 
 /********************************* Hasiera *********************************/
 
-.ateaItxiaText {
+.ateaItxiaText, .paperaPatio {
     transform: translate(-50%, -50%);
 }
 

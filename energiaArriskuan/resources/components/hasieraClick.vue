@@ -9,6 +9,14 @@
       </div>
     </div>
 
+    <div class="absolute top-0 left-0 z-50">
+        <Irten/>
+    </div>
+
+    <div class="absolute top-0 right-0 z-50">
+        <Pista :probak=pruebas></Pista>
+    </div>
+
     <div id="atekoPaperaDiv" class="hidden">
       <div class="absolute top-1/2 left-1/2 atekoPapera">
         <AtekoPapera :testua="testua" />
@@ -57,7 +65,10 @@ import Juego3 from "./juego3.vue";
 import Cuadro from "./letrasYnumerosHasiera.vue";
 import Denbora from "./denbora.vue";
 import AtekoPapera from "./panelPuerta.vue";
+import Irten from './jolasakIrten.vue';
 import route from "../../vendor/tightenco/ziggy";
+import Pista from './pistak.vue';
+
 
 export default {
   name: "hasieraClick",
@@ -71,6 +82,9 @@ export default {
     Denbora,
     AtekoPapera,
     Cuadro,
+    Irten,
+    Pista,
+
   },
   data() {
     return {

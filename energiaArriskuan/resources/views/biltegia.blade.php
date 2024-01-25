@@ -3,7 +3,7 @@
 @section('title', 'Biltegia')
 
 @section('content')
-    <x-audio-player />
+    {{-- <x-audio-player /> --}}
 
     @if (Auth::user()->id == $partida->id_erabiltzailea)
         <div id="biltegiaDiv">
