@@ -66,6 +66,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/partida/gameOver/{partidaId}', [PartidaController::class, 'gameOverView'])->name('gameOverView');
 
+    Route::get('/partida/irabaziUpdate/{partidaId}', [PartidaController::class, 'irabaziUpdate'])->name('irabazi');
+
+    Route::get('/partida/irabazi/{partidaId}', [PartidaController::class, 'irabaziView'])->name('irabaziView');
+
 });
 
 Route::get('/partidas', [PartidaController::class, 'index'])->name('partida.index');
