@@ -91,7 +91,6 @@ export default {
         ) {
           if (i == 0) {
             // * juego
-            console.log("ebjwyfgveu");
             for (let i = 0; i < this.pruebas.length; i++) {
               if (this.pruebas[i].izena == "prueba2") {
                 // Beste testuak kendu

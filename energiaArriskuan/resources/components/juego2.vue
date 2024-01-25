@@ -2,10 +2,10 @@
     <div>
         <div class="flex items-center justify-center mb-8">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                Bilatu zein den panelaren inklinazioa eta orientazioa.
+                Bilatu zein den panelaren orientazioa eta inklinazioa.
                 <!--
-                    inklinazioa (β)
                     orientazioa (α)
+                    inklinazioa (β)
                 -->
             </p>
             <img
@@ -17,36 +17,52 @@
             />
         </div>
 
-        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white bg-[#010440] w-[880px] mx-auto">
-            <div class="flex justify-center mt-10">
+        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white bg-[#010440] w-[1000px] mx-auto">
+            <div class="flex justify-center">
 
-                <div class="flex flex-col items-center mx-5">
-                    <div class="relative border-[#0BD904] border-2 rounded-xl p-5">
-                        <div class="h-[210px] w-[485px]">
-                            <img src="../../public/images/juego2/panelSolar.png" alt="hierba" class="absolute h-[250px] w-full top-0 left-0 rounded-xl">
+                <div class="flex gap-10 items-center mx-5">
+
+                    <div class="flex items-center">
+                        <div class="flex flex-col items-center gap-5 justify-center">
+                            <p class="text-xl">Inklinazioa:</p>
+                            <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="rounded sotoaPanelLetra text-center w-14 text-2xl text-[#010440] bg-[#fff]" v-model="inclinazioaValue">
+                        </div>
+                        <div class="flex flex-col">
+                            <button @click.prevent="decrementarValor('inclinazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-12">⭡</button>
+                            <input type="range" name="Inclinazioa" id="Inclinazioa" min="0" max="75" value="0" @input="moverInclinazioa()" class="accent-[#0BD904] transform rotate-90 h-16">
+                            <button @click.prevent="incrementarValor('inclinazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-12">⭣</button>
                         </div>
                     </div>
 
-                    <div class="flex gap-20">
+                    <div class="relative rounded-xl p-5">
 
-                        <div class="flex items-center mt-20 mb-14">
-                            <p class="text-xl">Inklinazioa:</p>
-                            <button @click.prevent="decrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#60;</button>
-                            <input type="range" name="inclinacion" id="brujulaSlider" min="0" max="100" value="50" @input="" class="accent-[#0BD904] m-[-50px] transform rotate-90 h-16">
-                            <button @click.prevent="incrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#62;</button>
-                        </div>
-
-                        <div class="flex items-center mt-20 mb-14">
-                            <p class="text-xl">Orientazioa:</p>
-                            <button @click.prevent="decrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#60;</button>
-                            <input type="range" name="orientacion" id="brujulaSlider" min="0" max="359" value="0" @input="" class="accent-[#0BD904]">
-                            <button @click.prevent="incrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#62;</button>
+                        <div id="divPanel" class="h-[210px] w-[485px]" style="transform: rotateX(0deg);">
+                            <img id="panelSolar" src="../../public/images/juego2/panelSolar.png" alt="hierba" class="absolute h-[250px] w-full top-0 left-0 rounded-xl">
                         </div>
                         
                     </div>
+
+
                 </div>
 
             </div>
+
+            <div class="flex justify-center mb-8 mt-8">
+
+                <div class="flex items-center">
+                    <p class="text-xl mr-10">Orientazioa:</p>
+                    <button @click.prevent="decrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
+                    <input type="range" name="Orientazioa" id="Orientazioa" min="-30" max="30" value="0" @input="moverOrientazioa()" class="accent-[#0BD904]">
+                    <button @click.prevent="incrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
+                    
+                    <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl text-[#010440] bg-[#fff]" v-model="orientazioaValue">
+
+                </div>
+
+            </div>
+
+            <button @click.prevent="egiaztatu()" class="hover:bg-[#fff] bg-[#0BD904] text-black p-3 text-2xl font-rubik-regular rounded mb-8 ">EGIAZTATU</button>
+
         </div>
     </div>
 </template>
@@ -63,39 +79,73 @@
         props: {
             partida: String,
         },
-        mounted() {
-            this.slideBrujula();
-        },
+        
         data() {
             return {
+                inclinazioaValue: 0,
+                orientazioaValue: 0,
                 animacion: "",
+                colorFondo: "",
+
             }
         },
         methods: {
-            slideBrujula() {
-                let value = document.getElementById("brujulaSlider").value;
-                document.getElementById("brujulaImg").style.transform = "rotate(" + value + "deg)";
-                document.getElementById("molinoImg").style.transform = "rotate(" + value + "deg)";
-                if (value >= 314 && value <= 316) {
-                    this.animacion = "vientoAnim 2s infinite";
-                } else {
-                    this.animacion = "";
+
+            egiaztatu(){
+                if(this.inclinazioaValue == 30 && this.orientazioaValue == 15){
+                    console.log("aaaaaaaaaa");
+                    this.colorFondo = "#00ff00"
+
+                }else{
+                    this.animacion = "errorSotoa 1s";
+                    setTimeout(() => {
+                        this.animacion = "";
+                    }, 1000);
                 }
             },
-            incrementarValor() {
-                let value = document.getElementById("brujulaSlider").value;
-                document.getElementById("brujulaSlider").value = parseInt(value) + 1;
-                this.slideBrujula();
+
+            moverInclinazioa() {
+                let inclinazioaInput = document.getElementById("Inclinazioa");
+                let value = inclinazioaInput.value;
+                this.inclinazioaValue = value;
+                document.getElementById("divPanel").style.transform = "rotateX(" + value + "deg)";
             },
-            decrementarValor() {
-                let value = document.getElementById("brujulaSlider").value;
-                document.getElementById("brujulaSlider").value = parseInt(value) - 1;
-                this.slideBrujula();
+
+            moverOrientazioa() {
+                let orientazioaInput = document.getElementById("Orientazioa");
+                let value = orientazioaInput.value;
+                this.orientazioaValue = value;
+                document.getElementById("panelSolar").style.transform = "skewX(" + value + "deg)";
             },
+
+            incrementarValor(valor) {
+                if (valor === 'inclinazioa') {
+                    let value = document.getElementById("Inclinazioa").value;
+                    document.getElementById("Inclinazioa").value = parseInt(value) + 1;
+                    this.moverInclinazioa();
+                } else if (valor === 'orientazioa') {
+                    let value = document.getElementById("Orientazioa").value;
+                    document.getElementById("Orientazioa").value = parseInt(value) + 1;
+                    this.moverOrientazioa();
+                }
+            },
+
+            decrementarValor(valor) {
+                if (valor === 'inclinazioa') {
+                    let value = document.getElementById("Inclinazioa").value;
+                    document.getElementById("Inclinazioa").value = parseInt(value) - 1;
+                    this.moverInclinazioa();
+                } else if (valor === 'orientazioa') {
+                    let value = document.getElementById("Orientazioa").value;
+                    document.getElementById("Orientazioa").value = parseInt(value) - 1;
+                    this.moverOrientazioa();
+                }
+            },
+
             closeGame() {
-            document.getElementById("juego4div").classList.remove("block");
-            document.getElementById("juego4div").classList.add("hidden");
-        },
+                document.getElementById("juego4div").classList.remove("block");
+                document.getElementById("juego4div").classList.add("hidden");
+            },
         }
     }
 </script>

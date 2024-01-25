@@ -27,9 +27,9 @@
 
                     <!-- TODO Poner hover a los botones y un background -->
                     <div class="flex items-center mt-5">
-                        <button @click.prevent="decrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#60;</button>
+                        <button @click.prevent="decrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
                         <input type="range" name="brujula" id="brujulaSlider" min="0" max="359" value="0" @input="slideBrujula()" class="accent-[#0BD904]">
-                        <button @click.prevent="incrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">&#62;</button>
+                        <button @click.prevent="incrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
                     </div>
                 </div>
 
