@@ -47,6 +47,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
     Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+    
+    Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
     Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
@@ -65,6 +67,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/partida/gameOverUpdate/{partidaId}', [PartidaController::class, 'gameOverUpdate'])->name('gameOver');
 
     Route::get('/partida/gameOver/{partidaId}', [PartidaController::class, 'gameOverView'])->name('gameOverView');
+
+    Route::get('/partida/irabaziUpdate/{partidaId}', [PartidaController::class, 'irabaziUpdate'])->name('irabazi');
+
+    Route::get('/partida/irabazi/{partidaId}', [PartidaController::class, 'irabaziView'])->name('irabaziView');
 
 });
 

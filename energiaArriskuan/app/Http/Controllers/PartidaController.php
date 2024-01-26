@@ -46,9 +46,16 @@ class PartidaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        $partidaId = $request->input('partidaId');
+
+        $partida = Partida::find($partidaId);
+
+        $partida->delete();
+
+        return redirect()->route('profile.index', Auth::user()->id);
+
     }
 
     public function jolasAzalpena(int $erabiltzaileaId) {
@@ -156,5 +163,14 @@ class PartidaController extends Controller
 
     public function gameOverView($partidaId) {
         return view('partida.gameOver', ['partidaId' => $partidaId]);
+    }
+
+    public function irabaziUpdate($partidaId) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1]);
+        return redirect()->route('irabaziView', $partidaId);
+    }
+
+    public function irabaziView($partidaId) {
+        return view('partida.irabazita', ['partidaId' => $partidaId]);
     }
 }

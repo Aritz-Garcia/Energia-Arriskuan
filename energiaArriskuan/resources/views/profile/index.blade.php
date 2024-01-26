@@ -32,11 +32,13 @@
                     <div class="flex justify-between py-4 items-center">
                         <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
 
-                        <button @if ($profila->partidas->contains('bukatuta', 0)) disabled @endif type="button"
-                            class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                            <img src="{{ asset('images/anadir.png') }}" alt="Texto alternativo de la imagen"
-                                class="h-9 w-9">
-                        </button>
+                        <form action="{{ route('jolasa', Auth::user()->id) }}">
+                            <button @if ($profila->partidas->contains('bukatuta', 0)) disabled class="flex items-center mr-4 border-2 border-[#ff3131] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg" @endif
+                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
+                                <img src="{{ asset('images/anadir.png') }}" alt="Gehitu"
+                                    class="h-9 w-9">
+                            </button>
+                        </form>
                     </div>
                     <hr>
                     @if (count($profila->partidas) == 0)
@@ -49,17 +51,16 @@
                                         {{-- Bukatu gabe --}}
                                         <td class="ps-2 flex py-4">
 
-                                            <button type="button"
-                                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                <img src="{{ asset('images/play.png') }}" alt="Texto alternativo de la imagen"
-                                                    class="h-9 w-9">
-                                            </button>
+                                            <form action="{{ route('jolasa', Auth::user()->id) }}">
+                                                <button
+                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
+                                                    <img src="{{ asset('images/play.png') }}" alt="Jolastu"
+                                                        class="h-9 w-9">
+                                                </button>
+                                            </form>
 
-                                            <button type="button"
-                                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                <img src="{{ asset('images/borrar.png') }}" alt="Texto alternativo de la imagen"
-                                                    class="h-9 w-9">
-                                            </button>
+                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
+
                                         </td>
                                         @if ($partida->denbora == null)
                                             <td class="text-center py-4 text-xl">00:00</td>
@@ -77,11 +78,7 @@
                                     @else
                                         {{-- Bukatuta --}}
                                         <td class="ps-2 flex py-4">
-                                            <button type="button"
-                                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                <img src="{{ asset('images/borrar.png') }}"
-                                                    alt="Texto alternativo de la imagen" class="h-9 w-9">
-                                            </button>
+                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                         </td>
                                         @if ($partida->irabazita == 0)
                                             {{-- Irabazi gabe --}}
@@ -148,8 +145,6 @@
                     <div class="border-solid border-2 border-[#0bd904] text-[#0bd904] rounded-lg mt-10 p-2 bg-[#010440]">
                         <div class="flex justify-between py-4 items-center">
                             <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
-
-
                         </div>
                         <hr>
                         @if (count($profila->partidas) == 0)
@@ -161,18 +156,7 @@
                                         @if ($partida->bukatuta == 0)
                                             {{-- Bukatu gabe --}}
                                             <td class="ps-2 flex py-4">
-
-                                                <button type="button"
-                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/play.png') }}"
-                                                        alt="Texto alternativo de la imagen" class="h-9 w-9">
-                                                </button>
-
-                                                <button type="button"
-                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/borrar.png') }}"
-                                                        alt="Texto alternativo de la imagen" class="h-9 w-9">
-                                                </button>
+                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                             </td>
                                             @if ($partida->denbora == null)
                                                 <td class="text-center py-4 text-xl">00:00</td>
@@ -190,11 +174,7 @@
                                         @else
                                             {{-- Bukatuta --}}
                                             <td class="ps-2 flex py-4">
-                                                <button type="button"
-                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/borrar.png') }}"
-                                                        alt="Texto alternativo de la imagen" class="h-9 w-9">
-                                                </button>
+                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                             </td>
                                             @if ($partida->irabazita == 0)
                                                 {{-- Irabazi gabe --}}
