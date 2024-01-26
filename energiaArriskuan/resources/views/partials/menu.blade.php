@@ -1,5 +1,5 @@
 <nav class="bg-[#010440] border-gray-200">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+    <div class="flex flex-wrap items-center justify-center sm:justify-between max-w-screen-xl mx-auto p-4">
         <a href="{{ route('index') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ url(asset('images/Logo.png')) }}" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#0BD904]">ENERGIA ARRISKUAN</span>
