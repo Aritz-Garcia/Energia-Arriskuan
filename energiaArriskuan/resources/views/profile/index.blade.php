@@ -59,11 +59,8 @@
                                                 </button>
                                             </form>
 
-                                            <button
-                                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                <img src="{{ asset('images/borrar.png') }}" alt="Ezabatu"
-                                                    class="h-9 w-9">
-                                            </button>
+                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
+
                                         </td>
                                         @if ($partida->denbora == null)
                                             <td class="text-center py-4 text-xl">00:00</td>
@@ -81,11 +78,7 @@
                                     @else
                                         {{-- Bukatuta --}}
                                         <td class="ps-2 flex py-4">
-                                            <button
-                                                class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                <img src="{{ asset('images/borrar.png') }}"
-                                                    alt="Ezabatu" class="h-9 w-9">
-                                            </button>
+                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                         </td>
                                         @if ($partida->irabazita == 0)
                                             {{-- Irabazi gabe --}}
@@ -163,11 +156,7 @@
                                         @if ($partida->bukatuta == 0)
                                             {{-- Bukatu gabe --}}
                                             <td class="ps-2 flex py-4">
-                                                <button
-                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/borrar.png') }}"
-                                                        alt="Ezabatu" class="h-9 w-9">
-                                                </button>
+                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                             </td>
                                             @if ($partida->denbora == null)
                                                 <td class="text-center py-4 text-xl">00:00</td>
@@ -185,11 +174,7 @@
                                         @else
                                             {{-- Bukatuta --}}
                                             <td class="ps-2 flex py-4">
-                                                <button
-                                                    class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/borrar.png') }}"
-                                                        alt="Ezabatu" class="h-9 w-9">
-                                                </button>
+                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
                                             </td>
                                             @if ($partida->irabazita == 0)
                                                 {{-- Irabazi gabe --}}
