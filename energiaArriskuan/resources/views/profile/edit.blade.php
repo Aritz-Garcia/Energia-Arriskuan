@@ -7,13 +7,17 @@
                     @include('profile.partials.update-profile-information-form')
                 </div>
             </div>
+
             <hr class="border w-2/3 border-[#0bd904]">
+
             <div class="p-4 sm:p-8 shadow sm:rounded-lg flex justify-center">
                 <div class="max-w-xl">
                     @include('profile.partials.update-password-form')
                 </div>
             </div>
+
             <hr class="border w-2/3 border-[#0bd904]">
+
             <div class="p-4 sm:p-8 shadow sm:rounded-lg flex justify-center">
                 <div class="max-w-xl">
                     @include('profile.partials.delete-user-form')

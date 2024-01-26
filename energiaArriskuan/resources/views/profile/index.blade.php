@@ -24,6 +24,7 @@
                             class="hover:bg-white rounded-full bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">Editatu
                         </a>
                     </div>
+
                 </div>
 
 
@@ -34,13 +35,12 @@
 
                         <button @if ($profila->partidas->contains('bukatuta', 0)) disabled @endif type="button"
                             class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                            <img src="{{ asset('images/anadir.png') }}" alt="Texto alternativo de la imagen"
-                                class="h-9 w-9">
+                            <img src="{{ asset('images/anadir.png') }}" alt="Texto alternativo de la imagen" class="h-9 w-9">
                         </button>
                     </div>
                     <hr>
                     @if (count($profila->partidas) == 0)
-                        <p>Ez duzu partidarik jokatu</p>
+                        <p class="p-3">Ez duzu partidarik jokatu</p>
                     @else
                         <table class="table-fixed w-full">
                             @foreach ($profila->partidas as $partida)
@@ -69,8 +69,8 @@
                                         <td class="pe-2">
                                             <div class="flex justify-end content-center pr-1">
                                                 <div
-                                                class="text-center border-solid border-2 border-[#daff33] rounded-lg p-2 text-[#010440] bg-[#daff33] font-semibold w-auto sm:w-36">
-                                                Bukatu Gabe
+                                                    class="text-center border-solid border-2 border-[#daff33] rounded-lg p-2 text-[#010440] bg-[#daff33] font-semibold w-auto sm:w-36">
+                                                    Bukatu Gabe
                                                 </div>
                                             </div>
                                         </td>
@@ -110,8 +110,8 @@
                                             <td class="pe-2">
                                                 <div class="flex justify-end content-center pr-1">
                                                     <div
-                                                    class="text-center border-solid border-2 border-[#0bd904] rounded-lg p-2 text-[#010440] bg-[#0bd904] font-semibold w-auto sm:w-36">
-                                                    Bukatuta
+                                                        class="text-center border-solid border-2 border-[#0bd904] rounded-lg p-2 text-[#010440] bg-[#0bd904] font-semibold w-auto sm:w-36">
+                                                        Bukatuta
                                                     </div>
                                                 </div>
                                             </td>
@@ -137,11 +137,14 @@
                                 <p class="p-1">{{ $profila->email }}</p>
                             </div>
                         </div>
-                        <div class="mt-7 mb-4">
-                            <a href="{{ route('profile.edit') }}"
-                                class="hover:bg-white rounded-full bg-[#0BD904] py-3 px-8 text-base font-semibold text-[#010440] outline-none">Editatu
-                            </a>
-                        </div>
+
+                        @if (Auth::user()->rol == 1)
+                            <div class="mt-7 mb-4">
+                                <a href="{{ route('profile.delete', ['userId' => $profila->id] ) }}"
+                                    class="hover:bg-white rounded-full bg-[#ff2626] py-3 px-8 text-base font-semibold text-[#010440] outline-none">Ezabatu kontua
+                                </a>
+                            </div>
+                        @endif
                     </div>
 
                     {{-- Taula --}}
@@ -153,7 +156,7 @@
                         </div>
                         <hr>
                         @if (count($profila->partidas) == 0)
-                            <p>Ez duzu partidarik jokatu</p>
+                            <p class="p-3">Ez duzu partidarik jokatu</p>
                         @else
                             <table class="table-fixed w-full">
                                 @foreach ($profila->partidas as $partida)
@@ -201,7 +204,8 @@
                                                 @if ($partida->denbora == null)
                                                     <td class="text-center py-4 text-xl"><del>00:00</del></td>
                                                 @else
-                                                    <td class="text-center py-4 text-xl line-through">{{ $partida->denbora }}</td>
+                                                    <td class="text-center py-4 text-xl line-through">{{ $partida->denbora }}
+                                                    </td>
                                                 @endif
 
                                                 <td class="pe-2">
@@ -238,7 +242,7 @@
                 </div>
             @else
                 {{-- Erab normal beste user batean --}}
-                {{route('index')}}
+                {{ route('index') }}
             @endif
         </div>
     @endauth

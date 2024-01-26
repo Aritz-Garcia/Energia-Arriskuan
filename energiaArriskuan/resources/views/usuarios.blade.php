@@ -40,8 +40,7 @@
                             </th>
                             <td class="px-6 py-4 text-base border border-[#0BD904]">{{ $usuario->email }}</td>
                             <td class="px-6 py-4 border border-[#0BD904]">
-                                <a href="#"><img class="w-10 h-10" src="{{ asset('images/ver.png') }}"
-                                        alt="Jese image"></a>
+                                <a href="{{ route('profile.index',$usuario->id)}}"><img class="w-10 h-10" src="{{ asset('images/ver.png') }}"></a>
                             </td>
                         </tr>
                     @endforeach

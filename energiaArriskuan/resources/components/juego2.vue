@@ -24,9 +24,9 @@
                             <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="rounded sotoaPanelLetra text-center w-14 text-2xl text-[#010440] bg-[#fff]" v-model="inclinazioaValue">
                         </div>
                         <div class="flex flex-col">
-                            <button @click.prevent="decrementarValor('inclinazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-12">⭡</button>
+                            <button @click.prevent="decrementarValor('inclinazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-12">⭡</button>
                             <input type="range" name="Inclinazioa" id="Inclinazioa" min="0" max="75" value="0" @input="moverInclinazioa()" class="accent-[#0BD904] transform rotate-90 h-16">
-                            <button @click.prevent="incrementarValor('inclinazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-12">⭣</button>
+                            <button @click.prevent="incrementarValor('inclinazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-12">⭣</button>
                         </div>
                     </div>
 
@@ -47,9 +47,9 @@
 
                 <div class="flex items-center">
                     <p class="text-xl mr-10">Orientazioa:</p>
-                    <button @click.prevent="decrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
+                    <button @click.prevent="decrementarValor('orientazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
                     <input type="range" name="Orientazioa" id="Orientazioa" min="-30" max="30" value="0" @input="moverOrientazioa()" class="accent-[#0BD904]">
-                    <button @click.prevent="incrementarValor('orientazioa')" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
+                    <button @click.prevent="incrementarValor('orientazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
 
                     <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl text-[#010440] bg-[#fff]" v-model="orientazioaValue">
 
@@ -68,7 +68,7 @@
     import route from '../../vendor/tightenco/ziggy';
 
     export default {
-        name: "juego4",
+        name: "juego2",
         components: {
             Panel,
         },
@@ -88,9 +88,24 @@
         methods: {
 
             egiaztatu(){
+                var resultElement = document.getElementById("text");
+
                 if(this.inclinazioaValue == 30 && this.orientazioaValue == 15){
-                    console.log("aaaaaaaaaa");
+
                     this.colorFondo = "#00ff00"
+
+                    resultElement.innerHTML = "Panelaren orientazioa eta inklinazioa ondo jarri duzu.";
+
+                    document.getElementById("Inclinazioa").disabled = true;
+                    document.getElementById("Orientazioa").disabled = true;
+
+                    var botones = document.getElementsByClassName("botones");
+                    for (var i = 0; i < botones.length; i++) {
+                        botones[i].disabled = true;
+                    }
+                    setTimeout(() => {
+                    window.location.href = route("prueba2.update", this.partida);
+                }, 3000);
 
                 }else{
                     this.animacion = "errorSotoa 1s";
