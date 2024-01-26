@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
     Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+    
+    Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
     Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
     Route::get('/prueba2/update/{partidaId}', [PruebaController::class, 'prueba2'])->name('prueba2.update');
