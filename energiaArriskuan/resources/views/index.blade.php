@@ -4,13 +4,11 @@
 
 @section('content')
 
-    <div class="min-h-screen flex items-center justify-center px-10">
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
 
         <div class="containerIndex max-w-screen-xl mx-auto text-center">
 
             <div class="items-center flex flex-col w-auto">
-
-
 
                 <p class="text-xl">
                     2073an, baliabide fosilak agortuta, Lurra energia berriztagarrien mende dago. Eraso estralurtarrei aurre
