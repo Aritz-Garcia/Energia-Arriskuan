@@ -16,10 +16,48 @@ export default {
   name: "pistak",
   props: {
     probak: Array,
+  },data(){
+    return {
+      lugar: "",
+      actual:0,
+      pistak: [
+        hasiera[
+          {pista:"pista1"},
+          {pista:"pista2"}
+        ],
+        juego1[
+          {pista:"pista1"},
+          {pista:"pista2"}
+        ],
+        juego2[
+          {pista:"pista1"},
+          {pista:"pista2"},
+          {pista:"pista3"}
+        ],
+        juego3[
+          {pista:"pista1"},
+          {pista:"pista2"}
+        ],
+        juego4[
+          {pista:"pista1"},
+          {pista:"pista2"}
+        ],
+      ]
+    }
   },
   components: {
     Probak,
   },
-  methods: {},
+  methods: {
+    enseñarPista(){
+      
+    },
+    siguientePista(){
+
+    },
+    anteriorPista(){
+
+  }
+  },
 };
 </script>
