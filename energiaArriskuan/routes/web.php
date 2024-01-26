@@ -29,6 +29,10 @@ Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
 
+Route::get('/klasifikazioa', function () {
+    return view('klasifikazioa');
+})->name('klasifikazioa');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
@@ -47,7 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
     Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
-    
+
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
     Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
