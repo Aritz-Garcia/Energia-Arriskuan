@@ -21,9 +21,9 @@
                 <!-- Encabezado de la tabla -->
                 <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">
                     <tr>
-                        <th class="px-6 py-3 border border-[#0BD904]">Izen-Abizena</th>
-                        <th class="px-6 py-3 border border-[#0BD904]">Email</th>
-                        <th class="px-6 py-3 border border-[#0BD904]">Editatu</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Izen-Abizena</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Email</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Perfilara joan</th>
                     </tr>
                 </thead>
                 <tbody>

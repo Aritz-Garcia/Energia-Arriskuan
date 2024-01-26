@@ -72,13 +72,14 @@ class ProfileController extends Controller
         return Redirect::to('/');
    }
 
-   public function delete(Request $request, $userId): RedirectResponse
+   public function destroyAdmin(Request $request): RedirectResponse
     {
         // Validar que el usuario tiene permisos para realizar esta acción si es necesario
         // ...
 
+        $perfilId = $request->input("perfilId");
         // Buscar al usuario
-        $user = User::find($userId);
+        $user = User::find($perfilId);
 
         // Verificar si el usuario existe
         if (!$user) {
@@ -88,12 +89,7 @@ class ProfileController extends Controller
         // Eliminar al usuario
         $user->delete();
 
-        if ($user->id === Auth::id()) {
-            Auth::logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-        }
+        return redirect()->route('admin', Auth::user()->id);
 
-        return Redirect::to('/');
     }
 }

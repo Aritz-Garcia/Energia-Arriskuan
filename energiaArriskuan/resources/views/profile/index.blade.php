@@ -34,10 +34,10 @@
                         <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
 
                         <form action="{{ route('jolasa', Auth::user()->id) }}">
-                            <button @if ($profila->partidas->contains('bukatuta', 0)) disabled class="flex items-center mr-4 border-2 border-[#ff3131] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg" @endif
+                            <button
+                                @if ($profila->partidas->contains('bukatuta', 0)) disabled class="flex items-center mr-4 border-2 border-[#ff3131] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg" @endif
                                 class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                <img src="{{ asset('images/anadir.png') }}" alt="Gehitu"
-                                    class="h-9 w-9">
+                                <img src="{{ asset('images/anadir.png') }}" alt="Gehitu" class="h-9 w-9">
                             </button>
                         </form>
                     </div>
@@ -55,12 +55,13 @@
                                             <form action="{{ route('jolasa', Auth::user()->id) }}">
                                                 <button
                                                     class="flex items-center mr-4 border-2 border-[#0bd904] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
-                                                    <img src="{{ asset('images/play.png') }}" alt="Jolastu"
-                                                        class="h-9 w-9">
+                                                    <img src="{{ asset('images/play.png') }}" alt="Jolastu" class="h-9 w-9">
                                                 </button>
                                             </form>
 
-                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
+                                            @include('partida.partials.delete-partida-form', [
+                                                'partida' => $partida,
+                                            ])
 
                                         </td>
                                         @if ($partida->denbora == null)
@@ -79,7 +80,9 @@
                                     @else
                                         {{-- Bukatuta --}}
                                         <td class="ps-2 flex py-4">
-                                            @include('partida.partials.delete-partida-form', ['partida' => $partida])
+                                            @include('partida.partials.delete-partida-form', [
+                                                'partida' => $partida,
+                                            ])
                                         </td>
                                         @if ($partida->irabazita == 0)
                                             {{-- Irabazi gabe --}}
@@ -137,11 +140,11 @@
                         </div>
 
                         @if (Auth::user()->rol == 1)
-                            <div class="mt-7 mb-4">
-                                <a href="{{ route('profile.delete', ['userId' => $profila->id] ) }}"
-                                    class="hover:bg-white rounded-full bg-[#ff2626] py-3 px-8 text-base font-semibold text-[#010440] outline-none">Ezabatu kontua
-                                </a>
-                            </div>
+
+                        @include('profile.partials.deleteAdmin', [
+                            'profile' => $profila,
+                        ])
+
                         @endif
                     </div>
 
@@ -160,7 +163,9 @@
                                         @if ($partida->bukatuta == 0)
                                             {{-- Bukatu gabe --}}
                                             <td class="ps-2 flex py-4">
-                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
+                                                @include('partida.partials.delete-partida-form', [
+                                                    'partida' => $partida,
+                                                ])
                                             </td>
                                             @if ($partida->denbora == null)
                                                 <td class="text-center py-4 text-xl">00:00</td>
@@ -178,7 +183,9 @@
                                         @else
                                             {{-- Bukatuta --}}
                                             <td class="ps-2 flex py-4">
-                                                @include('partida.partials.delete-partida-form', ['partida' => $partida])
+                                                @include('partida.partials.delete-partida-form', [
+                                                    'partida' => $partida,
+                                                ])
                                             </td>
                                             @if ($partida->irabazita == 0)
                                                 {{-- Irabazi gabe --}}

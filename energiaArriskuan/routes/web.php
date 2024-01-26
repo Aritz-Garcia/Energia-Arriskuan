@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::delete('/profile/{userId}', [ProfileController::class, 'delete'])->name('profile.delete');
+    Route::delete('/profileAdmin', [ProfileController::class, 'destroyAdmin'])->name('profile.destroyAdmin');
 
 
     Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
     Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
     Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
-    
+
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
     Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
