@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Imagen;
 
 class ProfileController extends Controller
 {
@@ -69,5 +70,26 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+   }
+
+   public function destroyAdmin(Request $request): RedirectResponse
+    {
+        // Validar que el usuario tiene permisos para realizar esta acción si es necesario
+        // ...
+
+        $perfilId = $request->input("perfilId");
+        // Buscar al usuario
+        $user = User::find($perfilId);
+
+        // Verificar si el usuario existe
+        if (!$user) {
+            return Redirect::route('index');
+        }
+
+        // Eliminar al usuario
+        $user->delete();
+
+        return redirect()->route('admin', Auth::user()->id);
+
     }
 }
