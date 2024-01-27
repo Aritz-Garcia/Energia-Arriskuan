@@ -43,6 +43,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::delete('/profileAdmin', [ProfileController::class, 'destroyAdmin'])->name('profile.destroyAdmin');
+
 
     Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
     Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
@@ -55,6 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
     Route::get('/prueba1/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
+    Route::get('/prueba2/update/{partidaId}', [PruebaController::class, 'prueba2'])->name('prueba2.update');
     Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
     Route::get('/prueba4/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
 

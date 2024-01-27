@@ -47,6 +47,20 @@
                 <x-input-error :messages="$errors->get('abizena')" class="mt-2" />
             </div>
 
+            <!-- Email Address -->
+            <div class="mt-4">
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
+                    v-model="erabiltzaileak.email" :value="old('email')" required autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            </div>
+
+        </div>
+
+        <div v-show="pausua == 2" class="pt-9">
+            <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzailea sortu:</h3>
+            <hr class="my-2 border-t-2 border-[#0BD904]">
+
             <!-- Erabiltzailea -->
             <div class="mt-4">
                 <x-input-label for="erabiltzailea" :value="__('Erabiltzailea')" />
@@ -55,18 +69,7 @@
                     autocomplete="erabiltzailea" />
                 <x-input-error :messages="$errors->get('erabiltzailea')" class="mt-2" />
             </div>
-        </div>
 
-        <div v-show="pausua == 2" class="pt-9">
-            <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzailea sortu:</h3>
-            <hr class="my-2 border-t-2 border-[#0BD904]">
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
-                    v-model="erabiltzaileak.email" :value="old('email')" required autocomplete="username" />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
 
             <!-- Argazia -->
             <div class="mt-4 grid w-full items-center gap-1.5">
@@ -77,7 +80,6 @@
 
                 <x-input-error :messages="$errors->get('foto')" class="mt-2" />
             </div>
-
 
             <!-- Password -->
             <div class="mt-4">
@@ -98,6 +100,7 @@
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>
+
 
         </div>
 

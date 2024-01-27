@@ -21,9 +21,9 @@
                 <!-- Encabezado de la tabla -->
                 <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">
                     <tr>
-                        <th class="px-6 py-3 border border-[#0BD904]">Izen-Abizena</th>
-                        <th class="px-6 py-3 border border-[#0BD904]">Email</th>
-                        <th class="px-6 py-3 border border-[#0BD904]">Editatu</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Izen-Abizena</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Email</th>
+                        <th class="pl-5 py-3 border border-[#0BD904]">Perfilara joan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,8 +40,7 @@
                             </th>
                             <td class="px-6 py-4 text-base border border-[#0BD904]">{{ $usuario->email }}</td>
                             <td class="px-6 py-4 border border-[#0BD904]">
-                                <a href="#"><img class="w-10 h-10" src="{{ asset('images/ver.png') }}"
-                                        alt="Jese image"></a>
+                                <a href="{{ route('profile.index',$usuario->id)}}"><img class="w-10 h-10" src="{{ asset('images/ver.png') }}"></a>
                             </td>
                         </tr>
                     @endforeach

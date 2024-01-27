@@ -84,6 +84,17 @@ class PruebaController extends Controller
 
     }
 
+    public function prueba2(String $partidaId){
+
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba2")->update(["bukatuta" => 1]);
+
+        if ($this->konprobatu($partidaId)) {
+            return redirect()->route("irabazi", $partidaId);
+        }
+
+        return redirect()->route("teilatua", $partidaId);
+    }
+  
     public function denboraAldatu(int $denbora) {
 
         $partidaDenbora = 3600;
