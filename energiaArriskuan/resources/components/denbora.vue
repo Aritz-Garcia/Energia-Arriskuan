@@ -38,7 +38,6 @@ export default {
         startDenbora() {
             this.getDenbora();
             this.intervalo = setInterval(() => {
-
                 if (this.denbora == 0) {
                     this.terminarIntervalo();
                     this.gameOver();
@@ -51,6 +50,7 @@ export default {
                     this.denboraStringEgin();
                     this.gorderDb();
                 }
+                this.$cookies.set("denbora", this.denbora, '365d');
             }, 1000);
         },
         denboraStringEgin() {

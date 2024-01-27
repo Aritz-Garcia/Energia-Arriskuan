@@ -32,6 +32,7 @@
         "typeface-inter": "^3.18.1",
         "vite-plugin-windicss": "^1.9.2",
         "vue": "^3.4.11",
+        "vue-cookies": "^1.8.3",
         "vue-router": "^4.2.5",
         "ziggy": "^2.4.0",
         "ziggy-js": "^1.8.1"
