@@ -165,8 +165,8 @@ class PartidaController extends Controller
         return view('partida.gameOver', ['partidaId' => $partidaId]);
     }
 
-    public function irabaziUpdate($partidaId) {
-        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1]);
+    public function irabaziUpdate($partidaId, $denbora) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1, "denbora" => $denbora]);
         return redirect()->route('irabaziView', $partidaId);
     }
 

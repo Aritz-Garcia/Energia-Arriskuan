@@ -156,8 +156,11 @@ export default {
                 this.verificationButtonBlocked = true;
 
                 document.getElementById("close-img-hasiera").classList.add("hidden");
+
+                let denbora = this.$cookies.get("denbora");
+
                 setTimeout(() => {
-                    window.location.href = route("prueba3.update", this.partida);
+                    window.location.href = route("prueba3.update", [this.partida, denbora]);
                 }, 3000);
             } else {
                 this.vibration = true;
