@@ -103,9 +103,12 @@
                     for (var i = 0; i < botones.length; i++) {
                         botones[i].disabled = true;
                     }
+
+                    let denbora = this.$cookies.get("denbora");
+
                     setTimeout(() => {
-                    window.location.href = route("prueba2.update", this.partida);
-                }, 3000);
+                        window.location.href = route("prueba2.update", [this.partida, denbora]);
+                    }, 3000);
 
                 }else{
                     this.animacion = "errorSotoa 1s";

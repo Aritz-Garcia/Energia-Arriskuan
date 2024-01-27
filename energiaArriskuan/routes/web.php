@@ -29,6 +29,10 @@ Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
 
+Route::get('/klasifikazioa', function () {
+    return view('klasifikazioa');
+})->name('klasifikazioa');
+
 
 // Route::get('/perfil', function () {
 //     return view('perfil');
@@ -52,10 +56,10 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
-    Route::get('/prueba1/update/{partidaId}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
-    Route::get('/prueba2/update/{partidaId}', [PruebaController::class, 'prueba2'])->name('prueba2.update');
-    Route::get('/prueba3/update/{partidaId}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
-    Route::get('/prueba4/update/{partidaId}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
+    Route::get('/prueba1/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba1'])->name('prueba1.update');
+    Route::get('/prueba2/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba2'])->name('prueba2.update');
+    Route::get('/prueba3/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
+    Route::get('/prueba4/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
 
     Route::get('/admin/{userId}', [AdminController::class, 'admin'])->name('admin');
 
@@ -71,7 +75,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/partida/gameOver/{partidaId}', [PartidaController::class, 'gameOverView'])->name('gameOverView');
 
-    Route::get('/partida/irabaziUpdate/{partidaId}', [PartidaController::class, 'irabaziUpdate'])->name('irabazi');
+    Route::get('/partida/irabaziUpdate/{partidaId}/{denbora}', [PartidaController::class, 'irabaziUpdate'])->name('irabazi');
 
     Route::get('/partida/irabazi/{partidaId}', [PartidaController::class, 'irabaziView'])->name('irabaziView');
 

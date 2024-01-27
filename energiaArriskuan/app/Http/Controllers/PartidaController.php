@@ -165,12 +165,17 @@ class PartidaController extends Controller
         return view('partida.gameOver', ['partidaId' => $partidaId]);
     }
 
-    public function irabaziUpdate($partidaId) {
-        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1]);
+    public function irabaziUpdate($partidaId, $denbora) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1, "denbora" => $denbora]);
         return redirect()->route('irabaziView', $partidaId);
     }
 
     public function irabaziView($partidaId) {
         return view('partida.irabazita', ['partidaId' => $partidaId]);
+    }
+
+    public function klasifikazioa() {
+        $partidak = Partida::where('bukatuta', 1)->where('irabazita', 1)->orderBy('denbora', 'asc')->get();
+        return view('klasifikazioa', ['partidak' => $partidak]);
     }
 }

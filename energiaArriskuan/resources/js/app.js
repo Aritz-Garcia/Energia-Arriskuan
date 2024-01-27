@@ -3,6 +3,7 @@ import './bootstrap';
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { ZiggyVue } from 'ziggy-js';
+import VueCookies from 'vue-cookies';
 import Denbora from "../components/denbora.vue";
 import Hasiera from "../components/hasieraClick.vue";
 import HasieraTutorial from "../components/hasieraTutorial.vue";
@@ -30,6 +31,7 @@ const app = createApp({
 });
 app.use(createPinia());
 app.use(ZiggyVue);
+app.use(VueCookies);
 app.mount('#app');
 
 var acc = document.getElementsByClassName("accordion");
