@@ -61,9 +61,9 @@ class PruebaController extends Controller
 
     }
 
-    public function prueba1(String $partidaId){
+    public function prueba1(String $partidaId, String $denbora){
 
-        Prueba::where("id_partida", $partidaId)->where("izena", "prueba1")->update(["bukatuta" => 1]);
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba1")->update(["bukatuta" => 1, "denbora" => $this->denboraAldatu($denbora)]);
 
         if ($this->konprobatu($partidaId)) {
             return redirect()->route("irabazi", $partidaId);
@@ -72,9 +72,9 @@ class PruebaController extends Controller
         return redirect()->route("biltegia", $partidaId);
     }
 
-    public function prueba4(String $partidaId){
+    public function prueba4(String $partidaId, String $denbora){
 
-        Prueba::where("id_partida", $partidaId)->where("izena", "prueba4")->update(["bukatuta" => 1]);
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba4")->update(["bukatuta" => 1, "denbora" => $this->denboraAldatu($denbora)]);
 
         if ($this->konprobatu($partidaId)) {
             return redirect()->route("irabazi", $partidaId);
@@ -93,7 +93,16 @@ class PruebaController extends Controller
         }
 
         return redirect()->route("teilatua", $partidaId);
+    }
+  
+    public function denboraAldatu(int $denbora) {
 
+        $partidaDenbora = 3600;
+
+        $denbora = $partidaDenbora - $denbora;
+
+        $denboraString = gmdate("i:s", $denbora);
+        return $denboraString;
     }
 
     public function konprobatu(String $partidaId) {

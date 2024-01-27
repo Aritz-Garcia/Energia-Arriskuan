@@ -173,4 +173,9 @@ class PartidaController extends Controller
     public function irabaziView($partidaId) {
         return view('partida.irabazita', ['partidaId' => $partidaId]);
     }
+
+    public function klasifikazioa() {
+        $partidak = Partida::where('bukatuta', 1)->where('irabazita', 1)->orderBy('denbora', 'asc')->get();
+        return view('klasifikazioa', ['partidak' => $partidak]);
+    }
 }
