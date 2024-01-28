@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partida;
+use App\Models\Prueba;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
@@ -176,6 +177,8 @@ class PartidaController extends Controller
 
     public function klasifikazioa() {
         $partidak = Partida::where('bukatuta', 1)->where('irabazita', 1)->orderBy('denbora', 'asc')->get();
-        return view('klasifikazioa', ['partidak' => $partidak]);
+        $erabiltzaileak = User::all();
+        $probak = Prueba::orderBy('denbora', 'asc')->get();
+        return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
     }
 }

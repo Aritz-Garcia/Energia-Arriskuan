@@ -1,16 +1,28 @@
 <template>
-    <div>
-        <nav class="text-white">
-            <RouterLink class="me-2" to="/">Generala</RouterLink>
-            <RouterLink class="mx-2" to="/proba1">Proba 1</RouterLink>
-            <RouterLink class="mx-2" to="/proba2">Proba 2</RouterLink>
-            <RouterLink class="mx-2" to="/proba3">Proba 3</RouterLink>
-            <RouterLink class="ms-2" to="/proba4">Proba 4</RouterLink>
+    <div class="text-white">
+        <nav class="text-center my-5">
+            <RouterLink class="me-2 hover:text-[#0BD904]" to="/">Orokorra</RouterLink>
+            <RouterLink class="mx-2 hover:text-[#0BD904]" to="/proba1">1. Proba</RouterLink>
+            <RouterLink class="mx-2 hover:text-[#0BD904]" to="/proba2">2. Proba</RouterLink>
+            <RouterLink class="mx-2 hover:text-[#0BD904]" to="/proba3">3. Proba</RouterLink>
+            <RouterLink class="ms-2 hover:text-[#0BD904]" to="/proba4">4. Proba</RouterLink>
         </nav>
-        <RouterView />
+        <RouterView :partidak=partidak :erabiltzaileak=erabiltzaileak :probak=probak></RouterView>
     </div>
 </template>
 
-<script setup>
+<script>
     import { RouterLink, RouterView } from 'vue-router'
+    export default {
+        name: "klasifikazioa",
+        components: {
+            RouterLink,
+            RouterView
+        },
+        props: {
+            partidak: Array,
+            erabiltzaileak: Array,
+            probak: Array,
+        }
+    }
 </script>

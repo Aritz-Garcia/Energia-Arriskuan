@@ -29,9 +29,7 @@ Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
 
-Route::get('/klasifikazioa', function () {
-    return view('klasifikazioa');
-})->name('klasifikazioa');
+Route::get('/klasifikazioa', [PartidaController::class, "klasifikazioa"])->name('klasifikazioa');
 
 
 // Route::get('/perfil', function () {
