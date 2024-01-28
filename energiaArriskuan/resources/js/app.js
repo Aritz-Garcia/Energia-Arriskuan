@@ -38,16 +38,39 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
+
+const passwordInput = document.getElementById('password');
+const passwordInput2 = document.getElementById('password_confirmation');
+
+const showPasswordButtonLogin = document.getElementById('showPassword');
+const showPasswordButtonLogin2 = document.getElementById('showPassword2');
+
+function togglePasswordVisibility(input) {
+    if (input.type === 'password') {
+        input.type = 'text';
+    } else {
+        input.type = 'password';
+    }
+}
+
+showPasswordButtonLogin.addEventListener('click', function () {
+    togglePasswordVisibility(passwordInput);
+});
+
+showPasswordButtonLogin2.addEventListener('click', function () {
+    togglePasswordVisibility(passwordInput2);
+});
+
 
 // // Importa tu componente
 // import EjemploComponente from '../components/juego3.vue';
