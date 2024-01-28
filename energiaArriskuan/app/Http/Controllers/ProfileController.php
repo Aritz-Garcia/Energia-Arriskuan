@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -46,6 +45,13 @@ class ProfileController extends Controller
             $request->user()->email_verified_at = null;
         }
 
+        if ($request->hasFile('foto')) {
+            $fotoPath = $request->file('foto')->store('erabiltzaileak', 'public');
+            $request->user()->foto = 'storage/' . $fotoPath;
+        }
+
+
+
         $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
@@ -70,9 +76,9 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
-   }
+    }
 
-   public function destroyAdmin(Request $request): RedirectResponse
+    public function destroyAdmin(Request $request): RedirectResponse
     {
         // Validar que el usuario tiene permisos para realizar esta acción si es necesario
         // ...
@@ -90,6 +96,5 @@ class ProfileController extends Controller
         $user->delete();
 
         return redirect()->route('admin', Auth::user()->id);
-
     }
 }
