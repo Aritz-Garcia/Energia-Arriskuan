@@ -1,6 +1,10 @@
 <template>
     <div class="mt-5">
         <h1  class="text-center text-2xl text-[#0BD904]">1. Proba</h1>
+        <div class="text-center">
+            <input type="text" id="bilatzailea" :value=testua @input="testuaAldatu" class="font-rubik-regular text-left border my-3 bg-[#010440] text-[#0BD904] me-3 rounded-xl">
+            <button @click="ezabatu" class="text-center border my-3 bg-[#010440] text-[#0BD904] p-2 rounded-xl">Ezabatu</button>
+        </div>
         <table class="w-full text-center border my-3 bg-[#010440] text-[#0BD904]">
             <thead>
                 <tr class="border">
@@ -10,10 +14,13 @@
                 </tr>
             </thead>
             <tbody class="font-rubik-regular">
-                <tr v-for="(proba, index) in proba1Erabiltzaileak()" :key="index" class="border">
+                <tr v-for="(proba, index) in probaBusqueda" :key="index" class="border">
                     <td class="border">{{ index + 1 }}</td>
                     <td class="border">{{ proba.erabiltzailea }}</td>
                     <td class="border">{{ proba.denbora }}</td>
+                </tr>
+                <tr v-if="utzik == true">
+                    <td class="border" colspan="3">Ez dago emaitzarik</td>
                 </tr>
             </tbody>
         </table>
@@ -21,6 +28,9 @@
 </template>
 
 <script>
+    import { mapState, mapActions } from 'pinia'
+    import {useCounterStore} from '@/store/bilatzailea'
+
     export default {
         name: "general",
         props: {
@@ -31,7 +41,18 @@
         computed: {
             proba1() {
                 return this.probak.filter(proba => proba.izena == "prueba1");
-            }
+            },
+            probaBusqueda() {
+                return this.proba1Erabiltzaileak().filter(proba => proba.erabiltzailea.includes(this.testua.toLowerCase()));
+            },
+            utzik() {
+                if (this.probaBusqueda.length == 0) {
+                    return true;
+                } else {
+                    return false
+                }
+            },
+            ...mapState(useCounterStore, ['testua']),
         },
         methods: {
             proba1Erabiltzaileak() {
@@ -44,7 +65,8 @@
                         argazkia: erabiltzailea ? erabiltzailea.foto : '',
                     };
                 });
-            }
+            },
+            ...mapActions(useCounterStore, ['ezabatu', 'testuaAldatu']),
         }
     }
 </script>
