@@ -75,7 +75,6 @@ export default {
             });
         },
         gameOver() {
-            // TODO - Game over
             window.location.href = route('gameOver', this.partida);
         }
     },
