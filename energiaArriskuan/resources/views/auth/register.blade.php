@@ -76,7 +76,7 @@
                 <x-input-label for="foto" :value="__('Argazkia - Aukerazkoa')" />
                 <input
                     class="flex w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
-                    type="file" id="picture" name="foto" accept="image/*" @change="argazkiaBarruan" />
+                    type="file" id="picture" name="foto" accept="image/*"/>
 
                 <x-input-error :messages="$errors->get('foto')" class="mt-2" />
             </div>
@@ -100,8 +100,6 @@
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>
-
-
         </div>
 
         <div class="flex items-center justify-between mt-8 pb-3 pt-3">
@@ -116,24 +114,5 @@
 
         </div>
     </form>
-
-    {{-- Dialogo que al te advierte si quieres ir para atras o no porque la foto se borra si vas para atras --}}
-    {{-- <div id="dialog" class="hidden fixed inset-0 flex items-center justify-center">
-            <div class="bg-white p-8 rounded shadow-lg">
-                <h2 class="text-xl font-bold mb-4">Kontuz</h2>
-                <p>Adi, atzera joatean aukeratutako argazkia ezabatuko da eta berriro sartu beharko da. Ziur zaude atzera joan nahi duzula?</p>
-                <div class="flex justify-end mt-4">
-                    <button @click.prevent="dialogoItxi" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2">
-                    Ez
-                    </button>
-                    <button @click.prevent="atzera" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                    Bai
-                    </button>
-                </div>
-            </div>
-        </div> --}}
-
-
-    @vite('resources/js/vue/registro.js')
 
 @endsection
