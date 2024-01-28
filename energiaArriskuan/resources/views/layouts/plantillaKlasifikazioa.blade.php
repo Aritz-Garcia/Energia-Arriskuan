@@ -9,7 +9,7 @@
     <link rel="icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/app.js') }}" defer></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/klasifikazioa.js'])
+    @vite(['resources/css/app.css', 'resources/js/klasifikazioa.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
