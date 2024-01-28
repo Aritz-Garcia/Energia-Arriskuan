@@ -13,7 +13,10 @@ class Mugikorra
     {
         $agent = new Agent();
         if ($agent->isMobile() || $agent->isTablet()) {
+            session(['isMobileDevice' => true]);
             return redirect()->route('index');
+        } else {
+            session()->forget('isMobileDevice');
         }
         return $next($request);
     }
