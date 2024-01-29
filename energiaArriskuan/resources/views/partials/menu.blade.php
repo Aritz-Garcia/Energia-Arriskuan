@@ -84,7 +84,7 @@
                         class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-[#0BD904] lg:p-0 text-white">Hasiera</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="{{ route('klasifikazioa') }}"
                         class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-[#0BD904] lg:p-0 text-white">Klasifikazioa</a>
                 </li>
                 <li>

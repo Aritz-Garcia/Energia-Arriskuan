@@ -107,8 +107,11 @@ export default {
         // Lógica adicional para después de ganar
         textoElement.innerHTML = "Eguzki panelak konpondu dira!";
         document.getElementById("close-img").classList.add("hidden");
+
+        let denbora = this.$cookies.get("denbora");
+
         setTimeout(() => {
-            window.location.href = route("prueba1.update", this.partida);
+            window.location.href = route("prueba1.update", [this.partida, denbora]);
         }, 2000);
       } else {
         // Limpiar cartas-grid después de verificar

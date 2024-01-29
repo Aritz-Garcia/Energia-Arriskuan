@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partida;
+use App\Models\Prueba;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
@@ -165,12 +166,25 @@ class PartidaController extends Controller
         return view('partida.gameOver', ['partidaId' => $partidaId]);
     }
 
-    public function irabaziUpdate($partidaId) {
-        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1]);
+    public function irabaziUpdate($partidaId, $denbora) {
+        Partida::where("id", $partidaId)->update(["bukatuta" => 1, "irabazita" => 1, "denbora" => $denbora]);
         return redirect()->route('irabaziView', $partidaId);
     }
 
     public function irabaziView($partidaId) {
         return view('partida.irabazita', ['partidaId' => $partidaId]);
+    }
+
+    public function klasifikazioa() {
+        $partidak = Partida::where('bukatuta', 1)->where('irabazita', 1)->orderBy('denbora', 'asc')->get();
+        $erabiltzaileak = User::all();
+        $partidasPruebas = Partida::where('bukatuta', 1)->where('irabazita', 1)->with('pruebas')->orderBy('denbora', 'asc')->get();
+        $probakSinOrden = $partidasPruebas->flatMap(function ($partida) {
+            return $partida->pruebas;
+        });
+        $probak = $probakSinOrden->sort(function ($a, $b) {
+            return $a->denbora <=> $b->denbora;
+        })->values();
+        return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
     }
 }

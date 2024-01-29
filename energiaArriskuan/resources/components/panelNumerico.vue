@@ -137,8 +137,10 @@
 
                     document.getElementById("close-img").classList.add("hidden");
 
+                    let denbora = this.$cookies.get("denbora");
+
                     setTimeout(() => {
-                        window.location.href = route("prueba4.update", this.partida);
+                        window.location.href = route("prueba4.update", [this.partida, denbora]);
                     }, 3000);
                 } else {
                     this.result1 = result1;
