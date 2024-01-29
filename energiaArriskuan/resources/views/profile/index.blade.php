@@ -169,9 +169,7 @@
                                         @if ($partida->bukatuta == 0)
                                             {{-- Bukatu gabe --}}
                                             <td class="ps-2 flex py-4">
-                                                @include('partida.partials.delete-partida-form', [
-                                                    'partida' => $partida,
-                                                ])
+                                                
                                             </td>
                                             @if ($partida->denbora == null)
                                                 <td class="text-center py-4 text-xl">00:00</td>
