@@ -40,16 +40,32 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        // Obtén la instancia del usuario
+        $user = $request->user();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        // Obtén la ruta de la foto actual
+        $fotoActual = $user->foto;
+
+        $user->fill($request->validated());
+
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
         }
 
-        $request->user()->save();
+        if ($request->hasFile('foto')) {
+            if ($fotoActual) {
+                unlink(public_path($fotoActual));
+            }
+
+            $fotoPath = $request->file('foto')->store('erabiltzaileak', 'public');
+            $user->foto = 'storage/' . $fotoPath;
+        }
+
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
+
 
     /**
      * Delete the user's account.
@@ -70,9 +86,9 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
-   }
+    }
 
-   public function destroyAdmin(Request $request): RedirectResponse
+    public function destroyAdmin(Request $request): RedirectResponse
     {
         // Validar que el usuario tiene permisos para realizar esta acción si es necesario
         // ...
@@ -90,6 +106,5 @@ class ProfileController extends Controller
         $user->delete();
 
         return redirect()->route('admin', Auth::user()->id);
-
     }
 }

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="contJolasAzalpena relative overflow-hidden text-[#0BD904] mt-6">
+    <div class="contJolasAzalpena relative overflow-hidden testu-kolore-nagusia mt-6">
         <div id="titulua" class="z-0 absolute bottom-0 text-justify overflow-hidden after:absolute after:left-0 after:right-0 after:top-0 after:pointer-events-none">
             <div id="azalpenaContent" class="absolute">
                 <p class="text-center my-5 text-white font-medium">ENERGIA ARRISKUAN</p>
@@ -20,10 +20,10 @@
         </div>
         <div class="z-50 botoiaHasiDiv flex flex-col justify-center items-center h-full m-0 invisible">
             <p class="md:mx-auto text-3xl font-semibold">Misioa hasteko prest?</p>
-            <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto text-[#010440]"><strong>HASI</strong></a>
+            <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto testu-kolore-oinarria"><strong>HASI</strong></a>
         </div>
         <form action="{{ route('hasiera', $partida->id )}}">
-            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-[#0BD904] bg-[#0BD904] text-[#010440] p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:text-[#010440]">SKIP</button>
+            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-color-nagusia atzekaldeko-kolore-nagusia testu-kolore-oinarria p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:testu-kolore-oinarria">SKIP</button>
         </form>
     </div>
 

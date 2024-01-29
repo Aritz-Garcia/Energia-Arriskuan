@@ -4,6 +4,8 @@
 
 @section('content')
 
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
+
     @if (session('isMobileDevice'))
         <x-modal name="confirm-mugikorra" :show="true" focusable>
             <div class="p-6">
@@ -25,7 +27,8 @@
         </x-modal>
     @endif
 
-    <div class="min-h-screen flex items-center justify-center px-10">
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
+
 
         <div class="containerIndex max-w-screen-xl mx-auto text-center">
 
@@ -42,10 +45,10 @@
                 </p>
 
                 @if (Auth::user() != null)
-                <a href="{{ route('jolasa', Auth::user()->id) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                <a href="{{ route('jolasa', Auth::user()->id) }}" id="bottone1" class="md:mx-auto flex items-center testu-kolore-oinarria">
 
                 @else
-                <a href="{{ route('jolasa', 0) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                <a href="{{ route('jolasa', 0) }}" id="bottone1" class="md:mx-auto flex items-center testu-kolore-oinarria">
                 @endif
 
                     <svg stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none"
@@ -55,7 +58,7 @@
                         </path>
                     </svg>
 
-                    <strong class="pl-3 text-[#010440]">JOLASTU</strong>
+                    <strong class="pl-3 testu-kolore-oinarria">JOLASTU</strong>
 
                 </a>
 

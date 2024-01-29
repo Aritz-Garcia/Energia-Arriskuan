@@ -30,6 +30,7 @@
         "install": "^0.13.0",
         "js-cookie": "^3.0.5",
         "pinia": "^2.1.7",
+        "sass": "^1.70.0",
         "tailwind-typewriter": "^1.0.1",
         "typeface-inter": "^3.18.1",
         "vite-plugin-windicss": "^1.9.2",

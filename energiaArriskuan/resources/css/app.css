@@ -554,6 +554,20 @@ body.fondoAzul {
     color: #ffffff !important;
 }
 
+#showPassword {
+    color: #0bd904; /* Cambia este valor al color que desees */
+    background: none;
+    border: none;
+    font-size: 1.5em; /* Ajusta el tamaño de fuente según tus preferencias */
+}
+
+#showPassword2 {
+    color: #0bd904; /* Cambia este valor al color que desees */
+    background: none;
+    border: none;
+    font-size: 1.5em; /* Ajusta el tamaño de fuente según tus preferencias */
+}
+
 /********************************* Tutorial *********************************/
 
 .driver-popover.driverjs-theme {
