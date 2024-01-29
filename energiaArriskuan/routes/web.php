@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
         Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
         Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+        Route::get('/denbora/{partidaId}/{lekua}/{denbora}', [PartidaController::class, 'pistaUpdate'])->name('pista');
     });
 
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
