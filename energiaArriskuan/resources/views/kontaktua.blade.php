@@ -61,7 +61,9 @@
 
         <div class="w-full lg:w-1/2 lg:p-24  pl-16 pr-16 pb-16 sm:pt-8">
 
-            <form action="" method="POST">
+            <form action="{{ route('kontaktuaEmail') }}" method="post">
+                @csrf
+                @method('POST')
                 <div class="mb-5">
                     <label for="name" class="mb-3 block text-base font-medium testu-kolore-nagusia">
                         Izena
@@ -71,7 +73,7 @@
                 </div>
                 <div class="mb-5">
                     <label for="email" class="mb-3 block text-base font-medium testu-kolore-nagusia">
-                        Abizena
+                        Email
                     </label>
                     <input type="email" name="email" id="email"
                         class="w-full rounded-md border border-kolore-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
