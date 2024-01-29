@@ -23,7 +23,7 @@
                 {{ __('Are you sure you want to delete your account?') }}
             </h2>
 
-            <p class="mt-1 text-md text-[#0BD904]">
+            <p class="mt-1 text-md testu-kolore-nagusia">
                 {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 

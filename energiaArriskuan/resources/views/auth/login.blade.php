@@ -40,7 +40,7 @@
                     autocomplete="current-password" />
 
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <button testu-kolore-nagusia text-x id="showPassword" type="button" class="cursor-pointer">
+                    <button text-x id="showPassword" type="button" class="cursor-pointer testu-kolore-nagusia">
                         &#x1F441; <!-- Unicode character for an eye symbol -->
                     </button>
                 </div>
@@ -54,7 +54,7 @@
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
-                    class="rounded testu-kolore-nagusia atzekaldeko-kolore-oinarria border-color-nagusia shadow-sm focus:ring-[#0BD904] "
+                    class="rounded testu-kolore-nagusia atzekaldeko-kolore-oinarria border-kolore-nagusia shadow-sm focus:ring-[#0BD904] "
                     name="remember">
                 <span class="ms-2 text-sm testu-kolore-nagusia">{{ __('Remember me') }}</span>
             </label>
