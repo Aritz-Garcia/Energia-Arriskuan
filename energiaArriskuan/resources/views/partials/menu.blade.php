@@ -1,5 +1,5 @@
 <nav class="bg-[#010440] border-gray-200">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+    <div class="flex flex-wrap items-center justify-center sm:justify-between max-w-screen-xl mx-auto p-4">
         <a href="{{ route('index') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ url(asset('images/Logo.png')) }}" class="h-20" alt="Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#0BD904]">ENERGIA ARRISKUAN</span>
@@ -65,7 +65,7 @@
                 @endif
             </div>
             <button id="boton-menu-movil" data-collapse-toggle="mega-menu" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+                class="flex justify-center items-center p-2 w-full text-[#0BD904] rounded-lg lg:hidden"
                 aria-controls="mega-menu" aria-expanded="false">
                 <span class="sr-only">Menua zabaldu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -135,16 +135,18 @@
                             </x-slot>
                         </x-dropdown>
                     @else
-                        <button onclick="window.location='{{ route('login') }}'"
-                            class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                            Saioa hasi
-                        </button>
-                        @if (Route::has('register'))
-                            <button onclick="window.location='{{ route('register') }}'"
-                                class="font-semibold text-white bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
-                                Erregistratu
+                        <div class="flex flex-col gap-4">
+                            <button onclick="window.location='{{ route('login') }}'"
+                                class="font-semibold text-[#010440] bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                Saioa hasi
                             </button>
-                        @endif
+                            @if (Route::has('register'))
+                                <button onclick="window.location='{{ route('register') }}'"
+                                    class="font-semibold text-[#010440] bg-[#0BD904] hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
+                                    Erregistratu
+                                </button>
+                            @endif
+                        </div>
                     @endauth
                 </li>
             </ul>
