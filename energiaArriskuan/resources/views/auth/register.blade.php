@@ -76,7 +76,7 @@
                 <x-input-label for="foto" :value="__('Argazkia - Aukerazkoa')" />
                 <input
                     class="flex w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
-                    type="file" id="picture" name="foto" accept="image/*"/>
+                    type="file" id="picture" name="foto" accept="image/*" />
 
                 <x-input-error :messages="$errors->get('foto')" class="mt-2" />
             </div>
@@ -85,8 +85,16 @@
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Password')" />
 
-                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="new-password" />
+                <div class="relative">
+                    <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                        autocomplete="new-password" />
+
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                        <button text-[#0bd904] text-x id="showPassword" type="button" class="cursor-pointer">
+                            &#x1F441; <!-- Unicode character for an eye symbol -->
+                        </button>
+                    </div>
+                </div>
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
@@ -95,8 +103,16 @@
             <div class="mt-4">
                 <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password" />
+                <div class="relative">
+                    <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required
+                        autocomplete="new-password" />
+
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                        <button text-[#0bd904] text-x id="showPassword2" type="button" class="cursor-pointer">
+                            &#x1F441; <!-- Unicode character for an eye symbol -->
+                        </button>
+                    </div>
+                </div>
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>

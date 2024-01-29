@@ -4,6 +4,8 @@
 
 @section('content')
 
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
+
     @if (session('isMobileDevice'))
         <x-modal name="confirm-mugikorra" :show="true" focusable>
             <div class="p-6">
@@ -25,7 +27,8 @@
         </x-modal>
     @endif
 
-    <div class="min-h-screen flex items-center justify-center px-10">
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
+
 
         <div class="containerIndex max-w-screen-xl mx-auto text-center">
 
