@@ -187,4 +187,30 @@ class PartidaController extends Controller
         })->values();
         return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
     }
+
+    public function pistaUpdate($partidaId,$lekua,$denbora){
+        Partida::where('id', $partidaId)->update(['denbora' => $this->denboraAldatu($denbora)]);
+        switch ($lekua) {
+            case 'hasiera':
+                return redirect()->route('hasiera', $partidaId);
+                break;
+            case 'patioa':
+                return redirect()->route('patio', $partidaId);
+            break;
+            case 'juego2':
+                return redirect()->route('teilatua', $partidaId);
+            break;
+            case 'juego4':
+                return redirect()->route('sotoa', $partidaId);
+            break;
+            case 'juego1':
+                return redirect()->route('biltegia', $partidaId);
+            break;
+        }
+    }
+
+    public function denboraAldatu(int $denbora) {
+        $denboraString = gmdate("i:s", $denbora);
+        return $denboraString;
+    }
 }
