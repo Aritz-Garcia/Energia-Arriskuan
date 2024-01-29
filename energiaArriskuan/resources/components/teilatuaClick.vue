@@ -14,7 +14,7 @@
     </div>
 
     <div class="absolute top-0 right-0 z-50">
-      <Pista :probak=pruebas></Pista>
+      <Pista :probak=pruebas lugar="juego2" :partida=partida.id></Pista>
     </div>
 
     <div id="juego4div" class="hidden">

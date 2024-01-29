@@ -8,8 +8,8 @@
         @csrf
 
         <div v-show="pausua == 1" class="pt-3">
-            <h3 class="text-2xl font-bold text-[#0BD904]">Datu pertsonalak:</h3>
-            <hr class="my-2 border-t-2 border-[#0BD904]">
+            <h3 class="text-2xl font-bold testu-kolore-nagusia">Datu pertsonalak:</h3>
+            <hr class="my-2 border-t-2 border-color-nagusia">
 
             <!-- Name -->
             {{-- <div class="pt-3">
@@ -58,8 +58,8 @@
         </div>
 
         <div v-show="pausua == 2" class="pt-9">
-            <h3 class="text-2xl font-bold text-[#0BD904]">Erabiltzailea sortu:</h3>
-            <hr class="my-2 border-t-2 border-[#0BD904]">
+            <h3 class="text-2xl font-bold testu-kolore-nagusia">Erabiltzailea sortu:</h3>
+            <hr class="my-2 border-t-2 border-color-nagusia">
 
             <!-- Erabiltzailea -->
             <div class="mt-4">
@@ -75,7 +75,7 @@
             <div class="mt-4 grid w-full items-center gap-1.5">
                 <x-input-label for="foto" :value="__('Argazkia - Aukerazkoa')" />
                 <input
-                    class="flex w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
+                    class="flex w-full rounded-md border border-color-nagusia file:p-2 file:text-black border-input atzekaldeko-kolore-oinarria text-md text-white file:border-0 file:atzekaldeko-kolore-nagusia file:text-md file:font-medium"
                     type="file" id="picture" name="foto" accept="image/*" />
 
                 <x-input-error :messages="$errors->get('foto')" class="mt-2" />
@@ -90,7 +90,7 @@
                         autocomplete="new-password" />
 
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                        <button text-[#0bd904] text-x id="showPassword" type="button" class="cursor-pointer">
+                        <button testu-kolore-nagusia text-x id="showPassword" type="button" class="cursor-pointer">
                             &#x1F441; <!-- Unicode character for an eye symbol -->
                         </button>
                     </div>
@@ -108,7 +108,7 @@
                         autocomplete="new-password" />
 
                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                        <button text-[#0bd904] text-x id="showPassword2" type="button" class="cursor-pointer">
+                        <button testu-kolore-nagusia text-x id="showPassword2" type="button" class="cursor-pointer">
                             &#x1F441; <!-- Unicode character for an eye symbol -->
                         </button>
                     </div>
@@ -120,7 +120,7 @@
 
         <div class="flex items-center justify-between mt-8 pb-3 pt-3">
 
-            <a class="text-[#0BD904] hover:text-[#fff]" href="{{ route('login') }}">
+            <a class="testu-kolore-nagusia hover:text-[#fff]" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 

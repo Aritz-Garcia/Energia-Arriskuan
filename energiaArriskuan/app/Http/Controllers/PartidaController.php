@@ -178,7 +178,39 @@ class PartidaController extends Controller
     public function klasifikazioa() {
         $partidak = Partida::where('bukatuta', 1)->where('irabazita', 1)->orderBy('denbora', 'asc')->get();
         $erabiltzaileak = User::all();
-        $probak = Prueba::orderBy('denbora', 'asc')->get();
+        $partidasPruebas = Partida::where('bukatuta', 1)->where('irabazita', 1)->with('pruebas')->orderBy('denbora', 'asc')->get();
+        $probakSinOrden = $partidasPruebas->flatMap(function ($partida) {
+            return $partida->pruebas;
+        });
+        $probak = $probakSinOrden->sort(function ($a, $b) {
+            return $a->denbora <=> $b->denbora;
+        })->values();
         return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
+    }
+
+    public function pistaUpdate($partidaId,$lekua,$denbora){
+        Partida::where('id', $partidaId)->update(['denbora' => $this->denboraAldatu($denbora)]);
+        switch ($lekua) {
+            case 'hasiera':
+                return redirect()->route('hasiera', $partidaId);
+                break;
+            case 'patioa':
+                return redirect()->route('patio', $partidaId);
+            break;
+            case 'juego2':
+                return redirect()->route('teilatua', $partidaId);
+            break;
+            case 'juego4':
+                return redirect()->route('sotoa', $partidaId);
+            break;
+            case 'juego1':
+                return redirect()->route('biltegia', $partidaId);
+            break;
+        }
+    }
+
+    public function denboraAldatu(int $denbora) {
+        $denboraString = gmdate("i:s", $denbora);
+        return $denboraString;
     }
 }
