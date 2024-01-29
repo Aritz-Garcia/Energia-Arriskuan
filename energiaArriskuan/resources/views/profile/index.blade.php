@@ -8,8 +8,8 @@
             @if (Auth::user()->id == $profila->id)
                 {{-- Zure erab --}}
                 {{-- Erab info --}}
-                <div class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto text-[#0bd904] border-2 border-[#0bd904] hover:border-[#ffffff] hover:border-2 bg-[#010440] rounded-3xl py-7">
-
+                <div
+                    class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto text-[#0bd904] border-2 border-[#0bd904] hover:border-[#ffffff] hover:border-2 bg-[#010440] rounded-3xl py-7">
                     <div class="flex flex-col lg:flex-row justify-center items-center">
 
                         <!-- Profile Image -->
@@ -35,7 +35,8 @@
 
 
                 {{-- Taula --}}
-                <div class="border-solid border-2 border-[#0bd904] text-[#0bd904] min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 bg-[#010440]">
+                <div
+                    class="border-solid border-2 border-[#0bd904] text-[#0bd904] min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 bg-[#010440]">
                     <div class="flex justify-between py-4 items-center">
                         <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
 
@@ -146,11 +147,9 @@
                         </div>
 
                         @if (Auth::user()->rol == 1)
-
-                        @include('profile.partials.deleteAdmin', [
-                            'profile' => $profila,
-                        ])
-
+                            @include('profile.partials.deleteAdmin', [
+                                'profile' => $profila,
+                            ])
                         @endif
                     </div>
 
