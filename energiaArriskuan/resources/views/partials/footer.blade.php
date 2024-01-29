@@ -5,7 +5,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-color-nagusia uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -21,7 +21,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-color-nagusia uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -37,7 +37,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-color-nagusia uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -53,7 +53,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-color-nagusia uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
