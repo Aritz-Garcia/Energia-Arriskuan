@@ -13,7 +13,7 @@
             />
         </div>
 
-        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white bg-[#010440] w-[1000px] mx-auto">
+        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[1000px] mx-auto">
             <div class="flex justify-center">
 
                 <div class="flex gap-10 items-center mx-5">
@@ -21,7 +21,7 @@
                     <div class="flex items-center">
                         <div class="flex flex-col items-center gap-5 justify-center">
                             <p class="text-xl">Inklinazioa:</p>
-                            <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="rounded sotoaPanelLetra text-center w-14 text-2xl text-[#010440] bg-[#fff]" v-model="inclinazioaValue">
+                            <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="rounded sotoaPanelLetra text-center w-14 text-2xl testu-kolore-oinarria bg-[#fff]" v-model="inclinazioaValue">
                         </div>
                         <div class="flex flex-col">
                             <button @click.prevent="decrementarValor('inclinazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-12">⭡</button>
@@ -51,13 +51,13 @@
                     <input type="range" name="Orientazioa" id="Orientazioa" min="-30" max="30" value="0" @input="moverOrientazioa()" class="accent-[#0BD904]">
                     <button @click.prevent="incrementarValor('orientazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
 
-                    <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl text-[#010440] bg-[#fff]" v-model="orientazioaValue">
+                    <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl testu-kolore-oinarria bg-[#fff]" v-model="orientazioaValue">
 
                 </div>
 
             </div>
 
-            <button @click.prevent="egiaztatu()" class="hover:bg-[#fff] bg-[#0BD904] text-black p-3 text-2xl font-rubik-regular rounded mb-8 ">EGIAZTATU</button>
+            <button @click.prevent="egiaztatu()" class="hover:bg-[#fff] atzekaldeko-kolore-nagusia text-black p-3 text-2xl font-rubik-regular rounded mb-8 ">EGIAZTATU</button>
 
         </div>
     </div>

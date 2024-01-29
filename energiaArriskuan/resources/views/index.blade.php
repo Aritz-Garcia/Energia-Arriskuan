@@ -45,10 +45,10 @@
                 </p>
 
                 @if (Auth::user() != null)
-                <a href="{{ route('jolasa', Auth::user()->id) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                <a href="{{ route('jolasa', Auth::user()->id) }}" id="bottone1" class="md:mx-auto flex items-center testu-kolore-oinarria">
 
                 @else
-                <a href="{{ route('jolasa', 0) }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
+                <a href="{{ route('jolasa', 0) }}" id="bottone1" class="md:mx-auto flex items-center testu-kolore-oinarria">
                 @endif
 
                     <svg stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none"
@@ -58,7 +58,7 @@
                         </path>
                     </svg>
 
-                    <strong class="pl-3 text-[#010440]">JOLASTU</strong>
+                    <strong class="pl-3 testu-kolore-oinarria">JOLASTU</strong>
 
                 </a>
 

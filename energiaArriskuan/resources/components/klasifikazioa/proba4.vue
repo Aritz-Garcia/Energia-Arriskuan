@@ -1,11 +1,11 @@
 <template>
     <div class="mt-5">
-        <h1  class="text-center text-2xl text-[#0BD904]">4. Proba</h1>
+        <h1  class="text-center text-2xl testu-kolore-nagusia">4. Proba</h1>
         <div class="text-center">
-            <input type="text" id="bilatzailea" :value=testua @input="testuaAldatu" class="font-rubik-regular text-left border my-3 bg-[#010440] text-[#0BD904] me-3 rounded-xl">
-            <button @click="ezabatu" class="text-center border my-3 bg-[#010440] text-[#0BD904] p-2 rounded-xl">Ezabatu</button>
+            <input type="text" id="bilatzailea" :value=testua @input="testuaAldatu" class="font-rubik-regular text-left border my-3 atzekaldeko-kolore-oinarria testu-kolore-nagusia me-3 rounded-xl">
+            <button @click="ezabatu" class="text-center border my-3 atzekaldeko-kolore-oinarria testu-kolore-nagusia p-2 rounded-xl">Ezabatu</button>
         </div>
-        <table class="w-full text-center border my-3 bg-[#010440] text-[#0BD904]">
+        <table class="w-full text-center border my-3 atzekaldeko-kolore-oinarria testu-kolore-nagusia">
             <thead>
                 <tr class="border">
                     <th class="border">Postua</th>
