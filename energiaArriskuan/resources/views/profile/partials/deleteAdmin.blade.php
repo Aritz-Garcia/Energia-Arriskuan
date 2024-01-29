@@ -14,7 +14,7 @@
             Ziur zaude erabiltzailea ezabatu nahi duzula?
         </h2>
 
-        <p class="mt-1 text-md text-[#0BD904]">
+        <p class="mt-1 text-md testu-kolore-nagusia">
             Erabiltzailea ezabatzean, erabiltzailearen informazio guztia ezabatuko da.
         </p>
 

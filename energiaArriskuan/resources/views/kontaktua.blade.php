@@ -66,29 +66,29 @@
                     <label for="name" class="mb-3 block text-base font-medium testu-kolore-nagusia">
                         Izena
                     </label>
-                    <input type="text" name="name" id="name""
-                        class="w-full rounded-md border border-color-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
+                    <input type="text" name="name" id="name"
+                        class="w-full rounded-md border border-kolore-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
                 </div>
                 <div class="mb-5">
                     <label for="email" class="mb-3 block text-base font-medium testu-kolore-nagusia">
                         Abizena
                     </label>
-                    <input type="email" name="email" id="email""
-                        class="w-full rounded-md border border-color-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
+                    <input type="email" name="email" id="email"
+                        class="w-full rounded-md border border-kolore-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
                 </div>
                 <div class="mb-5">
                     <label for="subject" class="mb-3 block text-base font-medium testu-kolore-nagusia">
                         Gaia
                     </label>
-                    <input type="text" name="subject" id="subject""
-                        class="w-full rounded-md border border-color-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
+                    <input type="text" name="subject" id="subject"
+                        class="w-full rounded-md border border-kolore-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md" />
                 </div>
                 <div class="mb-5">
                     <label for="message" class="mb-3 block text-base font-medium testu-kolore-nagusia">
                         Mezua
                     </label>
-                    <textarea rows="4" name="message" id="message""
-                        class="w-full resize-none rounded-md border border-color-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md"></textarea>
+                    <textarea rows="4" name="message" id="message"
+                        class="w-full resize-none rounded-md border border-kolore-nagusia atzekaldeko-kolore-oinarria py-3 px-6 text-base font-medium text-white outline-none focus:border-white focus:shadow-md"></textarea>
                 </div>
                 <div>
                     <button

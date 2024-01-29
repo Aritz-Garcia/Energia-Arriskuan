@@ -9,13 +9,13 @@
                 {{-- Zure erab --}}
                 {{-- Erab info --}}
 
-                <div class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto testu-kolore-nagusia border-2 border-color-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
+                <div class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto testu-kolore-nagusia border-2 border-kolore-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
 
                     <div class="flex flex-col lg:flex-row justify-center items-center">
 
                         <!-- Profile Image -->
                         <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia"
-                            class="m-2 h-36 w-36 rounded-full border-2 border-color-nagusia md:mr-4 md:mb-0">
+                            class="m-2 h-36 w-36 rounded-full border-2 border-kolore-nagusia md:mr-4 md:mb-0">
 
                         <!-- Profile Details -->
                         <div class="m-4 text-center md:text-left">
@@ -37,14 +37,14 @@
 
                 {{-- Taula --}}
 
-                <div class="border-solid border-2 border-color-nagusia testu-kolore-nagusia min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
+                <div class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
                     <div class="flex justify-between py-4 items-center">
                         <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
 
                         <form action="{{ route('jolasa', Auth::user()->id) }}">
                             <button
                                 @if ($profila->partidas->contains('bukatuta', 0)) disabled class="flex items-center mr-4 border-2 border-[#ff3131] boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg" @endif
-                                class="flex items-center mr-4 border-2 border-color-nagusia boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
+                                class="flex items-center mr-4 border-2 border-kolore-nagusia boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
                                 <img src="{{ asset('images/anadir.png') }}" alt="Gehitu" class="h-9 w-9">
                             </button>
                         </form>
@@ -62,7 +62,7 @@
 
                                             <form action="{{ route('jolasa', Auth::user()->id) }}" class=" mb-2">
                                                 <button
-                                                    class="flex items-center mr-4 border-2 border-color-nagusia boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
+                                                    class="flex items-center mr-4 border-2 border-kolore-nagusia boton hover:border-[#ffffff] hover:text-[#ffffff] p-2 rounded-lg">
                                                     <img src="{{ asset('images/play.png') }}" alt="Jolastu" class="h-9 w-9">
                                                 </button>
                                             </form>
@@ -119,7 +119,7 @@
                                             <td class="pe-2">
                                                 <div class="flex justify-end content-center pr-1">
                                                     <div
-                                                        class="text-center border-solid border-2 border-color-nagusia rounded-lg p-2 testu-kolore-oinarria atzekaldeko-kolore-nagusia font-semibold w-auto sm:w-36">
+                                                        class="text-center border-solid border-2 border-kolore-nagusia rounded-lg p-2 testu-kolore-oinarria atzekaldeko-kolore-nagusia font-semibold w-auto sm:w-36">
                                                         Bukatuta
                                                     </div>
                                                 </div>
@@ -136,10 +136,10 @@
                 <div class="text-white">
                     {{-- Erab info --}}
                     <div
-                        class="flex flex-col justify-center items-center max-w-sm min-w-sm mx-auto testu-kolore-nagusia border-2 border-color-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
+                        class="flex flex-col justify-center items-center max-w-sm min-w-sm mx-auto testu-kolore-nagusia border-2 border-kolore-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
                         <div class="flex justify-center items-center">
                             <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia"
-                                class="hover:border-[#ffffff] m-2 h-36 w-36 rounded-full border-2 border-color-nagusia">
+                                class="hover:border-[#ffffff] m-2 h-36 w-36 rounded-full border-2 border-kolore-nagusia">
                             <div class="m-4">
                                 <p class="text-3xl text-[#ffffff] p-1">{{ $profila->erabiltzailea }}</p>
                                 <p class="p-1">{{ $profila->name }} {{ $profila->abizena }}</p>
@@ -155,7 +155,7 @@
                     </div>
 
                     {{-- Taula --}}
-                    <div class="border-solid border-2 border-color-nagusia testu-kolore-nagusia rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
+                    <div class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
                         <div class="flex justify-between py-4 items-center">
                             <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
                         </div>
@@ -219,7 +219,7 @@
                                                 <td class="pe-2">
                                                     <div class="flex justify-end content-center pr-1">
                                                         <div
-                                                            class="text-center border-solid border-2 border-color-nagusia rounded-lg p-2 testu-kolore-oinarria atzekaldeko-kolore-nagusia font-semibold w-auto sm:w-36">
+                                                            class="text-center border-solid border-2 border-kolore-nagusia rounded-lg p-2 testu-kolore-oinarria atzekaldeko-kolore-nagusia font-semibold w-auto sm:w-36">
                                                             Bukatuta
                                                         </div>
                                                     </div>

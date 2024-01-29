@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <hr class="border w-2/3 border-color-nagusia">
+            <hr class="border w-2/3 border-kolore-nagusia">
 
             <div class="p-4 sm:p-8 shadow sm:rounded-lg flex justify-center">
                 <div class="max-w-xl">
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <hr class="border w-2/3 border-color-nagusia">
+            <hr class="border w-2/3 border-kolore-nagusia">
 
             <div class="p-4 sm:p-8 shadow sm:rounded-lg flex justify-center">
                 <div class="max-w-xl">
