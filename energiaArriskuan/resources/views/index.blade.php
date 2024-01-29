@@ -6,6 +6,30 @@
 
     <div class="min-h-screen flex items-center justify-center px-10 py-10">
 
+    @if (session('isMobileDevice'))
+        <x-modal name="confirm-mugikorra" :show="true" focusable>
+            <div class="p-6">
+                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                    Ezin da jolastu mugikor edo tabletekin.
+                </h2>
+
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                    Ezin da jolastu mugikor edo tabletekin. Mesedez, erabili ordenagailu bat.
+                </p>
+
+                <div class="mt-6 flex justify-end">
+                    <x-secondary-button x-on:click="$dispatch('close')">
+                        Itxi
+                    </x-secondary-button>
+                </div>
+            </div>
+
+        </x-modal>
+    @endif
+
+    <div class="min-h-screen flex items-center justify-center px-10 py-10">
+
+
         <div class="containerIndex max-w-screen-xl mx-auto text-center">
 
             <div class="items-center flex flex-col w-auto">

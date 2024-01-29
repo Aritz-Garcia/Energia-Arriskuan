@@ -44,13 +44,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profileAdmin', [ProfileController::class, 'destroyAdmin'])->name('profile.destroyAdmin');
 
 
-    Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
-    Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
-    Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
-    Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
-    Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
-    Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
-    Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+    Route::middleware('mugikorra')->group(function () {
+        Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
+        Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
+        Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
+        Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
+        Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
+        Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
+        Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+    });
 
     Route::delete('/partida', [PartidaController::class, 'destroy'])->name('partida.destroy');
 
