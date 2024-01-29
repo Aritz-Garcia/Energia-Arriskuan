@@ -13,7 +13,7 @@
             />
         </div>
 
-        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[1000px] mx-auto">
+        <div class="border-color-nagusia border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[1000px] mx-auto">
             <div class="flex justify-center">
 
                 <div class="flex gap-10 items-center mx-5">
@@ -24,9 +24,9 @@
                             <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="rounded sotoaPanelLetra text-center w-14 text-2xl testu-kolore-oinarria bg-[#fff]" v-model="inclinazioaValue">
                         </div>
                         <div class="flex flex-col">
-                            <button @click.prevent="decrementarValor('inclinazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-12">⭡</button>
+                            <button @click.prevent="decrementarValor('inclinazioa')" class="botones border rounded-md border-color-nagusia px-3 py-1 m-12">⭡</button>
                             <input type="range" name="Inclinazioa" id="Inclinazioa" min="0" max="75" value="0" @input="moverInclinazioa()" class="accent-[#0BD904] transform rotate-90 h-16">
-                            <button @click.prevent="incrementarValor('inclinazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-12">⭣</button>
+                            <button @click.prevent="incrementarValor('inclinazioa')" class="botones border rounded-md border-color-nagusia px-3 py-1 m-12">⭣</button>
                         </div>
                     </div>
 
@@ -47,9 +47,9 @@
 
                 <div class="flex items-center">
                     <p class="text-xl mr-10">Orientazioa:</p>
-                    <button @click.prevent="decrementarValor('orientazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
+                    <button @click.prevent="decrementarValor('orientazioa')" class="botones border rounded-md border-color-nagusia px-3 py-1 m-2">⭠</button>
                     <input type="range" name="Orientazioa" id="Orientazioa" min="-30" max="30" value="0" @input="moverOrientazioa()" class="accent-[#0BD904]">
-                    <button @click.prevent="incrementarValor('orientazioa')" class="botones border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
+                    <button @click.prevent="incrementarValor('orientazioa')" class="botones border rounded-md border-color-nagusia px-3 py-1 m-2">⭢</button>
 
                     <input :style="{ animation: animacion, 'background-color': colorFondo }" type="text" disabled class="ml-10 rounded sotoaPanelLetra text-center w-16 text-2xl testu-kolore-oinarria bg-[#fff]" v-model="orientazioaValue">
 

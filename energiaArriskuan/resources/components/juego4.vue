@@ -13,10 +13,10 @@
             />
         </div>
 
-        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[880px] mx-auto">
+        <div class="border-color-nagusia border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[880px] mx-auto">
             <div class="flex">
                 <div class="flex flex-col items-center mx-5">
-                    <div class="relative border-[#0BD904] border-2 rounded-xl p-5">
+                    <div class="relative border-color-nagusia border-2 rounded-xl p-5">
                         <div class="h-[365px] w-[485px]">
                             <img src="../../public/images/juego4/hierba.jpg" alt="hierba" class="absolute h-[405px] top-0 left-0 rounded-xl">
                             <img id="molinoImg" src="../../public/images/juego4/molino1.png" alt="molino" class="absolute left-[147px] w-48">
@@ -27,15 +27,15 @@
 
                     <!-- TODO Poner hover a los botones y un background -->
                     <div class="flex items-center mt-5">
-                        <button @click.prevent="decrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭠</button>
+                        <button @click.prevent="decrementarValor" class="border rounded-md border-color-nagusia px-3 py-1 m-2">⭠</button>
                         <input type="range" name="brujula" id="brujulaSlider" min="0" max="359" value="0" @input="slideBrujula()" class="accent-[#0BD904]">
-                        <button @click.prevent="incrementarValor" class="border rounded-md border-[#0BD904] px-3 py-1 m-2">⭢</button>
+                        <button @click.prevent="incrementarValor" class="border rounded-md border-color-nagusia px-3 py-1 m-2">⭢</button>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-center mx-5">
                     <div class="relative flex justify-between">
-                        <div class="border-2 border-[#0BD904] rounded-xl p-5">
+                        <div class="border-2 border-color-nagusia rounded-xl p-5">
                             <div class="relative w-48 h-48">
                                 <img id="brujulaImg" src="../../public/images/juego4/brujula_general.png" alt="brujula" class="object-contain">
                                 <img src="../../public/images/juego4/brujula_aguja.png" alt="brujula aguja" class="absolute w-8 top-[33.5px] left-[80px]">
