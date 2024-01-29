@@ -40,9 +40,16 @@
                             <td class="px-6 py-4 text-base border border-[#0BD904]">
                                 {{ $partida->erabiltzailea->erabiltzailea }}
                             </td>
-                            <td class="px-6 py-4 text-base border border-[#0BD904]">
-                                {{ $partida->denbora }}
-                            </td>
+                            @if ($partida->denbora == '00:00')
+                                <td class="px-6 py-4 text-base border border-[#0BD904] line-through">
+                                    {{$partida->denbora}}
+                                </td>
+                            @else
+                                <td class="px-6 py-4 text-base border border-[#0BD904]">
+                                    {{$partida->denbora}}
+                                </td>
+                            @endif
+
                             <td class="px-6 py-4 text-base border border-[#0BD904]">
                                 @if ($partida->irabazita == 1)
                                     Bai
@@ -52,7 +59,7 @@
                             </td>
                             <td class="px-6 py-4 border border-[#0BD904] ">
                                 <a href="#"><img class="w-10 h-10" src="{{ asset('images/borrar.png') }}"
-                                        alt="Jese image"></a>
+                                        alt="borrar"></a>
                             </td>
                         </tr>
                     @endforeach
