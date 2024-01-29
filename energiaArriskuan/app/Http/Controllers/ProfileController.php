@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -39,23 +40,32 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        // Obtén la instancia del usuario
+        $user = $request->user();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        // Obtén la ruta de la foto actual
+        $fotoActual = $user->foto;
+
+        $user->fill($request->validated());
+
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
         }
 
         if ($request->hasFile('foto')) {
+            if ($fotoActual) {
+                unlink(public_path($fotoActual));
+            }
+
             $fotoPath = $request->file('foto')->store('erabiltzaileak', 'public');
-            $request->user()->foto = 'storage/' . $fotoPath;
+            $user->foto = 'storage/' . $fotoPath;
         }
 
-
-
-        $request->user()->save();
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
+
 
     /**
      * Delete the user's account.

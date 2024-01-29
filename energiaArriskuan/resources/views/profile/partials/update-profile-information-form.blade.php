@@ -60,7 +60,6 @@
                 class="flex mt-5 w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
                 type="file" id="foto" name="foto" accept="image/*" @change="argazkiaBarruan" />
 
-            <!-- Vista previa de la foto actual -->
         </div>
 
         <div class="flex items-center gap-4">
