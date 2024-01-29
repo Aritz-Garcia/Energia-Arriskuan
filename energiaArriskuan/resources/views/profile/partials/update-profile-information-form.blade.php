@@ -54,7 +54,7 @@
             <x-input-label for="foto" :value="__('Argazkia')" />
 
             @if ($user->foto)
-                <img src="{{ asset($user->foto) }}" alt="Foto de perfil actual" class="mt-2 max-w-full min-h-40 max-h-40 border-2 border-[#0BD904] rounded-xl" />
+                <img src="{{ asset($user->foto) }}" alt="Foto de perfil actual" class="mt-2 max-w-40 min-w-20 min-h-40 max-h-40 border-2 border-[#0BD904] rounded-xl" />
             @endif
             <input
                 class="flex mt-5 w-full rounded-md border border-[#0BD904] file:p-2 file:text-black border-input bg-[#010440] text-md text-white file:border-0 file:bg-[#0BD904] file:text-md file:font-medium"
