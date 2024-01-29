@@ -17,29 +17,29 @@
 
         @if (count($users) > 0)
             <table
-                class="table-auto w-full border-collapse text-sm text-left rtl:text-right text-[#0BD904] border border-[#0BD904] mx-auto">
+                class="table-auto w-full border-collapse text-sm text-left rtl:text-right testu-kolore-nagusia border border-color-nagusia mx-auto">
                 <!-- Encabezado de la tabla -->
-                <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">
+                <thead class="text-md text-[#ffffff] uppercase text-base atzekaldeko-kolore-oinarria">
                     <tr>
-                        <th class="pl-5 py-3 border border-[#0BD904]">Izen-Abizena</th>
-                        <th class="pl-5 py-3 border border-[#0BD904]">Email</th>
-                        <th class="pl-5 py-3 border border-[#0BD904]">Perfilara joan</th>
+                        <th class="pl-5 py-3 border border-color-nagusia">Izen-Abizena</th>
+                        <th class="pl-5 py-3 border border-color-nagusia">Email</th>
+                        <th class="pl-5 py-3 border border-color-nagusia">Perfilara joan</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Filas de la tabla -->
                     @foreach ($users as $usuario)
-                        <tr class="bg-[#010440] border border-[#0BD904]">
+                        <tr class="atzekaldeko-kolore-oinarria border border-color-nagusia">
                             <!-- Contenido de cada celda -->
-                            <th scope="row" class="flex items-center px-6 py-4 whitespace-nowrap text-[#0BD904]">
+                            <th scope="row" class="flex items-center px-6 py-4 whitespace-nowrap testu-kolore-nagusia">
                                 <img class="w-10 h-10 rounded-full" src="{{ url(asset($usuario->foto)) }}" alt="Argazkia">
                                 <div class="ps-3">
                                     <div class="text-base">{{ $usuario->name }}</div>
-                                    <div class="font-normal text-[#0BD904]">{{ $usuario->abizena }}</div>
+                                    <div class="font-normal testu-kolore-nagusia">{{ $usuario->abizena }}</div>
                                 </div>
                             </th>
-                            <td class="px-6 py-4 text-base border border-[#0BD904]">{{ $usuario->email }}</td>
-                            <td class="px-6 py-4 border border-[#0BD904]">
+                            <td class="px-6 py-4 text-base border border-color-nagusia">{{ $usuario->email }}</td>
+                            <td class="px-6 py-4 border border-color-nagusia">
                                 <a href="{{ route('profile.index',$usuario->id)}}"><img class="w-10 h-10" src="{{ asset('images/ver.png') }}"></a>
                             </td>
                         </tr>
@@ -51,7 +51,7 @@
                 {{ $users->links() }}
             </div>
         @else
-            <p class="text-xl text-center bg-[#010440] border border-[#0BD904] text-[#0BD904] p-5">Ez daude erabiltzarile
+            <p class="text-xl text-center atzekaldeko-kolore-oinarria border border-color-nagusia testu-kolore-nagusia p-5">Ez daude erabiltzarile
                 arruntarik!</p>
         @endif
     </div>

@@ -40,7 +40,7 @@
                     autocomplete="current-password" />
 
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <button text-[#0bd904] text-x id="showPassword" type="button" class="cursor-pointer">
+                    <button testu-kolore-nagusia text-x id="showPassword" type="button" class="cursor-pointer">
                         &#x1F441; <!-- Unicode character for an eye symbol -->
                     </button>
                 </div>
@@ -54,20 +54,20 @@
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
-                    class="rounded text-[#0BD904] bg-[#010440] border-[#0BD904] shadow-sm focus:ring-[#0BD904] "
+                    class="rounded testu-kolore-nagusia atzekaldeko-kolore-oinarria border-color-nagusia shadow-sm focus:ring-[#0BD904] "
                     name="remember">
-                <span class="ms-2 text-sm text-[#0BD904]">{{ __('Remember me') }}</span>
+                <span class="ms-2 text-sm testu-kolore-nagusia">{{ __('Remember me') }}</span>
             </label>
         </div>
 
         <div class="flex items-center justify-between mt-8 pb-3">
             @if (Route::has('password.request'))
-                <a class="text-[#0BD904] hover:text-[#fff] pr-10" href="{{ route('password.request') }}">
+                <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
-            <a class="text-[#0BD904] hover:text-[#fff] pr-10" href="{{ route('register') }}">
+            <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('register') }}">
                 {{ __('Ez zaude erregistratuta?') }}
             </a>
 
