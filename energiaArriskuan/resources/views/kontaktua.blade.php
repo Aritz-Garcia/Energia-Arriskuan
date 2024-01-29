@@ -16,7 +16,7 @@
                 Zein da escape room-aren iraupena?
             </button>
             <div class="panel">
-                <p class="text-white">20 minutu daude escape room-a bukatzeko.</p>
+                <p class="text-white">60 minutu daude escape room-a bukatzeko.</p>
             </div>
 
             <button class="accordion atzekaldeko-kolore-oinarria testu-kolore-nagusia">Zenbat pertsonak parte har dezakete aldi berean escape
