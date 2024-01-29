@@ -16,8 +16,8 @@
         class="flex flex-col items-center justify-center gap-10 py-16 sm:py-80 sm:flex-row sm:gap-3 md:gap-6 lg:gap-10 xl:gap-16 mx-20">
 
         @if (count($partidak) > 0)
-            <table class="max-w-screen-md mx-auto text-sm text-left  rtl:text-right text-[#0BD904] border border-[#0BD904]">
-                <thead class="text-md text-[#ffffff] uppercase text-base bg-[#010440]">
+            <table class="max-w-screen-md mx-auto text-sm text-left  rtl:text-right testu-kolore-nagusia border border-[#0BD904]">
+                <thead class="text-md text-[#ffffff] uppercase text-base atzekaldeko-kolore-oinarria">
                     <tr class="">
                         <th scope="col" class="px-6 py-3 border border-[#0BD904]">
                             Erabiltzailea
@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
                     @foreach ($partidak as $partida)
-                        <tr class="bg-[#010440] border border-[#0BD904]">
+                        <tr class="atzekaldeko-kolore-oinarria border border-[#0BD904]">
                             <td class="px-6 py-4 text-base border border-[#0BD904]">
                                 {{ $partida->erabiltzailea->erabiltzailea }}
                             </td>
@@ -66,7 +66,7 @@
                 </tbody>
             </table>
         @else
-            <p class="text-xl text-center bg-[#010440] border border-[#0BD904] text-[#0BD904] p-5">Ez daude partidarik
+            <p class="text-xl text-center atzekaldeko-kolore-oinarria border border-[#0BD904] testu-kolore-nagusia p-5">Ez daude partidarik
                 bukatuta!</p>
         @endif
     </div>

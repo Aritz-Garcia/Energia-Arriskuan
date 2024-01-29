@@ -8,12 +8,12 @@
         src="../../public/images/cerrar.png"/>
 
         <div class="flex items-center">
-            <button class="text-3xl me-4 text-[#0BD904] bg-[#010440] p-2 px-4 rounded-xl" @click.prevent="kendu">&#129136;</button>
+            <button class="text-3xl me-4 testu-kolore-nagusia atzekaldeko-kolore-oinarria p-2 px-4 rounded-xl" @click.prevent="kendu">&#129136;</button>
             <div class="relative">
                 <img src="../../public/images/juego2/papelPatio.png" alt="Papera" class="w-72">
                 <p class="absolute top-1/2 left-1/2 text-7xl paperaPatio">{{ textoMostrado }}</p>
             </div>
-            <button class="text-3xl ms-4 text-[#0BD904] bg-[#010440] p-2 px-4 rounded-xl" @click.prevent="gehitu">&#129138;</button>
+            <button class="text-3xl ms-4 testu-kolore-nagusia atzekaldeko-kolore-oinarria p-2 px-4 rounded-xl" @click.prevent="gehitu">&#129138;</button>
         </div>
     </div>
   </div>

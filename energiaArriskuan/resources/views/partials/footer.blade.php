@@ -1,11 +1,11 @@
 <footer
-  class="flex flex-col items-center bg-[#010440] text-center text-white">
+  class="flex flex-col items-center atzekaldeko-kolore-oinarria text-center text-white">
   <div class="container px-6 pt-6">
     <div class="mb-6 flex justify-center">
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal text-[#0BD904] transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -21,7 +21,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal text-[#0BD904] transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -37,7 +37,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal text-[#0BD904] transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -53,7 +53,7 @@
       <a
         href="#!"
         type="button"
-        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal text-[#0BD904] transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        class="m-1 h-9 w-9 rounded-full border-2 border-[#0BD904] uppercase leading-normal testu-kolore-nagusia transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
         data-te-ripple-init
         data-te-ripple-color="light">
         <svg
@@ -70,9 +70,9 @@
 
   <!--Copyright section-->
   <div
-    class="w-full p-4 text-center text-[#0BD904] bg-[#010440]">
+    class="w-full p-4 text-center testu-kolore-nagusia atzekaldeko-kolore-oinarria">
     © 2023 Copyright |
-    <a class="text-whitehite text-[#0BD904]" href="#"
+    <a class="text-whitehite testu-kolore-nagusia" href="#"
       >Energia Arriskuan: Escape Room</a
     >
   </div>

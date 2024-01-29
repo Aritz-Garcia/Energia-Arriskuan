@@ -10,8 +10,8 @@
         <p class="text-green-600 text-5xl">IRABAZITA</p>
         <p class="font-digital-regular text-green-600 text-3xl mt-4">Zorionak. Energia-sistemak berrezartzea lortu duzu. <br>Zuri ezker pertsona asko bizirik mantendu dira. Eskerrik asko guztiagatik.</p>
 
-        <a href="{{ route('index') }}" id="bottone1" class="md:mx-auto flex items-center text-[#010440]">
-            <strong class="text-[#010440] font-rubik-bold">ITZULI</strong>
+        <a href="{{ route('index') }}" id="bottone1" class="md:mx-auto flex items-center testu-kolore-oinarria">
+            <strong class="testu-kolore-oinarria font-rubik-bold">ITZULI</strong>
         </a>
     </div>
 

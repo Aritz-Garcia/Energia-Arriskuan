@@ -13,7 +13,7 @@
             />
         </div>
 
-        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white bg-[#010440] w-[880px] mx-auto">
+        <div class="border-[#0BD904] border-2 rounded-xl p-4 text-white atzekaldeko-kolore-oinarria w-[880px] mx-auto">
             <div class="flex">
                 <div class="flex flex-col items-center mx-5">
                     <div class="relative border-[#0BD904] border-2 rounded-xl p-5">
