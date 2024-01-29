@@ -54,13 +54,13 @@
             <x-input-label for="foto" :value="__('Argazkia')" />
 
             @if ($user->foto)
+
                 <img src="{{ asset($user->foto) }}" alt="Foto de perfil actual" class="mt-2 max-w-full min-h-40 max-h-40 border-2 border-color-nagusia rounded-xl" />
             @endif
             <input
                 class="flex mt-5 w-full rounded-md border border-color-nagusia file:p-2 file:text-black border-input atzekaldeko-kolore-oinarria text-md text-white file:border-0 file:atzekaldeko-kolore-nagusia file:text-md file:font-medium"
                 type="file" id="foto" name="foto" accept="image/*" @change="argazkiaBarruan" />
 
-            <!-- Vista previa de la foto actual -->
         </div>
 
         <div class="flex items-center gap-4">

@@ -10,11 +10,11 @@
 
         <input type="hidden" name="perfilId" value="{{ $profile->id }}">
 
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-xl font-medium text-[#fff]">
             Ziur zaude erabiltzailea ezabatu nahi duzula?
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-1 text-md text-[#0BD904]">
             Erabiltzailea ezabatzean, erabiltzailearen informazio guztia ezabatuko da.
         </p>
 
