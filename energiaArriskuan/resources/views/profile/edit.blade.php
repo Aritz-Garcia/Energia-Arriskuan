@@ -1,4 +1,11 @@
 <x-app-layout>
+    <div class="absolute top-28 left-0 z-50">
+        <a href="{{ route('profile.index', Auth::user()->id) }}">
+            <div class="ms-2 mt-2 px-5 p-3 text-center hover:brightness-0 hover:invert">
+                <img src="{{ asset('images/irten-index.png') }}" alt="admin horrira joan" class="w-10">
+            </div>
+        </a>
+    </div>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6 flex items-center flex-col justify-center min-h-screen">
