@@ -43,7 +43,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::delete('/profileAdmin', [ProfileController::class, 'destroyAdmin'])->name('profile.destroyAdmin');
-
+    Route::patch('/profileAdmin', [ProfileController::class, 'doAdmin'])->name('profile.doAdmin');
+    Route::patch('/profileAdminDelete', [ProfileController::class, 'removeAdmin'])->name('profile.removeAdmin');
 
     Route::middleware('mugikorra')->group(function () {
         Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');

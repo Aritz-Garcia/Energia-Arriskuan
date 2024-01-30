@@ -9,7 +9,8 @@
                 {{-- Zure erab --}}
                 {{-- Erab info --}}
 
-                <div class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto testu-kolore-nagusia border-2 border-kolore-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
+                <div
+                    class="flex flex-col justify-center items-center max-w-lg min-w-72 sm:min-w-72 mx-auto testu-kolore-nagusia border-2 border-kolore-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
 
                     <div class="flex flex-col lg:flex-row justify-center items-center">
 
@@ -37,7 +38,8 @@
 
                 {{-- Taula --}}
 
-                <div class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
+                <div
+                    class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia min-w-72 sm:min-w-72 rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
                     <div class="flex justify-between py-4 items-center">
                         <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
 
@@ -147,15 +149,24 @@
                             </div>
                         </div>
 
-                        @if (Auth::user()->rol == 1)
-                            @include('profile.partials.deleteAdmin', [
+                        @include('profile.partials.deleteAdmin', [
+                            'profile' => $profila,
+                        ])
+                        @if ($profila->rol == 1)
+                            @include('profile.partials.removeAdmin', [
+                                'profile' => $profila,
+                            ])
+                        @else
+                            @include('profile.partials.doAdmin', [
                                 'profile' => $profila,
                             ])
                         @endif
+
                     </div>
 
                     {{-- Taula --}}
-                    <div class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
+                    <div
+                        class="border-solid border-2 border-kolore-nagusia testu-kolore-nagusia rounded-lg mt-10 p-2 atzekaldeko-kolore-oinarria">
                         <div class="flex justify-between py-4 items-center">
                             <p class="font-bold mt-3 mb-2 ml-2 text-2xl">Partidak:</p>
                         </div>
