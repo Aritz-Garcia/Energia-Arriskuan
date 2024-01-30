@@ -105,7 +105,7 @@
 export default {
     name: "juego3",
     props: {
-        partida: String,
+        partida: Number,
     },
     data() {
         return {
