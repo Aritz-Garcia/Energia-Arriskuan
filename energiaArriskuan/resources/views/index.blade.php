@@ -9,11 +9,11 @@
     @if (session('isMobileDevice'))
         <x-modal name="confirm-mugikorra" :show="true" focusable>
             <div class="p-6">
-                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                <h2 class="text-lg font-medium testu-kolore-nagusia">
                     Ezin da jolastu mugikor edo tabletekin.
                 </h2>
 
-                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                <p class="mt-1 text-sm text-gray-100">
                     Ezin da jolastu mugikor edo tabletekin. Mesedez, erabili ordenagailu bat.
                 </p>
 
