@@ -169,7 +169,6 @@
                     this.abierto2 = true;
                     this.confirmacion = false;
                 } else {
-                    this.abierto = true;
                     this.confirmacion = false;
                     switch (this.lugar) {
                         case "hasiera":
@@ -177,9 +176,12 @@
                                 if (this.probak[i].izena == "prueba3") {
                                     if (this.probak[i].bukatuta) {
                                         this.mensaje = this.pistak[0].hasiera[this.actual].pista;
-                                        console.log();
+                                        this.abierto = true;
+                                        this.abierto2 = false;
                                     } else {
-                                        this.mensaje = this.pistak[3].juego3[this.actual].pista;
+                                        this.abierto = true;
+                                        this.abierto2 = false;
+                                        this.mensaje = this.pistak[3].juego3[this.actual].pista; 
                                     }
                                     return;
                                 }
@@ -187,19 +189,67 @@
                             break;
 
                         case "patioa":
-                            this.mensaje = this.pistak[5].patioa[this.actual].pista;
+                            for (let i = 0; i < this.probak.length; i++) {
+                                if (this.probak[i].izena == "prueba2") {
+                                    if (this.probak[i].bukatuta) {
+                                        this.abierto = false;
+                                        this.abierto2 = true;
+                                    } else {
+                                        this.abierto = true;
+                                        this.abierto2 = false;
+                                        this.mensaje = this.pistak[5].patioa[this.actual].pista;
+                                    }
+                                    return;
+                                }
+                            }
                             break;
 
                         case "juego1":
-                            this.mensaje = this.pistak[1].juego1[this.actual].pista;
+                        for (let i = 0; i < this.probak.length; i++) {
+                                if (this.probak[i].izena == "prueba1") {
+                                    if (this.probak[i].bukatuta) {
+                                        this.abierto = false;
+                                        this.abierto2 = true;
+                                    } else {
+                                        this.abierto = true;
+                                        this.abierto2 = false;
+                                        this.mensaje = this.pistak[1].juego1[this.actual].pista;
+                                    }
+                                    return;
+                                }
+                            }
                             break;
 
                         case "juego2":
-                            this.mensaje = this.pistak[2].juego2[this.actual].pista;
+                        for (let i = 0; i < this.probak.length; i++) {
+                                if (this.probak[i].izena == "prueba2") {
+                                    if (this.probak[i].bukatuta) {
+                                        this.abierto = false;
+                                        this.abierto2 = true;
+                                    } else {
+                                        this.abierto = true;
+                                        this.abierto2 = false;
+                                        this.mensaje = this.pistak[2].juego2[this.actual].pista;
+                                    }
+                                    return;
+                                }
+                            }
                             break;
 
                         case "juego4":
-                            this.mensaje = this.pistak[4].juego4[this.actual].pista;
+                        for (let i = 0; i < this.probak.length; i++) {
+                                if (this.probak[i].izena == "prueba4") {
+                                    if (this.probak[i].bukatuta) {
+                                        this.abierto = false;
+                                        this.abierto2 = true;
+                                    } else {
+                                        this.abierto = true;
+                                        this.abierto2 = false;
+                                        this.mensaje = this.pistak[4].juego4[this.actual].pista;
+                                    }
+                                    return;
+                                }
+                            }
                             break;
 
                         default:
