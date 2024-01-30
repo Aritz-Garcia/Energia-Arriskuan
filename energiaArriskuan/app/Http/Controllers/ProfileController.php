@@ -107,4 +107,38 @@ class ProfileController extends Controller
 
         return redirect()->route('admin', Auth::user()->id);
     }
+
+    public function doAdmin(Request $request): RedirectResponse
+    {
+        $user = User::find($request->input('perfilId'));
+
+        if ($user) {
+
+            $user->rol = 1;
+
+            $user->save();
+
+            return redirect()->route('admin', Auth::user()->id);
+
+        } else {
+            return redirect()->route('index');
+        }
+    }
+
+    public function removeAdmin(Request $request): RedirectResponse
+    {
+        $user = User::find($request->input('perfilaId'));
+
+        if ($user) {
+
+            $user->rol = 0;
+
+            $user->save();
+
+            return redirect()->route('admin', Auth::user()->id);
+
+        } else {
+            return redirect()->route('index');
+        }
+    }
 }
