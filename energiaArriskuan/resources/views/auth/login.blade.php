@@ -4,13 +4,12 @@
 
 @section('content')
 
-    {{-- TODO testu info --}}
     <div id="testuaInfo" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center overflow-hidden z-10">
-        <div class="relative bg-white bg-opacity-90 p-6 rounded-lg">
+        <div class="relative atzekaldeko-kolore-oinarria bg-opacity-90 p-6 rounded-lg border border-kolore-nagusia">
             <button id="cerrarInfo" class="absolute top-0 right-2 text-3xl text-red-600">
                 &times;
             </button>
-            <div class="text-md">
+            <div class="text-md testu-kolore-nagusia">
                 <p><b>Erabiltzailea: </b>Minuzkulaz idatzi behar da.</p>
                 <p><b>Pasahitza: </b>Gutxienez 8 karaktere izan behar ditu.</p>
             </div>
@@ -68,18 +67,18 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-between mt-8 pb-3">
+            <div class="flex items-center flex-col justify-between mt-8 pb-3 sm:flex-row">
                 @if (Route::has('password.request'))
-                    <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('password.request') }}">
+                    <a class="testu-kolore-nagusia text-center hover:text-[#fff] my-2 sm:pr-10 sm:my-0" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
 
-                <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('register') }}">
+                <a class="testu-kolore-nagusia text-center hover:text-[#fff] my-2 sm:pr-10 sm:my-0" href="{{ route('register') }}">
                     {{ __('Ez zaude erregistratuta?') }}
                 </a>
 
-                <x-primary-button class="ms-3">
+                <x-primary-button class="mt-2 sm:ms-3 sm:my-0">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>

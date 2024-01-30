@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="absolute top-28 left-0 z-50">
-        <a href="{{ route('admin', ['userId' => 1]) }}">
+        <a href="{{ route('admin', ['userId' => Auth::user()->id]) }}">
             <div class="ms-2 mt-2 px-5 p-3 text-center hover:brightness-0 hover:invert">
                 <img src="{{ asset('images/irten-index.png') }}" alt="admin horrira joan" class="w-10">
             </div>
