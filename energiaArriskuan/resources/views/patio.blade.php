@@ -9,9 +9,17 @@
 
     @if(Auth::user()->id == $partida->id_erabiltzailea)
         <div id="patioaDiv">
-            <Patioa urlimg={{ asset('images/patio.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Patioa>
+            <Patioa urlimg={{ asset('images/patio.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }} easteregg={{ asset('images/easter_egg/extraterrestre.png') }}></Patioa>
         </div>
 
+        {{-- <div style="position: absolute;
+            top: 45vh;
+            left: 58%;
+            width: 2%;
+            height: 3vh;
+            background-color:#fff;
+            opacity: 0.8;">
+        </div> --}}
         {{-- atea --}}
         {{-- <div style="position: absolute;
             top: 52vh;

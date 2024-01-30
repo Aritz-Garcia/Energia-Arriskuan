@@ -62,6 +62,10 @@
         <div id="simbolosDiv" class="hidden">
             <div id="juego2Paperak"><Papera :zenbakia="zenbakia"></Papera></div>
         </div>
+
+        <div id="easter_eggDiv" class="hidden absolute top-[45%] left-[58%] w-[2%] h-[3%]" :style="{ 'animation' : estilo }">
+            <img :src="easteregg" alt="Easter_Egg">
+        </div>
     </div>
 </template>
 
@@ -84,6 +88,7 @@ export default {
         urlimg: String,
         partida: Object,
         pruebas: Array,
+        easteregg: String,
     },
     data() {
         return {
@@ -108,8 +113,12 @@ export default {
                 { areaTop: 75, areaLeft: 40.2, areaWidth: 46, areaHeight: 10 },
                 { areaTop: 70, areaLeft: 43.7, areaWidth: 42.5, areaHeight: 5 },
                 { areaTop: 60, areaLeft: 67, areaWidth: 19.2, areaHeight: 10 },
+                // * Easter Egg
+                { areaTop: 45, areaLeft: 58, areaWidth: 2, areaHeight: 3 },
             ],
             zenbakia: 0,
+            estilo: "",
+            contador: 0,
         };
     },
     methods: {
@@ -233,10 +242,43 @@ export default {
                         }, 4900);
                     } else if (i == 7 || i == 8 || i == 9 || i == 10 || i == 11) {
                         // * Lurreko sinboloak
-                        console.log("Lurreko sinboloak");
+
+                        JolastuDiv.classList.remove("hidden");
+                        JolastuDiv.classList.add("block");
+                        JolastuDiv.classList.add("animate__ateaItxia__text");
+
+                        pelotasDiv.classList.remove("block");
+                        pelotasDiv.classList.add("hidden");
+
+                        pelucheDiv.classList.remove("block");
+                        pelucheDiv.classList.add("hidden");
+
+                        ZaborraDiv.classList.remove("block");
+                        ZaborraDiv.classList.add("hidden");
+
+                        JolastuDiv.classList.remove("block");
+                        JolastuDiv.classList.add("hidden");
+
+                        easter_eggDiv.classList.remove("block");
+                        easter_eggDiv.classList.add("hidden");
+
                         this.zenbakia = this.randomZenbakia();
                         simbolosDiv.classList.remove("hidden");
                         simbolosDiv.classList.add("block");
+                    } else if (i == 12) {
+                        // * Easter Egg
+                        this.contador++;
+                        
+                        if (this.contador == 5) {
+                            easter_eggDiv.classList.remove("hidden");
+                            easter_eggDiv.classList.add("block");
+                            this.estilo = "easterEgg 3s";
+                            setTimeout(() => {
+                                easter_eggDiv.classList.remove("block");
+                                easter_eggDiv.classList.add("hidden");
+                                this.estilo = "";
+                            }, 3000);
+                        }
                     }
                     return;
                 }
