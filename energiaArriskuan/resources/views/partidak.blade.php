@@ -16,48 +16,48 @@
         class="flex flex-col items-center justify-center gap-10 py-16 sm:py-80 sm:flex-row sm:gap-3 md:gap-6 lg:gap-10 xl:gap-16 mx-20">
 
         @if (count($partidak) > 0)
-            <table class="max-w-screen-md mx-auto text-sm text-left  rtl:text-right testu-kolore-nagusia border border-color-nagusia">
+            <table class="max-w-screen-md mx-auto text-sm text-left  rtl:text-right testu-kolore-nagusia border border-kolore-nagusia">
                 <thead class="text-md text-[#ffffff] uppercase text-base atzekaldeko-kolore-oinarria">
                     <tr class="">
-                        <th scope="col" class="px-6 py-3 border border-color-nagusia">
+                        <th scope="col" class="px-6 py-3 border border-kolore-nagusia">
                             Erabiltzailea
                         </th>
-                        <th scope="col" class="px-6 py-3 border border-color-nagusia">
+                        <th scope="col" class="px-6 py-3 border border-kolore-nagusia">
                             Denbora
                         </th>
 
-                        <th scope="col" class="px-6 py-3 border border-color-nagusia">
+                        <th scope="col" class="px-6 py-3 border border-kolore-nagusia">
                             Irabazita
                         </th>
-                        <th scope="col" class="px-6 py-3 border border-color-nagusia">
+                        <th scope="col" class="px-6 py-3 border border-kolore-nagusia">
                             Ezabatu
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($partidak as $partida)
-                        <tr class="atzekaldeko-kolore-oinarria border border-color-nagusia">
-                            <td class="px-6 py-4 text-base border border-color-nagusia">
+                        <tr class="atzekaldeko-kolore-oinarria border border-kolore-nagusia">
+                            <td class="px-6 py-4 text-base border border-kolore-nagusia">
                                 {{ $partida->erabiltzailea->erabiltzailea }}
                             </td>
                             @if ($partida->denbora == '00:00')
-                                <td class="px-6 py-4 text-base border border-color-nagusia line-through">
+                                <td class="px-6 py-4 text-base border border-kolore-nagusia line-through">
                                     {{$partida->denbora}}
                                 </td>
                             @else
-                                <td class="px-6 py-4 text-base border border-color-nagusia">
+                                <td class="px-6 py-4 text-base border border-kolore-nagusia">
                                     {{$partida->denbora}}
                                 </td>
                             @endif
 
-                            <td class="px-6 py-4 text-base border border-color-nagusia">
+                            <td class="px-6 py-4 text-base border border-kolore-nagusia">
                                 @if ($partida->irabazita == 1)
                                     Bai
                                 @else
                                     Ez
                                 @endif
                             </td>
-                            <td class="px-6 py-4 border border-color-nagusia ">
+                            <td class="px-6 py-4 border border-kolore-nagusia ">
                                 <a href="#"><img class="w-10 h-10" src="{{ asset('images/borrar.png') }}"
                                         alt="borrar"></a>
                             </td>
@@ -66,7 +66,7 @@
                 </tbody>
             </table>
         @else
-            <p class="text-xl text-center atzekaldeko-kolore-oinarria border border-color-nagusia testu-kolore-nagusia p-5">Ez daude partidarik
+            <p class="text-xl text-center atzekaldeko-kolore-oinarria border border-kolore-nagusia testu-kolore-nagusia p-5">Ez daude partidarik
                 bukatuta!</p>
         @endif
     </div>

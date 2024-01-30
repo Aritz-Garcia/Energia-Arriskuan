@@ -185,10 +185,11 @@ class PartidaController extends Controller
         $probak = $probakSinOrden->sort(function ($a, $b) {
             return $a->denbora <=> $b->denbora;
         })->values();
+        
         return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
     }
 
-    public function pistaUpdate($partidaId,$lekua,$denbora){
+    public function pistaUpdate($partidaId, $lekua, $denbora){
         Partida::where('id', $partidaId)->update(['denbora' => $this->denboraAldatu($denbora)]);
         switch ($lekua) {
             case 'hasiera':
