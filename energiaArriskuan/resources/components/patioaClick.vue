@@ -118,6 +118,7 @@ export default {
             ],
             zenbakia: 0,
             estilo: "",
+            contador: 0,
         };
     },
     methods: {
@@ -266,14 +267,18 @@ export default {
                         simbolosDiv.classList.add("block");
                     } else if (i == 12) {
                         // * Easter Egg
-                        easter_eggDiv.classList.remove("hidden");
-                        easter_eggDiv.classList.add("block");
-                        this.estilo = "easterEgg 3s";
-                        setTimeout(() => {
-                            easter_eggDiv.classList.remove("block");
-                            easter_eggDiv.classList.add("hidden");
-                            this.estilo = "";
-                        }, 3000);
+                        this.contador++;
+                        
+                        if (this.contador == 5) {
+                            easter_eggDiv.classList.remove("hidden");
+                            easter_eggDiv.classList.add("block");
+                            this.estilo = "easterEgg 3s";
+                            setTimeout(() => {
+                                easter_eggDiv.classList.remove("block");
+                                easter_eggDiv.classList.add("hidden");
+                                this.estilo = "";
+                            }, 3000);
+                        }
                     }
                     return;
                 }
