@@ -49,7 +49,7 @@ import route from '../../vendor/tightenco/ziggy/src/js';
 export default {
   name: "juego1",
   props: {
-    partida: String,
+    partida: Number,
   },
   data() {
     return {

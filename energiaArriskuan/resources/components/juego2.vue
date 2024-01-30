@@ -73,7 +73,7 @@
             Panel,
         },
         props: {
-            partida: String,
+            partida: Number,
         },
 
         data() {
