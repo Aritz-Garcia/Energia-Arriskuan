@@ -104,6 +104,8 @@
                         botones[i].disabled = true;
                     }
 
+                    document.getElementById("close-img").classList.add("hidden");
+
                     let denbora = this.$cookies.get("denbora");
 
                     setTimeout(() => {
