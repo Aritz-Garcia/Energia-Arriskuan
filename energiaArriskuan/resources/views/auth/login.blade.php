@@ -67,18 +67,18 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-between mt-8 pb-3">
+            <div class="flex items-center flex-col justify-between mt-8 pb-3 sm:flex-row">
                 @if (Route::has('password.request'))
-                    <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('password.request') }}">
+                    <a class="testu-kolore-nagusia text-center hover:text-[#fff] my-2 sm:pr-10 sm:my-0" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
 
-                <a class="testu-kolore-nagusia hover:text-[#fff] pr-10" href="{{ route('register') }}">
+                <a class="testu-kolore-nagusia text-center hover:text-[#fff] my-2 sm:pr-10 sm:my-0" href="{{ route('register') }}">
                     {{ __('Ez zaude erregistratuta?') }}
                 </a>
 
-                <x-primary-button class="ms-3">
+                <x-primary-button class="mt-2 sm:ms-3 sm:my-0">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
