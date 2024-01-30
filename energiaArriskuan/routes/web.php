@@ -4,11 +4,10 @@ use App\Http\Controllers\PartidaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PruebaController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CorreoController;
 use App\Http\Controllers\EditarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +27,8 @@ Route::get('/', function () {
 Route::get('/kontaktua', function () {
     return view('kontaktua');
 })->name('kontaktua');
+
+Route::post('/kontaktuaEmail', [CorreoController::class, 'kontaktua'])->name('kontaktuaEmail');
 
 Route::get('/klasifikazioa', [PartidaController::class, "klasifikazioa"])->name('klasifikazioa');
 
@@ -82,6 +83,6 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::get('/partidas', [PartidaController::class, 'index'])->name('partida.index');
+// Route::get('/partidas', [PartidaController::class, 'index'])->name('partida.index');
 
 require __DIR__.'/auth.php';

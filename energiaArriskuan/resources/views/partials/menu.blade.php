@@ -26,13 +26,13 @@
                                 <x-slot name="content">
                                     <div class="py-2 atzekaldeko-kolore-oinarria testu-kolore-nagusia border rounded">
                                         <x-dropdown-link :href="route('profile.index', Auth::user()->id)"
-                                            class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                             {{ __('Profile') }}
                                         </x-dropdown-link>
 
                                         @if (Auth::user()->rol == 1)
                                             <x-dropdown-link :href="route('admin', Auth::user()->id)"
-                                                class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                                class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                                 {{ __('Admin') }}
                                             </x-dropdown-link>
                                         @endif
@@ -42,7 +42,7 @@
                                             @csrf
                                             <x-dropdown-link :href="route('logout')"
                                                 onclick="event.preventDefault(); this.closest('form').submit();"
-                                                class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                                class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                                 {{ __('Saioa Itxi') }}
                                             </x-dropdown-link>
                                         </form>
@@ -51,12 +51,12 @@
                             </x-dropdown>
                         @else
                             <button onclick="window.location='{{ route('login') }}'"
-                                class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:testu-kolore-oinarria py-2 px-4 rounded-full focus:outline-none">
+                                class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                 Saioa hasi
                             </button>
                             @if (Route::has('register'))
                                 <button onclick="window.location='{{ route('register') }}'"
-                                    class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:testu-kolore-oinarria py-2 px-4 rounded-full focus:outline-none">
+                                    class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                     Erregistratu
                                 </button>
                             @endif
@@ -81,15 +81,15 @@
             <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:mt-0 lg:space-x-8 rtl:space-x-reverse">
                 <li>
                     <a href="{{ route('index') }}"
-                        class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:testu-kolore-nagusia lg:p-0 text-white">Hasiera</a>
+                        class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-[#0BD904] lg:p-0 text-white">Hasiera</a>
                 </li>
                 <li>
                     <a href="{{ route('klasifikazioa') }}"
-                        class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:testu-kolore-nagusia lg:p-0 text-white">Klasifikazioa</a>
+                        class="block py-2 px-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-[#0BD904] lg:p-0 text-white">Klasifikazioa</a>
                 </li>
                 <li>
                     <a href="{{ route('kontaktua') }}"
-                        class="block py-2 px-3  border-b lg:hover:bg-transparent lg:border-0 lg:hover:testu-kolore-nagusia lg:p-0 text-white">Kontaktua</a>
+                        class="block py-2 px-3  border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-[#0BD904] lg:p-0 text-white">Kontaktua</a>
                 </li>
                 <li class="lg:hidden flex flex-row pt-4 pb-2 gap-4">
                     @auth
@@ -109,13 +109,13 @@
                             <x-slot name="content">
                                 <div class="py-2 atzekaldeko-kolore-oinarria testu-kolore-nagusia  border rounded">
                                     <x-dropdown-link :href="route('profile.index', Auth::user()->id)"
-                                        class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                        class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
 
                                     @if (Auth::user()->rol == 1)
                                         <x-dropdown-link :href="route('admin', Auth::user()->id)"
-                                            class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                             {{ __('Admin') }}
                                         </x-dropdown-link>
                                     @endif
@@ -127,7 +127,7 @@
                                         @csrf
                                         <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault(); this.closest('form').submit();"
-                                            class="block px-4 py-2 text-white hover:testu-kolore-nagusia">
+                                            class="block px-4 py-2 text-white hover:text-[#0BD904]">
                                             {{ __('Saioa Itxi') }}
                                         </x-dropdown-link>
                                     </form>
@@ -137,12 +137,12 @@
                     @else
                         <div class="flex flex-col gap-4">
                             <button onclick="window.location='{{ route('login') }}'"
-                                class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:testu-kolore-oinarria py-2 px-4 rounded-full focus:outline-none">
+                                class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                 Saioa hasi
                             </button>
                             @if (Route::has('register'))
                                 <button onclick="window.location='{{ route('register') }}'"
-                                    class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:testu-kolore-oinarria py-2 px-4 rounded-full focus:outline-none">
+                                    class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">
                                     Erregistratu
                                 </button>
                             @endif

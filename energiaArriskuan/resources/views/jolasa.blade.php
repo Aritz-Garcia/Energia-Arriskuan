@@ -23,7 +23,7 @@
             <a href="{{ route('hasiera', $partida->id) }}" id="bottone1" class="md:mx-auto testu-kolore-oinarria"><strong>HASI</strong></a>
         </div>
         <form action="{{ route('hasiera', $partida->id )}}">
-            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-color-nagusia atzekaldeko-kolore-nagusia testu-kolore-oinarria p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:testu-kolore-oinarria">SKIP</button>
+            <button class="absolute top-0 right-0 m-5 my-2 border-2 border-kolore-nagusia atzekaldeko-kolore-nagusia testu-kolore-oinarria p-3 px-5 rounded-xl hover:bg-white hover:border-white hover:text-[#010440]">SKIP</button>
         </form>
     </div>
 
