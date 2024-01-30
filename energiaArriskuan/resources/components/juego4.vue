@@ -64,7 +64,7 @@
             Panel,
         },
         props: {
-            partida: String,
+            partida: Number,
         },
         mounted() {
             this.slideBrujula();

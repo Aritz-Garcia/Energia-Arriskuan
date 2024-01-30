@@ -73,7 +73,7 @@
             Panel,
         },
         props: {
-            partida: String,
+            partida: Number,
         },
 
         data() {
@@ -103,6 +103,8 @@
                     for (var i = 0; i < botones.length; i++) {
                         botones[i].disabled = true;
                     }
+
+                    document.getElementById("close-img").classList.add("hidden");
 
                     let denbora = this.$cookies.get("denbora");
 
