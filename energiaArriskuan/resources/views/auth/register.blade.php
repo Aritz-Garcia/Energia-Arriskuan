@@ -5,11 +5,11 @@
 @section('content')
 
     <div id="testuaInfo" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center overflow-hidden z-10">
-        <div class="relative bg-white bg-opacity-90 p-6 rounded-lg">
+        <div class="relative atzekaldeko-kolore-oinarria bg-opacity-90 p-6 rounded-lg border border-kolore-nagusia">
             <button id="cerrarInfo" class="absolute top-0 right-2 text-3xl text-red-600">
                 &times;
             </button>
-            <div class="text-md">
+            <div class="text-md testu-kolore-nagusia">
                 <p><b>Izena: </b>Derrigorrezkoa da.</p>
                 <p><b>Abizena: </b>Derrigorrezkoa da.</p>
                 <p><b>Email: </b>Derrigorrezkoa da.</p>
