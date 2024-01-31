@@ -18,7 +18,7 @@ class AdminController extends Controller
 
             if ($usuario != null) {
 
-                return view('admin');
+                return view('admin.admin');
             } else {
 
                 return redirect()->route('index');
@@ -38,7 +38,7 @@ class AdminController extends Controller
 
                 $users = User::where('rol', 1)->paginate(5);
 
-                return view('usuarios')->with('users', $users);
+                return view('admin.usuarios')->with('users', $users);
             } else {
 
                 return redirect()->route('index');
@@ -58,7 +58,7 @@ class AdminController extends Controller
 
                 $users = User::where('rol', 0)->paginate(5);
 
-                return view('usuarios')->with('users', $users);
+                return view('admin.usuarios')->with('users', $users);
             } else {
 
                 return redirect()->route('index');
@@ -80,7 +80,7 @@ class AdminController extends Controller
 
                 $partidak = Partida::all()->where('bukatuta', 1);
 
-                return view('partidak')->with('partidak', $partidak);;
+                return view('admin.partidak')->with('partidak', $partidak);;
             } else {
 
                 return redirect()->route('index');

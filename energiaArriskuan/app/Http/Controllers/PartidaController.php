@@ -76,7 +76,7 @@ class PartidaController extends Controller
                         'bukatuta' => 0,
                     ]);
                 }
-                return view('jolasa', ['partida' => $partida]);
+                return view('partida.jolasa', ['partida' => $partida]);
             } else {
                 return redirect()->route('hasiera', $partida->id);
             }
@@ -100,7 +100,7 @@ class PartidaController extends Controller
             $berria = 0;
         }
 
-        return view('hasiera', ['partida' => $partida, "berria" => $berria]);
+        return view('partida.hasiera', ['partida' => $partida, "berria" => $berria]);
 
     }
 
@@ -109,7 +109,7 @@ class PartidaController extends Controller
         if ($partida == null || $partida->bukatuta == 1) {
             return redirect()->route('index');
         }
-        return view('biltegia', ['partida' => $partida]);
+        return view('partida.biltegia', ['partida' => $partida]);
 
     }
 
@@ -118,7 +118,7 @@ class PartidaController extends Controller
         if ($partida == null || $partida->bukatuta == 1) {
             return redirect()->route('index');
         }
-        return view('sotoa', ['partida' => $partida]);
+        return view('partida.sotoa', ['partida' => $partida]);
 
     }
 
@@ -127,7 +127,7 @@ class PartidaController extends Controller
         if ($partida == null || $partida->bukatuta == 1) {
             return redirect()->route('index');
         }
-        return view('patio', ['partida' => $partida]);
+        return view('partida.patio', ['partida' => $partida]);
 
     }
 
@@ -136,7 +136,7 @@ class PartidaController extends Controller
         if ($partida == null || $partida->bukatuta == 1) {
             return redirect()->route('index');
         }
-        return view('teilatua', ['partida' => $partida]);
+        return view('partida.teilatua', ['partida' => $partida]);
 
     }
 

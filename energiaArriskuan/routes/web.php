@@ -32,11 +32,6 @@ Route::post('/kontaktuaEmail', [CorreoController::class, 'kontaktua'])->name('ko
 
 Route::get('/klasifikazioa', [PartidaController::class, "klasifikazioa"])->name('klasifikazioa');
 
-
-// Route::get('/perfil', function () {
-//     return view('perfil');
-// })->middleware(['auth', 'verified'])->name('perfil');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile/{profilaId}', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -48,7 +43,6 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('mugikorra')->group(function () {
         Route::get('/jolasa/{partidaId}',  [PartidaController::class, 'jolasAzalpena'])->name('jolasa');
-        Route::get('/partida/{partidaId}', [PartidaController::class, 'index'])->name('partida.index');
         Route::get('/hasiera/{partidaId}', [PartidaController::class, 'hasiera'])->name('hasiera');
         Route::get('/biltegia/{partidaId}', [PartidaController::class, 'biltegia'])->name('biltegia');
         Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
@@ -84,7 +78,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/partida/irabazi/{partidaId}', [PartidaController::class, 'irabaziView'])->name('irabaziView');
 
 });
-
-// Route::get('/partidas', [PartidaController::class, 'index'])->name('partida.index');
 
 require __DIR__.'/auth.php';
