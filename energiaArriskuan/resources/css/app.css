@@ -641,5 +641,24 @@ body.fondoAzul {
 
 /********************************* Galdetegia Info *********************************/
 .galdetegiaInfoText {
-    
+
+}
+
+/********************************* Easter Egg *********************************/
+@keyframes easterEgg {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

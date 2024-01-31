@@ -185,12 +185,14 @@ class PartidaController extends Controller
         $probak = $probakSinOrden->sort(function ($a, $b) {
             return $a->denbora <=> $b->denbora;
         })->values();
-        
+
         return view('klasifikazioa', ['partidak' => $partidak, 'erabiltzaileak' => $erabiltzaileak, 'probak' => $probak]);
     }
 
-    public function pistaUpdate($partidaId, $lekua, $denbora){
-        Partida::where('id', $partidaId)->update(['denbora' => $this->denboraAldatu($denbora)]);
+    public function pistaUpdate($partidaId, $lekua, $denbora) {
+        // dd($partidaId, $lekua, $denbora);
+        Partida::where("id", $partidaId)->update(["denbora" => $this->denboraAldatu($denbora)]);
+
         switch ($lekua) {
             case 'hasiera':
                 return redirect()->route('hasiera', $partidaId);
@@ -213,5 +215,16 @@ class PartidaController extends Controller
     public function denboraAldatu(int $denbora) {
         $denboraString = gmdate("i:s", $denbora);
         return $denboraString;
+    }
+
+
+    public function denboraGordePista(Request $request) {
+        $partidaId = $request->input('partidaId');
+        $valor = $request->input('valor');
+
+        $value = intval($valor);
+        $denborarenString = $this->denboraAldatu($value);
+        Partida::where("id", $partidaId)->update(["denbora" => $denborarenString]);
+        return true;
     }
 }

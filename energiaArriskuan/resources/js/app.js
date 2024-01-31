@@ -34,21 +34,6 @@ app.use(ZiggyVue);
 app.use(VueCookies);
 app.mount('#app');
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
-
 const passwordInput = document.getElementById('password');
 const passwordInput2 = document.getElementById('password_confirmation');
 
@@ -63,14 +48,17 @@ function togglePasswordVisibility(input) {
     }
 }
 
-showPasswordButtonLogin.addEventListener('click', function () {
-    togglePasswordVisibility(passwordInput);
-});
+if (showPasswordButtonLogin != null) {
+    showPasswordButtonLogin.addEventListener('click', function () {
+        togglePasswordVisibility(passwordInput);
+    });
+}
 
-showPasswordButtonLogin2.addEventListener('click', function () {
-    togglePasswordVisibility(passwordInput2);
-});
-
+if (showPasswordButtonLogin2 != null) {
+    showPasswordButtonLogin2.addEventListener('click', function () {
+        togglePasswordVisibility(passwordInput2);
+    });
+}
 
 var acc = document.getElementsByClassName("accordion");
 var i;

@@ -95,7 +95,7 @@
     export default {
         name: "panelNumerico",
         props: {
-            partida: String,
+            partida: Number,
         },
         data() {
             return {
