@@ -51,6 +51,10 @@ class RegisteredUserController extends Controller
         //     'rol' => 0,
         // ]);
 
+        $request->validate([
+            'foto' => 'image | mimes:jpeg,png,jpg,gif | max:2048',
+        ]);
+
         $user = User::create($request->all());
 
         $user->password = Hash::make($request->password);
