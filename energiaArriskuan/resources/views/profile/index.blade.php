@@ -139,7 +139,7 @@
                     {{-- Erab info --}}
                     <div
                         class="flex flex-col justify-center items-center max-w-sm min-w-sm mx-auto testu-kolore-nagusia border-2 border-kolore-nagusia hover:border-[#ffffff] hover:border-2 atzekaldeko-kolore-oinarria rounded-3xl py-7">
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center text-center sm:text-left flex-col sm:flex-row">
                             <img src="{{ url(asset($profila->foto)) }}" alt="Argazkia"
                                 class="hover:border-[#ffffff] m-2 h-36 w-36 rounded-full border-2 border-kolore-nagusia">
                             <div class="m-4">

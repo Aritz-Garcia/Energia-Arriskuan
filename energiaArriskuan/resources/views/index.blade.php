@@ -34,7 +34,7 @@
 
             <div class="items-center flex flex-col w-auto">
 
-                <p class="text-xl">
+                <p class="text-xl font-rubik-bold">
                     2073an, baliabide fosilak agortuta, Lurra energia berriztagarrien mende dago. Eraso estralurtarrei aurre
                     egin
                     behar diegu, arlo honetan gure ezagutza lapurtu nahian. Txurdinaga LHII zentroari eraso ondoren, sistema
@@ -58,7 +58,7 @@
                         </path>
                     </svg>
 
-                    <strong class="pl-3 testu-kolore-oinarria">JOLASTU</strong>
+                    <strong class="sotoaPanelLetra text-2xl pl-3 testu-kolore-oinarria">JOLASTU</strong>
 
                 </a>
 
