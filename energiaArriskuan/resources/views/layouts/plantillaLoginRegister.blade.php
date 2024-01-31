@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,7 @@
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div>
-            
+
             @yield('content')
             </div>
         </div>
