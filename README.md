@@ -7,17 +7,15 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 ## 📑 Aurkibidea
 
 1. [Deskribapena](#-deskribapena)
-2. [Características](#-características)
+2. [Ezaugarriak](#-características)
 3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
 4. [Workspace](#keyboard-workspace)
-5. [Pre-requisitos](#-pre-requisitos)
-6. [Instalazioa](#-instalazioa)
-7. [Erabilera](#-erabilera)
-8. [Lizentzia](#-lizentzia)
-9. [Garatzaileak](#-garatzaileak)
-10. [Kontaktua](#%EF%B8%8F-kontaktua)
-11. [Eskerrik asko!](#-eskerrik-asko)
-12. [Ikastetxea](#-ikastetxea)
+5. [Instalazioa](#-instalazioa)
+6. [Erabilera](#-erabilera)
+7. [Garatzaileak](#-garatzaileak)
+8. [Kontaktua](#%EF%B8%8F-kontaktua)
+9. [Eskerrik asko!](#-eskerrik-asko)
+10. [Ikastetxea](#-ikastetxea)
 
 ## 📝 Deskribapena
 
@@ -27,14 +25,12 @@ Lur planetako bizitza etsaia da, eta etengabe jasaten dituzte zibilizazio estral
 
 Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Estralurtar talde batek zentroari eraso egin dio, urteetan energia berriztagarrian garatutako ezagutza guztia xurgatzeko helburuarekin, eta, horren ondorioz, zentroko sistema guztiak deskonektatu egin dira.
 
-## 💎 Características
+## 💎 Ezaugarriak
 
-*Puedes enumerar las **características de tu proyecto** para que sea más fácil de entender para el usuario. Para eso, puedes hacerlo mediante una lista de funcionalidades:*
+Hauek dira gure proiektuaren ezaugarri batzuk:
 
-- `Funcionalidad 1`: descripción de la funcionalidad 1
-- `Funcionalidad 2`: descripción de la funcionalidad 2
-- `Funcionalidad 2a`: descripción de la funcionalidad 2a relacionada con la funcionalidad 2
-- `Funcionalidad 3`: descripción de la funcionalidad 3
+- `1. ezaugarria`: erabiltzaileek login egitea
+- `2. ezaugarria`: jolas bat egitea denbora limite batekin
 
 ## :computer: Hizkuntzak eta Teknologiak
 [![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
@@ -49,29 +45,108 @@ Txurdinaga LHII zentroa izan da Lurrean izandako azken erasoaren eszenatokia. Es
 [![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
 [![](https://custom-icon-badges.demolab.com/badge/docker-white?logo=docker&logoColor=1d63ed&style=for-the-badge)]()
 
-## 📋 Pre-requisitos 
-
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Ejemplo
-```
-
 ## 🔧 Instalazioa  
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutándose_
+Hauek dira gure proiektua desplegatzeko pausuak:
 
-**Paso 1**
+**1. pausua:** <br>
+Xampp barruan dagoen "htdocs" karpetan:
+```
+git clone https://github.com/2324-EscapeRoom-2DW3/T1-2DW3D.git
+```
+**2. pausua:** <br>
+Vs code ireki, eta *CTRL + Ñ* egin:
+```
+cd energiaArriskuan
+```
+**3. pausua:** <br>
+Proiekturako gauzak deskargatu:
+```
+composer install
+npm install
+```
+**4. pausua:** <br>
+*.env* fitxategia sortu
+```
+cp .env.example .env
+```
+**5. pausua:** <br>
+Email-en bidalketa funtzionatzeko *.env* fitxategia editatu behar da eta email jartzen duen tokian email bat eta pasahitza jarri beharko da:
+```
+APP_NAME=Energia_Arriskuan
+APP_ENV=local
+APP_KEY=base64:BxIqyfDYmOcXpO9ArD8Xt6yFdViWiUNv+7ZO/AcioQw=
+APP_DEBUG=true
+APP_URL=http://localhost
 
-**Paso 2**
+LOG_CHANNEL=stack
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=erronka2
+DB_USERNAME=root
+DB_PASSWORD=
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=(email@email.com)
+MAIL_PASSWORD=(pasahitza)
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS="(email@email.com)"
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_HOST=
+PUSHER_PORT=443
+PUSHER_SCHEME=https
+PUSHER_APP_CLUSTER=mt1
+
+VITE_APP_NAME="${APP_NAME}"
+VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+VITE_PUSHER_HOST="${PUSHER_HOST}"
+VITE_PUSHER_PORT="${PUSHER_PORT}"
+VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
+VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+```
+**6. pausua:** <br>
+ADI: xampp a executatzen egon behar da, bai *Apache*, bai *MySQL*:
+```
+php artisan migrate
+```
+**7. pausua:** <br>
+Proiektua exekutatzeko
+```
+npm run dev
+```
 
 ## 📕 Erabilera
 
-*Guía sobre cómo utilizar el proyecto, ejemplos de código o ejemplos de casos de uso.*
-
-## 🖋 Lizentzia
-
-*Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles*
+Gure proiektua Energia berristagarrien modulurako sortutako ikasleentzat egindako "escape room" bat da. Energia Arriskuan modulu hau dibertigarriago ikasteko egin da.
 
 ## 👨🏽‍💻 Garatzaileak
 
@@ -81,9 +156,9 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 
 ## ✉️ Kontaktua
 
-- Email: [correo@dominio.com](mailto:correo@dominio.com)
-- Twitter: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
-- Discord: [@nombre_de_usuario](https://twitter.com/nombre_de_usuario)
+- Email: [energiaarriskuan@gmail.com](mailto:energiaarriskuan@gmail.com)
+- Twitter: [@EArriskuan](https://twitter.com/EArriskuan)
+- Facebook: [Energia Arriskuan](https://www.facebook.com/profile.php?id=61555611103945&locale=es_ES)
 
 ## 🎁 Eskerrik asko!
 
