@@ -1,46 +1,108 @@
 <template>
-    <div class="plantillaOsoa">
-        <div class="plantillaRow">
-            <Piezak
-                v-for="pieza in indexRow1[0]"
-                :key="pieza.id"
-                :pieza="pieza"
-            >
-            </Piezak>
+    <div>
+        <div class="flex items-center justify-center mb-8">
+            <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
+                Aerosorgailua biratu daiteke. Azmatu kokapena kodea lortzeko.
+            </p>
+            <img
+                id="close-img"
+                @click="closeGame"
+                src="../../public/images/cerrar.png"
+                alt="Cerrar"
+                class="close-img"
+            />
         </div>
-        <div>
-            <div class="plantillaCol">
+
+        <div class="plantillaOsoa"
+            v-if="paso == 1">
+            <div class="plantillaRow">
                 <Piezak
-                    v-for="pieza in indexCol1[0]"
+                    v-for="pieza in indexRow1[0]"
                     :key="pieza.id"
                     :pieza="pieza"
                 >
                 </Piezak>
             </div>
-            <div class="piezas">
-                <Piezak
-                    v-for="pieza in posiciones1"
-                    :key="pieza.id"
-                    :pieza="pieza"
-                    @click.prevent=handleClickMoverPieza
-                />
+            <div>
+                <div class="plantillaCol">
+                    <Piezak
+                        v-for="pieza in indexCol1[0]"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                    >
+                    </Piezak>
+                </div>
+                <div class="piezas">
+                    <Piezak
+                        v-for="pieza in posiciones1"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                        @click.prevent=handleClickMoverPieza
+                    />
+                </div>
+                <div class="plantillaCol">
+                    <Piezak
+                        v-for="pieza in indexCol1[1]"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                    >
+                    </Piezak>
+                </div>
             </div>
-            <div class="plantillaCol">
+            <div class="plantillaRow">
                 <Piezak
-                    v-for="pieza in indexCol1[1]"
+                    v-for="pieza in indexRow1[1]"
                     :key="pieza.id"
                     :pieza="pieza"
                 >
                 </Piezak>
             </div>
         </div>
-        <div class="plantillaRow">
-            <Piezak
-                v-for="pieza in indexRow1[1]"
-                :key="pieza.id"
-                :pieza="pieza"
-            >
-            </Piezak>
+
+        <div class="plantillaOsoa"
+            v-if="paso == 2">
+            <div class="plantillaRow">
+                <Piezak
+                    v-for="pieza in indexRow2[0]"
+                    :key="pieza.id"
+                    :pieza="pieza"
+                >
+                </Piezak>
+            </div>
+            <div>
+                <div class="plantillaCol">
+                    <Piezak
+                        v-for="pieza in indexCol2[0]"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                    >
+                    </Piezak>
+                </div>
+                <div class="piezas">
+                    <Piezak
+                        v-for="pieza in posiciones2"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                        @click.prevent=handleClickMoverPieza
+                    />
+                </div>
+                <div class="plantillaCol">
+                    <Piezak
+                        v-for="pieza in indexCol2[1]"
+                        :key="pieza.id"
+                        :pieza="pieza"
+                    >
+                    </Piezak>
+                </div>
+            </div>
+            <div class="plantillaRow">
+                <Piezak
+                    v-for="pieza in indexRow2[1]"
+                    :key="pieza.id"
+                    :pieza="pieza"
+                >
+                </Piezak>
+            </div>
         </div>
     </div>
 </template>
@@ -60,6 +122,9 @@
             }
         from "../js/konstanteak_juego5.js";
     import Piezak from "./piezak.vue";
+
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
     export default {
         name: "juego5",
         components: {
@@ -70,8 +135,63 @@
         },
         data() {
             return {
+                paso: 1,
                 posiciones1: [],
                 objetos1: [
+                    { id: 1, name: "BERDEA_KURBA_BEHE_ESKUMA", argazkia: BERDEA_KURBA_BEHE_ESKUMA },
+                    { id: 2, name: "BERDEA_HORIZONTALA", argazkia: BERDEA_HORIZONTALA },
+                    { id: 3, name: "BERDEA_HORIZONTALA", argazkia: BERDEA_HORIZONTALA },
+                    { id: 4, name: "BERDEA_HORIZONTALA", argazkia: BERDEA_HORIZONTALA },
+                    { id: 5, name: "BERDEA_BERTIKALA", argazkia: BERDEA_BERTIKALA },
+                    { id: 6, name: "ZURIA", argazkia: ZURIA },
+                    { id: 7, name: "ZURIA", argazkia: ZURIA },
+                    { id: 8, name: "ZURIA", argazkia: ZURIA },
+                    { id: 9, name: "BERDEA_BERTIKALA", argazkia: BERDEA_BERTIKALA },
+                    { id: 10, name: "ZURIA", argazkia: ZURIA },
+                    { id: 11, name: "ZURIA", argazkia: ZURIA },
+                    { id: 12, name: "ZURIA", argazkia: ZURIA },
+                    { id: 13, name: "BERDEA_BERTIKALA", argazkia: BERDEA_BERTIKALA },
+                    { id: 14, name: "ZURIA", argazkia: ZURIA },
+                    { id: 15, name: "ZURIA", argazkia: ZURIA },
+                ],
+                solucionesPosible1: [
+                    [
+                        "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_HORIZONTALA", "BERDEA_HORIZONTALA", "BERDEA_HORIZONTALA",
+                        "BERDEA_BERTIKALA", "ZURIA", "ZURIA", "ZURIA",
+                        "BERDEA_BERTIKALA", "ZURIA", "ZURIA", "ZURIA",
+                        "BERDEA_BERTIKALA", "ZURIA", "ZURIA", "ZURIA"
+                    ],
+                ],
+                indexCol1: [
+                    [
+                        { id: 1, name: "ZURIA", argazkia: ZURIA },
+                        { id: 2, name: "ZURIA", argazkia: ZURIA },
+                        { id: 3, name: "ZURIA", argazkia: ZURIA },
+                        { id: 4, name: "ZURIA", argazkia: ZURIA },
+                    ],
+                    [
+                        { id: 1, name: "BATERIA_BERDEA_GOIAN", argazkia: BATERIA_BERDEA_GOIAN },
+                        { id: 2, name: "ZURIA", argazkia: ZURIA },
+                        { id: 3, name: "ZURIA", argazkia: ZURIA },
+                        { id: 4, name: "ZURIA", argazkia: ZURIA },
+                    ]
+                ],
+                indexRow1: [
+                    [
+                        { id: 1, name: "ZURIA", argazkia: ZURIA },
+                        { id: 2, name: "ZURIA", argazkia: ZURIA },
+                        { id: 3, name: "ZURIA", argazkia: ZURIA },
+                        { id: 4, name: "ZURIA", argazkia: ZURIA },
+                    ],
+                    [
+                        { id: 1, name: "BOMBILLA_BERDEA_EZKERRA", argazkia: BOMBILLA_BERDEA_EZKERRA },
+                        { id: 2, name: "ZURIA", argazkia: ZURIA },
+                        { id: 3, name: "ZURIA", argazkia: ZURIA },
+                        { id: 4, name: "ZURIA", argazkia: ZURIA },
+                    ]
+                ],
+                posiciones2: [],
+                objetos2: [
                     { id: 1, name: "URDINA_KURBA_GOI_ESKUMA", argazkia: URDINA_KURBA_GOI_ESKUMA },
                     { id: 2, name: "URDINA_KURBA_BEHE_EZKERRA", argazkia: URDINA_KURBA_BEHE_EZKERRA },
                     { id: 3, name: "ZURIA", argazkia: ZURIA },
@@ -88,13 +208,33 @@
                     { id: 14, name: "URDINA_BERTIKALA", argazkia: URDINA_BERTIKALA },
                     { id: 15, name: "ZURIA", argazkia: ZURIA },
                 ],
-                solucionesPosible1: [
-                    "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA",
-                    "ZURIA", "URDINA_BERTIKALA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_KURBA_GOI_EZKERRA",
-                    "BERDEA_HORIZONTALA", "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
-                    "ZURIA", "URDINA_BERTIKALA", "ZURIA", "ZURIA"
+                solucionesPosible2: [
+                    [
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA",
+                        "ZURIA", "URDINA_BERTIKALA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_KURBA_GOI_EZKERRA",
+                        "BERDEA_HORIZONTALA", "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
+                        "ZURIA", "URDINA_BERTIKALA", "ZURIA", "ZURIA"
+                    ],
+                    [
+                        "URDINA_BERTIKALA", "ZURIA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA",
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_KURBA_GOI_EZKERRA",
+                        "BERDEA_HORIZONTALA", "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
+                        "ZURIA", "URDINA_BERTIKALA", "ZURIA", "ZURIA"
+                    ],
+                    [
+                        "URDINA_BERTIKALA", "ZURIA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA",
+                        "URDINA_BERTIKALA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_KURBA_GOI_EZKERRA",
+                        "BIKOITZA_1", "BERDEA_HORIZONTALA", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "ZURIA", "ZURIA"
+                    ],
+                    [
+                        "URDINA_BERTIKALA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_HORIZONTALA",
+                        "URDINA_BERTIKALA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
+                        "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA", "ZURIA",
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "ZURIA", "ZURIA"
+                    ],
                 ],
-                indexCol1: [
+                indexCol2: [
                     [
                         { id: 1, name: "BOMBILLA_URDINA_BEHEAN", argazkia: BOMBILLA_URDINA_BEHEAN },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
@@ -108,7 +248,7 @@
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ]
                 ],
-                indexRow1: [
+                indexRow2: [
                     [
                         { id: 1, name: "ZURIA", argazkia: ZURIA },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
@@ -122,6 +262,7 @@
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ]
                 ],
+                resuelto: false,
             }
         },
         mounted() {
@@ -133,9 +274,9 @@
                 document.getElementById("juego5div").classList.add("hidden");
             },
             iniciarPartida() {
-                this.randomArray(1, this.posiciones1, this.objetos1);
+                this.randomArray(this.posiciones1, this.objetos1);
             },
-            randomArray(numero, posiciones, objetos) {
+            randomArray(posiciones, objetos) {
                 posiciones = [];
                 for (let i = 0; i < objetos.length; i++) {
                     let random = Math.floor(Math.random() * objetos.length);
@@ -149,14 +290,17 @@
 
                 if (this.isSolvable(posiciones)) {
                     // EGIN DAITEKE
-                    switch (numero) {
+                    switch (this.paso) {
                         case 1:
                             this.posiciones1 = posiciones;
+                            break;
+                        case 2:
+                            this.posiciones2 = posiciones;
                             break;
                     }
                 } else {
                     // EZIN DA EGIN
-                    this.randomArray(numero, posiciones, objetos);
+                    this.randomArray(posiciones, objetos);
                 }
             },
             countInversions(array) {
@@ -184,9 +328,18 @@
                 }
             },
             handleClickMoverPieza(event) {
+                if (this.resuelto) return
                 if (event.target.style.backgroundColor != "rgb(244, 244, 244)") {
                     let id = event.target.alt.split('_').slice(-1);
-                    let cambiarPosiciones = this.posiciones1;
+                    let cambiarPosiciones;
+                    switch (this.paso) {
+                        case 1:
+                            cambiarPosiciones = this.posiciones1;
+                            break;
+                        case 2:
+                            cambiarPosiciones = this.posiciones2;
+                            break;
+                    }
                     let index = -1;
                     for (let i = 0; i < cambiarPosiciones.length; i++) {
                         if (cambiarPosiciones[i].id == id) {
@@ -231,18 +384,39 @@
                             }
                         }
 
-                        this.posiciones1 = cambiarPosiciones;
-
-                        this.respuesta(this.solucionesPosible1, this.posiciones1);
+                        switch (this.paso) {
+                            case 1:
+                                this.posiciones1 = cambiarPosiciones;
+                                this.respuesta(this.solucionesPosible1, this.posiciones1);
+                                break;
+                            case 2:
+                                this.posiciones2 = cambiarPosiciones;
+                                this.respuesta(this.solucionesPosible2, this.posiciones2);
+                                break;
+                        }
 
                     }
                 }
             },
             respuesta(resultado, movido) {
                 let movidoName = movido.map((x) => x.name);
-                resultado = resultado.map((x) => x);
-                if (this.comprobarArray(resultado, movidoName)) {
-                    console.log('Has ganado');
+                for (let i = 0; i < resultado.length; i++) {
+                    let resultadoConcreto = resultado[i].map((x) => x);
+                    if (this.comprobarArray(resultadoConcreto, movidoName)) {
+                        console.log('Has ganado');
+                        this.resuelto = true;
+                        if (this.paso == 1) {
+                            sleep(5000)
+                            .then(() =>{
+                                this.paso++;
+                                this.randomArray(this.posiciones2, this.objetos2);
+                                this.resuelto = false;
+                            });
+
+                        } else if (this.paso == 2) {
+                            // Bukatuta
+                        }
+                    }
                 }
             },
             comprobarArray(array1, array2) {

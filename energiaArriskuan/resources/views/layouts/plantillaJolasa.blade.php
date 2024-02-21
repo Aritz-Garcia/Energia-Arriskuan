@@ -11,7 +11,7 @@
     <link rel="icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/app.js') }}" defer></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/sass.css'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/sass.css', 'resources/js/fullScreen.js'])
     @routes
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -27,6 +27,13 @@
             </div>
         </header>
     @endisset
+
+    <div id="fullScreendivdiv" class="hidden">
+        <div id="fullScreendiv">
+            <p>Para tener mejor experiencia habilita la pantalla completa</p>
+            <button id="fullScreen">Pantalla completa</button>
+        </div>
+    </div>
 
     <main role="main" class="x-w-screen-xl">
         <div id="app">
