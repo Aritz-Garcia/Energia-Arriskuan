@@ -18,8 +18,6 @@
 
 <body class="antialiased font-rubik">
 
-    {{-- @include("partials.menu") --}}
-
     @isset($header)
         <header>
             <div>
@@ -28,20 +26,20 @@
         </header>
     @endisset
 
-    <div id="fullScreendivdiv" class="hidden">
-        <div id="fullScreendiv">
-            <p>Para tener mejor experiencia habilita la pantalla completa</p>
-            <button id="fullScreen">Pantalla completa</button>
-        </div>
-    </div>
-
     <main role="main" class="x-w-screen-xl">
         <div id="app">
             @yield("content")
         </div>
     </main>
 
-    {{-- @include("partials.footer") --}}
+    <div id="fullScreendivdiv" class="hidden">
+        <div id="fullScreendiv">
+            <div class="fixed bg-gray-900 p-5 text-center border-4 border-kolore-nagusia rounded-lg">
+                <p class="text-white p-10 text-xl mb-5">Esperientzia hobea izateko, gaitu pantaila osoa</p>
+                <button id="fullScreenBtn" class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">Pantaila osoa</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 
