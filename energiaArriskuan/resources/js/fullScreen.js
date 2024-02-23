@@ -40,14 +40,14 @@ async function toggleFullScreen() {
     }
 }
 
-document.addEventListener(
-    "keydown",
-    (e) => {
-        if (e.key === 'F11' || e.keyCode == 122) {
-            e.preventDefault();
-        }
-    }
-);
+// document.addEventListener(
+//     "keydown",
+//     (e) => {
+//         if (e.key === 'F11' || e.keyCode == 122) {
+//             e.preventDefault();
+//         }
+//     }
+// );
 
 // Detecta si la pantalla cambia de tamaño
 window.addEventListener('resize', function () {

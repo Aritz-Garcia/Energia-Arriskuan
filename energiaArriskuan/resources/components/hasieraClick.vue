@@ -50,7 +50,7 @@
       <div
         class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText"
       >
-        <p>Atea itxita dago</p>
+        <p>Atea itxita dago. Ez daude 4 proba bukatuta.</p>
       </div>
     </div>
 
@@ -99,7 +99,7 @@ export default {
         { areaTop: 43.5, areaLeft: 37, areaWidth: 3, areaHeight: 18 },
         // * Erlojua
         { areaTop: 36, areaLeft: 53.7, areaWidth: 1.7, areaHeight: 2 },
-        // * Ate itxiak
+        // * Klasea
         { areaTop: 46.1, areaLeft: 50.1, areaWidth: 7.3, areaHeight: 10 },
         // * Biltegia papera
         { areaTop: 37, areaLeft: 29.2, areaWidth: 2, areaHeight: 2 },
@@ -185,25 +185,29 @@ export default {
                 .classList.remove("animate__ateaItxia__text");
             }, 4900);
           } else if (i == 5) {
-            // * Ate itxiak
-            // Atea itxita dagoela erakusten duen testua
-            document.getElementById("ateaItxiakDiv").classList.remove("hidden");
-            document.getElementById("ateaItxiakDiv").classList.add("block");
-            document
-              .getElementById("ateaItxiakDiv")
-              .classList.add("animate__ateaItxia__text");
-
-            // Beste testuak kendu
-            document.getElementById("erlojuaDiv").classList.remove("block");
-            document.getElementById("erlojuaDiv").classList.add("hidden");
-
-            setTimeout(() => {
-              document.getElementById("ateaItxiakDiv").classList.remove("block");
-              document.getElementById("ateaItxiakDiv").classList.add("hidden");
-              document
+            // * Klasea
+            if (this.pruebas[0].bukatuta && this.pruebas[1].bukatuta && this.pruebas[2].bukatuta && this.pruebas[3].bukatuta) {
+                // Jolasak bukatuta
+                window.location.href = route("klasea", this.partida.id);
+            } else {
+                // Atea itxita dagoela erakusten duen testua
+                document.getElementById("ateaItxiakDiv").classList.remove("hidden");
+                document.getElementById("ateaItxiakDiv").classList.add("block");
+                document
                 .getElementById("ateaItxiakDiv")
-                .classList.remove("animate__ateaItxia__text");
-            }, 4900);
+                .classList.add("animate__ateaItxia__text");
+
+                // Beste testuak kendu
+                document.getElementById("erlojuaDiv").classList.remove("block");
+                document.getElementById("erlojuaDiv").classList.add("hidden");
+
+                setTimeout(() => {
+                    document.getElementById("ateaItxiakDiv").classList.remove("block");
+                    document.getElementById("ateaItxiakDiv").classList.add("hidden");
+                    document.getElementById("ateaItxiakDiv").classList.remove("animate__ateaItxia__text");
+                }, 4900);
+            }
+
           } else if (i == 6) {
             // * Biltegia papera
             this.testua = "BILTEGIA";

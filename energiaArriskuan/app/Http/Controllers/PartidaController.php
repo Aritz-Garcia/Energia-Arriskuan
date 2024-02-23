@@ -70,7 +70,7 @@ class PartidaController extends Controller
                 $partida->denbora = "60:00";
                 $partida->save();
 
-                for ($i = 1; $i <= 4; $i++) {
+                for ($i = 1; $i <= 5; $i++) {
                     $partida->pruebas()->create([
                         'izena' => 'prueba' . $i,
                         'bukatuta' => 0,
@@ -137,6 +137,15 @@ class PartidaController extends Controller
             return redirect()->route('index');
         }
         return view('partida.teilatua', ['partida' => $partida]);
+
+    }
+
+    public function klasea(int $partidaId) {
+        $partida = Partida::find($partidaId);
+        if ($partida == null || $partida->bukatuta == 1) {
+            return redirect()->route('index');
+        }
+        return view('partida.klasea', ['partida' => $partida]);
 
     }
 

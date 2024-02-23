@@ -11,6 +11,7 @@ import Biltegia from "../components/biltegiaClick.vue";
 import Sotoa from "../components/sotoaClick.vue";
 import Teilatua from "../components/teilatuaClick.vue";
 import Patioa from "../components/patioaClick.vue";
+import Klasea from "../components/klaseaClick.vue";
 
 
 window.Alpine = Alpine;
@@ -27,6 +28,7 @@ const app = createApp({
         Sotoa,
         Teilatua,
         Patioa,
+        Klasea,
     }
 });
 app.use(createPinia());

@@ -2,7 +2,7 @@
     <div>
         <div class="flex items-center justify-center mb-8">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                Aerosorgailua biratu daiteke. Azmatu kokapena kodea lortzeko.
+                Piezak mugitzen elektrizitate zirkuitua osatu behar duzu.
             </p>
             <img
                 id="close-img"
@@ -233,6 +233,18 @@
                         "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA", "ZURIA",
                         "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_BEHE_EZKERRA", "ZURIA", "ZURIA"
                     ],
+                    [
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_GOI_EZKERRA", "BERDEA_KURBA_BEHE_ESKUMA", "BERDEA_HORIZONTALA",
+                        "BERDEA_KURBA_BEHE_ESKUMA", "BIKOITZA_1", "BERDEA_KURBA_GOI_EZKERRA", "ZURIA",
+                        "BERDEA_KURBA_GOI_EZKERRA", "URDINA_BERTIKALA", "ZURIA", "ZURIA",
+                        "ZURIA", "URDINA_BERTIKALA", "ZURIA", "ZURIA"
+                    ],
+                    [
+                        "URDINA_KURBA_GOI_ESKUMA", "URDINA_KURBA_GOI_EZKERRA", "ZURIA", "BERDEA_KURBA_BEHE_ESKUMA",
+                        "BERDEA_KURBA_BEHE_ESKUMA", "BIKOITZA_1", "BERDEA_HORIZONTALA", "BERDEA_KURBA_GOI_EZKERRA",
+                        "BERDEA_KURBA_GOI_EZKERRA", "URDINA_BERTIKALA", "ZURIA", "ZURIA",
+                        "ZURIA", "URDINA_BERTIKALA", "ZURIA", "ZURIA"
+                    ],
                 ],
                 indexCol2: [
                     [
@@ -403,18 +415,28 @@
                 for (let i = 0; i < resultado.length; i++) {
                     let resultadoConcreto = resultado[i].map((x) => x);
                     if (this.comprobarArray(resultadoConcreto, movidoName)) {
-                        console.log('Has ganado');
                         this.resuelto = true;
                         if (this.paso == 1) {
+                            document.getElementById("text").innerHTML = "Zorionak! Lehenengo zirkuitua osatu duzu!";
                             sleep(5000)
                             .then(() =>{
                                 this.paso++;
                                 this.randomArray(this.posiciones2, this.objetos2);
+                                document.getElementById("text").innerHTML = "Orain, bigarren zirkuitua osatu behar duzu.";
                                 this.resuelto = false;
                             });
 
                         } else if (this.paso == 2) {
                             // Bukatuta
+                            document.getElementById("text").innerHTML = "Zorionak! Zirkuituak osatu dituzu!";
+
+                            document.getElementById("close-img").classList.add("hidden");
+
+                            let denbora = this.$cookies.get("denbora");
+
+                            setTimeout(() => {
+                                window.location.href = route("prueba5.update", [this.partida, denbora]);
+                            }, 3000);
                         }
                     }
                 }
