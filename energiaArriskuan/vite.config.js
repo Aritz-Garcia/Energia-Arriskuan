@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/js/loginRegistro.js',
                 'resources/js/tutorial.js',
                 'resources/js/klasifikazioa.js',
+                'resources/js/fullScreen.js',
             ],
             refresh: true,
         }),

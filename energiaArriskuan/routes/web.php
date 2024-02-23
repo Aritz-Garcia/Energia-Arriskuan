@@ -48,6 +48,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/sotoa/{partidaId}', [PartidaController::class, 'sotoa'])->name('sotoa');
         Route::get('/patio/{partidaId}', [PartidaController::class, 'patio'])->name('patio');
         Route::get('/teilatua/{partidaId}', [PartidaController::class, 'teilatua'])->name('teilatua');
+        Route::get('/klasea/{partidaId}', [PartidaController::class, 'klasea'])->name('klasea');
         Route::get('/denbora/{partidaId}/{lekua}/{denbora}', [PartidaController::class, 'pistaUpdate'])->name('pista');
     });
 
@@ -57,6 +58,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/prueba2/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba2'])->name('prueba2.update');
     Route::get('/prueba3/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba3'])->name('prueba3.update');
     Route::get('/prueba4/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba4'])->name('prueba4.update');
+    Route::get('/prueba5/update/{partidaId}/{denbora}', [PruebaController::class, 'prueba5'])->name('prueba5.update');
 
     Route::get('/admin/{userId}', [AdminController::class, 'admin'])->name('admin');
 
