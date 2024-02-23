@@ -36,8 +36,7 @@
     <div id="fullScreendivdiv" class="hidden">
         <div id="fullScreendiv">
             <div class="fixed bg-gray-900 p-5 text-center border-4 border-kolore-nagusia rounded-lg">
-                <p class="text-white p-10 text-xl mb-5">Esperientzia hobea izateko, gaitu pantaila osoa. <br>Hau lortzeko botoia klikatu edo "F11" botoia klikatu.</p>
-                <button id="fullScreenBtn" class="font-semibold testu-kolore-oinarria atzekaldeko-kolore-nagusia hover:bg-white hover:text-[#010440] py-2 px-4 rounded-full focus:outline-none">Pantaila osoa</button>
+                <p class="text-white p-10 text-xl">Esperientzia hobea izateko, gaitu pantaila osoa. <br>Hau lortzeko "F11" botoia klikatu.</p>
             </div>
         </div>
     </div>

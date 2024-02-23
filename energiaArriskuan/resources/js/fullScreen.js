@@ -1,10 +1,10 @@
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+// const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 detectarFullScreen();
 
-document.getElementById('fullScreenBtn').addEventListener('click', function () {
-    toggleFullScreen();
-});
+// document.getElementById('fullScreenBtn').addEventListener('click', function () {
+//     toggleFullScreen();
+// });
 
 function detectarFullScreen() {
     let screenWidth = screen.width;
@@ -26,19 +26,19 @@ function detectarFullScreen() {
     }
 }
 
-async function toggleFullScreen() {
-    if (!detectarFullScreen()) {
-        document.documentElement.requestFullscreen();
-        document.getElementById('fullScreendivdiv').classList.remove('block');
-        document.getElementById('fullScreendivdiv').classList.add('hidden');
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-            document.getElementById('fullScreendivdiv').classList.remove('hidden');
-            document.getElementById('fullScreendivdiv').classList.add('block');
-        }
-    }
-}
+// async function toggleFullScreen() {
+//     if (!detectarFullScreen()) {
+//         document.documentElement.requestFullscreen();
+//         document.getElementById('fullScreendivdiv').classList.remove('block');
+//         document.getElementById('fullScreendivdiv').classList.add('hidden');
+//     } else {
+//         if (document.exitFullscreen) {
+//             document.exitFullscreen();
+//             document.getElementById('fullScreendivdiv').classList.remove('hidden');
+//             document.getElementById('fullScreendivdiv').classList.add('block');
+//         }
+//     }
+// }
 
 // document.addEventListener(
 //     "keydown",
