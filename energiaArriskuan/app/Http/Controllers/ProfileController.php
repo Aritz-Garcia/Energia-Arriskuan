@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Imagen;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -78,6 +79,10 @@ class ProfileController extends Controller
 
         $user = $request->user();
 
+        if($user->foto != "storage/erabiltzaileak/default.png") {
+            unlink(public_path($user->foto));
+        }
+
         Auth::logout();
 
         $user->delete();
@@ -96,6 +101,10 @@ class ProfileController extends Controller
         $perfilId = $request->input("perfilId");
         // Buscar al usuario
         $user = User::find($perfilId);
+
+        if($user->foto != "storage/erabiltzaileak/default.png") {
+            unlink(public_path($user->foto));
+        }
 
         // Verificar si el usuario existe
         if (!$user) {

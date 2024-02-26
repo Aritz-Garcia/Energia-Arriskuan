@@ -1,4 +1,4 @@
-@extends('layouts.plantillaJolasa')
+@extends('layouts.plantillaJolasaHasiera')
 
 @section('title', 'Hasiera')
 
@@ -35,6 +35,8 @@
             <div id="hasieraDiv">
                 <Hasiera urlimg={{ asset('images/hasiera.png') }} :partida={{ $partida }} :pruebas={{ $partida->pruebas }}></Hasiera>
             </div>
+
+            @vite(["resources/js/fullScreen.js"])
 
         @endif
 

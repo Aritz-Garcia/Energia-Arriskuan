@@ -27,6 +27,11 @@ const router = createRouter({
         path: '/proba4',
         name: 'proba4',
         component: () => import('../../components/klasifikazioa/proba4.vue')
+    },
+    {
+        path: '/proba5',
+        name: 'proba5',
+        component: () => import('../../components/klasifikazioa/proba5.vue')
     }
   ]
 })
