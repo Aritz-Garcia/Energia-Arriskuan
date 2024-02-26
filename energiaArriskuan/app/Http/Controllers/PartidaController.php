@@ -218,6 +218,9 @@ class PartidaController extends Controller
             case 'juego1':
                 return redirect()->route('biltegia', $partidaId);
             break;
+            case 'klasea':
+                return redirect()->route('klasea', $partidaId);
+            break;
         }
     }
 
