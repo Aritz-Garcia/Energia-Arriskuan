@@ -2,7 +2,7 @@
     <div>
         <div class="flex items-center justify-center mb-8">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                Piezak mugitzen elektrizitate zirkuitua osatu behar duzu.
+                Piezak mugitzen zirkuitua osatu behar duzu.
             </p>
             <img
                 id="close-img"
