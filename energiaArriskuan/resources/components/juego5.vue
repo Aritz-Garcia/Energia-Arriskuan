@@ -2,7 +2,7 @@
     <div>
         <div class="flex items-center justify-center mb-8">
             <p class="text-3xl md:w-auto mx-10 pl-20 p-6" id="text">
-                Piezak mugitzen elektrizitate zirkuitua osatu behar duzu.
+                Piezak mugitzen zirkuitua osatu behar duzu.
             </p>
             <img
                 id="close-img"
@@ -115,10 +115,14 @@
                 URDINA_BERTIKALA, URDINA_HORIZONTALA,
                 BIKOITZA_1, BIKOITZA_2,
                 ZURIA,
-                BATERIA_URDINA_GOIAN, BATERIA_URDINA_BEHEAN, BATERIA_URDINA_EZKERRA, BATERIA_URDINA_ESKUMA,
-                BATERIA_BERDEA_GOIAN, BATERIA_BERDEA_BEHEAN, BATERIA_BERDEA_EZKERRA, BATERIA_BERDEA_ESKUMA,
-                BOMBILLA_URDINA_GOIAN, BOMBILLA_URDINA_BEHEAN, BOMBILLA_URDINA_EZKERRA, BOMBILLA_URDINA_ESKUMA,
-                BOMBILLA_BERDEA_GOIAN, BOMBILLA_BERDEA_BEHEAN, BOMBILLA_BERDEA_EZKERRA, BOMBILLA_BERDEA_ESKUMA,
+                KONOA_URDINA_GOIAN, KONOA_URDINA_BEHEAN, KONOA_URDINA_EZKERRA, KONOA_URDINA_ESKUMA,
+                KONOA_BERDEA_GOIAN, KONOA_BERDEA_BEHEAN, KONOA_BERDEA_EZKERRA, KONOA_BERDEA_ESKUMA,
+                AEROSORGAILUA_URDINA_GOIAN, AEROSORGAILUA_URDINA_BEHEAN, AEROSORGAILUA_URDINA_EZKERRA, AEROSORGAILUA_URDINA_ESKUMA,
+                AEROSORGAILUA_BERDEA_GOIAN, AEROSORGAILUA_BERDEA_BEHEAN, AEROSORGAILUA_BERDEA_EZKERRA, AEROSORGAILUA_BERDEA_ESKUMA,
+                EGUZKIA_URDINA_GOIAN, EGUZKIA_URDINA_BEHEAN, EGUZKIA_URDINA_EZKERRA, EGUZKIA_URDINA_ESKUMA,
+                EGUZKIA_BERDEA_GOIAN, EGUZKIA_BERDEA_BEHEAN, EGUZKIA_BERDEA_EZKERRA, EGUZKIA_BERDEA_ESKUMA,
+                PANEL_URDINA_GOIAN, PANEL_URDINA_BEHEAN, PANEL_URDINA_EZKERRA, PANEL_URDINA_ESKUMA,
+                PANEL_BERDEA_GOIAN, PANEL_BERDEA_BEHEAN, PANEL_BERDEA_EZKERRA, PANEL_BERDEA_ESKUMA,
             }
         from "../js/konstanteak_juego5.js";
     import Piezak from "./piezak.vue";
@@ -170,7 +174,7 @@
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ],
                     [
-                        { id: 1, name: "BATERIA_BERDEA_GOIAN", argazkia: BATERIA_BERDEA_GOIAN },
+                        { id: 1, name: "KONOA_BERDEA_GOIAN", argazkia: KONOA_BERDEA_GOIAN },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
                         { id: 3, name: "ZURIA", argazkia: ZURIA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
@@ -184,7 +188,7 @@
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ],
                     [
-                        { id: 1, name: "BOMBILLA_BERDEA_EZKERRA", argazkia: BOMBILLA_BERDEA_EZKERRA },
+                        { id: 1, name: "AEROSORGAILUA_BERDEA_EZKERRA", argazkia: AEROSORGAILUA_BERDEA_EZKERRA },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
                         { id: 3, name: "ZURIA", argazkia: ZURIA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
@@ -248,14 +252,14 @@
                 ],
                 indexCol2: [
                     [
-                        { id: 1, name: "BOMBILLA_URDINA_BEHEAN", argazkia: BOMBILLA_URDINA_BEHEAN },
+                        { id: 1, name: "PANEL_URDINA_BEHEAN", argazkia: PANEL_URDINA_BEHEAN },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
                         { id: 3, name: "ZURIA", argazkia: ZURIA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ],
                     [
                         { id: 1, name: "ZURIA", argazkia: ZURIA },
-                        { id: 2, name: "BATERIA_URDINA_GOIAN", argazkia: BATERIA_URDINA_GOIAN },
+                        { id: 2, name: "EGUZKIA_URDINA_GOIAN", argazkia: EGUZKIA_URDINA_GOIAN },
                         { id: 3, name: "ZURIA", argazkia: ZURIA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ]
@@ -264,11 +268,11 @@
                     [
                         { id: 1, name: "ZURIA", argazkia: ZURIA },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
-                        { id: 3, name: "BATERIA_BERDEA_ESKUMA", argazkia: BATERIA_BERDEA_ESKUMA },
+                        { id: 3, name: "KONOA_BERDEA_ESKUMA", argazkia: KONOA_BERDEA_ESKUMA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
                     ],
                     [
-                        { id: 1, name: "BOMBILLA_BERDEA_EZKERRA", argazkia: BOMBILLA_BERDEA_EZKERRA },
+                        { id: 1, name: "AEROSORGAILUA_BERDEA_EZKERRA", argazkia: AEROSORGAILUA_BERDEA_EZKERRA },
                         { id: 2, name: "ZURIA", argazkia: ZURIA },
                         { id: 3, name: "ZURIA", argazkia: ZURIA },
                         { id: 4, name: "ZURIA", argazkia: ZURIA },
