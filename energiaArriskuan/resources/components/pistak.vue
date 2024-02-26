@@ -110,7 +110,7 @@
                 ]},
                 {
                     klasea:[
-                        {pista:"Pato"}
+                        {pista:"Ordenagailuan klikatu, eta lotu kolore berdina duten piezak"}
                     ]
                 }
             ],
