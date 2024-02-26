@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,12 @@
     <link rel="shortcut icon" href="{{ asset('images/Logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/app.js') }}" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/sass.css'])
+    @vite('resources/js/fullScreen.js')
     @routes
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="antialiased font-rubik">
-
-    {{-- @include("partials.menu") --}}
 
     @isset($header)
         <header>
@@ -34,7 +33,13 @@
         </div>
     </main>
 
-    {{-- @include("partials.footer") --}}
+    <div id="fullScreendivdiv" class="hidden">
+        <div id="fullScreendiv">
+            <div class="fixed bg-gray-900 p-5 text-center border-4 border-kolore-nagusia rounded-lg">
+                <p class="text-white p-10 text-xl">Esperientzia hobea izateko, gaitu pantaila osoa. <br>Hau lortzeko "F11" botoia klikatu.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 

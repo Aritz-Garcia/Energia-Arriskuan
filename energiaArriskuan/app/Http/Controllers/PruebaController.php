@@ -95,6 +95,18 @@ class PruebaController extends Controller
 
     }
 
+    public function prueba5(String $partidaId, String $denbora){
+
+        Prueba::where("id_partida", $partidaId)->where("izena", "prueba5")->update(["bukatuta" => 1, "denbora" => $this->denboraAldatu($denbora)]);
+
+        if ($this->konprobatu($partidaId)) {
+            return redirect()->route("irabazi", [$partidaId, $this->denboraAldatu($denbora)]);
+        }
+
+        return redirect()->route("sotoa", $partidaId);
+
+    }
+
     public function denboraAldatu(int $denbora) {
 
         $partidaDenbora = 3600;
@@ -110,8 +122,9 @@ class PruebaController extends Controller
         $irabazita2 = Prueba::where("id_partida", $partidaId)->where("izena", "prueba2")->where("bukatuta", 1)->first();
         $irabazita3 = Prueba::where("id_partida", $partidaId)->where("izena", "prueba3")->where("bukatuta", 1)->first();
         $irabazita4 = Prueba::where("id_partida", $partidaId)->where("izena", "prueba4")->where("bukatuta", 1)->first();
+        $irabazita5 = Prueba::where("id_partida", $partidaId)->where("izena", "prueba5")->where("bukatuta", 1)->first();
 
-        if ($irabazita1 == null || $irabazita2 == null || $irabazita3 == null || $irabazita4 == null) {
+        if ($irabazita1 == null || $irabazita2 == null || $irabazita3 == null || $irabazita4 == null || $irabazita5 == null) {
             return false;
         } else {
             return true;

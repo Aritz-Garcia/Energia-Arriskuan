@@ -149,7 +149,7 @@ export default {
                 this.result3 === "P"
             ) {
                 document.querySelector(".fondo").style.backgroundImage =
-                    "url('/T1-2DW3D/energiaArriskuan/public/images/candadoAbierto.png')";
+                    "url('../../public/images/candadoAbierto.png')";
                 resultElement.innerHTML = "Zuzen! Sotora sar zaitezke orain.";
                 this.resetValues();
                 this.inputsBlocked = true;

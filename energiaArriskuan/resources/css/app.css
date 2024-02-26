@@ -189,7 +189,7 @@ body.fondoAzul {
 
 /* ------------------------------------------- */
 
-#juego3, #juego4, .atekoPapera, #juego2Paperak, .gameOver, #juego2letralYnumeros, .galdetegiaInfoText {
+#juego3, #juego4, .atekoPapera, #juego2Paperak, .gameOver, #juego2letralYnumeros, .galdetegiaInfoText, #fullScreendiv, #juego5 {
     position: absolute;
     top: 50%;
     left: 50%;
