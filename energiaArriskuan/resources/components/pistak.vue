@@ -43,8 +43,8 @@
 
     </div>
 
-         
-    
+
+
 
 </template>
 <style>
@@ -110,7 +110,7 @@
                 ]},
                 {
                     klasea:[
-                        {pista:"Ordenagailuan klikatu, eta lotu kolore berdina duten piezak"}
+                        {pista:"Ordenagailuan klikatu, eta lotu kolore berdina duten piezak zirkuitua osatzeko"}
                     ]
                 }
             ],
@@ -153,7 +153,7 @@
                                     } else {
                                         this.abierto = true;
                                         this.abierto3 = false;
-                                        this.mensaje = this.pistak[3].juego3[this.actual].pista; 
+                                        this.mensaje = this.pistak[3].juego3[this.actual].pista;
                                     }
                                     return;
                                 }
