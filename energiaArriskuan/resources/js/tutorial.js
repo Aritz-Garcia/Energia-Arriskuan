@@ -34,7 +34,7 @@ const driverObj = driver({
         { element: '#ateGainean', popover: { title: 'Gelen izena', description: 'Gelen izena jakiteko ateen gainean klik eginez agertuko da.', side: "right", align: 'start' }},
         { element: '#atea', popover: { title: 'Gelak', description: 'Ateen gainean kliaktzean gelaz aldatuko da.', side: "right", align: 'start' }},
         { element: '#pistak', popover: { title: 'Pistak', description: 'Pantailaren goikaldeaan, eskumaldean pista botoia ikusi daiteke. Gainenan klikatzean jolas baten pistak emango ditu.', side: "left", align: 'start' }},
-        { element: '#probakSemaforo', popover: { title: 'Ekintzak', description: 'Ikusi daitekenez 4 ekintza desberdin daude energia-sistemak berrezartzeko. Ekintzak egin ahala agiak berdez jarriko dira.', side: "left", align: 'start' }},
+        { element: '#probakSemaforo', popover: { title: 'Ekintzak', description: 'Ikusi daitekenez 5 ekintza desberdin daude energia-sistemak berrezartzeko. Ekintzak egin ahala agiak berdez jarriko dira.', side: "left", align: 'start' }},
         { popover: { title: 'Zure txanda', description: 'Orain zure txanda da, zailatu denbora bukatu baino lehen ekintza desberdinak egiten. Zorte on!!!' } }
     ]
 });
