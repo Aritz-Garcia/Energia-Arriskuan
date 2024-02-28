@@ -124,7 +124,6 @@ export default {
                             }
                         }
                     } else if (i == 2) {
-
                         // * Pantaila
                         divPantaila.classList.remove("hidden");
                         divPantaila.classList.add("block");
@@ -144,7 +143,6 @@ export default {
                         }, 4900);
 
                     } else if (i == 3) {
-
                         // * Sua
                         divSua.classList.remove("hidden");
                         divSua.classList.add("block");
