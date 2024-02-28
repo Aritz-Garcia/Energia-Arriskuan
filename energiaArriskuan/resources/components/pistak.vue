@@ -43,8 +43,8 @@
 
     </div>
 
-         
-    
+
+
 
 </template>
 <style>
@@ -108,6 +108,11 @@
                 patioa:[
                     {pista:"Lurrean begiratu duzu ?"}
                 ]},
+                {
+                    klasea:[
+                        {pista:"Ordenagailuan klikatu, eta lotu kolore berdina duten piezak zirkuitua osatzeko"}
+                    ]
+                }
             ],
             mensaje: "",
             abierto: false,
@@ -148,7 +153,7 @@
                                     } else {
                                         this.abierto = true;
                                         this.abierto3 = false;
-                                        this.mensaje = this.pistak[3].juego3[this.actual].pista; 
+                                        this.mensaje = this.pistak[3].juego3[this.actual].pista;
                                     }
                                     return;
                                 }
@@ -219,6 +224,16 @@
                             }
                             break;
 
+                        case "klasea":
+                        for (let i = 0; i < this.probak.length; i++) {
+                                if (this.probak[i].izena == "prueba5") {
+                                        this.abierto = true;
+                                        this.abierto3 = false;
+                                        this.mensaje = this.pistak[6].klasea[this.actual].pista;
+                                    return;
+                                }
+                            }
+                            break;
                         default:
                             break;
                     }
