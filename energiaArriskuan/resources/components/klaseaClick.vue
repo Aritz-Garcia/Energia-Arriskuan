@@ -63,6 +63,13 @@ export default {
                 { areaTop: 13, areaLeft: 89, areaWidth: 11, areaHeight: 49 },
                 // * Ordenagailua
                 { areaTop: 46, areaLeft: 45, areaWidth: 4, areaHeight: 5 },
+                // * Pantaila
+                { areaTop: 44, areaLeft: 3, areaWidth: 7.5, areaHeight: 10 },
+                // * Sua
+                { areaTop: 60, areaLeft: 75, areaWidth: 7.5, areaHeight: 10 },
+                // * Pizarrak
+                { areaTop: 38, areaLeft: 66, areaWidth: 7.5, areaHeight: 11.8 },
+                { areaTop: 39, areaLeft: 25, areaWidth: 6, areaHeight: 10.5 },
             ],
             zenbakia: 0,
             estilo: "",
@@ -98,20 +105,24 @@ export default {
                         );
                     } else if (i == 1) {
                         // * Ordenagailua
-                        console.log("Ordenagailua");
                         for (let i = 0; i < this.pruebas.length; i++) {
                             if (this.pruebas[i].izena == "prueba5") {
-                                if (this.pruebas[i].bukatuta) {
-                                    // Jolasa bukatuta dago
-                                    console.log("Jolasa bukatuta dago");
-                                } else {
-                                    console.log("Jolasa bukatuta ez dago");
+                                if (!this.pruebas[i].bukatuta) {
                                     // Jolasa bukatuta ez dago
                                     document.getElementById("juego5div").classList.remove("hidden");
                                     document.getElementById("juego5div").classList.add("block");
                                 }
                             }
                         }
+                    } else if (i == 2) {
+                        // * Pantaila
+                        console.log("Pantaila");
+                    } else if (i == 3) {
+                        // * Sua
+                        console.log("Sua");
+                    } else if (i == 4 || i == 5) {
+                        // * Pizarrak
+                        console.log("Pizarrak");
                     }
                     return;
                 }
