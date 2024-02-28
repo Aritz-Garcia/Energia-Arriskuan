@@ -1,14 +1,8 @@
 <template>
     <div>
         <div>
-            <div
-                id="denbora"
-                class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50"
-            >
-                <Denbora
-                    :denboraPart="partida.denbora"
-                    :partida="partida.id"
-                ></Denbora>
+            <div id="denbora" class="text-center absolute top-0 left-1/2 denboraErdian my-3 text-white text-xl z-50">
+                <Denbora :denboraPart="partida.denbora" :partida="partida.id"></Denbora>
             </div>
         </div>
 
@@ -20,18 +14,32 @@
             <Pista :probak=pruebas lugar="klasea" :partida=partida.id></Pista>
         </div>
 
-        <img
-        :src="urlimg"
-        @click.prevent="clickImagen"
-        alt="Img"
-        style="width: 100%; height: 100vh"
-        />
+        <img :src="urlimg" @click.prevent="clickImagen" alt="Img" style="width: 100%; height: 100vh" />
 
         <div id="juego5div" class="hidden">
             <div id="juego5">
                 <Juego5 :partida="partida.id"></Juego5>
             </div>
         </div>
+
+        <div id="divPantaila" class="hidden">
+            <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+                <p>Badirudi pantaila ez duela funtzionatzen</p>
+            </div>
+        </div>
+
+        <div id="divSua" class="hidden">
+            <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+                <p>Norbaitek sua piztuta utzi du</p>
+            </div>
+        </div>
+
+        <div id="divPizarrak" class="hidden">
+            <div class="absolute top-1/2 left-1/2 text-white bg-black p-5 rounded text-center ateaItxiaText">
+                <p>Arbela marraz beteta dago</p>
+            </div>
+        </div>
+
 
     </div>
 </template>
@@ -67,8 +75,9 @@ export default {
                 { areaTop: 44, areaLeft: 3, areaWidth: 7.5, areaHeight: 10 },
                 // * Sua
                 { areaTop: 60, areaLeft: 75, areaWidth: 7.5, areaHeight: 10 },
-                // * Pizarrak
+                // * Pizarra 1
                 { areaTop: 38, areaLeft: 66, areaWidth: 7.5, areaHeight: 11.8 },
+                // * Pizarra 2
                 { areaTop: 39, areaLeft: 25, areaWidth: 6, areaHeight: 10.5 },
             ],
             zenbakia: 0,
@@ -115,19 +124,67 @@ export default {
                             }
                         }
                     } else if (i == 2) {
+
                         // * Pantaila
-                        console.log("Pantaila");
+                        divPantaila.classList.remove("hidden");
+                        divPantaila.classList.add("block");
+                        divPantaila.classList.add("animate__ateaItxia__text");
+
+                        // * Beste testuak kendu
+                        divSua.classList.remove("block");
+                        divSua.classList.add("hidden");
+
+                        divPizarrak.classList.remove("block");
+                        divPizarrak.classList.add("hidden");
+
+                        setTimeout(() => {
+                            divPantaila.classList.remove("block");
+                            divPantaila.classList.add("hidden");
+                            divPantaila.classList.remove("animate__ateaItxia__text");
+                        }, 4900);
+
                     } else if (i == 3) {
+
                         // * Sua
-                        console.log("Sua");
+                        divSua.classList.remove("hidden");
+                        divSua.classList.add("block");
+                        divSua.classList.add("animate__ateaItxia__text");
+
+                        // * Beste testuak kendu
+                        divPantaila.classList.remove("block");
+                        divPantaila.classList.add("hidden");
+
+                        divPizarrak.classList.remove("block");
+                        divPizarrak.classList.add("hidden");
+
+                        setTimeout(() => {
+                            divSua.classList.remove("block");
+                            divSua.classList.add("hidden");
+                            divSua.classList.remove("animate__ateaItxia__text");
+                        }, 4900);
+
                     } else if (i == 4 || i == 5) {
                         // * Pizarrak
-                        console.log("Pizarrak");
+                        divPizarrak.classList.remove("hidden");
+                        divPizarrak.classList.add("block");
+                        divPizarrak.classList.add("animate__ateaItxia__text");
+
+                        // * Beste testuak kendu
+                        divPantaila.classList.remove("block");
+                        divPantaila.classList.add("hidden");
+
+                        divSua.classList.remove("block");
+                        divSua.classList.add("hidden");
+
+                        setTimeout(() => {
+                            divPizarrak.classList.remove("block");
+                            divPizarrak.classList.add("hidden");
+                            divPizarrak.classList.remove("animate__ateaItxia__text");
+                        }, 4900);
                     }
-                    return;
                 }
             }
-        },
-    },
+        }
+    }
 };
 </script>
