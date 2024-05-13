@@ -4,7 +4,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 
 <div align="center">
 
-![Static Badge](https://img.shields.io/badge/status-prozesuan-brightgreen)
+![Static Badge](https://img.shields.io/badge/status-bukatuta-brightgreen)
 
 <img src="img/logo.png" alt="logo" width="200px">
 
