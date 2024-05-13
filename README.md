@@ -17,7 +17,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
 4. [Workspace](#keyboard-workspace)
 5. [Instalazioa](#-instalazioa)
-6. [Galeria](#🖼-galeria)
+6. [Galeria](#-galeria)
 7. [Erabilera](#-erabilera)
 8. [Garatzaileak](#-garatzaileak)
 9. [Kontaktua](#%EF%B8%8F-kontaktua)
