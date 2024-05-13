@@ -153,7 +153,11 @@ npm run dev
 
 ## 🖼 Galeria
 ### 🎥 Bideoa:
+<div align="center">
+
 <!-- Bideoa hemen -->
+
+</div>
 
 ## 📕 Erabilera
 
