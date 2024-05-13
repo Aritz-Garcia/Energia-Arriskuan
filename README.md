@@ -2,7 +2,13 @@
 
 Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizitatea sortzea zaila da. Zibilizazio estralurtarrek eraso egiten dute, energia berriztagarrietan dagoen ezagutza lapurtzeko helburuarekin. Txurdinaga LHII zentroa da azken erasoaren lekua, estalurtar taldeak energia berriztagarrian garatutako ezagutza lapurtu du eta zentroko sistema guztiak deskonektatu ditu.
 
+<div align="center">
+
 ![Static Badge](https://img.shields.io/badge/status-prozesuan-brightgreen)
+
+<img src="img/logo.png" alt="logo" width="200px">
+
+<div>
 
 ## 📑 Aurkibidea
 
