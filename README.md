@@ -150,9 +150,9 @@ Gure proiektua Energia berristagarrien modulurako sortutako ikasleentzat egindak
 
 ## 👨🏽‍💻 Garatzaileak
 
-- **Aritz Garcia**
-- **Irkus Anzola**
-- **Adrian Ocampo**
+- **Aritz Garcia:** [@Aritz-Garcia](https://github.com/Aritz-Garcia)
+- **Irkus Anzola:** [@IrkusAnzola](https://github.com/IrkusAnzola)
+- **Adrian Ocampo:** [@AdriTxurdi](https://github.com/AdriTxurdi)
 
 ## ✉️ Kontaktua
 
