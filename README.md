@@ -8,7 +8,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 
 <img src="img/logo.png" alt="logo" width="200px">
 
-<div>
+</div>
 
 ## 📑 Aurkibidea
 
