@@ -13,7 +13,7 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 ## 📑 Aurkibidea
 
 1. [Deskribapena](#-deskribapena)
-2. [Ezaugarriak](#-características)
+2. [Ezaugarriak](#-ezaugarriak)
 3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
 4. [Workspace](#keyboard-workspace)
 5. [Instalazioa](#-instalazioa)
@@ -155,7 +155,7 @@ npm run dev
 ### 🎥 Bideoa:
 <div align="center">
 
-<!-- Bideoa hemen -->
+https://github.com/Aritz-Garcia/Energia-Arriskuan/assets/73273260/28d154b0-6eef-4918-9db7-ecba61c21c9c
 
 </div>
 
