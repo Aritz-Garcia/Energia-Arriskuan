@@ -17,11 +17,12 @@ Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizit
 3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
 4. [Workspace](#keyboard-workspace)
 5. [Instalazioa](#-instalazioa)
-6. [Erabilera](#-erabilera)
-7. [Garatzaileak](#-garatzaileak)
-8. [Kontaktua](#%EF%B8%8F-kontaktua)
-9. [Eskerrik asko!](#-eskerrik-asko)
-10. [Ikastetxea](#-ikastetxea)
+6. [Galeria](#🖼-galeria)
+7. [Erabilera](#-erabilera)
+8. [Garatzaileak](#-garatzaileak)
+9. [Kontaktua](#%EF%B8%8F-kontaktua)
+10. [Eskerrik asko!](#-eskerrik-asko)
+11. [Ikastetxea](#-ikastetxea)
 
 ## 📝 Deskribapena
 
@@ -149,6 +150,10 @@ Proiektua exekutatzeko
 ```
 npm run dev
 ```
+
+## 🖼 Galeria
+### 🎥 Bideoa:
+<!-- Bideoa hemen -->
 
 ## 📕 Erabilera
 
