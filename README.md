@@ -59,7 +59,7 @@ Hauek dira gure proiektua desplegatzeko pausuak:
 **1. pausua:** <br>
 Xampp barruan dagoen "htdocs" karpetan:
 ```
-git clone https://github.com/2324-EscapeRoom-2DW3/T1-2DW3D.git
+git clone https://github.com/Aritz-Garcia/Energia-Arriskuan
 ```
 **2. pausua:** <br>
 Vs code ireki, eta *CTRL + Ñ* egin:
