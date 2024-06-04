@@ -40,7 +40,6 @@ Hauek dira gure proiektuaren ezaugarri batzuk:
 - `2. ezaugarria`: jolas bat egitea denbora limite batekin
 
 ## :computer: Hizkuntzak eta Teknologiak
-
 [![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]() 
@@ -49,7 +48,6 @@ Hauek dira gure proiektuaren ezaugarri batzuk:
 [![](https://custom-icon-badges.demolab.com/badge/laravel-FF2D20?logo=laravel&logoColor=white&style=for-the-badge)]()
 
 ## :keyboard: Workspace
-
 [![](https://img.shields.io/badge/-Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)]()
 [![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
 [![](https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=FFFFFF)]()
@@ -155,7 +153,6 @@ npm run dev
 
 ## 🖼 Galeria
 ### 🎥 Bideoa:
-
 <div align="center">
 
 https://github.com/Aritz-Garcia/Energia-Arriskuan/assets/73273260/28d154b0-6eef-4918-9db7-ecba61c21c9c
