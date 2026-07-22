@@ -2,20 +2,27 @@
 
 Urteak dira 2073an, Lur planetak baliabide fosilak agortuta ditu, eta elektrizitatea sortzea zaila da. Zibilizazio estralurtarrek eraso egiten dute, energia berriztagarrietan dagoen ezagutza lapurtzeko helburuarekin. Txurdinaga LHII zentroa da azken erasoaren lekua, estalurtar taldeak energia berriztagarrian garatutako ezagutza lapurtu du eta zentroko sistema guztiak deskonektatu ditu.
 
-![Static Badge](https://img.shields.io/badge/status-prozesuan-brightgreen)
+<div align="center">
+
+![Static Badge](https://img.shields.io/badge/status-bukatuta-brightgreen)
+
+<img src="img/logo.png" alt="logo" width="200px">
+
+</div>
 
 ## 📑 Aurkibidea
 
 1. [Deskribapena](#-deskribapena)
-2. [Ezaugarriak](#-características)
+2. [Ezaugarriak](#-ezaugarriak)
 3. [Hizkuntzak eta Teknologiak](#computer-hizkuntzak-eta-teknologiak)
 4. [Workspace](#keyboard-workspace)
 5. [Instalazioa](#-instalazioa)
-6. [Erabilera](#-erabilera)
-7. [Garatzaileak](#-garatzaileak)
-8. [Kontaktua](#%EF%B8%8F-kontaktua)
-9. [Eskerrik asko!](#-eskerrik-asko)
-10. [Ikastetxea](#-ikastetxea)
+6. [Galeria](#-galeria)
+7. [Erabilera](#-erabilera)
+8. [Garatzaileak](#-garatzaileak)
+9. [Kontaktua](#%EF%B8%8F-kontaktua)
+10. [Eskerrik asko!](#-eskerrik-asko)
+11. [Ikastetxea](#-ikastetxea)
 
 ## 📝 Deskribapena
 
@@ -36,14 +43,14 @@ Hauek dira gure proiektuaren ezaugarri batzuk:
 [![](https://custom-icon-badges.demolab.com/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
 [![](https://custom-icon-badges.demolab.com/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]() 
-[![](https://custom-icon-badges.demolab.com/badge/tailwind-38B2AC?style=for-the-badge&logo=tailwind&logoColor=white)]()
-[![](https://custom-icon-badges.demolab.com/badge/vue-white?logo=vue&logoColor=green&style=for-the-badge)]()
+[![](https://img.shields.io/badge/TAILWIND-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=FFFFFF)]()
+[![](https://img.shields.io/badge/VUE-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=FFFFFF)]()
 [![](https://custom-icon-badges.demolab.com/badge/laravel-FF2D20?logo=laravel&logoColor=white&style=for-the-badge)]()
 
 ## :keyboard: Workspace
 [![](https://img.shields.io/badge/-Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)]()
 [![](https://img.shields.io/badge/Github-000?logo=github&style=for-the-badge)]()
-[![](https://custom-icon-badges.demolab.com/badge/docker-white?logo=docker&logoColor=1d63ed&style=for-the-badge)]()
+[![](https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=FFFFFF)]()
 
 ## 🔧 Instalazioa  
 
@@ -52,7 +59,7 @@ Hauek dira gure proiektua desplegatzeko pausuak:
 **1. pausua:** <br>
 Xampp barruan dagoen "htdocs" karpetan:
 ```
-git clone https://github.com/2324-EscapeRoom-2DW3/T1-2DW3D.git
+git clone https://github.com/Aritz-Garcia/Energia-Arriskuan
 ```
 **2. pausua:** <br>
 Vs code ireki, eta *CTRL + Ñ* egin:
@@ -144,15 +151,23 @@ Proiektua exekutatzeko
 npm run dev
 ```
 
+## 🖼 Galeria
+### 🎥 Bideoa:
+<div align="center">
+
+https://github.com/Aritz-Garcia/Energia-Arriskuan/assets/73273260/28d154b0-6eef-4918-9db7-ecba61c21c9c
+
+</div>
+
 ## 📕 Erabilera
 
 Gure proiektua Energia berristagarrien modulurako sortutako ikasleentzat egindako "escape room" bat da. Energia Arriskuan modulu hau dibertigarriago ikasteko egin da.
 
 ## 👨🏽‍💻 Garatzaileak
 
-- **Aritz Garcia**
-- **Irkus Anzola**
-- **Adrian Ocampo**
+- **Aritz Garcia:** [@Aritz-Garcia](https://github.com/Aritz-Garcia)
+- **Irkus Anzola:** [@IrkusAnzola](https://github.com/IrkusAnzola)
+- **Adrian Ocampo:** [@AdriTxurdi](https://github.com/AdriTxurdi)
 
 ## ✉️ Kontaktua
 
